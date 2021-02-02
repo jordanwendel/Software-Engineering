@@ -1,18 +1,12 @@
 # WORK-FLOW
 
-TEAM MEMBERS:
-
-Kate Edwards - SCRUM master
-
-Ian Wallack
-
-Jordan Wendel
-
-Steven Nirenberg
-
-Justin Andrea
-
-Ryan Toering
+TEAM MEMBERS: 
+Kate Edwards - SCRUM master,
+Ian Wallack,
+Jordan Wendel,
+Steven Nirenberg,
+Justin Andrea,
+Ryan Toering,
 
 
 
