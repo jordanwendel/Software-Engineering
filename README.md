@@ -1,6 +1,6 @@
 # WORK-FLOW
 
-TEMA MEMBERS:
+TEAM MEMBERS:
 Kate Edwards - SCRUM master
 Ian Wallack
 Jordan Wendel
