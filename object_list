@@ -1,13 +1,35 @@
-# List of objects (with what is needed in them) to accomplish project requirements
+USER CLASSES
 
-# REGISTRATION
-# Web browser
-# Login form
+User Object
+- Registration form
+	- User details, type of user
+	- Unique ID, paswsword, login generation
+	- Re-entry up to three times
+	- "Credentials" to allow / deny access to other methods
 
-# STOCK MANAGEMENT
+Inventory/Stock Object
+- Stock management methods
+	- Raw material details
+	- Stock id, report generation
+	- Update raw material details
+	- ID / name / quantity
 
-# PRODUCT MANAGEMENT
-
-# QUALITY ASSESSMENT
-
-# DELIVERY MANAGEMENT
+Product Object
+- Product management methods (only product manager has access)
+	- Details, ID, report generation, reduce stock
+	- Update product details
+	- Re-entry of product details
+- Quality assessment methods
+	- Product details
+	- Qualified/defective status
+	- Quality check
+	- Quality re-check
+- Delivery management methods
+	- Product status
+	- Sales / re-sent to manufacturing
+	- Product ready for sales/manufacturing dept
+	- Re-enter product id
+- Report management methods
+	- Product details/raw material details
+	- Report generation
+	- Re-enter type of reports
