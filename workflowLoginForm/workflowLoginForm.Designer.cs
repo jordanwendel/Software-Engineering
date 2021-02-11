@@ -1,7 +1,7 @@
 ﻿
 namespace workflowLoginForm
 {
-    partial class Form1
+    partial class workflowLoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,18 @@ namespace workflowLoginForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // workflowLoginForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "workflowLoginForm";
+            this.Text = "Welcome to Work Flow!";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
