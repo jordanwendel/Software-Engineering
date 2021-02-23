@@ -18,6 +18,7 @@ namespace workflowLoginForm
             InitializeComponent();
         }
 
+        Dictionary<string, int> registrationTable = new Dictionary<string, int>(); // Dictionary that stores a registered username to an ID
         private String getAuthorizedPassword(string userName)
         {
             SqlConnection cn = new SqlConnection();
@@ -82,6 +83,11 @@ namespace workflowLoginForm
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            // Create a new class for user registration with SQL Server
         }
     }
 }
