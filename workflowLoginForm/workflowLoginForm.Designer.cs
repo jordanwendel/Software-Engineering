@@ -42,9 +42,10 @@ namespace workflowLoginForm
             // title
             // 
             this.title.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.Location = new System.Drawing.Point(187, 50);
+            this.title.Location = new System.Drawing.Point(249, 62);
+            this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(428, 50);
+            this.title.Size = new System.Drawing.Size(571, 62);
             this.title.TabIndex = 0;
             this.title.Text = "WORK FLOW LOGIN";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -52,44 +53,50 @@ namespace workflowLoginForm
             // userNameLabel
             // 
             this.userNameLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userNameLabel.Location = new System.Drawing.Point(115, 147);
+            this.userNameLabel.Location = new System.Drawing.Point(153, 181);
+            this.userNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(113, 23);
+            this.userNameLabel.Size = new System.Drawing.Size(151, 28);
             this.userNameLabel.TabIndex = 1;
             this.userNameLabel.Text = "USER NAME";
             // 
             // passwordTxt
             // 
             this.passwordTxt.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTxt.Location = new System.Drawing.Point(115, 213);
+            this.passwordTxt.Location = new System.Drawing.Point(153, 262);
+            this.passwordTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(113, 23);
+            this.passwordTxt.Size = new System.Drawing.Size(151, 28);
             this.passwordTxt.TabIndex = 2;
             this.passwordTxt.Text = "PASSWORD";
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(234, 147);
+            this.txtUserName.Location = new System.Drawing.Point(312, 181);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(335, 20);
+            this.txtUserName.Size = new System.Drawing.Size(445, 22);
             this.txtUserName.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(234, 215);
+            this.txtPassword.Location = new System.Drawing.Point(312, 265);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(335, 20);
+            this.txtPassword.Size = new System.Drawing.Size(445, 22);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // loginBtn
             // 
             this.loginBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.loginBtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(234, 297);
+            this.loginBtn.Location = new System.Drawing.Point(312, 366);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(102, 34);
+            this.loginBtn.Size = new System.Drawing.Size(136, 42);
             this.loginBtn.TabIndex = 5;
             this.loginBtn.Text = "LOGIN";
             this.loginBtn.UseVisualStyleBackColor = false;
@@ -99,9 +106,10 @@ namespace workflowLoginForm
             // 
             this.clearBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.clearBtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearBtn.Location = new System.Drawing.Point(359, 297);
+            this.clearBtn.Location = new System.Drawing.Point(479, 366);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(95, 34);
+            this.clearBtn.Size = new System.Drawing.Size(127, 42);
             this.clearBtn.TabIndex = 6;
             this.clearBtn.Text = "CLEAR";
             this.clearBtn.UseVisualStyleBackColor = false;
@@ -111,9 +119,10 @@ namespace workflowLoginForm
             // 
             this.exitBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.exitBtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.Location = new System.Drawing.Point(474, 297);
+            this.exitBtn.Location = new System.Drawing.Point(632, 366);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(95, 34);
+            this.exitBtn.Size = new System.Drawing.Size(127, 42);
             this.exitBtn.TabIndex = 7;
             this.exitBtn.Text = "EXIT";
             this.exitBtn.UseVisualStyleBackColor = false;
@@ -121,11 +130,11 @@ namespace workflowLoginForm
             // 
             // workflowLoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.loginBtn);
@@ -134,6 +143,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.userNameLabel);
             this.Controls.Add(this.title);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "workflowLoginForm";
             this.Text = "Welcome to Work Flow!";
             this.ResumeLayout(false);

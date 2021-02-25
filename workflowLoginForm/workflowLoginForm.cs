@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace workflowLoginForm
 {
@@ -17,18 +18,53 @@ namespace workflowLoginForm
             InitializeComponent();
         }
 
+        private String getAuthorizedPassword(string userName)
+        {
+            SqlConnection cn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+
+            try
+            {
+                cn.ConnectionString = @"C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf";
+                cmd.Connection = cn;
+                cmd.CommandText = "SELECT userPassword FROM UserLoginCredential WHERE userName = @username";
+                cmd.Parameters.AddWithValue("@username", userName);
+
+                cn.Open();
+                dr = cmd.ExecuteReader();
+                dr.Read();
+
+                return dr.GetString(0);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+
+                return null;
+            }
+        }
+
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            string enteredUserName = txtUserName.Text;
             string enteredPassword = txtPassword.Text;
 
-            if (enteredUserName == "admin" && enteredPassword == "admin")
+            try
             {
-                MessageBox.Show("Welcome to Work Flow!", "Successful Login!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (enteredPassword == getAuthorizedPassword(txtUserName.Text))
+                {
+                    MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid login info", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtUserName.Focus();
+                    txtUserName.SelectAll();
+                }
             }
-            else
+            catch (Exception err)
             {
-                MessageBox.Show("Invalid user name and/or password. Try again!", "Invalid Credentials!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(err.Message, "Something Broke");
             }
         }
 
@@ -41,6 +77,11 @@ namespace workflowLoginForm
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
