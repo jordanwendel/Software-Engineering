@@ -90,5 +90,10 @@ namespace workflowLoginForm
             RegisterForm rform = new RegisterForm(); // Creates instance of Register Form class
             rform.ShowDialog(); // Shows the register form on the screen
         }
+
+        private void workflowLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

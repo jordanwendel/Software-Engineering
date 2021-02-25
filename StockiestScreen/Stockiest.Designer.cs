@@ -1,6 +1,6 @@
-﻿namespace AdministratorScreen
+﻿namespace StockiestScreen
 {
-    partial class Administrator
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Admin = new System.Windows.Forms.Label();
+            this.Stockiest = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // Admin
+            // Stockiest
             // 
-            this.Admin.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(104, 150);
-            this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(571, 62);
-            this.Admin.TabIndex = 1;
-            this.Admin.Text = "ADMIN PAGE";
-            this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Stockiest.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Stockiest.Location = new System.Drawing.Point(115, 194);
+            this.Stockiest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Stockiest.Name = "Stockiest";
+            this.Stockiest.Size = new System.Drawing.Size(571, 62);
+            this.Stockiest.TabIndex = 2;
+            this.Stockiest.Text = "STOCKIEST PAGE";
+            this.Stockiest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Administrator
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Admin);
-            this.Name = "Administrator";
-            this.Text = "Admin";
+            this.Controls.Add(this.Stockiest);
+            this.Name = "Form1";
+            this.Text = "Stockiest";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label Admin;
+        private System.Windows.Forms.Label Stockiest;
     }
 }
 
