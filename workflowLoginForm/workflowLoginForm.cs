@@ -27,9 +27,9 @@ namespace workflowLoginForm
 
             try
             {
-                cn.ConnectionString = @"C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf";
+                cn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf";
                 cmd.Connection = cn;
-                cmd.CommandText = "SELECT userPassword FROM UserLoginCredential WHERE userName = @username";
+                cmd.CommandText = "SELECT userPassword FROM AuthorizedUsers WHERE userName = @username";
                 cmd.Parameters.AddWithValue("@username", userName);
 
                 cn.Open();
@@ -40,9 +40,13 @@ namespace workflowLoginForm
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Warning!");
+                //MessageBox.Show(err.Message, "Warning!");
 
                 return null;
+            }
+            finally
+            {
+                cn.Close();
             }
         }
 
@@ -58,7 +62,7 @@ namespace workflowLoginForm
                 }
                 else
                 {
-                    MessageBox.Show("Invalid login info", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Invalid username or password", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtUserName.Focus();
                     txtUserName.SelectAll();
                 }

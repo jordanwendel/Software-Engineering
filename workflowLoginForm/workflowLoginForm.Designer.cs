@@ -131,12 +131,13 @@ namespace workflowLoginForm
             // 
             // registerBtn
             // 
-            this.registerBtn.Location = new System.Drawing.Point(845, 353);
+            this.registerBtn.Location = new System.Drawing.Point(312, 451);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(139, 88);
+            this.registerBtn.Size = new System.Drawing.Size(445, 44);
             this.registerBtn.TabIndex = 8;
             this.registerBtn.Text = "Register User";
-            this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.UseVisualStyleBackColor = false;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // workflowLoginForm
