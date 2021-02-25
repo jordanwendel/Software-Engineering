@@ -37,6 +37,7 @@ namespace workflowLoginForm
             this.loginBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.registerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // title
@@ -73,7 +74,7 @@ namespace workflowLoginForm
             // txtUserName
             // 
             this.txtUserName.Location = new System.Drawing.Point(312, 181);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(445, 22);
             this.txtUserName.TabIndex = 3;
@@ -81,7 +82,7 @@ namespace workflowLoginForm
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(312, 265);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(445, 22);
@@ -94,7 +95,7 @@ namespace workflowLoginForm
             this.loginBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.loginBtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginBtn.Location = new System.Drawing.Point(312, 366);
-            this.loginBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(136, 42);
             this.loginBtn.TabIndex = 5;
@@ -107,7 +108,7 @@ namespace workflowLoginForm
             this.clearBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.clearBtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBtn.Location = new System.Drawing.Point(479, 366);
-            this.clearBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(127, 42);
             this.clearBtn.TabIndex = 6;
@@ -120,13 +121,24 @@ namespace workflowLoginForm
             this.exitBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.exitBtn.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitBtn.Location = new System.Drawing.Point(632, 366);
-            this.exitBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(4);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(127, 42);
             this.exitBtn.TabIndex = 7;
             this.exitBtn.Text = "EXIT";
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
+            // registerBtn
+            // 
+            this.registerBtn.Location = new System.Drawing.Point(312, 451);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(445, 44);
+            this.registerBtn.TabIndex = 8;
+            this.registerBtn.Text = "Register User";
+            this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // workflowLoginForm
             // 
@@ -135,6 +147,7 @@ namespace workflowLoginForm
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.loginBtn);
@@ -143,7 +156,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.userNameLabel);
             this.Controls.Add(this.title);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "workflowLoginForm";
             this.Text = "Welcome to Work Flow!";
             this.ResumeLayout(false);
@@ -161,6 +174,7 @@ namespace workflowLoginForm
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button exitBtn;
+        private System.Windows.Forms.Button registerBtn;
     }
 }
 
