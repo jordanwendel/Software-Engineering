@@ -93,5 +93,10 @@ namespace workflowLoginForm
         {
             // Create a new class for user registration with SQL Server
         }
+
+        private void workflowLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
