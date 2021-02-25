@@ -88,7 +88,7 @@ namespace workflowLoginForm
             this.txtPassword.Size = new System.Drawing.Size(445, 22);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
+
             // 
             // loginBtn
             // 

@@ -12,6 +12,7 @@ namespace AdministratorScreen
 {
     public partial class Administrator : Form
     {
+
         public Administrator()
         {
             InitializeComponent();

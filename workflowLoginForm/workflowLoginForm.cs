@@ -84,14 +84,11 @@ namespace workflowLoginForm
             Application.Exit();
         }
 
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void registerBtn_Click(object sender, EventArgs e)
         {
             // Create a new class for user registration with SQL Server
+            RegisterForm rform = new RegisterForm(); // Creates instance of Register Form class
+            rform.ShowDialog(); // Shows the register form on the screen
         }
     }
 }
