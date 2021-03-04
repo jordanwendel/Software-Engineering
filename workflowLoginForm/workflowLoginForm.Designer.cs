@@ -38,6 +38,7 @@ namespace workflowLoginForm
             this.clearBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
             this.registerBtn = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // title
@@ -88,7 +89,6 @@ namespace workflowLoginForm
             this.txtPassword.Size = new System.Drawing.Size(445, 22);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.UseSystemPasswordChar = true;
-
             // 
             // loginBtn
             // 
@@ -140,6 +140,16 @@ namespace workflowLoginForm
             this.registerBtn.UseVisualStyleBackColor = false;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
+            // btnProduct
+            // 
+            this.btnProduct.Location = new System.Drawing.Point(840, 191);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(163, 46);
+            this.btnProduct.TabIndex = 9;
+            this.btnProduct.Text = "To Product DatabaseForm";
+            this.btnProduct.UseVisualStyleBackColor = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
             // workflowLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -147,6 +157,7 @@ namespace workflowLoginForm
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.Controls.Add(this.btnProduct);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clearBtn);
@@ -176,6 +187,7 @@ namespace workflowLoginForm
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button exitBtn;
         private System.Windows.Forms.Button registerBtn;
+        private System.Windows.Forms.Button btnProduct;
     }
 }
 
