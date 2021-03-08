@@ -20,7 +20,7 @@ namespace Product
 
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
-            string con = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\justi\\Source\\Repos\\WORK - FLOW\\workflowLoginForm\\UserLoginData.mdf; Integrated Security = True";
+            string con = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\justi\\Source\\Repos\\WORK - FLOW\\workflowLoginForm\\UserLoginData.mdf; Integrated Security = True"; // FIX PATH
 
             SqlConnection connectionOne = new SqlConnection(con);
 

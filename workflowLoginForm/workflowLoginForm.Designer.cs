@@ -148,7 +148,6 @@ namespace workflowLoginForm
             this.btnProduct.TabIndex = 9;
             this.btnProduct.Text = "To Product DatabaseForm";
             this.btnProduct.UseVisualStyleBackColor = true;
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // workflowLoginForm
             // 
@@ -170,7 +169,6 @@ namespace workflowLoginForm
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "workflowLoginForm";
             this.Text = "Welcome to Work Flow!";
-            this.Load += new System.EventHandler(this.workflowLoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -27,7 +27,7 @@ namespace workflowLoginForm
 
             try
             {
-                cn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf";
+                cn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf"; // NEED TO FIX PATH
                 cmd.Connection = cn;
                 cmd.CommandText = "SELECT userPassword FROM AuthorizedUsers WHERE userName = @username";
                 cmd.Parameters.AddWithValue("@username", userName);
@@ -91,14 +91,5 @@ namespace workflowLoginForm
             rform.ShowDialog(); // Shows the register form on the screen
         }
 
-        private void workflowLoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnProduct_Click(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

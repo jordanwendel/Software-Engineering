@@ -1,6 +1,7 @@
 ﻿
 namespace workflowLoginForm
 {
+    
     partial class RegisterForm
     {
         /// <summary>
