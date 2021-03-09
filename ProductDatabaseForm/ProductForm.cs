@@ -13,11 +13,13 @@ namespace Product
 {
     public partial class ProductForm : Form
     {
+        // Constructor
         public ProductForm()
         {
             InitializeComponent();
         }
 
+        // Event handler for Insert Information button
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
             // string connection path
@@ -49,15 +51,12 @@ namespace Product
             txtLocation.Clear();
         }
 
+        // Event handler for Exit button click
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void ProductForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
 
