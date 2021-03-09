@@ -13,24 +13,22 @@ namespace workflowLoginForm
 {
     public partial class RegisterForm : Form
     {
-        //Variables
-        int id;
-        string username, password, job;
 
-        //Constructor
+        // Constructor
         public RegisterForm()
         {
             InitializeComponent();
         }
 
-        //Methods
+        // Event handler for Clear button click
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            passwordTxt.Text = String.Empty;
-            usernameTxt.Text = String.Empty;
-            jobTxt.Text = String.Empty;
+            passwordTxt.Text = String.Empty; // Empty password text
+            usernameTxt.Text = String.Empty; // Empty username text
+            jobTxt.Text = String.Empty; // Empty user job text
         }
 
+        // Event handler for Register button click
         private void registerBtn_Click(object sender, EventArgs e)
         {
             // FIX PATH

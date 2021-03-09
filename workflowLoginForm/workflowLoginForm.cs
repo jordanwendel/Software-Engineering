@@ -13,22 +13,23 @@ namespace workflowLoginForm
 {
     public partial class workflowLoginForm : Form
     {
+        // Constructor
         public workflowLoginForm()
         {
             InitializeComponent();
         }
 
-        Dictionary<string, int> registrationTable = new Dictionary<string, int>(); // Dictionary that stores a registered username to an ID
         private String getAuthorizedPassword(string userName)
         {
-            // Connecting to SQL database
-            SqlConnection cn = new SqlConnection();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
+            // Object variables
+            SqlConnection cn = new SqlConnection(); // Establishing sql connection
+            SqlCommand cmd = new SqlCommand(); // Creating a sql command object
+            SqlDataReader dr; // Sql data reader
 
+            // Error catching
             try
             {
-                cn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf"; // NEED TO FIX PATH
+                cn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf"; // Connection string
                 cmd.Connection = cn;
                 cmd.CommandText = "SELECT userPassword FROM AuthorizedUsers WHERE userName = @username";
                 cmd.Parameters.AddWithValue("@username", userName);
@@ -39,7 +40,7 @@ namespace workflowLoginForm
 
                 return dr.GetString(0);
             }
-            catch (Exception err)
+            catch (Exception err) // Handles exception
             {
                 //MessageBox.Show(err.Message, "Warning!");
 
@@ -51,40 +52,45 @@ namespace workflowLoginForm
             }
         }
 
+        // Event handler for Login button click
         private void loginBtn_Click(object sender, EventArgs e)
         {
             string enteredPassword = txtPassword.Text;
-
+            // Error catching 
             try
             {
-                if (enteredPassword == getAuthorizedPassword(txtUserName.Text))
+                // Password validation
+                if (enteredPassword == getAuthorizedPassword(txtUserName.Text)) // Correct password
                 {
                     MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else
+                else // Incorrect password
                 {
                     MessageBox.Show("Invalid username or password", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtUserName.Focus();
                     txtUserName.SelectAll();
                 }
             }
-            catch (Exception err)
+            catch (Exception err) // Error exception
             {
-                MessageBox.Show(err.Message, "Something Broke");
+                MessageBox.Show(err.Message, "Something Broke"); // Show error message
             }
         }
 
+        // Event handler for Clear button click
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            txtUserName.Text = string.Empty;
-            txtPassword.Text = string.Empty;
+            txtUserName.Text = string.Empty; // Clear username text
+            txtPassword.Text = string.Empty; // Clear password text
         }
 
+        // Event handler for Exit button click
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); // Quit application
         }
 
+        // Event handler for Register button click
         private void registerBtn_Click(object sender, EventArgs e)
         {
             // Create a new class for user registration with SQL Server
