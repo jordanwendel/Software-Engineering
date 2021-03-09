@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ReportManager.Properties
+namespace RepManager.Properties
 {
 
 

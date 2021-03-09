@@ -1,6 +1,6 @@
 ﻿namespace StockiestScreen
 {
-    partial class Form1
+    partial class Stock
     {
         /// <summary>
         /// Required designer variable.
@@ -42,14 +42,15 @@
             this.Stockiest.Text = "STOCKIEST PAGE";
             this.Stockiest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(640, 360);
             this.Controls.Add(this.Stockiest);
-            this.Name = "Form1";
+            this.Name = "Stock";
             this.Text = "Stockiest";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }

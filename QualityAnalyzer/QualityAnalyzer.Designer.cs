@@ -1,6 +1,6 @@
 ﻿namespace QualityAnalyzer
 {
-    partial class QualityAnalyzer
+    partial class QualAnalyzer
     {
         /// <summary>
         /// Required designer variable.
@@ -43,13 +43,13 @@
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
-            // QualityAnalyzer
+            // QualAnalyzer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Admin);
-            this.Name = "QualityAnalyzer";
+            this.Name = "QualAnalyzer";
             this.Text = "QualityAnalyzer";
             this.ResumeLayout(false);
 

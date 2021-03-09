@@ -1,6 +1,6 @@
 ﻿namespace ReportManager
 {
-    partial class ReportManager
+    partial class RepManager
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Admin = new System.Windows.Forms.Label();
+            this.Logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Admin
@@ -43,13 +44,24 @@
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
-            // ReportManager
+            // Logout
+            // 
+            this.Logout.Location = new System.Drawing.Point(300, 309);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(188, 63);
+            this.Logout.TabIndex = 3;
+            this.Logout.Text = "Logout";
+            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
+            // RepManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Name = "ReportManager";
+            this.Name = "RepManager";
             this.Text = "ReportManager";
             this.ResumeLayout(false);
 
@@ -58,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.Label Admin;
+        private System.Windows.Forms.Button Logout;
     }
 }
 

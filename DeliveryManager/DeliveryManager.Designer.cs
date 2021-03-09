@@ -1,6 +1,6 @@
 ﻿namespace DeliveryManager
 {
-    partial class DeliveryManager
+    partial class DelManager
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.Admin = new System.Windows.Forms.Label();
+            this.Logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Admin
@@ -42,14 +43,26 @@
             this.Admin.Text = "DELIVERY MANAGER PAGE";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // DeliveryManager
+            // Logout
+            // 
+            this.Logout.Location = new System.Drawing.Point(312, 312);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(188, 63);
+            this.Logout.TabIndex = 4;
+            this.Logout.Text = "Logout";
+            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
+            // DelManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Name = "DeliveryManager";
+            this.Name = "DelManager";
             this.Text = "DeliveryManager";
+            this.Load += new System.EventHandler(this.DelManager_Load);
             this.ResumeLayout(false);
 
         }
@@ -57,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.Label Admin;
+        private System.Windows.Forms.Button Logout;
     }
 }
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ReportManager
 {
-    public partial class ReportManager : Form
+    public partial class RepManager : Form
     {
-        public ReportManager()
+        public RepManager()
         {
             InitializeComponent();
         }
@@ -20,6 +20,17 @@ namespace ReportManager
         private void Admin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenLoginForm));//create new display thing called dispaly
+            this.Close(); //close current display
+            display.Start();//open new display
+        }
+        public static void OpenLoginForm()
+        {
+            Application.Run(new RepManager());
         }
     }
 }

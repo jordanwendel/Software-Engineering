@@ -1,6 +1,6 @@
 ﻿namespace ProductManager
 {
-    partial class ProductManager
+    partial class ProdMan
     {
         /// <summary>
         /// Required designer variable.
@@ -42,14 +42,15 @@
             this.Admin.Text = "PRODUCT MANAGER PAGE";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ProductManager
+            // ProdMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Admin);
-            this.Name = "ProductManager";
+            this.Name = "ProdMan";
             this.Text = "ProductManager";
+            this.Load += new System.EventHandler(this.ProductManager_Load);
             this.ResumeLayout(false);
 
         }

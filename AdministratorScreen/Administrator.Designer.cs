@@ -41,6 +41,7 @@
             this.Admin.TabIndex = 1;
             this.Admin.Text = "ADMIN PAGE";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
             // Administrator
             // 

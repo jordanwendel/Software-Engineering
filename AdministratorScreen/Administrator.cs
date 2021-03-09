@@ -17,5 +17,10 @@ namespace AdministratorScreen
         {
             InitializeComponent();
         }
+
+        private void Admin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

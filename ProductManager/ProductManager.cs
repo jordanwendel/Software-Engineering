@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProductManager
 {
-    public partial class ProductManager : Form
+    public partial class ProdMan : Form
     {
-        public ProductManager()
+        public ProdMan()
         {
             InitializeComponent();
+        }
+
+        private void ProductManager_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

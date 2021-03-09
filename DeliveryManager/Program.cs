@@ -16,7 +16,7 @@ namespace DeliveryManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DeliveryManager());
+            Application.Run(new DelManager());
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QualityAnalyzer
 {
-    public partial class QualityAnalyzer : Form
+    public partial class QualAnalyzer : Form
     {
-        public QualityAnalyzer()
+        public QualAnalyzer()
         {
             InitializeComponent();
         }

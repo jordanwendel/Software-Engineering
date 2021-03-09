@@ -16,7 +16,7 @@ namespace QualityAnalyzer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new QualityAnalyzer());
+            Application.Run(new QualAnalyzer());
         }
     }
 }
