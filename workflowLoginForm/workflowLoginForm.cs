@@ -29,11 +29,13 @@ namespace workflowLoginForm
             // Error catching
             try
             {
+                
                 cn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf"; // Connection string
-                cmd.Connection = cn;
-                cmd.CommandText = "SELECT userPassword FROM AuthorizedUsers WHERE userName = @username";
+                cmd.Connection = cn;//connects command object to database
+                cmd.CommandText = "SELECT userPassword FROM AuthorizedUsers WHERE userName = @username"; //grabs password from associated username in database that matches the username input on the login screen
                 cmd.Parameters.AddWithValue("@username", userName);
 
+                //opens database, grabs and returns password
                 cn.Open();
                 dr = cmd.ExecuteReader();
                 dr.Read();
