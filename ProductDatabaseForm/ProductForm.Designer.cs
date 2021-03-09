@@ -166,6 +166,7 @@ namespace Product
             this.Controls.Add(this.txtQuality);
             this.Name = "ProductForm";
             this.Text = "Prodcut Form";
+            this.Load += new System.EventHandler(this.ProductForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
