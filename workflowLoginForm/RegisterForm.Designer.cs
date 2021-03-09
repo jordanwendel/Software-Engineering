@@ -73,8 +73,10 @@ namespace workflowLoginForm
             // 
             this.passwordTxt.Location = new System.Drawing.Point(164, 115);
             this.passwordTxt.Name = "passwordTxt";
+            this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(100, 20);
             this.passwordTxt.TabIndex = 3;
+            this.passwordTxt.UseSystemPasswordChar = true;
             // 
             // registerBtn
             // 

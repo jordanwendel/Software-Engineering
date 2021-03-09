@@ -21,6 +21,7 @@ namespace workflowLoginForm
         Dictionary<string, int> registrationTable = new Dictionary<string, int>(); // Dictionary that stores a registered username to an ID
         private String getAuthorizedPassword(string userName)
         {
+            // Connecting to SQL database
             SqlConnection cn = new SqlConnection();
             SqlCommand cmd = new SqlCommand();
             SqlDataReader dr;
