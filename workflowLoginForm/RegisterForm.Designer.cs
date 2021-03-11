@@ -38,16 +38,18 @@ namespace workflowLoginForm
             this.jobLbl = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
             this.boxOccupation = new System.Windows.Forms.ComboBox();
+            this.confirmpasswordtxt = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // usernameLbl
             // 
             this.usernameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.usernameLbl.Location = new System.Drawing.Point(116, 125);
-            this.usernameLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.usernameLbl.Location = new System.Drawing.Point(68, 80);
+            this.usernameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameLbl.Name = "usernameLbl";
-            this.usernameLbl.Size = new System.Drawing.Size(218, 44);
+            this.usernameLbl.Size = new System.Drawing.Size(154, 28);
             this.usernameLbl.TabIndex = 0;
             this.usernameLbl.Text = "Enter Username: ";
             this.usernameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -56,39 +58,40 @@ namespace workflowLoginForm
             // 
             this.passwordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.passwordLbl.Location = new System.Drawing.Point(116, 215);
-            this.passwordLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.passwordLbl.Location = new System.Drawing.Point(68, 120);
+            this.passwordLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordLbl.Name = "passwordLbl";
-            this.passwordLbl.Size = new System.Drawing.Size(200, 44);
+            this.passwordLbl.Size = new System.Drawing.Size(141, 28);
             this.passwordLbl.TabIndex = 1;
             this.passwordLbl.Text = "Enter Password: ";
             this.passwordLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.passwordLbl.Click += new System.EventHandler(this.passwordLbl_Click);
             // 
             // usernameTxt
             // 
-            this.usernameTxt.Location = new System.Drawing.Point(328, 131);
-            this.usernameTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.usernameTxt.Location = new System.Drawing.Point(219, 84);
+            this.usernameTxt.Margin = new System.Windows.Forms.Padding(4);
             this.usernameTxt.Name = "usernameTxt";
-            this.usernameTxt.Size = new System.Drawing.Size(196, 31);
+            this.usernameTxt.Size = new System.Drawing.Size(132, 22);
             this.usernameTxt.TabIndex = 2;
             // 
             // passwordTxt
             // 
-            this.passwordTxt.Location = new System.Drawing.Point(328, 221);
-            this.passwordTxt.Margin = new System.Windows.Forms.Padding(6);
+            this.passwordTxt.Location = new System.Drawing.Point(217, 124);
+            this.passwordTxt.Margin = new System.Windows.Forms.Padding(4);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.PasswordChar = '*';
-            this.passwordTxt.Size = new System.Drawing.Size(196, 31);
+            this.passwordTxt.Size = new System.Drawing.Size(132, 22);
             this.passwordTxt.TabIndex = 3;
             this.passwordTxt.UseSystemPasswordChar = true;
             // 
             // registerBtn
             // 
             this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerBtn.Location = new System.Drawing.Point(590, 188);
-            this.registerBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.registerBtn.Location = new System.Drawing.Point(393, 120);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(204, 69);
+            this.registerBtn.Size = new System.Drawing.Size(136, 44);
             this.registerBtn.TabIndex = 4;
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = true;
@@ -98,10 +101,10 @@ namespace workflowLoginForm
             // 
             this.jobLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jobLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.jobLbl.Location = new System.Drawing.Point(116, 302);
-            this.jobLbl.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.jobLbl.Location = new System.Drawing.Point(71, 193);
+            this.jobLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.jobLbl.Name = "jobLbl";
-            this.jobLbl.Size = new System.Drawing.Size(200, 44);
+            this.jobLbl.Size = new System.Drawing.Size(139, 28);
             this.jobLbl.TabIndex = 5;
             this.jobLbl.Text = "Enter Job:";
             this.jobLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -109,10 +112,10 @@ namespace workflowLoginForm
             // clearBtn
             // 
             this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clearBtn.Location = new System.Drawing.Point(618, 269);
-            this.clearBtn.Margin = new System.Windows.Forms.Padding(6);
+            this.clearBtn.Location = new System.Drawing.Point(412, 172);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(150, 44);
+            this.clearBtn.Size = new System.Drawing.Size(100, 28);
             this.clearBtn.TabIndex = 7;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
@@ -128,17 +131,43 @@ namespace workflowLoginForm
             "Quality Analyzer",
             "Report Manager",
             "Stockiest"});
-            this.boxOccupation.Location = new System.Drawing.Point(325, 313);
+            this.boxOccupation.Location = new System.Drawing.Point(217, 200);
+            this.boxOccupation.Margin = new System.Windows.Forms.Padding(2);
             this.boxOccupation.Name = "boxOccupation";
-            this.boxOccupation.Size = new System.Drawing.Size(196, 33);
+            this.boxOccupation.Size = new System.Drawing.Size(132, 24);
             this.boxOccupation.TabIndex = 8;
             this.boxOccupation.SelectedIndexChanged += new System.EventHandler(this.boxOccupation_SelectedIndexChanged);
             // 
+            // confirmpasswordtxt
+            // 
+            this.confirmpasswordtxt.Location = new System.Drawing.Point(217, 165);
+            this.confirmpasswordtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.confirmpasswordtxt.Name = "confirmpasswordtxt";
+            this.confirmpasswordtxt.PasswordChar = '*';
+            this.confirmpasswordtxt.Size = new System.Drawing.Size(132, 22);
+            this.confirmpasswordtxt.TabIndex = 9;
+            this.confirmpasswordtxt.UseSystemPasswordChar = true;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(55, 161);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(154, 28);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Comfirm Password";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 465);
+            this.ClientSize = new System.Drawing.Size(587, 298);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.confirmpasswordtxt);
             this.Controls.Add(this.boxOccupation);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.jobLbl);
@@ -147,7 +176,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.passwordLbl);
             this.Controls.Add(this.usernameLbl);
-            this.Margin = new System.Windows.Forms.Padding(6);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
             this.Text = "Register";
             this.ResumeLayout(false);
@@ -164,11 +193,8 @@ namespace workflowLoginForm
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.Label jobLbl;
         private System.Windows.Forms.Button clearBtn;
-<<<<<<< HEAD
         private System.Windows.Forms.ComboBox boxOccupation;
-=======
         private System.Windows.Forms.TextBox confirmpasswordtxt;
         private System.Windows.Forms.Label label1;
->>>>>>> 56d752f231af6a7b5b0d12d4a3a61cebd9291111
     }
 }
