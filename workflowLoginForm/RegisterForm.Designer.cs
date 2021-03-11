@@ -36,7 +36,6 @@ namespace workflowLoginForm
             this.passwordTxt = new System.Windows.Forms.TextBox();
             this.registerBtn = new System.Windows.Forms.Button();
             this.jobLbl = new System.Windows.Forms.Label();
-            this.jobTxt = new System.Windows.Forms.TextBox();
             this.clearBtn = new System.Windows.Forms.Button();
             this.boxOccupation = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -107,14 +106,6 @@ namespace workflowLoginForm
             this.jobLbl.Text = "Enter Job:";
             this.jobLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // jobTxt
-            // 
-            this.jobTxt.Location = new System.Drawing.Point(69, 397);
-            this.jobTxt.Margin = new System.Windows.Forms.Padding(6);
-            this.jobTxt.Name = "jobTxt";
-            this.jobTxt.Size = new System.Drawing.Size(196, 31);
-            this.jobTxt.TabIndex = 6;
-            // 
             // clearBtn
             // 
             this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,6 +132,7 @@ namespace workflowLoginForm
             this.boxOccupation.Name = "boxOccupation";
             this.boxOccupation.Size = new System.Drawing.Size(196, 33);
             this.boxOccupation.TabIndex = 8;
+            this.boxOccupation.SelectedIndexChanged += new System.EventHandler(this.boxOccupation_SelectedIndexChanged);
             // 
             // RegisterForm
             // 
@@ -149,7 +141,6 @@ namespace workflowLoginForm
             this.ClientSize = new System.Drawing.Size(880, 465);
             this.Controls.Add(this.boxOccupation);
             this.Controls.Add(this.clearBtn);
-            this.Controls.Add(this.jobTxt);
             this.Controls.Add(this.jobLbl);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.passwordTxt);
@@ -172,8 +163,12 @@ namespace workflowLoginForm
         private System.Windows.Forms.TextBox passwordTxt;
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.Label jobLbl;
-        private System.Windows.Forms.TextBox jobTxt;
         private System.Windows.Forms.Button clearBtn;
+<<<<<<< HEAD
         private System.Windows.Forms.ComboBox boxOccupation;
+=======
+        private System.Windows.Forms.TextBox confirmpasswordtxt;
+        private System.Windows.Forms.Label label1;
+>>>>>>> 56d752f231af6a7b5b0d12d4a3a61cebd9291111
     }
 }
