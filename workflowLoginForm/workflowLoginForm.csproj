@@ -143,9 +143,9 @@
       <Project>{47487F1E-DA52-4B50-B5F7-745991FA5854}</Project>
       <Name>QualityAnalyzer</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ReportManager\ReportManager.csproj">
-      <Project>{3C11B43F-AE70-4E71-8FFB-342C2F62F593}</Project>
-      <Name>ReportManager</Name>
+    <ProjectReference Include="..\ReportManagerPage\ReportManagerPage.csproj">
+      <Project>{E93131EE-D14F-43C4-A36D-48ED1720EBB3}</Project>
+      <Name>ReportManagerPage</Name>
     </ProjectReference>
     <ProjectReference Include="..\StockiestScreen\StockiestScreen.csproj">
       <Project>{1DD5E0C5-2ADE-4D1D-B9CD-2CB9E8B56914}</Project>

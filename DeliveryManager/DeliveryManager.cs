@@ -25,9 +25,7 @@ namespace DeliveryManager
 
         private void Logout_Click(object sender, EventArgs e)
         {
-           // System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenLoginForm));//create new display thing called dispaly
-          //  this.Close(); //close current display
-           // display.Start();//open new display
+            this.Close(); //close current display
         }
        
     }

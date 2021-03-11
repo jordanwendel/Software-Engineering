@@ -42,7 +42,6 @@
             this.Admin.TabIndex = 2;
             this.Admin.Text = "REPORT MANAGER";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
             // Logout
             // 
@@ -63,6 +62,7 @@
             this.Controls.Add(this.Admin);
             this.Name = "RepManager";
             this.Text = "ReportManager";
+            this.Load += new System.EventHandler(this.RepManager_Load_1);
             this.ResumeLayout(false);
 
         }

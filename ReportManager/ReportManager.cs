@@ -17,20 +17,14 @@ namespace ReportManager
             InitializeComponent();
         }
 
-        private void Admin_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenLoginForm));//create new display thing called dispaly
             this.Close(); //close current display
-            display.Start();//open new display
         }
-        public static void OpenLoginForm()
+        private void RepManager_Load_1(object sender, EventArgs e)
         {
-            Application.Run(new RepManager());
+
         }
     }
 }

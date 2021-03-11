@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.Stockiest = new System.Windows.Forms.Label();
+            this.Logout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Stockiest
             // 
             this.Stockiest.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stockiest.Location = new System.Drawing.Point(115, 194);
+            this.Stockiest.Location = new System.Drawing.Point(38, 49);
             this.Stockiest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Stockiest.Name = "Stockiest";
             this.Stockiest.Size = new System.Drawing.Size(571, 62);
@@ -42,11 +43,22 @@
             this.Stockiest.Text = "STOCKIEST PAGE";
             this.Stockiest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Logout
+            // 
+            this.Logout.Location = new System.Drawing.Point(232, 222);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(188, 63);
+            this.Logout.TabIndex = 5;
+            this.Logout.Text = "Logout";
+            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 360);
+            this.Controls.Add(this.Logout);
             this.Controls.Add(this.Stockiest);
             this.Name = "Stock";
             this.Text = "Stockiest";
@@ -58,6 +70,7 @@
         #endregion
 
         private System.Windows.Forms.Label Stockiest;
+        private System.Windows.Forms.Button Logout;
     }
 }
 

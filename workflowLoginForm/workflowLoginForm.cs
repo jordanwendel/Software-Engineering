@@ -13,7 +13,7 @@ using StockiestScreen;
 using ProductManager;
 using QualityAnalyzer;
 using DeliveryManager;
-using ReportManager;
+using ReportManagerPage;
 
 namespace workflowLoginForm
 {
@@ -108,40 +108,59 @@ namespace workflowLoginForm
                     MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     if(getAuthorizedjob(txtUserName.Text)=="Administrator")
-                    { 
-                        System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenAdminPage));//create new display thing called dispaly
-                        this.Close(); //close current display
-                        display.Start();//open new display
+                    {
+                        this.Hide(); //close current display
+                        Administrator Admin = new Administrator();
+                        Admin.ShowDialog();//open new display
+                        txtUserName.Text = string.Empty; // Clear username text
+                        txtPassword.Text = string.Empty;
+                        this.Show();
                     }
                     else if (getAuthorizedjob(txtUserName.Text) == "Stockiest")
                     {
-                        System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenStockiestPage));//create new display thing called dispaly
-                        this.Close(); //close current display
-                        display.Start();//open new display
+                        this.Hide(); //close current display
+                        Stock Stockpage = new Stock();
+                        Stockpage.ShowDialog();//open new display
+                        txtUserName.Text = string.Empty; // Clear username text
+                        txtPassword.Text = string.Empty;
+                        this.Show();
                     }
                     else if (getAuthorizedjob(txtUserName.Text) == "Product Manager")
                     {
-                        System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenProductManagerPage));//create new display thing called dispaly
-                        this.Close(); //close current display
-                        display.Start();//open new display
+                        this.Hide(); //close current display
+                        ProdMan Prodpage = new ProdMan();
+                        Prodpage.ShowDialog();//open new display
+                        txtUserName.Text = string.Empty; // Clear username text
+                        txtPassword.Text = string.Empty;
+                        this.Show();
                     }
                     else if (getAuthorizedjob(txtUserName.Text) == "Quality Analyzer")
                     {
-                        System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenQualityAnalyzerPage));//create new display thing called dispaly
-                        this.Close(); //close current display
-                        display.Start();//open new display
+                        this.Hide(); //close current display
+                        QualAnalyzer Qualpage = new QualAnalyzer();
+                        Qualpage.ShowDialog();//open new display
+                        txtUserName.Text = string.Empty; // Clear username text
+                        txtPassword.Text = string.Empty;
+                        this.Show();
                     }
                     else if (getAuthorizedjob(txtUserName.Text) == "Delivery Manager")
                     {
-                        System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenDeliveryManagerPage));//create new display thing called dispaly
-                        this.Close(); //close current display
-                        display.Start();//open new display
+                        this.Hide(); //close current display
+                        DelManager dpage = new DelManager();
+                        dpage.ShowDialog();//open new display
+                        txtUserName.Text = string.Empty; // Clear username text
+                        txtPassword.Text = string.Empty;
+                        this.Show();
+                        
                     }
                     else if (getAuthorizedjob(txtUserName.Text) == "Report Manager")
                     {
-                        System.Threading.Thread display = new System.Threading.Thread(new System.Threading.ThreadStart(OpenReportManagerPage));//create new display thing called dispaly
-                        this.Close(); //close current display
-                        display.Start();//open new display
+                        this.Hide(); //close current display
+                        ReportManager Reppage = new ReportManager();
+                        Reppage.ShowDialog();//open new display
+                        txtUserName.Text = string.Empty; // Clear username text
+                        txtPassword.Text = string.Empty;
+                        this.Show();
                     }
                 }
                 else // Incorrect password
@@ -177,31 +196,6 @@ namespace workflowLoginForm
             RegisterForm rform = new RegisterForm(); // Creates instance of Register Form class
             rform.ShowDialog(); // Shows the register form on the screen
         }
-        //open new page (currenlty only linked to administrator page)
-        public static void OpenAdminPage()
-        {
-                Application.Run(new Administrator());
-        }
-        public static void OpenStockiestPage()
-        {
-            Application.Run(new Stock());
-
-        }
-        public static void OpenProductManagerPage()
-        {
-            Application.Run(new ProdMan());
-        }
-        public static void OpenQualityAnalyzerPage()
-        {
-            Application.Run(new QualAnalyzer());
-        }
-        public static void OpenDeliveryManagerPage()
-        {
-            Application.Run(new DelManager());
-        }
-        public static void OpenReportManagerPage()
-        {
-            //Application.Run(new RepManager());
-        }
+       
     }
 }

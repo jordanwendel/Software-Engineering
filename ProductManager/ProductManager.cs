@@ -21,5 +21,10 @@ namespace ProductManager
         {
 
         }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
