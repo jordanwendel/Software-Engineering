@@ -25,7 +25,7 @@ namespace workflowLoginForm
         {
             passwordTxt.Text = String.Empty; // Empty password text
             usernameTxt.Text = String.Empty; // Empty username text
-            jobTxt.Text = String.Empty; // Empty user job text
+            boxOccupation.Text = String.Empty; // Empty user job text
         }
 
         // Event handler for Register button click
@@ -38,7 +38,7 @@ namespace workflowLoginForm
             SqlCommand one = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", connectionOne); // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
             one.Parameters.AddWithValue("@username", usernameTxt.Text); // Database uses the username text and puts it into the username column
             one.Parameters.AddWithValue("@password", passwordTxt.Text); // Database uses the password text and puts it into the userpassword column
-            one.Parameters.AddWithValue("@job", jobTxt.Text); // Database uses the job text and puts it into the userjob column
+            one.Parameters.AddWithValue("@job", boxOccupation.Text); // Database uses the job text and puts it into the userjob column
 
             connectionOne.Open(); // Open the sql connection
             one.ExecuteNonQuery(); // Execute the sql command
@@ -48,10 +48,7 @@ namespace workflowLoginForm
             // Clear values for other users
             usernameTxt.Clear();
             passwordTxt.Clear();
-            jobTxt.Clear();
+            boxOccupation.Text = String.Empty;
         }
-
-  
-
     }
 }
