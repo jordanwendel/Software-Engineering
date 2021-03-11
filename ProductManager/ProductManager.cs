@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Product;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,13 @@ namespace ProductManager
         private void Logout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            ProdForm Stockpage = new ProdForm();
+            Stockpage.ShowDialog();//open new display
+            this.Show();
         }
     }
 }

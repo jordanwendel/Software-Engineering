@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace Product
 {
-    public partial class ProductForm : Form
+    public partial class ProdForm : Form
     {
         // Constructor
-        public ProductForm()
+        public ProdForm()
         {
             InitializeComponent();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace Product
 {
-    partial class ProductForm
+    partial class ProdForm
     {
         /// <summary>
         /// Required designer variable.
@@ -147,7 +147,7 @@ namespace Product
             this.txtQuality.Size = new System.Drawing.Size(288, 22);
             this.txtQuality.TabIndex = 13;
             // 
-            // ProductForm
+            // ProdForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,7 +164,7 @@ namespace Product
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtQuality);
-            this.Name = "ProductForm";
+            this.Name = "ProdForm";
             this.Text = "Prodcut Form";
             this.ResumeLayout(false);
             this.PerformLayout();

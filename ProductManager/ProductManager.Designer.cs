@@ -30,6 +30,7 @@
         {
             this.Admin = new System.Windows.Forms.Label();
             this.Logout = new System.Windows.Forms.Button();
+            this.btnProduct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Admin
@@ -53,11 +54,22 @@
             this.Logout.UseVisualStyleBackColor = true;
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
+            // btnProduct
+            // 
+            this.btnProduct.Location = new System.Drawing.Point(532, 310);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(163, 46);
+            this.btnProduct.TabIndex = 10;
+            this.btnProduct.Text = "To Product DatabaseForm";
+            this.btnProduct.UseVisualStyleBackColor = true;
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
             // ProdMan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnProduct);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
             this.Name = "ProdMan";
@@ -71,6 +83,7 @@
 
         private System.Windows.Forms.Label Admin;
         private System.Windows.Forms.Button Logout;
+        private System.Windows.Forms.Button btnProduct;
     }
 }
 
