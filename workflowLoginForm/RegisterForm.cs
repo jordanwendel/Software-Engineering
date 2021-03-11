@@ -32,26 +32,37 @@ namespace workflowLoginForm
         private void registerBtn_Click(object sender, EventArgs e)
         {
             // FIX PATH
-            string con = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\jwend\source\Repo\workflowLoginForm\UserLoginData.mdf"; // Connection string
-            SqlConnection connectionOne = new SqlConnection(con); // Creating an instance of the database
+            if(passwordTxt.Text == confirmpasswordtxt.Text)
+            {
+            //C: \Users\jwend\source\Repo\workflowLoginForm\UserLoginData.mdf"
+                string con = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf"; // Connection string
+                SqlConnection connectionOne = new SqlConnection(con); // Creating an instance of the database
 
-            SqlCommand one = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", connectionOne); // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
-            one.Parameters.AddWithValue("@username", usernameTxt.Text); // Database uses the username text and puts it into the username column
-            one.Parameters.AddWithValue("@password", passwordTxt.Text); // Database uses the password text and puts it into the userpassword column
-            one.Parameters.AddWithValue("@job", jobTxt.Text); // Database uses the job text and puts it into the userjob column
+                SqlCommand one = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", connectionOne); // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
+                one.Parameters.AddWithValue("@username", usernameTxt.Text); // Database uses the username text and puts it into the username column
+                one.Parameters.AddWithValue("@password", passwordTxt.Text); // Database uses the password text and puts it into the userpassword column
+                one.Parameters.AddWithValue("@job", jobTxt.Text); // Database uses the job text and puts it into the userjob column
 
-            connectionOne.Open(); // Open the sql connection
-            one.ExecuteNonQuery(); // Execute the sql command
-            connectionOne.Close(); // Close the sql connection
-            MessageBox.Show("Sucessfully Registered!");
+                connectionOne.Open(); // Open the sql connection
+                one.ExecuteNonQuery(); // Execute the sql command
+                connectionOne.Close(); // Close the sql connection
+                MessageBox.Show("Sucessfully Registered!");
 
-            // Clear values for other users
-            usernameTxt.Clear();
-            passwordTxt.Clear();
-            jobTxt.Clear();
+                // Clear values for other users
+                usernameTxt.Clear();
+                passwordTxt.Clear();
+                jobTxt.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+           
         }
 
-  
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
