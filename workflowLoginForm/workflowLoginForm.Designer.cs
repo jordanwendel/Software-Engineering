@@ -130,6 +130,8 @@ namespace workflowLoginForm
             // 
             // registerBtn
             // 
+            this.registerBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.registerBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.Location = new System.Drawing.Point(312, 451);
             this.registerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.registerBtn.Name = "registerBtn";
