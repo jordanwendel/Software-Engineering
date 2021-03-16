@@ -63,12 +63,67 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrator.cs" />
+    <Compile Include="AdministratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdministratorForm.Designer.cs">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeliveryManager.cs" />
+    <Compile Include="DeliveryManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryManagerForm.Designer.cs">
+      <DependentUpon>DeliveryManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductManager.cs" />
+    <Compile Include="ProductManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductManagerForm.Designer.cs">
+      <DependentUpon>ProductManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QualityAnalyzer.cs" />
+    <Compile Include="QualityAnalyzerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QualityAnalyzerForm.Designer.cs">
+      <DependentUpon>QualityAnalyzerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsForm.Designer.cs">
+      <DependentUpon>RawMaterialsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReportManager.cs" />
+    <Compile Include="ReportManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportManagerForm.Designer.cs">
+      <DependentUpon>ReportManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stockiest.cs" />
+    <Compile Include="StockiestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockiestForm.Designer.cs">
+      <DependentUpon>StockiestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="workflowLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +132,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdministratorForm.resx">
+      <DependentUpon>AdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeliveryManagerForm.resx">
+      <DependentUpon>DeliveryManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductManagerForm.resx">
+      <DependentUpon>ProductManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -86,8 +153,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QualityAnalyzerForm.resx">
+      <DependentUpon>QualityAnalyzerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsForm.resx">
+      <DependentUpon>RawMaterialsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportManagerForm.resx">
+      <DependentUpon>ReportManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StockiestForm.resx">
+      <DependentUpon>StockiestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="workflowLoginForm.resx">
       <DependentUpon>workflowLoginForm.cs</DependentUpon>

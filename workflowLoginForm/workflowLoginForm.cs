@@ -19,6 +19,12 @@ namespace workflowLoginForm
 {
     public partial class workflowLoginForm : Form
     {
+        User user;
+        DeliveryManagerForm delManager;
+        AdministratorForm Admin;
+        ProductManagerForm prodMan;
+        ReportManagerForm Reppage;
+
         // Constructor
         public workflowLoginForm()
         {
@@ -110,7 +116,7 @@ namespace workflowLoginForm
                     if(getAuthorizedjob(txtUserName.Text)=="Administrator")
                     {
                         this.Hide(); //close current display
-                        Administrator Admin = new Administrator();
+                        Admin = new AdministratorForm();
                         Admin.ShowDialog();//open new display
                         txtUserName.Text = string.Empty; // Clear username text
                         txtPassword.Text = string.Empty;
@@ -128,8 +134,8 @@ namespace workflowLoginForm
                     else if (getAuthorizedjob(txtUserName.Text) == "Product Manager")
                     {
                         this.Hide(); //close current display
-                        ProdMan Prodpage = new ProdMan();
-                        Prodpage.ShowDialog();//open new display
+                        prodMan = new ProductManagerForm();
+                        prodMan.ShowDialog();//open new display
                         txtUserName.Text = string.Empty; // Clear username text
                         txtPassword.Text = string.Empty;
                         this.Show();
@@ -146,8 +152,8 @@ namespace workflowLoginForm
                     else if (getAuthorizedjob(txtUserName.Text) == "Delivery Manager")
                     {
                         this.Hide(); //close current display
-                        DelManager dpage = new DelManager();
-                        dpage.ShowDialog();//open new display
+                        delManager = new DeliveryManager();
+                        delManager.ShowDialog();//open new display
                         txtUserName.Text = string.Empty; // Clear username text
                         txtPassword.Text = string.Empty;
                         this.Show();
@@ -156,7 +162,7 @@ namespace workflowLoginForm
                     else if (getAuthorizedjob(txtUserName.Text) == "Report Manager")
                     {
                         this.Hide(); //close current display
-                        ReportManager Reppage = new ReportManager();
+                        Reppage = new ReportManager();
                         Reppage.ShowDialog();//open new display
                         txtUserName.Text = string.Empty; // Clear username text
                         txtPassword.Text = string.Empty;

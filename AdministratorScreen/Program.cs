@@ -16,7 +16,7 @@ namespace AdministratorScreen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Administrator());
+            Application.Run(new AdministratorForm());
         }
     }
 }

@@ -32,18 +32,20 @@ namespace workflowLoginForm
         // Event handler for Register button click
         private void registerBtn_Click(object sender, EventArgs e)
         {
+            User user = new User(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Create a new user with entered values
+
             // FIX PATH
-            if(passwordTxt.Text == confirmpasswordtxt.Text)
+            if(user.getPassword() == confirmpasswordtxt.Text)
             {
                     //C: \Users\jwend\source\Repo\workflowLoginForm\UserLoginData.mdf"
-                    string con = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf"; // Connection string
+                    string con = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C: \Users\jwend\source\Repo\workflowLoginForm\UserLoginData.mdf"; // Connection string
                     SqlConnection connectionOne = new SqlConnection(con); // Creating an instance of the database
 
                     // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
                     SqlCommand one = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", connectionOne);
-                    one.Parameters.AddWithValue("@username", usernameTxt.Text); 
-                    one.Parameters.AddWithValue("@password", passwordTxt.Text); 
-                    one.Parameters.AddWithValue("@job", boxOccupation.Text); 
+                    one.Parameters.AddWithValue("@username", user.getUsername()); 
+                    one.Parameters.AddWithValue("@password", user.getPassword()); 
+                    one.Parameters.AddWithValue("@job", user.getJob()); 
 
                     connectionOne.Open(); // Open the sql connection
                     one.ExecuteNonQuery(); // Execute the sql command
