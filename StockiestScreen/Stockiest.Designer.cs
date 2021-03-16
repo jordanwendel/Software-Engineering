@@ -30,6 +30,7 @@
         {
             this.Stockiest = new System.Windows.Forms.Label();
             this.Logout = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Stockiest
@@ -45,7 +46,7 @@
             // 
             // Logout
             // 
-            this.Logout.Location = new System.Drawing.Point(232, 222);
+            this.Logout.Location = new System.Drawing.Point(134, 222);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(188, 63);
             this.Logout.TabIndex = 5;
@@ -53,11 +54,22 @@
             this.Logout.UseVisualStyleBackColor = true;
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(385, 222);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 63);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "To Materials Database Form";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Stock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 360);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Stockiest);
             this.Name = "Stock";
@@ -71,6 +83,7 @@
 
         private System.Windows.Forms.Label Stockiest;
         private System.Windows.Forms.Button Logout;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -11,10 +11,10 @@ using System.Data.SqlClient;
 
 namespace RawMaterials
 {
-    public partial class RawMaterials : Form
+    public partial class RawMats : Form
     {
         // Constructor
-        public RawMaterials()
+        public RawMats()
         {
             InitializeComponent();
         }
@@ -54,6 +54,10 @@ namespace RawMaterials
             Application.Exit();
         }
 
+        private void RawMaterials_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

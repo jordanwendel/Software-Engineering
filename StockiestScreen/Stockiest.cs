@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RawMaterials;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,13 @@ namespace StockiestScreen
         private void Logout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RawMats Stockpage = new RawMats();
+            Stockpage.ShowDialog();//open new display
+            this.Show();
         }
     }
 }

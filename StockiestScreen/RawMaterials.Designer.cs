@@ -1,7 +1,7 @@
 ﻿
 namespace RawMaterials
 {
-    partial class RawMaterials
+    partial class RawMats
     {
         /// <summary>
         /// Required designer variable.
@@ -45,20 +45,18 @@ namespace RawMaterials
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRawMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRawMat.Location = new System.Drawing.Point(191, 77);
-            this.lblRawMat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRawMat.Location = new System.Drawing.Point(127, 49);
             this.lblRawMat.Name = "lblRawMat";
-            this.lblRawMat.Size = new System.Drawing.Size(676, 89);
+            this.lblRawMat.Size = new System.Drawing.Size(451, 57);
             this.lblRawMat.TabIndex = 24;
             this.lblRawMat.Text = "Raw Materials Forms";
             this.lblRawMat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(824, 405);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnExit.Location = new System.Drawing.Point(549, 259);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(112, 36);
+            this.btnExit.Size = new System.Drawing.Size(75, 23);
             this.btnExit.TabIndex = 23;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -66,10 +64,9 @@ namespace RawMaterials
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(186, 334);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(124, 214);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 34);
+            this.label3.Size = new System.Drawing.Size(162, 22);
             this.label3.TabIndex = 20;
             this.label3.Text = "Quantity of Raw Material";
             // 
@@ -77,27 +74,24 @@ namespace RawMaterials
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(186, 243);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(124, 156);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(243, 25);
+            this.lblName.Size = new System.Drawing.Size(166, 17);
             this.lblName.TabIndex = 19;
             this.lblName.Text = "Name of Raw Material";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(186, 188);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(124, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 34);
+            this.label1.Size = new System.Drawing.Size(162, 22);
             this.label1.TabIndex = 17;
             // 
             // btnInsertInformation
             // 
-            this.btnInsertInformation.Location = new System.Drawing.Point(480, 405);
-            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnInsertInformation.Location = new System.Drawing.Point(320, 259);
             this.btnInsertInformation.Name = "btnInsertInformation";
-            this.btnInsertInformation.Size = new System.Drawing.Size(280, 36);
+            this.btnInsertInformation.Size = new System.Drawing.Size(187, 23);
             this.btnInsertInformation.TabIndex = 16;
             this.btnInsertInformation.Text = "Insert into Database";
             this.btnInsertInformation.UseVisualStyleBackColor = true;
@@ -105,25 +99,23 @@ namespace RawMaterials
             // 
             // txtRawMatName
             // 
-            this.txtRawMatName.Location = new System.Drawing.Point(438, 237);
-            this.txtRawMatName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRawMatName.Location = new System.Drawing.Point(292, 152);
             this.txtRawMatName.Name = "txtRawMatName";
-            this.txtRawMatName.Size = new System.Drawing.Size(430, 31);
+            this.txtRawMatName.Size = new System.Drawing.Size(288, 22);
             this.txtRawMatName.TabIndex = 14;
             // 
             // txtRawMatQuanity
             // 
-            this.txtRawMatQuanity.Location = new System.Drawing.Point(437, 331);
-            this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtRawMatQuanity.Location = new System.Drawing.Point(291, 212);
             this.txtRawMatQuanity.Name = "txtRawMatQuanity";
-            this.txtRawMatQuanity.Size = new System.Drawing.Size(430, 31);
+            this.txtRawMatQuanity.Size = new System.Drawing.Size(288, 22);
             this.txtRawMatQuanity.TabIndex = 13;
             // 
-            // RawMaterials
+            // RawMats
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblRawMat);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label3);
@@ -132,9 +124,9 @@ namespace RawMaterials
             this.Controls.Add(this.btnInsertInformation);
             this.Controls.Add(this.txtRawMatName);
             this.Controls.Add(this.txtRawMatQuanity);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "RawMaterials";
+            this.Name = "RawMats";
             this.Text = "Prodcut Form";
+            this.Load += new System.EventHandler(this.RawMaterials_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
