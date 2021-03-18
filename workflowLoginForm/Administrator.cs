@@ -13,10 +13,6 @@ namespace workflowLoginForm
             // Inherits user job from user class
         }
 
-        private void addNewUser(string username, string password, string job)
-        {
-            User user = new User(username, password, job);
-        }
 
         private void editUser()
         {
@@ -29,26 +25,31 @@ namespace workflowLoginForm
             clearUser();
         }
 
-        // Here is a list of functionality that the admin is allowed to do accordign to the requirement sheet
+        // Here is a list of functionality that the admin is allowed to do according to the requirement sheet
 
         /// MARK: REGISTRATION
-        /// Enter user details
-        /// Select type of the user
-        /// Validate Details
-        /// Generate User ID, Password
-        /// Update Details
-        /// Login Generation
-       
+        // Enter user details
+        private void addNewUser(string username, string password, string job)
+        {
+            User user = new User(username, password, job);
+        }
+
+        // Select type of the user
+        // Validate Details
+        // Generate User ID, Password
+        // Update Details
+        // Login Generation
+
 
         /// MARK: STOCK MANAGEMENT
-        /// Login
-        /// View Stock Status
-        /// Add raw materials
-        /// Validate details
-        /// Generate ID
-        /// Update stock
-        /// View report
-        
+        // Login
+        // View Stock Status
+        // Add raw materials
+        // Validate details
+        // Generate ID
+        // Update stock
+        // View report
+
 
         /// MARK: PRODUCT MANAGEMENT
         /// Login
@@ -62,7 +63,7 @@ namespace workflowLoginForm
         /// Generate ID for product
         /// Update product
         /// View report
-        
+
 
         /// MARK: QUALITY ASSESSMENT
         /// Login
@@ -70,7 +71,7 @@ namespace workflowLoginForm
         /// Check product quality
         /// Update product status
         /// View report
-        
+
 
         /// MARK: DELIVERY MANAGEMENT
         /// Login
@@ -79,7 +80,7 @@ namespace workflowLoginForm
         /// Sales of qualified products
         /// Update stock details
         /// View report
-        
+
 
         /// MARK: REPORT MANAGEMENT
         /// Login
@@ -89,5 +90,5 @@ namespace workflowLoginForm
         /// Defective products report
 
 
-    }
+}
 }

@@ -8,12 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using AdministratorScreen;
-using StockiestScreen;
-using ProductManager;
-using QualityAnalyzer;
-using DeliveryManager;
-using ReportManagerPage;
 
 namespace workflowLoginForm
 {
@@ -24,6 +18,7 @@ namespace workflowLoginForm
         private AdministratorForm Admin;
         private ProductManagerForm prodMan;
         private ReportManagerForm Reppage;
+        private DatabaseTools dbTools;
 
         // Constructor
         public workflowLoginForm()
@@ -105,6 +100,12 @@ namespace workflowLoginForm
         private void loginBtn_Click(object sender, EventArgs e)
         {
             string enteredPassword = txtPassword.Text;
+            string enteredUsername = txtUserName.Text;
+
+            // NEED TO GET A USER JOB FROM LOG IN
+            user = new User(enteredUsername, enteredPassword); // Logging in the current user
+            string job = user.getJob();
+
             // Error catching 
             try
             {

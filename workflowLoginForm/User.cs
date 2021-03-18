@@ -19,12 +19,11 @@ namespace workflowLoginForm
 
         }
 
-        // Constructor with values
-        public User (string username, string password, string job)
+        // Constructor with values for login
+        public User (string username, string password)
         {
             this.username = username;
             this.password = password;
-            this.job = job;
         }
 
         public User (string job)
