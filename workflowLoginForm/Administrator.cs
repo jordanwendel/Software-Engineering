@@ -68,8 +68,25 @@ namespace workflowLoginForm
         /// Login
         /// View products
         /// Check product quality
-        /// MARK: DELIVERING PRODUCT
-        /// MARK: REPORT
+        /// Update product status
+        /// View report
+        
+
+        /// MARK: DELIVERY MANAGEMENT
+        /// Login
+        /// View the product
+        /// Find qualified product
+        /// Sales of qualified products
+        /// Update stock details
+        /// View report
+        
+
+        /// MARK: REPORT MANAGEMENT
+        /// Login
+        /// Raw materials report
+        /// Product in progress report
+        /// Qualified products report
+        /// Defective products report
 
 
     }
