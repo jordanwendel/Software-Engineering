@@ -79,11 +79,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ProductDatabaseForm\ProductDatabaseForm.csproj">
-      <Project>{8311A842-32FA-40DD-B0ED-FA25D943171F}</Project>
-      <Name>ProductDatabaseForm</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

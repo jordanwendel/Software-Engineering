@@ -14,7 +14,7 @@ namespace workflowLoginForm
     public partial class DeliveryManagerForm : Form
     {
 
-        DeliveryManager delManager;
+        private DeliveryManager delManager;
 
         public DeliveryManagerForm()
         {

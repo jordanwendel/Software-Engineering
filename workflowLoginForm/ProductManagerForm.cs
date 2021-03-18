@@ -12,8 +12,8 @@ namespace workflowLoginForm
 {
     public partial class ProductManagerForm : Form
     {
-        ProductForm stockpage;
-        ProductManager prodMan;
+        private ProductForm stockpage;
+        private ProductManager prodMan;
         public ProductManagerForm()
         {
             InitializeComponent();

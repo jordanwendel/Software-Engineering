@@ -13,8 +13,8 @@ namespace workflowLoginForm
 {
     public partial class StockiestForm : Form
     {
-        Stockiest s;
-        RawMaterialsForm stockpage;
+        private Stockiest s;
+        private RawMaterialsForm stockpage;
         public StockiestForm()
         {
             InitializeComponent();

@@ -12,7 +12,7 @@ namespace workflowLoginForm
 {
     public partial class AdministratorForm : Form
     {
-        Administrator admin;
+        private Administrator admin;
 
         public AdministratorForm()
         {

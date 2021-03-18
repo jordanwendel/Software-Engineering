@@ -13,11 +13,63 @@ namespace workflowLoginForm
             // Inherits user job from user class
         }
 
+        private void addNewUser(string username, string password, string job)
+        {
+            User user = new User(username, password, job);
+        }
+
+        private void editUser()
+        {
+
+        }
+        
         // Log out
         public void logOut()
         {
             clearUser();
         }
+
+        // Here is a list of functionality that the admin is allowed to do accordign to the requirement sheet
+
+        /// MARK: REGISTRATION
+        /// Enter user details
+        /// Select type of the user
+        /// Validate Details
+        /// Generate User ID, Password
+        /// Update Details
+        /// Login Generation
+       
+
+        /// MARK: STOCK MANAGEMENT
+        /// Login
+        /// View Stock Status
+        /// Add raw materials
+        /// Validate details
+        /// Generate ID
+        /// Update stock
+        /// View report
+        
+
+        /// MARK: PRODUCT MANAGEMENT
+        /// Login
+        /// View raw material stock
+        /// Select items
+        /// Validation
+        /// Reduce stock of raw materials
+        /// Re-order stock of raw materials
+        /// Update stock status
+        /// Manufacture product
+        /// Generate ID for product
+        /// Update product
+        /// View report
+        
+
+        /// MARK: QUALITY ASSESSMENT
+        /// Login
+        /// View products
+        /// Check product quality
+        /// MARK: DELIVERING PRODUCT
+        /// MARK: REPORT
 
 
     }

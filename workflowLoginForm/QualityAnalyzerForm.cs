@@ -12,7 +12,7 @@ namespace workflowLoginForm
 {
     public partial class QualityAnalyzerForm : Form
     {
-        QualityAnalyzer q;
+        private QualityAnalyzer q;
         public QualityAnalyzerForm()
         {
             InitializeComponent();

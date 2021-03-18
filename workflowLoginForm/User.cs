@@ -42,9 +42,9 @@ namespace workflowLoginForm
         // Clear values when logging out
         public void clearUser()
         {
-            username = null;
-            password = null;
-            job = null;
+            username = string.Empty;
+            password = string.Empty;
+            job = string.Empty;
         }
 
     }

@@ -19,11 +19,11 @@ namespace workflowLoginForm
 {
     public partial class workflowLoginForm : Form
     {
-        User user;
-        DeliveryManagerForm delManager;
-        AdministratorForm Admin;
-        ProductManagerForm prodMan;
-        ReportManagerForm Reppage;
+        private User user;
+        private DeliveryManagerForm delManager;
+        private AdministratorForm Admin;
+        private ProductManagerForm prodMan;
+        private ReportManagerForm Reppage;
 
         // Constructor
         public workflowLoginForm()

@@ -1,6 +1,6 @@
-﻿namespace StockiestScreen
+﻿namespace workflowLoginForm
 {
-    partial class Stock
+    partial class StockiestForm
     {
         /// <summary>
         /// Required designer variable.

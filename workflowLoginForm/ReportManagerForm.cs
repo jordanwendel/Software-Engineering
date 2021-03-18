@@ -12,7 +12,7 @@ namespace workflowLoginForm
 {
     public partial class ReportManagerForm : Form
     {
-        ReportManager r;
+        private ReportManager r;
         public ReportManagerForm()
         {
             InitializeComponent();
