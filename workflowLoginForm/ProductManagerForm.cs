@@ -13,7 +13,6 @@ namespace workflowLoginForm
     public partial class ProductManagerForm : Form
     {
         private ProductForm stockpage;
-        private ProductManager prodMan;
         public ProductManagerForm()
         {
             InitializeComponent();
@@ -22,7 +21,6 @@ namespace workflowLoginForm
         private void Logout_Click(object sender, EventArgs e)
         { 
             this.Close();
-            prodMan.clearUser();
         }
 
         private void btnProduct_Click(object sender, EventArgs e)

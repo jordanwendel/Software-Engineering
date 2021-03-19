@@ -13,6 +13,7 @@ namespace workflowLoginForm
 {
     public partial class RegisterForm : Form
     {
+        private DatabaseTools dbTools;
 
         // Constructor
         public RegisterForm()
@@ -26,62 +27,34 @@ namespace workflowLoginForm
             // Clear text fields
             passwordTxt.Text = String.Empty; 
             usernameTxt.Text = String.Empty; 
-            boxOccupation.Text = String.Empty; 
+            boxOccupation.Text = String.Empty;
+            confirmpasswordtxt.Text = String.Empty;
         }
 
         // Event handler for Register button click
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            User user = new User(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Create a new user with entered values
+            dbTools = new DatabaseTools();
 
             // FIX PATH
-            if(user.getPassword() == confirmpasswordtxt.Text)
+            if(passwordTxt.Text.Equals(confirmpasswordtxt.Text))
             {
-                    //C: \Users\jwend\source\Repo\workflowLoginForm\UserLoginData.mdf"
-                    string con = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C: \Users\jwend\source\Repo\workflowLoginForm\UserLoginData.mdf"; // Connection string
-                    SqlConnection connectionOne = new SqlConnection(con); // Creating an instance of the database
+                dbTools.RegisterUser(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Register the user in the database
+                                        
+                // Clear values for other users
+                usernameTxt.Clear();
+                passwordTxt.Clear();
+                confirmpasswordtxt.Clear();
+                boxOccupation.Text = string.Empty;
 
-                    // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
-                    SqlCommand one = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", connectionOne);
-                    one.Parameters.AddWithValue("@username", user.getUsername()); 
-                    one.Parameters.AddWithValue("@password", user.getPassword()); 
-                    one.Parameters.AddWithValue("@job", user.getJob()); 
-
-                    connectionOne.Open(); // Open the sql connection
-                    one.ExecuteNonQuery(); // Execute the sql command
-                    connectionOne.Close(); // Close the sql connection
-                    MessageBox.Show("Sucessfully Registered!");
-
-                    // Clear values for other users
-                    usernameTxt.Clear();
-                    passwordTxt.Clear();
-                    boxOccupation.Text = String.Empty;
+                this.Hide();
             }
             else
             {
-                MessageBox.Show("Passwords do not match", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Passwords Do Not Match!", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
            
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void boxOccupation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

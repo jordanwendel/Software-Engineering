@@ -63,7 +63,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrator.cs" />
     <Compile Include="AdministratorForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,7 +70,6 @@
       <DependentUpon>AdministratorForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DatabaseTools.cs" />
-    <Compile Include="DeliveryManager.cs" />
     <Compile Include="DeliveryManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,14 +82,12 @@
     <Compile Include="ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductManager.cs" />
     <Compile Include="ProductManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ProductManagerForm.Designer.cs">
       <DependentUpon>ProductManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="QualityAnalyzer.cs" />
     <Compile Include="QualityAnalyzerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,14 +106,12 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportManager.cs" />
     <Compile Include="ReportManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ReportManagerForm.Designer.cs">
       <DependentUpon>ReportManagerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Stockiest.cs" />
     <Compile Include="StockiestForm.cs">
       <SubType>Form</SubType>
     </Compile>

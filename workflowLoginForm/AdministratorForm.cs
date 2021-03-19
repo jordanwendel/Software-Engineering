@@ -12,37 +12,60 @@ namespace workflowLoginForm
 {
     public partial class AdministratorForm : Form
     {
-        private Administrator admin;
+        private DeliveryManagerForm DeliveryManager;
+        private ProductManagerForm ProductManager;
+        private ReportManagerForm ReportManager;
+        private StockiestForm Stockpage;
+        private QualityAnalyzerForm QualityAnalyzer;
 
         public AdministratorForm()
         {
             InitializeComponent();
         }
 
-        private void Admin_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Logout_Click(object sender, EventArgs e)
         {
             this.Close();
-            admin.clearUser();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void stockiestBtn_Click(object sender, EventArgs e)
         {
-
+            Stockpage = new StockiestForm();
+            this.Hide();
+            Stockpage.ShowDialog();
+            this.Show();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void prodManagerBtn_Click(object sender, EventArgs e)
         {
-
+            ProductManager = new ProductManagerForm();
+            this.Hide();
+            ProductManager.ShowDialog();
+            this.Show();
         }
 
-        private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void delManagerBtn_Click(object sender, EventArgs e)
         {
+            DeliveryManager = new DeliveryManagerForm();
+            this.Hide();
+            DeliveryManager.ShowDialog();
+            this.Show();
+        }
 
+        private void repManagerBtn_Click(object sender, EventArgs e)
+        {
+            ReportManager = new ReportManagerForm();
+            this.Hide();
+            ReportManager.ShowDialog();
+            this.Show();
+        }
+
+        private void qualAnalyzerBtn_Click(object sender, EventArgs e)
+        {
+            QualityAnalyzer = new QualityAnalyzerForm();
+            this.Hide();
+            QualityAnalyzer.ShowDialog();
+            this.Show();
         }
     }
 }

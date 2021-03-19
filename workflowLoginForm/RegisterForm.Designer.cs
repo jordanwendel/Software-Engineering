@@ -65,7 +65,6 @@ namespace workflowLoginForm
             this.passwordLbl.TabIndex = 1;
             this.passwordLbl.Text = "Enter Password: ";
             this.passwordLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.passwordLbl.Click += new System.EventHandler(this.passwordLbl_Click);
             // 
             // usernameTxt
             // 
@@ -136,7 +135,6 @@ namespace workflowLoginForm
             this.boxOccupation.Name = "boxOccupation";
             this.boxOccupation.Size = new System.Drawing.Size(132, 24);
             this.boxOccupation.TabIndex = 8;
-            this.boxOccupation.SelectedIndexChanged += new System.EventHandler(this.boxOccupation_SelectedIndexChanged);
             // 
             // confirmpasswordtxt
             // 
@@ -159,7 +157,6 @@ namespace workflowLoginForm
             this.label1.TabIndex = 10;
             this.label1.Text = "Comfirm Password";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // RegisterForm
             // 

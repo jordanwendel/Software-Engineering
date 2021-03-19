@@ -14,8 +14,6 @@ namespace workflowLoginForm
     public partial class DeliveryManagerForm : Form
     {
 
-        private DeliveryManager delManager;
-
         public DeliveryManagerForm()
         {
             InitializeComponent();
@@ -24,8 +22,6 @@ namespace workflowLoginForm
         private void Logout_Click(object sender, EventArgs e)
         {
             this.Close();
-            //close current display
-            delManager.clearUser();
         }
        
     }

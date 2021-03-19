@@ -1,5 +1,4 @@
-﻿s
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +12,6 @@ namespace workflowLoginForm
 {
     public partial class StockiestForm : Form
     {
-        private Stockiest s;
         private RawMaterialsForm stockpage;
         public StockiestForm()
         {

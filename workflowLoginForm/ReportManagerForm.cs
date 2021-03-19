@@ -12,7 +12,6 @@ namespace workflowLoginForm
 {
     public partial class ReportManagerForm : Form
     {
-        private ReportManager r;
         public ReportManagerForm()
         {
             InitializeComponent();
@@ -20,7 +19,6 @@ namespace workflowLoginForm
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            r.clearUser();
             this.Close();
         }
     }

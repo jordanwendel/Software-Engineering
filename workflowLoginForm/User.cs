@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace workflowLoginForm
 {
-    public class User
+    class User
     {
+        private DatabaseTools databaseTools;
+
         // Variables
-        protected string username { get; set; }
-        protected string password { get; set; }
-        protected string job { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Job { get; set; }
 
         // Empty constructor
         public User ()
@@ -19,31 +21,25 @@ namespace workflowLoginForm
 
         }
 
-        // Constructor with values for login
+        // Constructor for login
         public User (string username, string password)
         {
-            this.username = username;
-            this.password = password;
+            databaseTools = new DatabaseTools();
+            this.Username = username;
+            this.Password = password;
+            this.Job = databaseTools.GetJob(username); // Sets job from the database
+            databaseTools.CloseConnection();
         }
 
-        public User (string job)
+
+        public bool hasRole(string job)
         {
-            this.job = job;
-        }
+            if (this.Job.Equals(job))
+            {
+                return true;
+            }
 
-        // Methods
-        public string getUsername() { return username; }
-        
-        public string getPassword() { return password; }
-
-        public string getJob() { return job; }
-
-        // Clear values when logging out
-        public void clearUser()
-        {
-            username = string.Empty;
-            password = string.Empty;
-            job = string.Empty;
+            return false;
         }
 
     }

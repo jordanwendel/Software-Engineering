@@ -13,88 +13,21 @@ namespace workflowLoginForm
 {
     public partial class workflowLoginForm : Form
     {
-        private User user;
-        private DeliveryManagerForm delManager;
+        private User loggedInUser;
+        private DeliveryManagerForm DeliveryManager;
         private AdministratorForm Admin;
-        private ProductManagerForm prodMan;
-        private ReportManagerForm Reppage;
-        private DatabaseTools dbTools;
+        private ProductManagerForm ProductManager;
+        private ReportManagerForm ReportManager;
+        private StockiestForm Stockpage;
+        private QualityAnalyzerForm QualityAnalyzer;
+        private DatabaseTools DbTools;
 
         // Constructor
         public workflowLoginForm()
         {
             InitializeComponent();
         }
-
-        private String getAuthorizedPassword(string userName)
-        {
-            // Object variables
-            SqlConnection cn = new SqlConnection(); // Establishing sql connection
-            SqlCommand cmd = new SqlCommand(); // Creating a sql command object
-            SqlDataReader dr; // Sql data reader
-
-            // Error catching
-            try
-            {
-                
-                cn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf"; // Connection string
-                cmd.Connection = cn;//connects command object to database
-                cmd.CommandText = "SELECT userPassword FROM AuthorizedUsers WHERE userName = @username"; //grabs password from associated username in database that matches the username input on the login screen
-                cmd.Parameters.AddWithValue("@username", userName);
-
-                //opens database, grabs and returns password
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-
-                return dr.GetString(0);
-            }
-            catch (Exception err) // Handles exception
-            {
-                //MessageBox.Show(err.Message, "Warning!");
-
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-        private String getAuthorizedjob(string userName)
-        {
-            // Object variables
-            SqlConnection cn = new SqlConnection(); // Establishing sql connection
-            SqlCommand cmd = new SqlCommand(); // Creating a sql command object
-            SqlDataReader dr; // Sql data reader
-
-            // Error catching
-            try
-            {
-
-                cn.ConnectionString = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\ian\Source\Repos\WORK-FLOW\workflowLoginForm\UserLoginData.mdf"; // Connection string
-                cmd.Connection = cn;//connects command object to database
-                cmd.CommandText = "SELECT userjob FROM AuthorizedUsers WHERE userName = @username"; //grabs j from associated username in database that matches the username input on the login screen
-                cmd.Parameters.AddWithValue("@username", userName);
-
-                //opens database, grabs and returns password
-                cn.Open();
-                dr = cmd.ExecuteReader();
-                dr.Read();
-
-                return dr.GetString(0);
-            }
-            catch (Exception err) // Handles exception
-            {
-                //MessageBox.Show(err.Message, "Warning!");
-
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
+      
 
         // Event handler for Login button click
         private void loginBtn_Click(object sender, EventArgs e)
@@ -102,85 +35,83 @@ namespace workflowLoginForm
             string enteredPassword = txtPassword.Text;
             string enteredUsername = txtUserName.Text;
 
-            // NEED TO GET A USER JOB FROM LOG IN
-            user = new User(enteredUsername, enteredPassword); // Logging in the current user
-            string job = user.getJob();
+            loggedInUser = new User(enteredUsername, enteredPassword); // Logging in the current user
 
-            // Error catching 
             try
             {
-                // Password validation
-                if (enteredPassword == getAuthorizedPassword(txtUserName.Text)) // Correct password
+                DbTools = new DatabaseTools();
+                if (DbTools.ValidatePassword(enteredUsername, enteredPassword).Equals(true))
                 {
                     MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    if(getAuthorizedjob(txtUserName.Text)=="Administrator")
+                    // May be better with an enum
+                    if (loggedInUser.Job.Equals("Administrator"))
                     {
-                        this.Hide(); //close current display
+                        this.Hide();
                         Admin = new AdministratorForm();
-                        Admin.ShowDialog();//open new display
-                        txtUserName.Text = string.Empty; // Clear username text
+                        Admin.ShowDialog();
+                        txtUserName.Text = string.Empty;
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (getAuthorizedjob(txtUserName.Text) == "Stockiest")
+                    else if (loggedInUser.Job.Equals("Delivery Manager"))
                     {
-                        this.Hide(); //close current display
-                        Stock Stockpage = new Stock();
-                        Stockpage.ShowDialog();//open new display
-                        txtUserName.Text = string.Empty; // Clear username text
+                        this.Hide();
+                        DeliveryManager = new DeliveryManagerForm();
+                        DeliveryManager.ShowDialog();
+                        txtUserName.Text = string.Empty;
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (getAuthorizedjob(txtUserName.Text) == "Product Manager")
+                    else if (loggedInUser.Job.Equals("Product Manager"))
                     {
-                        this.Hide(); //close current display
-                        prodMan = new ProductManagerForm();
-                        prodMan.ShowDialog();//open new display
-                        txtUserName.Text = string.Empty; // Clear username text
+                        this.Hide(); 
+                        ProductManager = new ProductManagerForm();
+                        ProductManager.ShowDialog();
+                        txtUserName.Text = string.Empty;
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (getAuthorizedjob(txtUserName.Text) == "Quality Analyzer")
+                    else if (loggedInUser.Job.Equals("Quality Analyzer"))
                     {
-                        this.Hide(); //close current display
-                        QualAnalyzer Qualpage = new QualAnalyzer();
-                        Qualpage.ShowDialog();//open new display
-                        txtUserName.Text = string.Empty; // Clear username text
+                        this.Hide();
+                        QualityAnalyzer = new QualityAnalyzerForm();
+                        QualityAnalyzer.ShowDialog();
+                        txtUserName.Text = string.Empty;
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (getAuthorizedjob(txtUserName.Text) == "Delivery Manager")
+                    else if (loggedInUser.Job.Equals("Report Manager"))
                     {
-                        this.Hide(); //close current display
-                        delManager = new DeliveryManager();
-                        delManager.ShowDialog();//open new display
-                        txtUserName.Text = string.Empty; // Clear username text
+                        this.Hide();
+                        ReportManager = new ReportManagerForm();
+                        ReportManager.ShowDialog();
+                        txtUserName.Text = string.Empty;
                         txtPassword.Text = string.Empty;
                         this.Show();
-                        
                     }
-                    else if (getAuthorizedjob(txtUserName.Text) == "Report Manager")
+                    else if (loggedInUser.Job.Equals("Stockiest"))
                     {
-                        this.Hide(); //close current display
-                        Reppage = new ReportManager();
-                        Reppage.ShowDialog();//open new display
-                        txtUserName.Text = string.Empty; // Clear username text
+                        this.Hide();
+                        Stockpage = new StockiestForm();
+                        Stockpage.ShowDialog();
+                        txtUserName.Text = string.Empty;
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
                 }
-                else // Incorrect password
-                {
+                else
+                {   // Incorrect password
                     MessageBox.Show("Invalid username or password", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtUserName.Focus();
                     txtUserName.SelectAll();
                 }
             }
-            catch (Exception err) // Error exception
+            catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Something Broke"); // Show error message
             }
+
         }
 
         // Event handler for Clear button click

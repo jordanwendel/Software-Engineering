@@ -12,7 +12,6 @@ namespace workflowLoginForm
 {
     public partial class QualityAnalyzerForm : Form
     {
-        private QualityAnalyzer q;
         public QualityAnalyzerForm()
         {
             InitializeComponent();
@@ -25,7 +24,6 @@ namespace workflowLoginForm
 
         private void Logout_Click(object sender, EventArgs e)
         {
-            q.clearUser();
             this.Close();
         }
     }
