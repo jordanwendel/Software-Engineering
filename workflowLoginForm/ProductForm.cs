@@ -19,14 +19,16 @@ namespace workflowLoginForm
             InitializeComponent();
         }
 
+        //create Product object
         private Product objProduct;
 
         // Event handler for Insert Information button
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
+            //assign objProduct
             objProduct = new Product(txtProductName.Text, txtQuality.Text, int.Parse(txtQuantity.Text), txtLocation.Text);
-            // string connection path
-
+           
+            //add item to the database
             objProduct.addProductInfo();
 
             MessageBox.Show("Item enterted Successfully");

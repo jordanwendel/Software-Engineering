@@ -19,28 +19,18 @@ namespace workflowLoginForm
             InitializeComponent();
         }
 
+        //create RawMeterial object
+        private RawMaterial objRawMaterial;
+
         // Event handler for Insert Information button
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
-            // string connection path
-            string con = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\justi\\Source\\Repos\\WORK - FLOW\\workflowLoginForm\\UserLoginData.mdf; Integrated Security = True"; 
+            //assign objRawMaterial
+            objRawMaterial = new RawMaterial(txtRawMatName.Text, int.Parse(txtRawMatQuanity.Text));
 
-            //create a new sql connection to 
-            SqlConnection connectionOne = new SqlConnection(con);
-            
-            // sql command to insert information into a sql database
-            SqlCommand one = new SqlCommand("Insert into RawMaterials(RawMaterialName, Quantity) Values(@RawMaterialName,  @Quantity);", connectionOne);
-            //add information from the text boxes into the databse itself
-            one.Parameters.AddWithValue("@RawMatName", txtRawMatName.Text);
-            one.Parameters.AddWithValue("@Quanity", txtRawMatQuanity.Text);
+            //add item to the database
+            objRawMaterial.addRawMaterialInfo();
 
-
-            //open connection
-            connectionOne.Open();
-            //execute the query above 
-            one.ExecuteNonQuery();
-            //close connection
-            connectionOne.Close();
             MessageBox.Show("Item enterted Successfully");
 
             //clear text boxes
