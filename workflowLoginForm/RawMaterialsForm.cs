@@ -13,29 +13,33 @@ namespace workflowLoginForm
 {
     public partial class RawMaterialsForm : Form
     {
+
+        private RawMaterial objRawMaterial;
+        private List<RawMaterial> rawMaterials; // For showing all raw materials
+
         // Constructor
         public RawMaterialsForm()
         {
             InitializeComponent();
         }
 
-        //create RawMeterial object
-        private RawMaterial objRawMaterial;
 
         // Event handler for Insert Information button
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
-            //assign objRawMaterial
-            objRawMaterial = new RawMaterial(txtRawMatName.Text, int.Parse(txtRawMatQuanity.Text));
+            try
+            {
+                objRawMaterial = new RawMaterial(txtRawMatName.Text, int.Parse(txtRawMatQuanity.Text)); // Create a new raw material object and put it into the RawMaterials database automatically
+                MessageBox.Show("Item enterted Successfully");
 
-            //add item to the database
-            objRawMaterial.addRawMaterialInfo();
-
-            MessageBox.Show("Item enterted Successfully");
-
-            //clear text boxes
-            txtRawMatName.Clear();
-            txtRawMatQuanity.Clear();
+                // Clear text boxes
+                txtRawMatName.Clear();
+                txtRawMatQuanity.Clear();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
         }
 
         // Event handler for Exit button click

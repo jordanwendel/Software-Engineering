@@ -36,10 +36,20 @@ namespace workflowLoginForm
         {
             dbTools = new DatabaseTools();
 
-            // FIX PATH
-            if(passwordTxt.Text.Equals(confirmpasswordtxt.Text))
+            if (passwordTxt.Text.Equals(confirmpasswordtxt.Text))
             {
-                dbTools.RegisterUser(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Register the user in the database
+                try
+                {
+                    dbTools.RegisterUser(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Register the user in the database
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Warning!");
+                }
+                finally
+                {
+                    dbTools.CloseConnection();
+                }
                                         
                 // Clear values for other users
                 usernameTxt.Clear();

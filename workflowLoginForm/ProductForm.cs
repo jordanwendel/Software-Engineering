@@ -13,31 +13,35 @@ namespace workflowLoginForm
 {
     public partial class ProductForm : Form
     {
+        private Product objProduct;
+        private List<Product> products; // For later use
+
         // Constructor
         public ProductForm()
         {
             InitializeComponent();
         }
 
-        //create Product object
-        private Product objProduct;
-
         // Event handler for Insert Information button
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
-            //assign objProduct
-            objProduct = new Product(txtProductName.Text, txtQuality.Text, int.Parse(txtQuantity.Text), txtLocation.Text);
-           
-            //add item to the database
-            objProduct.addProductInfo();
+            try
+            {
+                // Assign objProduct
+                objProduct = new Product(txtProductName.Text, txtQuality.Text, int.Parse(txtQuantity.Text), txtLocation.Text); // Create a new product object and put it into the Product database automatically
+                MessageBox.Show("Item enterted Successfully");
 
-            MessageBox.Show("Item enterted Successfully");
+                //clear text boxes
+                txtProductName.Clear();
+                txtQuality.Clear();
+                txtQuantity.Clear();
+                txtLocation.Clear();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
 
-            //clear text boxes
-            txtProductName.Clear();
-            txtQuality.Clear();
-            txtQuantity.Clear();
-            txtLocation.Clear();
         }
 
         // Event handler for Exit button click

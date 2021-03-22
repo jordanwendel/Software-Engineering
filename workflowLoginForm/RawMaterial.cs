@@ -4,48 +4,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace workflowLoginForm
 {
     class RawMaterial
     {
+        private DatabaseTools dbTools;
+
         private string rawMaterialName { get; set; }
         private int quantity { get; set; }
 
-        //default constructor
-        public RawMaterial()
-        {
 
-        }
-
-        //constructor
+        // Constructor
         public RawMaterial(string rawMaterialName, int quantity)
         {
+            dbTools = new DatabaseTools();
             this.rawMaterialName = rawMaterialName;
             this.quantity = quantity;
+
+            try
+            {
+                dbTools.AddRawMaterial(rawMaterialName, quantity); // Automatically enters the raw material into the database when called
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            
         }
 
-        public void addRawMaterialInfo()
-        {
-            // string connection path
-            string con = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\justi\\Source\\Repos\\WORK - FLOW\\workflowLoginForm\\UserLoginData.mdf; Integrated Security = True";
-
-            //create a new sql connection to 
-            SqlConnection connectionOne = new SqlConnection(con);
-
-            // sql command to insert information into a sql database
-            SqlCommand one = new SqlCommand("Insert into RawMaterials(RawMaterialName, Quantity) Values(@RawMaterialName,  @Quantity);", connectionOne);
-            //add information from the text boxes into the databse itself
-            one.Parameters.AddWithValue("@RawMatName", rawMaterialName);
-            one.Parameters.AddWithValue("@Quanity", quantity);
-
-
-            //open connection
-            connectionOne.Open();
-            //execute the query above 
-            one.ExecuteNonQuery();
-            //close connection
-            connectionOne.Close();
-        }
     }
 }
