@@ -14,7 +14,6 @@ namespace workflowLoginForm
     public partial class ProductForm : Form
     {
         private Product objProduct;
-        private List<Product> products; // For later use
 
         // Constructor
         public ProductForm()

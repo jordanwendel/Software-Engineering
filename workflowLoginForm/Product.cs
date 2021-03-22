@@ -19,7 +19,7 @@ namespace workflowLoginForm
         private string location { get; set; }
 
 
-        //constructor
+        // Constructor
         public Product(string productName, string quality, int quantity, string location)
         {
             this.productName = productName;

@@ -15,7 +15,6 @@ namespace workflowLoginForm
     {
 
         private RawMaterial objRawMaterial;
-        private List<RawMaterial> rawMaterials; // For showing all raw materials
 
         // Constructor
         public RawMaterialsForm()
