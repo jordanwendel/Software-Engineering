@@ -140,5 +140,10 @@ namespace workflowLoginForm
         {
 
         }
+
+        private void workflowLoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,39 +13,33 @@ namespace workflowLoginForm
 {
     public partial class RawMaterialsForm : Form
     {
+
+        private RawMaterial objRawMaterial;
+        private List<RawMaterial> rawMaterials; // For showing all raw materials
+
         // Constructor
         public RawMaterialsForm()
         {
             InitializeComponent();
         }
 
+
         // Event handler for Insert Information button
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
-            // string connection path
-            string con = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\justi\\Source\\Repos\\WORK - FLOW\\workflowLoginForm\\UserLoginData.mdf; Integrated Security = True"; 
+            try
+            {
+                objRawMaterial = new RawMaterial(txtRawMatName.Text, int.Parse(txtRawMatQuanity.Text)); // Create a new raw material object and put it into the RawMaterials database automatically
+                MessageBox.Show("Item enterted Successfully");
 
-            //create a new sql connection to 
-            SqlConnection connectionOne = new SqlConnection(con);
-            
-            // sql command to insert information into a sql database
-            SqlCommand one = new SqlCommand("Insert into RawMaterials(RawMaterialName, Quantity) Values(@RawMaterialName,  @Quantity);", connectionOne);
-            //add information from the text boxes into the databse itself
-            one.Parameters.AddWithValue("@RawMatName", txtRawMatName.Text);
-            one.Parameters.AddWithValue("@Quanity", txtRawMatQuanity.Text);
-
-
-            //open connection
-            connectionOne.Open();
-            //execute the query above 
-            one.ExecuteNonQuery();
-            //close connection
-            connectionOne.Close();
-            MessageBox.Show("Item enterted Successfully");
-
-            //clear text boxes
-            txtRawMatName.Clear();
-            txtRawMatQuanity.Clear();
+                // Clear text boxes
+                txtRawMatName.Clear();
+                txtRawMatQuanity.Clear();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
         }
 
         // Event handler for Exit button click

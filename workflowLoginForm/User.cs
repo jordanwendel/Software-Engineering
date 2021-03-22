@@ -15,11 +15,6 @@ namespace workflowLoginForm
         public string Password { get; set; }
         public string Job { get; set; }
 
-        // Empty constructor
-        public User ()
-        {
-
-        }
 
         // Constructor for login
         public User (string username, string password)

@@ -13,6 +13,7 @@ namespace workflowLoginForm
         private SqlConnection cn;
         private SqlDataReader dr;
         private SqlCommand cmd;
+        private SqlConnection connectionOne;
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString;
@@ -35,6 +36,12 @@ namespace workflowLoginForm
         }
 
         // Methods
+        public void CloseConnection()
+        {
+            cn.Close();
+        }
+
+
         public bool ValidatePassword(string username, string enteredPassword)
         {
             bool isAuthorized = false;
@@ -90,12 +97,6 @@ namespace workflowLoginForm
                 cn.Close();
             }
         }
-
-
-        public void CloseConnection()
-        {
-            cn.Close();
-        }
        
            
         public void RegisterUser(string username, string password, string job)
@@ -103,6 +104,7 @@ namespace workflowLoginForm
             try
             {
                 SqlConnection connectionOne = new SqlConnection(connectionString); // Creating an instance of the database
+
                 // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
                 SqlCommand one = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", connectionOne);
                 one.Parameters.AddWithValue("@username", username);
@@ -114,6 +116,63 @@ namespace workflowLoginForm
                 connectionOne.Close(); // Close the sql connection
                 MessageBox.Show("Sucessfully Registered!");
 
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
+        public void AddRawMaterial(string rawMaterialName, int quantity)
+        {
+            try
+            {
+                // Create a new sql connection
+                SqlConnection connectionOne = new SqlConnection(connectionString);
+
+                // Create a SQL command that takes user input -- raw material name, quantity -- and inputs into RawMaterials database
+                SqlCommand one = new SqlCommand("Insert into RawMaterials(RawMaterialName, Quantity) Values(@RawMaterialName,  @Quantity);", connectionOne);
+                one.Parameters.AddWithValue("@RawMaterialName", rawMaterialName);
+                one.Parameters.AddWithValue("@Quantity", quantity);
+
+
+                connectionOne.Open(); // Open the sql connection
+                one.ExecuteNonQuery(); // Execute the sql command
+                connectionOne.Close(); // Close the sql connection
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public void AddProduct(string name, string quality, int quantity, string location)
+        {
+            try
+            {
+                // Create a new sql connection 
+                SqlConnection connectionOne = new SqlConnection(connectionString);
+
+                // Create a sql command that takes user input -- product name, quality, quantity, location -- and inputs into Products database
+                SqlCommand one = new SqlCommand("Insert into Products(ProductName, Quality, Quantity, Location) Values(@ProductName, @Quality, @Quantity, @Location);", connectionOne);
+                //add information from the text boxes into the databse itself
+                one.Parameters.AddWithValue("@ProductName", name);
+                one.Parameters.AddWithValue("@Quality", quality);
+                one.Parameters.AddWithValue("@Quantity", quantity);
+                one.Parameters.AddWithValue("@Location", location);
+
+                connectionOne.Open(); // Open connection
+                one.ExecuteNonQuery(); // Execute the sql command
+                connectionOne.Close(); // Close the sql connection
             }
             catch (Exception err)
             {

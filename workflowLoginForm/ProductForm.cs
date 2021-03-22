@@ -13,6 +13,9 @@ namespace workflowLoginForm
 {
     public partial class ProductForm : Form
     {
+        private Product objProduct;
+        private List<Product> products; // For later use
+
         // Constructor
         public ProductForm()
         {
@@ -22,33 +25,23 @@ namespace workflowLoginForm
         // Event handler for Insert Information button
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
-            // string connection path
-            string con = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\justi\\Source\\Repos\\WORK - FLOW\\workflowLoginForm\\UserLoginData.mdf; Integrated Security = True"; 
+            try
+            {
+                // Assign objProduct
+                objProduct = new Product(txtProductName.Text, txtQuality.Text, int.Parse(txtQuantity.Text), txtLocation.Text); // Create a new product object and put it into the Product database automatically
+                MessageBox.Show("Item enterted Successfully");
 
-            //create a new sql connection to 
-            SqlConnection connectionOne = new SqlConnection(con);
-            
-            // sql command to insert information into a sql database
-            SqlCommand one = new SqlCommand("Insert into Products(ProductName, Quality, Quantity, Location) Values(@ProductName, @Quality, @Quantity, @Location);", connectionOne);
-            //add information from the text boxes into the databse itself
-            one.Parameters.AddWithValue("@ProductName", txtProductName.Text);
-            one.Parameters.AddWithValue("@Quality", txtQuality.Text);
-            one.Parameters.AddWithValue("@Quantity", txtQuantity.Text);
-            one.Parameters.AddWithValue("@Location", txtLocation.Text);
+                //clear text boxes
+                txtProductName.Clear();
+                txtQuality.Clear();
+                txtQuantity.Clear();
+                txtLocation.Clear();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
 
-            //open connection
-            connectionOne.Open();
-            //execute the query above 
-            one.ExecuteNonQuery();
-            //close connection
-            connectionOne.Close();
-            MessageBox.Show("Item enterted Successfully");
-
-            //clear text boxes
-            txtProductName.Clear();
-            txtQuality.Clear();
-            txtQuantity.Clear();
-            txtLocation.Clear();
         }
 
         // Event handler for Exit button click
@@ -57,6 +50,10 @@ namespace workflowLoginForm
             Application.Exit();
         }
 
+        private void ProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
