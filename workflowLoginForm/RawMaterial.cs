@@ -9,8 +9,8 @@ namespace workflowLoginForm
 {
     class RawMaterial
     {
-        private string rawMaterialName;
-        private int quantity;
+        private string rawMaterialName { get; set; }
+        private int quantity { get; set; }
 
         //default constructor
         public RawMaterial()
