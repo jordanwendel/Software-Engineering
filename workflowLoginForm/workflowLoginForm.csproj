@@ -69,6 +69,7 @@
     <Compile Include="AdministratorForm.Designer.cs">
       <DependentUpon>AdministratorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="DatabaseTools.cs" />
     <Compile Include="DeliveryManagerForm.cs">
       <SubType>Form</SubType>

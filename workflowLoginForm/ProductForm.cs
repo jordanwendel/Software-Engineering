@@ -19,29 +19,16 @@ namespace workflowLoginForm
             InitializeComponent();
         }
 
+        private Product objProduct;
+
         // Event handler for Insert Information button
         private void btnInsertInformation_Click(object sender, EventArgs e)
         {
+            objProduct = new Product(txtProductName.Text, txtQuality.Text, int.Parse(txtQuantity.Text), txtLocation.Text);
             // string connection path
-            string con = "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = C:\\Users\\justi\\Source\\Repos\\WORK - FLOW\\workflowLoginForm\\UserLoginData.mdf; Integrated Security = True"; 
 
-            //create a new sql connection to 
-            SqlConnection connectionOne = new SqlConnection(con);
-            
-            // sql command to insert information into a sql database
-            SqlCommand one = new SqlCommand("Insert into Products(ProductName, Quality, Quantity, Location) Values(@ProductName, @Quality, @Quantity, @Location);", connectionOne);
-            //add information from the text boxes into the databse itself
-            one.Parameters.AddWithValue("@ProductName", txtProductName.Text);
-            one.Parameters.AddWithValue("@Quality", txtQuality.Text);
-            one.Parameters.AddWithValue("@Quantity", txtQuantity.Text);
-            one.Parameters.AddWithValue("@Location", txtLocation.Text);
+            objProduct.addProductInfo();
 
-            //open connection
-            connectionOne.Open();
-            //execute the query above 
-            one.ExecuteNonQuery();
-            //close connection
-            connectionOne.Close();
             MessageBox.Show("Item enterted Successfully");
 
             //clear text boxes
@@ -57,6 +44,10 @@ namespace workflowLoginForm
             Application.Exit();
         }
 
+        private void ProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

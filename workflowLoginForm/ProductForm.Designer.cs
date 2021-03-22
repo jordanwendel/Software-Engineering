@@ -45,8 +45,8 @@ namespace workflowLoginForm
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(115, 43);
@@ -147,7 +147,7 @@ namespace workflowLoginForm
             this.txtQuality.Size = new System.Drawing.Size(288, 22);
             this.txtQuality.TabIndex = 13;
             // 
-            // ProdForm
+            // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -164,8 +164,9 @@ namespace workflowLoginForm
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtQuality);
-            this.Name = "ProdForm";
+            this.Name = "ProductForm";
             this.Text = "Prodcut Form";
+            this.Load += new System.EventHandler(this.ProductForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
