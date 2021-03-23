@@ -10,17 +10,19 @@ namespace workflowLoginForm
 {
     public partial class DatabaseTools
     {
+        // Class level objects
         private SqlConnection cn;
         private SqlDataReader dr;
         private SqlCommand cmd;
         private SqlDataAdapter sqlDa;
 
         // Variables
-        private readonly string connectionString = Properties.Settings.Default.connectionString;
+        private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
 
         // Empty constructor
         public DatabaseTools()
         {
+            // Open connection and create a sql command for class use
             try
             {
                 cn = new SqlConnection(); // Establishing sql connection
@@ -36,12 +38,16 @@ namespace workflowLoginForm
         }
 
         // Methods
-        public void CloseConnection()
+
+
+        // For closing connection manually
+        public void CloseConnection() 
         {
             cn.Close();
         }
 
 
+        // Validates user from the database upon login
         public bool ValidatePassword(string username, string enteredPassword)
         {
             bool isAuthorized = false;
@@ -51,11 +57,11 @@ namespace workflowLoginForm
                 cmd.CommandText = "SELECT userpassword FROM AuthorizedUsers WHERE username = @username"; // Grabs password from associated username in database that matches the username input on the login screen
                 cmd.Parameters.AddWithValue("@username", username);
 
-                //opens database, grabs and returns password
+                // Opens database, grabs and returns password
                 dr = cmd.ExecuteReader();
                 dr.Read();
 
-                if (enteredPassword.Equals(dr.GetString(0)))
+                if (enteredPassword.Equals(dr.GetString(0))) // Checks if entered password matches the one grabbed from database
                 {
                     isAuthorized = true;
                 }
@@ -74,6 +80,7 @@ namespace workflowLoginForm
         }
 
 
+        // Gets user job from database with given username
         public string GetJob(string username)
         {
             try
@@ -98,7 +105,7 @@ namespace workflowLoginForm
             }
         }
        
-           
+         // Inputs user into database with given username, password, and job
         public void RegisterUser(string username, string password, string job)
         {
             try
@@ -127,7 +134,7 @@ namespace workflowLoginForm
             }
         }
 
-
+        // Adds raw material to database with given name and quantity
         public void AddRawMaterial(string rawMaterialName, int quantity)
         {
             try
@@ -154,6 +161,7 @@ namespace workflowLoginForm
             }
         }
 
+        // Adds product to database with given name, quality, quantity, and location
         public void AddProduct(string name, string quality, int quantity, string location)
         {
             try

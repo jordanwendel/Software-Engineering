@@ -41,12 +41,12 @@ namespace workflowLoginForm
             try
             {
                 DbTools = new DatabaseTools();
-                if (DbTools.ValidatePassword(enteredUsername, enteredPassword).Equals(true))
+                if (DbTools.ValidatePassword(enteredUsername, enteredPassword).Equals(true)) // Validating if the user's password matches in the database
                 {
                     MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // May be better with an enum
-                    if (loggedInUser.Job.Equals("Administrator"))
+                    if (loggedInUser.Job.Equals("Administrator")) // Admin page
                     {
                         this.Hide();
                         Admin = new AdministratorForm();
@@ -55,7 +55,7 @@ namespace workflowLoginForm
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (loggedInUser.Job.Equals("Delivery Manager"))
+                    else if (loggedInUser.Job.Equals("Delivery Manager")) // Delivery manager page
                     {
                         this.Hide();
                         DeliveryManager = new DeliveryManagerForm();
@@ -64,7 +64,7 @@ namespace workflowLoginForm
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (loggedInUser.Job.Equals("Product Manager"))
+                    else if (loggedInUser.Job.Equals("Product Manager")) // Product manager page
                     {
                         this.Hide(); 
                         ProductManager = new ProductManagerForm();
@@ -73,7 +73,7 @@ namespace workflowLoginForm
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (loggedInUser.Job.Equals("Quality Analyzer"))
+                    else if (loggedInUser.Job.Equals("Quality Analyzer")) // Quality analyzer page
                     {
                         this.Hide();
                         QualityAnalyzer = new QualityAnalyzerForm();
@@ -82,7 +82,7 @@ namespace workflowLoginForm
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (loggedInUser.Job.Equals("Report Manager"))
+                    else if (loggedInUser.Job.Equals("Report Manager")) // Report manager page
                     {
                         this.Hide();
                         ReportManager = new ReportManagerForm();
@@ -91,7 +91,7 @@ namespace workflowLoginForm
                         txtPassword.Text = string.Empty;
                         this.Show();
                     }
-                    else if (loggedInUser.Job.Equals("Stockiest"))
+                    else if (loggedInUser.Job.Equals("Stockiest")) // Stockiest page
                     {
                         this.Hide();
                         Stockpage = new StockiestForm();
@@ -118,8 +118,9 @@ namespace workflowLoginForm
         // Event handler for Clear button click
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            txtUserName.Text = string.Empty; // Clear username text
-            txtPassword.Text = string.Empty; // Clear password text
+            // Clear text fields
+            txtUserName.Text = string.Empty; 
+            txtPassword.Text = string.Empty;
         }
 
         // Event handler for Exit button click
@@ -132,19 +133,9 @@ namespace workflowLoginForm
         // Event handler for Register button click
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            // Create a new class for user registration with SQL Server
             RegisterForm rform = new RegisterForm(); // Creates instance of Register Form class
             rform.ShowDialog(); // Shows the register form on the screen
         }
 
-        private void btnProduct_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void workflowLoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

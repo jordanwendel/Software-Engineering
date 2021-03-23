@@ -8,6 +8,7 @@ namespace workflowLoginForm
 {
     class User
     {
+        // Class level objects
         private DatabaseTools databaseTools;
 
         // Variables
@@ -22,7 +23,7 @@ namespace workflowLoginForm
             databaseTools = new DatabaseTools();
             this.Username = username;
             this.Password = password;
-            this.Job = databaseTools.GetJob(username); // Sets job from the database
+            this.Job = databaseTools.GetJob(username); // Sets job from the database with given username
             databaseTools.CloseConnection();
         }
 

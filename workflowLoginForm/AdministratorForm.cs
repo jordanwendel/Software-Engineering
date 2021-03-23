@@ -12,22 +12,26 @@ namespace workflowLoginForm
 {
     public partial class AdministratorForm : Form
     {
+        // Class level objects
         private DeliveryManagerForm DeliveryManager;
         private ProductManagerForm ProductManager;
         private ReportManagerForm ReportManager;
         private StockiestForm Stockpage;
         private QualityAnalyzerForm QualityAnalyzer;
 
+        // Constructor
         public AdministratorForm()
         {
             InitializeComponent();
         }
 
+        // Event handler for Logout button click
         private void Logout_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Event handler for Stockest button click
         private void stockiestBtn_Click(object sender, EventArgs e)
         {
             Stockpage = new StockiestForm();
@@ -36,6 +40,7 @@ namespace workflowLoginForm
             this.Show();
         }
 
+        // Event handler for Product Manager button click 
         private void prodManagerBtn_Click(object sender, EventArgs e)
         {
             ProductManager = new ProductManagerForm();
@@ -44,6 +49,7 @@ namespace workflowLoginForm
             this.Show();
         }
 
+        // Event handler for Delivery Manager button click
         private void delManagerBtn_Click(object sender, EventArgs e)
         {
             DeliveryManager = new DeliveryManagerForm();
@@ -52,6 +58,7 @@ namespace workflowLoginForm
             this.Show();
         }
 
+        // Event handler for Report Manager button click
         private void repManagerBtn_Click(object sender, EventArgs e)
         {
             ReportManager = new ReportManagerForm();
@@ -60,6 +67,7 @@ namespace workflowLoginForm
             this.Show();
         }
 
+        // Event handler for Quality Analyzer button click
         private void qualAnalyzerBtn_Click(object sender, EventArgs e)
         {
             QualityAnalyzer = new QualityAnalyzerForm();
