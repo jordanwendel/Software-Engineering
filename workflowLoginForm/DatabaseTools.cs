@@ -15,6 +15,7 @@ namespace workflowLoginForm
         private SqlDataReader dr;
         private SqlCommand cmd;
         private SqlDataAdapter sqlDa;
+        private User user;
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
