@@ -46,7 +46,7 @@
             // Stockiest
             // 
             this.Stockiest.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stockiest.Location = new System.Drawing.Point(213, 9);
+            this.Stockiest.Location = new System.Drawing.Point(239, 9);
             this.Stockiest.Name = "Stockiest";
             this.Stockiest.Size = new System.Drawing.Size(428, 50);
             this.Stockiest.TabIndex = 2;
