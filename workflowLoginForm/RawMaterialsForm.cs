@@ -15,6 +15,7 @@ namespace workflowLoginForm
     {
 
         private RawMaterial objRawMaterial;
+        private DatabaseTools dbTools;
 
         // Constructor
         public RawMaterialsForm()
@@ -39,6 +40,14 @@ namespace workflowLoginForm
             {
                 MessageBox.Show(err.Message, "Warning!");
             }
+
+            this.Hide();
+            /**
+            dbTools = new DatabaseTools();
+            DataGridView dataGridView1 = dbTools.dataGridView1;
+            dbTools.PopulateDataGrid(dataGridView1);
+            dbTools.RefreshDataGrid(dataGridView1);
+            */
         }
 
         // Event handler for Exit button click
@@ -47,10 +56,7 @@ namespace workflowLoginForm
             Application.Exit();
         }
 
-        private void RawMaterials_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }
 

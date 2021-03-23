@@ -30,8 +30,8 @@
         {
             this.Stockiest = new System.Windows.Forms.Label();
             this.Logout = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.viewMaterialsBtn = new System.Windows.Forms.Button();
+            this.addNewMatBtn = new System.Windows.Forms.Button();
+            this.refreshBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.addItemLbl = new System.Windows.Forms.Label();
@@ -64,28 +64,32 @@
             this.Logout.UseVisualStyleBackColor = true;
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
-            // button1
+            // addNewMatBtn
             // 
-            this.button1.Location = new System.Drawing.Point(766, 552);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 40);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add New Material";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.addNewMatBtn.Location = new System.Drawing.Point(109, 177);
+            this.addNewMatBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.addNewMatBtn.Name = "addNewMatBtn";
+            this.addNewMatBtn.Size = new System.Drawing.Size(98, 28);
+            this.addNewMatBtn.TabIndex = 6;
+            this.addNewMatBtn.Text = "Add New";
+            this.addNewMatBtn.UseVisualStyleBackColor = true;
+            this.addNewMatBtn.Click += new System.EventHandler(this.addNewMatBtn_Click);
             // 
-            // viewMaterialsBtn
+            // refreshBtn
             // 
-            this.viewMaterialsBtn.Location = new System.Drawing.Point(373, 552);
-            this.viewMaterialsBtn.Name = "viewMaterialsBtn";
-            this.viewMaterialsBtn.Size = new System.Drawing.Size(97, 40);
-            this.viewMaterialsBtn.TabIndex = 7;
-            this.viewMaterialsBtn.Text = "View Raw Materials";
-            this.viewMaterialsBtn.UseVisualStyleBackColor = true;
+            this.refreshBtn.Location = new System.Drawing.Point(373, 552);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(97, 40);
+            this.refreshBtn.TabIndex = 7;
+            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.UseVisualStyleBackColor = true;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -134,12 +138,13 @@
             // 
             // addItemBtn
             // 
-            this.addItemBtn.Location = new System.Drawing.Point(64, 179);
+            this.addItemBtn.Location = new System.Drawing.Point(11, 177);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(93, 28);
             this.addItemBtn.TabIndex = 15;
             this.addItemBtn.Text = "Add Item";
             this.addItemBtn.UseVisualStyleBackColor = true;
+            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
             // textBox1
             // 
@@ -169,8 +174,8 @@
             this.Controls.Add(this.addItemLbl);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.viewMaterialsBtn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.refreshBtn);
+            this.Controls.Add(this.addNewMatBtn);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Stockiest);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -187,8 +192,8 @@
 
         private System.Windows.Forms.Label Stockiest;
         private System.Windows.Forms.Button Logout;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button viewMaterialsBtn;
+        private System.Windows.Forms.Button addNewMatBtn;
+        private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label addItemLbl;

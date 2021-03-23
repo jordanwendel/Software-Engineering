@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace workflowLoginForm
 {
@@ -16,6 +17,7 @@ namespace workflowLoginForm
         private SqlCommand cmd;
         private SqlDataAdapter sqlDa;
         private User user;
+        public DataGridView dataGridView1;
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
@@ -189,6 +191,27 @@ namespace workflowLoginForm
             {
                 cn.Close();
             }
+        }
+
+        public void PopulateDataGrid(DataGridView dataGridView1) 
+        {
+            //DataGridView dataGridView1 = new DataGridView();
+            string sql = "SELECT * FROM RawMaterials";
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, connection);
+            DataSet ds = new DataSet();
+            connection.Open();
+            dataAdapter.Fill(ds, "RawMaterials");
+            connection.Close();
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = "RawMaterials";
+        }
+
+        public void RefreshDataGrid(DataGridView dataGridView1)
+        {
+            dataGridView1.Update();
+            dataGridView1.Refresh();
+            PopulateDataGrid(dataGridView1);
         }
 
     }

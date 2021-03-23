@@ -56,7 +56,7 @@ namespace workflowLoginForm
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(412, 210);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(56, 19);
             this.btnExit.TabIndex = 23;
@@ -66,10 +66,10 @@ namespace workflowLoginForm
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(83, 175);
+            this.label3.Location = new System.Drawing.Point(66, 175);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 18);
+            this.label3.Size = new System.Drawing.Size(149, 18);
             this.label3.TabIndex = 20;
             this.label3.Text = "Quantity of Raw Material";
             // 
@@ -95,7 +95,7 @@ namespace workflowLoginForm
             // btnInsertInformation
             // 
             this.btnInsertInformation.Location = new System.Drawing.Point(240, 210);
-            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertInformation.Name = "btnInsertInformation";
             this.btnInsertInformation.Size = new System.Drawing.Size(140, 19);
             this.btnInsertInformation.TabIndex = 16;
@@ -106,7 +106,7 @@ namespace workflowLoginForm
             // txtRawMatName
             // 
             this.txtRawMatName.Location = new System.Drawing.Point(219, 124);
-            this.txtRawMatName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRawMatName.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawMatName.Name = "txtRawMatName";
             this.txtRawMatName.Size = new System.Drawing.Size(217, 20);
             this.txtRawMatName.TabIndex = 14;
@@ -114,7 +114,7 @@ namespace workflowLoginForm
             // txtRawMatQuanity
             // 
             this.txtRawMatQuanity.Location = new System.Drawing.Point(218, 172);
-            this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawMatQuanity.Name = "txtRawMatQuanity";
             this.txtRawMatQuanity.Size = new System.Drawing.Size(217, 20);
             this.txtRawMatQuanity.TabIndex = 13;
@@ -132,10 +132,9 @@ namespace workflowLoginForm
             this.Controls.Add(this.btnInsertInformation);
             this.Controls.Add(this.txtRawMatName);
             this.Controls.Add(this.txtRawMatQuanity);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RawMaterialsForm";
             this.Text = "Prodcut Form";
-            this.Load += new System.EventHandler(this.RawMaterials_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
