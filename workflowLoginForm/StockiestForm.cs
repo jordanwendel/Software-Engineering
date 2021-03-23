@@ -31,7 +31,7 @@ namespace workflowLoginForm
         private void button1_Click(object sender, EventArgs e)
         {
             stockpage = new RawMaterialsForm();
-            stockpage.ShowDialog();//open new display
+            stockpage.ShowDialog(); // Open new display
             this.Show();
         }
     }

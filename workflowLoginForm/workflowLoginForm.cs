@@ -13,6 +13,7 @@ namespace workflowLoginForm
 {
     public partial class workflowLoginForm : Form
     {
+        // Class level objects
         private User loggedInUser;
         private DeliveryManagerForm DeliveryManager;
         private AdministratorForm Admin;

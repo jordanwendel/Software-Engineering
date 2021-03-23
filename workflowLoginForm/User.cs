@@ -26,7 +26,7 @@ namespace workflowLoginForm
             databaseTools.CloseConnection();
         }
 
-
+        /**
         public bool hasRole(string job)
         {
             if (this.Job.Equals(job))
@@ -36,6 +36,7 @@ namespace workflowLoginForm
 
             return false;
         }
+        */
 
     }
 

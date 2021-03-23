@@ -13,7 +13,7 @@ namespace workflowLoginForm
         private SqlConnection cn;
         private SqlDataReader dr;
         private SqlCommand cmd;
-        private SqlConnection connectionOne;
+        private SqlDataAdapter sqlDa;
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString;
@@ -140,7 +140,6 @@ namespace workflowLoginForm
                 one.Parameters.AddWithValue("@RawMaterialName", rawMaterialName);
                 one.Parameters.AddWithValue("@Quantity", quantity);
 
-
                 connectionOne.Open(); // Open the sql connection
                 one.ExecuteNonQuery(); // Execute the sql command
                 connectionOne.Close(); // Close the sql connection
@@ -164,7 +163,6 @@ namespace workflowLoginForm
 
                 // Create a sql command that takes user input -- product name, quality, quantity, location -- and inputs into Products database
                 SqlCommand one = new SqlCommand("Insert into Products(ProductName, Quality, Quantity, Location) Values(@ProductName, @Quality, @Quantity, @Location);", connectionOne);
-                //add information from the text boxes into the databse itself
                 one.Parameters.AddWithValue("@ProductName", name);
                 one.Parameters.AddWithValue("@Quality", quality);
                 one.Parameters.AddWithValue("@Quantity", quantity);
@@ -183,6 +181,7 @@ namespace workflowLoginForm
                 cn.Close();
             }
         }
+
     }
 
 }
