@@ -32,7 +32,7 @@
             this.Logout = new System.Windows.Forms.Button();
             this.addNewMatBtn = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.stockDataGridView = new System.Windows.Forms.DataGridView();
             this.rawMatsList = new System.Windows.Forms.ComboBox();
             this.addItemLbl = new System.Windows.Forms.Label();
             this.itemLbl = new System.Windows.Forms.Label();
@@ -40,7 +40,8 @@
             this.addItemBtn = new System.Windows.Forms.Button();
             this.quantityTxt = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.filterLbl = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Stockiest
@@ -77,34 +78,35 @@
             // 
             // refreshBtn
             // 
-            this.refreshBtn.Location = new System.Drawing.Point(373, 552);
+            this.refreshBtn.Location = new System.Drawing.Point(766, 552);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(97, 40);
             this.refreshBtn.TabIndex = 7;
-            this.refreshBtn.Text = "Refresh";
+            this.refreshBtn.Text = "Refresh Inventory";
             this.refreshBtn.UseVisualStyleBackColor = true;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
-            // dataGridView1
+            // stockDataGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.stockDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(210, 62);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(651, 475);
-            this.dataGridView1.TabIndex = 8;
+            this.stockDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.stockDataGridView.Location = new System.Drawing.Point(210, 62);
+            this.stockDataGridView.Name = "stockDataGridView";
+            this.stockDataGridView.Size = new System.Drawing.Size(651, 475);
+            this.stockDataGridView.TabIndex = 8;
             // 
             // rawMatsList
             // 
             this.rawMatsList.FormattingEnabled = true;
-            this.rawMatsList.Location = new System.Drawing.Point(64, 102);
+            this.rawMatsList.Location = new System.Drawing.Point(85, 102);
             this.rawMatsList.Name = "rawMatsList";
             this.rawMatsList.Size = new System.Drawing.Size(119, 21);
             this.rawMatsList.TabIndex = 10;
+            this.rawMatsList.Text = "Click to expand...";
             // 
             // addItemLbl
             // 
@@ -129,7 +131,7 @@
             // quantityLbl
             // 
             this.quantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityLbl.Location = new System.Drawing.Point(-1, 139);
+            this.quantityLbl.Location = new System.Drawing.Point(8, 137);
             this.quantityLbl.Name = "quantityLbl";
             this.quantityLbl.Size = new System.Drawing.Size(87, 23);
             this.quantityLbl.TabIndex = 14;
@@ -148,10 +150,11 @@
             // 
             // quantityTxt
             // 
-            this.quantityTxt.Location = new System.Drawing.Point(64, 139);
+            this.quantityTxt.Location = new System.Drawing.Point(85, 139);
             this.quantityTxt.Name = "quantityTxt";
             this.quantityTxt.Size = new System.Drawing.Size(119, 20);
             this.quantityTxt.TabIndex = 16;
+            this.quantityTxt.Text = "Enter Quantity";
             // 
             // checkedListBox1
             // 
@@ -161,11 +164,22 @@
             this.checkedListBox1.Size = new System.Drawing.Size(172, 229);
             this.checkedListBox1.TabIndex = 17;
             // 
+            // filterLbl
+            // 
+            this.filterLbl.AutoSize = true;
+            this.filterLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filterLbl.Location = new System.Drawing.Point(71, 281);
+            this.filterLbl.Name = "filterLbl";
+            this.filterLbl.Size = new System.Drawing.Size(57, 24);
+            this.filterLbl.TabIndex = 29;
+            this.filterLbl.Text = "Filter";
+            // 
             // StockiestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 602);
+            this.Controls.Add(this.filterLbl);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.quantityTxt);
             this.Controls.Add(this.addItemBtn);
@@ -173,7 +187,7 @@
             this.Controls.Add(this.itemLbl);
             this.Controls.Add(this.addItemLbl);
             this.Controls.Add(this.rawMatsList);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.stockDataGridView);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.addNewMatBtn);
             this.Controls.Add(this.Logout);
@@ -182,7 +196,7 @@
             this.Name = "StockiestForm";
             this.Text = "Stockiest";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,7 +208,7 @@
         private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Button addNewMatBtn;
         private System.Windows.Forms.Button refreshBtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView stockDataGridView;
         private System.Windows.Forms.ComboBox rawMatsList;
         private System.Windows.Forms.Label addItemLbl;
         private System.Windows.Forms.Label itemLbl;
@@ -202,6 +216,7 @@
         private System.Windows.Forms.Button addItemBtn;
         private System.Windows.Forms.TextBox quantityTxt;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label filterLbl;
     }
 }
 

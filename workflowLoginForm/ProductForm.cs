@@ -41,6 +41,7 @@ namespace workflowLoginForm
                 MessageBox.Show(err.Message, "Warning!");
             }
 
+            this.Hide();
         }
 
         // Event handler for Exit button click

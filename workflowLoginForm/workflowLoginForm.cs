@@ -133,6 +133,10 @@ namespace workflowLoginForm
         // Event handler for Register button click
         private void registerBtn_Click(object sender, EventArgs e)
         {
+            // Add a small login screen here so only admin can register a user
+            // They will have to sign in and validate that they are an admin in the database
+            // If so, they can proceed with registering a user
+
             RegisterForm rform = new RegisterForm(); // Creates instance of Register Form class
             rform.ShowDialog(); // Shows the register form on the screen
         }

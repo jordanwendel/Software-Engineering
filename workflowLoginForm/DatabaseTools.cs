@@ -207,11 +207,11 @@ namespace workflowLoginForm
         }
 
         // Refreshing the data grid to update inventory
-        public void RefreshDataGrid(DataGridView dataGrid)
+        public void RefreshDataGrid(DataGridView dataGrid, string databaseName)
         {
             dataGrid.Update();
             dataGrid.Refresh();
-            PopulateDataGrid(dataGrid, "RawMaterials");
+            PopulateDataGrid(dataGrid, databaseName);
         }
 
     }
