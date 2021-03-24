@@ -55,5 +55,10 @@ namespace workflowLoginForm
             dbTools = new DatabaseTools();
             dbTools.RefreshDataGrid(prodDataGridView, "Products"); // Refresh the data grid to see changes
         }
+
+        private void prodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

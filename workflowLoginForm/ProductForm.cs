@@ -55,6 +55,15 @@ namespace workflowLoginForm
         {
 
         }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            txtProductName.Clear();
+            txtQuality.Clear();
+            txtQuantity.Clear();
+            txtLocation.Clear();
+            this.Hide();
+        }
     }
 }
 

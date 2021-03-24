@@ -23,6 +23,15 @@ namespace workflowLoginForm
         {
             this.Close();
         }
-       
+
+        private void Admin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void prodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
