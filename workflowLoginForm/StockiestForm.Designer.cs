@@ -146,7 +146,6 @@
             this.addItemBtn.TabIndex = 15;
             this.addItemBtn.Text = "Add Item";
             this.addItemBtn.UseVisualStyleBackColor = true;
-            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
             // quantityTxt
             // 
@@ -195,7 +194,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StockiestForm";
             this.Text = "Stockiest";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.StockiestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

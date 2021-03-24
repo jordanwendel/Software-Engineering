@@ -199,9 +199,11 @@ namespace workflowLoginForm
             SqlConnection connection = new SqlConnection(connectionString);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, connection);
             DataSet ds = new DataSet();
-            connection.Open();
-            dataAdapter.Fill(ds, databaseName);
-            connection.Close();
+
+            // Fill data grid on screen with data from given database
+            connection.Open(); // Open connection
+            dataAdapter.Fill(ds, databaseName); 
+            connection.Close(); // Close connection
             dataGrid.DataSource = ds;
             dataGrid.DataMember = databaseName;
         }

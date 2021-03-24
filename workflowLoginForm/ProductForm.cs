@@ -13,6 +13,7 @@ namespace workflowLoginForm
 {
     public partial class ProductForm : Form
     {
+        // Class level objects
         private Product objProduct;
 
         // Constructor
