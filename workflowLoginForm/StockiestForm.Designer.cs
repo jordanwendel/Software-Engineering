@@ -33,12 +33,12 @@
             this.addNewMatBtn = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.rawMatsList = new System.Windows.Forms.ComboBox();
             this.addItemLbl = new System.Windows.Forms.Label();
             this.itemLbl = new System.Windows.Forms.Label();
             this.quantityLbl = new System.Windows.Forms.Label();
             this.addItemBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.quantityTxt = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -98,13 +98,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(651, 475);
             this.dataGridView1.TabIndex = 8;
             // 
-            // comboBox1
+            // rawMatsList
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(64, 102);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(119, 21);
-            this.comboBox1.TabIndex = 10;
+            this.rawMatsList.FormattingEnabled = true;
+            this.rawMatsList.Location = new System.Drawing.Point(64, 102);
+            this.rawMatsList.Name = "rawMatsList";
+            this.rawMatsList.Size = new System.Drawing.Size(119, 21);
+            this.rawMatsList.TabIndex = 10;
             // 
             // addItemLbl
             // 
@@ -146,12 +146,12 @@
             this.addItemBtn.UseVisualStyleBackColor = true;
             this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
-            // textBox1
+            // quantityTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 16;
+            this.quantityTxt.Location = new System.Drawing.Point(64, 139);
+            this.quantityTxt.Name = "quantityTxt";
+            this.quantityTxt.Size = new System.Drawing.Size(119, 20);
+            this.quantityTxt.TabIndex = 16;
             // 
             // checkedListBox1
             // 
@@ -167,12 +167,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 602);
             this.Controls.Add(this.checkedListBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.quantityTxt);
             this.Controls.Add(this.addItemBtn);
             this.Controls.Add(this.quantityLbl);
             this.Controls.Add(this.itemLbl);
             this.Controls.Add(this.addItemLbl);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.rawMatsList);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.addNewMatBtn);
@@ -195,12 +195,12 @@
         private System.Windows.Forms.Button addNewMatBtn;
         private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox rawMatsList;
         private System.Windows.Forms.Label addItemLbl;
         private System.Windows.Forms.Label itemLbl;
         private System.Windows.Forms.Label quantityLbl;
         private System.Windows.Forms.Button addItemBtn;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox quantityTxt;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }

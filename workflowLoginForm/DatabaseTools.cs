@@ -17,7 +17,6 @@ namespace workflowLoginForm
         private SqlCommand cmd;
         private SqlDataAdapter sqlDa;
         private User user;
-        public DataGridView dataGridView1;
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
@@ -193,25 +192,26 @@ namespace workflowLoginForm
             }
         }
 
-        public void PopulateDataGrid(DataGridView dataGridView1) 
+        // Creates a data grid from a specified database
+        public void PopulateDataGrid(DataGridView dataGrid, string databaseName) 
         {
-            //DataGridView dataGridView1 = new DataGridView();
-            string sql = "SELECT * FROM RawMaterials";
+            string sql = "SELECT * FROM " + databaseName;
             SqlConnection connection = new SqlConnection(connectionString);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, connection);
             DataSet ds = new DataSet();
             connection.Open();
-            dataAdapter.Fill(ds, "RawMaterials");
+            dataAdapter.Fill(ds, databaseName);
             connection.Close();
-            dataGridView1.DataSource = ds;
-            dataGridView1.DataMember = "RawMaterials";
+            dataGrid.DataSource = ds;
+            dataGrid.DataMember = databaseName;
         }
 
-        public void RefreshDataGrid(DataGridView dataGridView1)
+        // Refreshing the data grid to update inventory
+        public void RefreshDataGrid(DataGridView dataGrid)
         {
-            dataGridView1.Update();
-            dataGridView1.Refresh();
-            PopulateDataGrid(dataGridView1);
+            dataGrid.Update();
+            dataGrid.Refresh();
+            PopulateDataGrid(dataGrid, "RawMaterials");
         }
 
     }

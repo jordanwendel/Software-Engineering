@@ -14,19 +14,21 @@ namespace workflowLoginForm
     {
         private DatabaseTools dbTools;
         private RawMaterialsForm stockpage;
+        public DataGridView dataGrid;
 
         public StockiestForm()
         {
             InitializeComponent();
+            dataGrid = dataGridView1;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             dbTools = new DatabaseTools();
-            dbTools.PopulateDataGrid(dataGridView1);
-            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-            dataGridView1.RowsDefaultCellStyle.BackColor = Color.Wheat;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dbTools.PopulateDataGrid(dataGridView1, "RawMaterials");
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+            dataGrid.RowsDefaultCellStyle.BackColor = Color.Wheat;
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void Logout_Click(object sender, EventArgs e)
@@ -43,6 +45,7 @@ namespace workflowLoginForm
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
+            dbTools = new DatabaseTools();
             dbTools.RefreshDataGrid(dataGridView1);
         }
 
