@@ -60,5 +60,70 @@ namespace workflowLoginForm
         {
 
         }
+
+        private void filterLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locationLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quantityLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void qualityLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locationMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quantityTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void qualityMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nameMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addItemLbl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addItemBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Admin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,5 +21,15 @@ namespace workflowLoginForm
         {
             this.Close();
         }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Logout_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
