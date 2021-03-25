@@ -108,10 +108,13 @@
             this.prodDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.prodDataGridView.Location = new System.Drawing.Point(212, 63);
+            this.prodDataGridView.Location = new System.Drawing.Point(283, 78);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prodDataGridView.Name = "prodDataGridView";
-            this.prodDataGridView.Size = new System.Drawing.Size(665, 473);
+            this.prodDataGridView.RowHeadersWidth = 51;
+            this.prodDataGridView.Size = new System.Drawing.Size(887, 582);
             this.prodDataGridView.TabIndex = 12;
+            this.prodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDataGridView_CellContentClick);
             // 
             // checkedListBox1
             // 
@@ -134,35 +137,39 @@
             // nameMenu
             // 
             this.nameMenu.FormattingEnabled = true;
-            this.nameMenu.Location = new System.Drawing.Point(87, 63);
+            this.nameMenu.Location = new System.Drawing.Point(116, 78);
+            this.nameMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nameMenu.Name = "nameMenu";
-            this.nameMenu.Size = new System.Drawing.Size(119, 21);
+            this.nameMenu.Size = new System.Drawing.Size(157, 24);
             this.nameMenu.TabIndex = 20;
             this.nameMenu.Text = "Click to expand...";
             // 
             // qualityMenu
             // 
             this.qualityMenu.FormattingEnabled = true;
-            this.qualityMenu.Location = new System.Drawing.Point(87, 90);
+            this.qualityMenu.Location = new System.Drawing.Point(116, 111);
+            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.qualityMenu.Name = "qualityMenu";
-            this.qualityMenu.Size = new System.Drawing.Size(119, 21);
+            this.qualityMenu.Size = new System.Drawing.Size(157, 24);
             this.qualityMenu.TabIndex = 21;
             this.qualityMenu.Text = "Click to expand...";
             // 
             // quantityTxt
             // 
-            this.quantityTxt.Location = new System.Drawing.Point(87, 117);
+            this.quantityTxt.Location = new System.Drawing.Point(116, 144);
+            this.quantityTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.quantityTxt.Name = "quantityTxt";
-            this.quantityTxt.Size = new System.Drawing.Size(119, 20);
+            this.quantityTxt.Size = new System.Drawing.Size(157, 22);
             this.quantityTxt.TabIndex = 22;
             this.quantityTxt.Text = "Enter Quantity";
             // 
             // locationMenu
             // 
             this.locationMenu.FormattingEnabled = true;
-            this.locationMenu.Location = new System.Drawing.Point(87, 143);
+            this.locationMenu.Location = new System.Drawing.Point(116, 176);
+            this.locationMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.locationMenu.Name = "locationMenu";
-            this.locationMenu.Size = new System.Drawing.Size(119, 21);
+            this.locationMenu.Size = new System.Drawing.Size(157, 24);
             this.locationMenu.TabIndex = 23;
             this.locationMenu.Text = "Click to expand...";
             // 
@@ -172,7 +179,7 @@
             this.nameLbl.ForeColor = System.Drawing.Color.White;
             this.nameLbl.Location = new System.Drawing.Point(40, 63);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(46, 23);
+            this.nameLbl.Size = new System.Drawing.Size(61, 28);
             this.nameLbl.TabIndex = 24;
             this.nameLbl.Text = "Item:";
             this.nameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -194,7 +201,7 @@
             this.quantityLbl.ForeColor = System.Drawing.Color.White;
             this.quantityLbl.Location = new System.Drawing.Point(9, 117);
             this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(77, 23);
+            this.quantityLbl.Size = new System.Drawing.Size(103, 28);
             this.quantityLbl.TabIndex = 26;
             this.quantityLbl.Text = "Quantity:";
             this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -205,7 +212,7 @@
             this.locationLbl.ForeColor = System.Drawing.Color.White;
             this.locationLbl.Location = new System.Drawing.Point(8, 141);
             this.locationLbl.Name = "locationLbl";
-            this.locationLbl.Size = new System.Drawing.Size(78, 23);
+            this.locationLbl.Size = new System.Drawing.Size(104, 28);
             this.locationLbl.TabIndex = 27;
             this.locationLbl.Text = "Location:";
             this.locationLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -235,7 +242,7 @@
             // 
             // ProductManagerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(888, 594);
@@ -256,7 +263,7 @@
             this.Controls.Add(this.addProduct);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductManagerForm";
             this.Text = "Product Manager Form";
             this.Load += new System.EventHandler(this.ProductManagerForm_Load);
