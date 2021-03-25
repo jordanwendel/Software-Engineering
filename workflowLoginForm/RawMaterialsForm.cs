@@ -51,8 +51,6 @@ namespace workflowLoginForm
         {
             Application.Exit();
         }
-
-
     }
 }
 

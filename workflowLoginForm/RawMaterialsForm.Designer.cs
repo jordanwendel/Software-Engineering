@@ -33,10 +33,10 @@ namespace workflowLoginForm
             this.btnExit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnInsertInformation = new System.Windows.Forms.Button();
             this.txtRawMatName = new System.Windows.Forms.TextBox();
             this.txtRawMatQuanity = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblRawMat
@@ -44,97 +44,111 @@ namespace workflowLoginForm
             this.lblRawMat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRawMat.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRawMat.Location = new System.Drawing.Point(95, 40);
+            this.lblRawMat.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRawMat.ForeColor = System.Drawing.Color.White;
+            this.lblRawMat.Location = new System.Drawing.Point(81, 33);
             this.lblRawMat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRawMat.Name = "lblRawMat";
-            this.lblRawMat.Size = new System.Drawing.Size(338, 46);
+            this.lblRawMat.Size = new System.Drawing.Size(434, 46);
             this.lblRawMat.TabIndex = 24;
-            this.lblRawMat.Text = "Raw Materials Forms";
+            this.lblRawMat.Text = "Raw Materials Database";
             this.lblRawMat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(412, 210);
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(80)))), ((int)(((byte)(75)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(11, 330);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(56, 19);
+            this.btnExit.Size = new System.Drawing.Size(75, 25);
             this.btnExit.TabIndex = 23;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Text = "EXIT ";
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(66, 175);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(152, 198);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 18);
+            this.label3.Size = new System.Drawing.Size(117, 18);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Quantity of Raw Material";
+            this.label3.Text = "Item Quantity:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(83, 127);
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(164, 151);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(132, 13);
+            this.lblName.Size = new System.Drawing.Size(105, 20);
             this.lblName.TabIndex = 19;
-            this.lblName.Text = "Name of Raw Material";
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(93, 98);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 18);
-            this.label1.TabIndex = 17;
+            this.lblName.Text = "Item Name:";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnInsertInformation
             // 
-            this.btnInsertInformation.Location = new System.Drawing.Point(240, 210);
+            this.btnInsertInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(214)))), ((int)(((byte)(98)))));
+            this.btnInsertInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInsertInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertInformation.Location = new System.Drawing.Point(489, 320);
             this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertInformation.Name = "btnInsertInformation";
-            this.btnInsertInformation.Size = new System.Drawing.Size(140, 19);
+            this.btnInsertInformation.Size = new System.Drawing.Size(100, 35);
             this.btnInsertInformation.TabIndex = 16;
-            this.btnInsertInformation.Text = "Insert into Database";
-            this.btnInsertInformation.UseVisualStyleBackColor = true;
+            this.btnInsertInformation.Text = "INSERT";
+            this.btnInsertInformation.UseVisualStyleBackColor = false;
             this.btnInsertInformation.Click += new System.EventHandler(this.btnInsertInformation_Click);
             // 
             // txtRawMatName
             // 
-            this.txtRawMatName.Location = new System.Drawing.Point(219, 124);
+            this.txtRawMatName.Location = new System.Drawing.Point(273, 153);
             this.txtRawMatName.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawMatName.Name = "txtRawMatName";
-            this.txtRawMatName.Size = new System.Drawing.Size(217, 20);
+            this.txtRawMatName.Size = new System.Drawing.Size(160, 20);
             this.txtRawMatName.TabIndex = 14;
             // 
             // txtRawMatQuanity
             // 
-            this.txtRawMatQuanity.Location = new System.Drawing.Point(218, 172);
+            this.txtRawMatQuanity.Location = new System.Drawing.Point(273, 199);
             this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawMatQuanity.Name = "txtRawMatQuanity";
-            this.txtRawMatQuanity.Size = new System.Drawing.Size(217, 20);
+            this.txtRawMatQuanity.Size = new System.Drawing.Size(160, 20);
             this.txtRawMatQuanity.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(224, 88);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 13);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Add a Raw Material";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RawMaterialsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRawMat);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnInsertInformation);
             this.Controls.Add(this.txtRawMatName);
             this.Controls.Add(this.txtRawMatQuanity);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RawMaterialsForm";
-            this.Text = "Prodcut Form";
+            this.Text = "Raw Materials Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,10 +160,10 @@ namespace workflowLoginForm
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInsertInformation;
         private System.Windows.Forms.TextBox txtRawMatName;
         private System.Windows.Forms.TextBox txtRawMatQuanity;
+        private System.Windows.Forms.Label label1;
     }
 }
 

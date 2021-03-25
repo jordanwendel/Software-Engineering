@@ -34,35 +34,41 @@
             // 
             // Admin
             // 
-            this.Admin.Font = new System.Drawing.Font("Tahoma", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Admin.Location = new System.Drawing.Point(115, 194);
-            this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Admin.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin.ForeColor = System.Drawing.SystemColors.Control;
+            this.Admin.Location = new System.Drawing.Point(87, 103);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(571, 62);
+            this.Admin.Size = new System.Drawing.Size(428, 50);
             this.Admin.TabIndex = 2;
-            this.Admin.Text = "QUALITY ANALYZER PAGE";
+            this.Admin.Text = "COMING SOON";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
             // Logout
             // 
-            this.Logout.Location = new System.Drawing.Point(293, 306);
+            this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(62)))), ((int)(((byte)(56)))));
+            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.Location = new System.Drawing.Point(11, 325);
+            this.Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(188, 63);
+            this.Logout.Size = new System.Drawing.Size(100, 30);
             this.Logout.TabIndex = 5;
-            this.Logout.Text = "Logout";
-            this.Logout.UseVisualStyleBackColor = true;
+            this.Logout.Text = "LOG OUT";
+            this.Logout.UseVisualStyleBackColor = false;
             this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
-            // QualAnalyzer
+            // QualityAnalyzerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Name = "QualAnalyzer";
-            this.Text = "QualityAnalyzer";
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "QualityAnalyzerForm";
+            this.Text = "Quality Analyzer Form";
             this.ResumeLayout(false);
 
         }
