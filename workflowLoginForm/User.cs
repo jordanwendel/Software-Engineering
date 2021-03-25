@@ -27,6 +27,15 @@ namespace workflowLoginForm
             databaseTools.CloseConnection();
         }
 
+        // For future use to delete the user when exiting or logging out
+        public void LogOut (User user)
+        {
+            user.Username = null;
+            user.Password = null;
+            user.Job = null;
+
+        }
+
         /**
         public bool hasRole(string job)
         {

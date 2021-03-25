@@ -37,7 +37,7 @@
             this.addItemLbl = new System.Windows.Forms.Label();
             this.itemLbl = new System.Windows.Forms.Label();
             this.quantityLbl = new System.Windows.Forms.Label();
-            this.addItemBtn = new System.Windows.Forms.Button();
+            this.addNewMat_Btn = new System.Windows.Forms.Button();
             this.quantityTxt = new System.Windows.Forms.TextBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.filterLbl = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             // 
             this.Stockiest.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Stockiest.ForeColor = System.Drawing.Color.White;
-            this.Stockiest.Location = new System.Drawing.Point(330, 9);
+            this.Stockiest.Location = new System.Drawing.Point(273, 9);
             this.Stockiest.Name = "Stockiest";
             this.Stockiest.Size = new System.Drawing.Size(428, 50);
             this.Stockiest.TabIndex = 2;
@@ -60,10 +60,10 @@
             this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
             this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(11, 561);
+            this.Logout.Location = new System.Drawing.Point(11, 562);
             this.Logout.Margin = new System.Windows.Forms.Padding(2);
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(100, 30);
+            this.Logout.Size = new System.Drawing.Size(106, 29);
             this.Logout.TabIndex = 5;
             this.Logout.Text = "LOG OUT";
             this.Logout.UseVisualStyleBackColor = false;
@@ -81,18 +81,17 @@
             this.addNewMatBtn.TabIndex = 6;
             this.addNewMatBtn.Text = "ADD";
             this.addNewMatBtn.UseVisualStyleBackColor = false;
-            this.addNewMatBtn.Click += new System.EventHandler(this.addNewMatBtn_Click);
             // 
             // refreshBtn
             // 
             this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.Location = new System.Drawing.Point(763, 561);
+            this.refreshBtn.Location = new System.Drawing.Point(764, 556);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(100, 30);
+            this.refreshBtn.Size = new System.Drawing.Size(97, 35);
             this.refreshBtn.TabIndex = 7;
-            this.refreshBtn.Text = "RERESH";
+            this.refreshBtn.Text = "REFRESH";
             this.refreshBtn.UseVisualStyleBackColor = false;
             this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
@@ -151,17 +150,18 @@
             this.quantityLbl.Text = "Quantity:";
             this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // addItemBtn
+            // addNewMat_Btn
             // 
-            this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(8, 175);
-            this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(195, 30);
-            this.addItemBtn.TabIndex = 15;
-            this.addItemBtn.Text = "ADD NEW ITEM";
-            this.addItemBtn.UseVisualStyleBackColor = false;
+            this.addNewMat_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addNewMat_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addNewMat_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewMat_Btn.Location = new System.Drawing.Point(8, 175);
+            this.addNewMat_Btn.Name = "addNewMat_Btn";
+            this.addNewMat_Btn.Size = new System.Drawing.Size(195, 30);
+            this.addNewMat_Btn.TabIndex = 15;
+            this.addNewMat_Btn.Text = "ADD NEW ITEM";
+            this.addNewMat_Btn.UseVisualStyleBackColor = false;
+            this.addNewMat_Btn.Click += new System.EventHandler(this.addNewMat_Btn_Click);
             // 
             // quantityTxt
             // 
@@ -199,7 +199,7 @@
             this.Controls.Add(this.filterLbl);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.quantityTxt);
-            this.Controls.Add(this.addItemBtn);
+            this.Controls.Add(this.addNewMat_Btn);
             this.Controls.Add(this.quantityLbl);
             this.Controls.Add(this.itemLbl);
             this.Controls.Add(this.addItemLbl);
@@ -230,7 +230,7 @@
         private System.Windows.Forms.Label addItemLbl;
         private System.Windows.Forms.Label itemLbl;
         private System.Windows.Forms.Label quantityLbl;
-        private System.Windows.Forms.Button addItemBtn;
+        private System.Windows.Forms.Button addNewMat_Btn;
         private System.Windows.Forms.TextBox quantityTxt;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Label filterLbl;

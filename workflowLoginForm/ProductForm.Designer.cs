@@ -64,7 +64,7 @@ namespace workflowLoginForm
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.Location = new System.Drawing.Point(11, 330);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 25);
             this.btnExit.TabIndex = 23;
@@ -77,7 +77,7 @@ namespace workflowLoginForm
             this.btnInsertInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertInformation.Location = new System.Drawing.Point(489, 320);
-            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertInformation.Name = "btnInsertInformation";
             this.btnInsertInformation.Size = new System.Drawing.Size(100, 35);
             this.btnInsertInformation.TabIndex = 16;
@@ -170,7 +170,7 @@ namespace workflowLoginForm
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(261, 76);
+            this.label1.Location = new System.Drawing.Point(275, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 25;
@@ -195,7 +195,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtQuality);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductForm";
             this.Text = "Product Form";
             this.Load += new System.EventHandler(this.ProductForm_Load);

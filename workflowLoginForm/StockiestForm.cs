@@ -41,14 +41,6 @@ namespace workflowLoginForm
             this.Close();
         }
 
-        // Event handler for Add New button click
-        private void addNewMatBtn_Click(object sender, EventArgs e)
-        {
-            stockpage = new RawMaterialsForm();
-            stockpage.ShowDialog(); // Open new display
-            this.Show();
-        }
-
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
@@ -56,5 +48,12 @@ namespace workflowLoginForm
             dbTools.RefreshDataGrid(stockDataGridView, "RawMaterials"); // Refresh the grid to see changes
         }
 
+        // Event handler for Add New button click
+        private void addNewMat_Btn_Click(object sender, EventArgs e)
+        {
+            stockpage = new RawMaterialsForm();
+            stockpage.ShowDialog(); // Open new display
+            this.Show();
+        }
     }
 }

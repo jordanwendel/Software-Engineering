@@ -43,7 +43,7 @@ namespace workflowLoginForm
                 DbTools = new DatabaseTools();
                 if (DbTools.ValidatePassword(enteredUsername, enteredPassword).Equals(true)) // Validating if the user's password matches in the database
                 {
-                    MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // May be better with an enum
                     if (loggedInUser.Job.Equals("Administrator")) // Admin page
