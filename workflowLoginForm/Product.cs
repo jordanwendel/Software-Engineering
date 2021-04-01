@@ -17,7 +17,6 @@ namespace workflowLoginForm
         private string quality { get; set; }
         private int quantity { get; set; }
         private string location { get; set; }
-        public DataGridView productDataGrid { get; set; }
 
         public Product()
         {

@@ -15,6 +15,7 @@ namespace workflowLoginForm
         // Class level objects
         private DatabaseTools dbTools;
         private ProductForm stockpage;
+        private string database;
 
         // Constructor
         public ProductManagerForm()
@@ -39,19 +40,16 @@ namespace workflowLoginForm
         // Event handler for Product Manager Form load
         private void ProductManagerForm_Load(object sender, EventArgs e)
         {
-            /**
             // Fill the data grid view on form with contents of given database using a data grid object
             dbTools = new DatabaseTools();
-            dbTools.PopulateDataGrid(prodDataGridView, "Products");
-
-            */
+            
         }
 
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dbTools = new DatabaseTools();
-            dbTools.RefreshDataGrid(prodDataGridView, "Products"); // Refresh the data grid to see changes
+            dbTools = new DatabaseTools(this.database);
+            dbTools.RefreshDataGrid(prodDataGridView); // Refresh the data grid to see changes
         }
 
         private void prodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -127,7 +125,9 @@ namespace workflowLoginForm
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
             dbTools = new DatabaseTools();
-            dbTools.PopulateDataGrid(prodDataGridView, "Products");
+            this.database = "Products"; // Set the name for the database we want to find
+            dbTools.dbName = this.database; // Pass that value to dbTools class
+            dbTools.PopulateDataGrid(prodDataGridView);
             dbTools.CloseConnection();
 
         }
@@ -135,7 +135,9 @@ namespace workflowLoginForm
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
             dbTools = new DatabaseTools();
-            dbTools.PopulateDataGrid(prodDataGridView, "RawMaterials");
+            this.database = "RawMaterials"; // Set the name for the database we want to find
+            dbTools.dbName = this.database; // Pass that value to dbTools class
+            dbTools.PopulateDataGrid(prodDataGridView);
             dbTools.CloseConnection();
         }
     }

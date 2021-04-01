@@ -21,10 +21,14 @@ namespace workflowLoginForm
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
+        public string dbName { get; set; }
+        
 
-        // Empty constructor
-        public DatabaseTools()
+
+        // Constructor with an optional argument to set the name of the database
+        public DatabaseTools(string db = "")
         {
+            this.dbName = db;
             // Open connection and create a sql command for class use
             try
             {
@@ -39,9 +43,9 @@ namespace workflowLoginForm
                 MessageBox.Show(err.Message, "Warning!");
             }
         }
+        
 
         // Methods
-
 
         // For closing connection manually
         public void CloseConnection() 
@@ -194,19 +198,38 @@ namespace workflowLoginForm
         }
 
         // Creates a data grid from a specified database
-        public void PopulateDataGrid(DataGridView dataGrid, string databaseName) 
+        public void PopulateDataGrid(DataGridView dataGrid)
         {
-            string sql = "SELECT * FROM " + databaseName;
-            SqlConnection connection = new SqlConnection(connectionString);
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, connection);
-            DataSet ds = new DataSet();
+            string sql = "SELECT * FROM " + dbName; // Default value
 
-            // Fill data grid on screen with data from given database
-            connection.Open(); // Open connection
-            dataAdapter.Fill(ds, databaseName); 
-            connection.Close(); // Close connection
-            dataGrid.DataSource = ds;
-            dataGrid.DataMember = databaseName;
+            // Only displaying the data that we want from each database
+            if (this.dbName.Equals("Products"))
+            {
+                sql = "SELECT ProductName, Quality, Quantity, Location FROM " + dbName; // Viewing all data from Product database except the ID
+            }
+            else if (this.dbName.Equals("RawMaterials"))
+            {
+                sql = "SELECT RawMaterialName, Quantity FROM " + dbName; // Viewing all data from RawMaterials database except the ID
+            }
+
+            // Error handling
+            try
+            {
+                SqlConnection connection = new SqlConnection(connectionString);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, connection);
+                DataSet ds = new DataSet();
+
+                // Fill data grid on screen with data from given database
+                connection.Open(); // Open connection
+                dataAdapter.Fill(ds, dbName);
+                connection.Close(); // Close connection
+                dataGrid.DataSource = ds;
+                dataGrid.DataMember = dbName;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Issue Creating DataGrid");
+            }
 
             // Formatting the data grid
             dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
@@ -215,11 +238,11 @@ namespace workflowLoginForm
         }
 
         // Refreshing the data grid to update inventory
-        public void RefreshDataGrid(DataGridView dataGrid, string databaseName)
+        public void RefreshDataGrid(DataGridView dataGrid)
         {
             dataGrid.Update();
             dataGrid.Refresh();
-            PopulateDataGrid(dataGrid, databaseName);
+            PopulateDataGrid(dataGrid);
         }
 
     }

@@ -27,7 +27,8 @@ namespace workflowLoginForm
         {
             // Fill the data grid view on form with contents of given database using a data grid object
             dbTools = new DatabaseTools();
-            dbTools.PopulateDataGrid(stockDataGridView, "RawMaterials");
+            dbTools.dbName = "RawMaterials";
+            dbTools.PopulateDataGrid(stockDataGridView);
 
             // Setting attributes for data grid
             stockDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
@@ -45,7 +46,8 @@ namespace workflowLoginForm
         private void refreshBtn_Click(object sender, EventArgs e)
         {
             dbTools = new DatabaseTools();
-            dbTools.RefreshDataGrid(stockDataGridView, "RawMaterials"); // Refresh the grid to see changes
+            dbTools.dbName = "RawMaterials";
+            dbTools.RefreshDataGrid(stockDataGridView); // Refresh the grid to see changes
         }
 
         // Event handler for Add New button click
