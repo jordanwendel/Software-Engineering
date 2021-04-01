@@ -29,7 +29,7 @@ namespace workflowLoginForm
             {
                 // Assign objProduct
                 objProduct = new Product(txtProductName.Text, txtQuality.Text, int.Parse(txtQuantity.Text), txtLocation.Text); // Create a new product object and put it into the Product database automatically
-                MessageBox.Show("Item enterted Successfully");
+                lblProductAddedStatus.Text = "Item Added Successfully!"; // Display a success message on screen
 
                 //clear text boxes
                 txtProductName.Clear();
@@ -42,7 +42,7 @@ namespace workflowLoginForm
                 MessageBox.Show(err.Message, "Warning!");
             }
 
-            this.Hide();
+            //this.Hide();
         }
 
         // Event handler for Exit button click

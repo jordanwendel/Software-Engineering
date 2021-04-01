@@ -41,6 +41,9 @@ namespace workflowLoginForm
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.addProdStatusStrip = new System.Windows.Forms.StatusStrip();
+            this.lblProductAddedStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.addProdStatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // label6
@@ -63,7 +66,7 @@ namespace workflowLoginForm
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(79)))), ((int)(((byte)(74)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(11, 330);
+            this.btnExit.Location = new System.Drawing.Point(11, 317);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 25);
@@ -77,7 +80,7 @@ namespace workflowLoginForm
             this.btnInsertInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.btnInsertInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertInformation.Location = new System.Drawing.Point(489, 320);
+            this.btnInsertInformation.Location = new System.Drawing.Point(489, 307);
             this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertInformation.Name = "btnInsertInformation";
             this.btnInsertInformation.Size = new System.Drawing.Size(100, 35);
@@ -178,12 +181,28 @@ namespace workflowLoginForm
             this.label1.Text = "Add a Product";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // addProdStatusStrip
+            // 
+            this.addProdStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lblProductAddedStatus});
+            this.addProdStatusStrip.Location = new System.Drawing.Point(0, 344);
+            this.addProdStatusStrip.Name = "addProdStatusStrip";
+            this.addProdStatusStrip.Size = new System.Drawing.Size(600, 22);
+            this.addProdStatusStrip.TabIndex = 26;
+            this.addProdStatusStrip.Text = "statusStrip1";
+            // 
+            // lblProductAddedStatus
+            // 
+            this.lblProductAddedStatus.Name = "lblProductAddedStatus";
+            this.lblProductAddedStatus.Size = new System.Drawing.Size(0, 17);
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.addProdStatusStrip);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnExit);
@@ -200,6 +219,8 @@ namespace workflowLoginForm
             this.Name = "ProductForm";
             this.Text = "Product Form";
             this.Load += new System.EventHandler(this.ProductForm_Load);
+            this.addProdStatusStrip.ResumeLayout(false);
+            this.addProdStatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,6 +240,8 @@ namespace workflowLoginForm
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.StatusStrip addProdStatusStrip;
+        private System.Windows.Forms.ToolStripStatusLabel lblProductAddedStatus;
     }
 }
 

@@ -25,7 +25,7 @@ namespace workflowLoginForm
         
 
 
-        // Constructor with an optional argument to set the name of the database
+        // Constructor with an optional argument to set the name of the database directly from the parameters
         public DatabaseTools(string db = "")
         {
             this.dbName = db;
@@ -211,6 +211,9 @@ namespace workflowLoginForm
             {
                 sql = "SELECT RawMaterialName, Quantity FROM " + dbName; // Viewing all data from RawMaterials database except the ID
             }
+
+                
+ 
 
             // Error handling
             try
