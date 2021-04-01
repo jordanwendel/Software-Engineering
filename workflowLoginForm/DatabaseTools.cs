@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Drawing;
 
 namespace workflowLoginForm
 {
@@ -206,6 +207,11 @@ namespace workflowLoginForm
             connection.Close(); // Close connection
             dataGrid.DataSource = ds;
             dataGrid.DataMember = databaseName;
+
+            // Formatting the data grid
+            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+            dataGrid.RowsDefaultCellStyle.BackColor = Color.Wheat;
+            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // Refreshing the data grid to update inventory

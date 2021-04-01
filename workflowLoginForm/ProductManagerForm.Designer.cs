@@ -69,7 +69,7 @@
             this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logout.Location = new System.Drawing.Point(58, 565);
-            this.Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Logout.Margin = new System.Windows.Forms.Padding(2);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(98, 27);
             this.Logout.TabIndex = 5;
@@ -83,7 +83,7 @@
             this.addProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProduct.Location = new System.Drawing.Point(17, 201);
-            this.addProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addProduct.Margin = new System.Windows.Forms.Padding(2);
             this.addProduct.Name = "addProduct";
             this.addProduct.Size = new System.Drawing.Size(188, 30);
             this.addProduct.TabIndex = 10;
@@ -100,7 +100,7 @@
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBtn.Location = new System.Drawing.Point(787, 552);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(97, 40);
             this.refreshBtn.TabIndex = 11;
@@ -127,7 +127,7 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(11, 288);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(194, 214);
             this.checkedListBox1.TabIndex = 18;
@@ -255,7 +255,7 @@
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemBtn.Location = new System.Drawing.Point(141, 169);
-            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(66, 28);
             this.addItemBtn.TabIndex = 29;
@@ -271,6 +271,7 @@
             this.viewProdBtn.TabIndex = 30;
             this.viewProdBtn.Text = "View Product Data";
             this.viewProdBtn.UseVisualStyleBackColor = true;
+            this.viewProdBtn.Click += new System.EventHandler(this.viewProdBtn_Click);
             // 
             // viewMatBtn
             // 
@@ -280,6 +281,7 @@
             this.viewMatBtn.TabIndex = 31;
             this.viewMatBtn.Text = "View Raw Materials";
             this.viewMatBtn.UseVisualStyleBackColor = true;
+            this.viewMatBtn.Click += new System.EventHandler(this.viewMatBtn_Click);
             // 
             // ProductManagerForm
             // 
@@ -306,7 +308,7 @@
             this.Controls.Add(this.addProduct);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductManagerForm";
             this.Text = "Product Manager Form";
             this.Load += new System.EventHandler(this.ProductManagerForm_Load);

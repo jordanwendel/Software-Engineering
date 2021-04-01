@@ -39,14 +39,12 @@ namespace workflowLoginForm
         // Event handler for Product Manager Form load
         private void ProductManagerForm_Load(object sender, EventArgs e)
         {
+            /**
             // Fill the data grid view on form with contents of given database using a data grid object
             dbTools = new DatabaseTools();
             dbTools.PopulateDataGrid(prodDataGridView, "Products");
 
-            // Setting attributes for data grid
-            prodDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-            prodDataGridView.RowsDefaultCellStyle.BackColor = Color.Wheat;
-            prodDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            */
         }
 
         // Event handler for Refresh Inventory button click
@@ -124,6 +122,21 @@ namespace workflowLoginForm
         private void Admin_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void viewProdBtn_Click(object sender, EventArgs e)
+        {
+            dbTools = new DatabaseTools();
+            dbTools.PopulateDataGrid(prodDataGridView, "Products");
+            dbTools.CloseConnection();
+
+        }
+
+        private void viewMatBtn_Click(object sender, EventArgs e)
+        {
+            dbTools = new DatabaseTools();
+            dbTools.PopulateDataGrid(prodDataGridView, "RawMaterials");
+            dbTools.CloseConnection();
         }
     }
 }

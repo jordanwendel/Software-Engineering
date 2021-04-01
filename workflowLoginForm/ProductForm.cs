@@ -64,6 +64,11 @@ namespace workflowLoginForm
             txtLocation.Clear();
             this.Hide();
         }
+
+        private void btnExit_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

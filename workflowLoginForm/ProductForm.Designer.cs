@@ -70,6 +70,7 @@ namespace workflowLoginForm
             this.btnExit.TabIndex = 23;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_2);
             // 
             // btnInsertInformation
             // 
