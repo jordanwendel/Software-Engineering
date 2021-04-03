@@ -30,10 +30,6 @@ namespace workflowLoginForm
             dbTools.dbName = "RawMaterials";
             dbTools.PopulateDataGrid(stockDataGridView);
 
-            // Setting attributes for data grid
-            stockDataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-            stockDataGridView.RowsDefaultCellStyle.BackColor = Color.Wheat;
-            stockDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         // Event handler for Logout button click

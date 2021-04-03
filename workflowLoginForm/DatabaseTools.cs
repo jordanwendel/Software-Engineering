@@ -13,10 +13,10 @@ namespace workflowLoginForm
     public partial class DatabaseTools
     {
         // Class level objects
-        private SqlConnection cn;
-        private SqlDataReader dr;
+        public SqlConnection cn { get; set; }
+        private SqlDataReader reader;
         private SqlCommand cmd;
-        private SqlDataAdapter sqlDa;
+        //private SqlDataAdapter sqlDa;
 
 
         // Variables
@@ -28,15 +28,13 @@ namespace workflowLoginForm
         // Constructor with an optional argument to set the name of the database directly from the parameters
         public DatabaseTools(string db = "")
         {
-            this.dbName = db;
+            this.dbName = db; // For storing the optional database name parameter, if applicable
+
             // Open connection and create a sql command for class use
             try
             {
                 cn = new SqlConnection(); // Establishing sql connection
                 cn.ConnectionString = connectionString;
-                cn.Open(); // Opening connection with specified path
-                cmd = new SqlCommand();
-                cmd.Connection = cn;
             }
             catch (Exception err)
             {
@@ -61,14 +59,15 @@ namespace workflowLoginForm
            
             try
             {
-                cmd.CommandText = "SELECT userpassword FROM AuthorizedUsers WHERE username = @username"; // Grabs password from associated username in database that matches the username input on the login screen
+                cn.Open();
+                cmd = new SqlCommand("SELECT userpassword FROM AuthorizedUsers WHERE username = @username", cn); // Grabs password from associated username in database that matches the username input on the login screen
                 cmd.Parameters.AddWithValue("@username", username);
 
                 // Opens database, grabs and returns password
-                dr = cmd.ExecuteReader();
-                dr.Read();
+                reader = cmd.ExecuteReader();
+                reader.Read();
 
-                if (enteredPassword.Equals(dr.GetString(0))) // Checks if entered password matches the one grabbed from database
+                if (enteredPassword.Equals(reader.GetString(0))) // Checks if entered password matches the one grabbed from database
                 {
                     isAuthorized = true;
                 }
@@ -92,14 +91,15 @@ namespace workflowLoginForm
         {
             try
             {
-                cmd.CommandText = "SELECT userjob FROM AuthorizedUsers WHERE userName = @username";
+                cn.Open();
+                cmd = new SqlCommand("SELECT userjob FROM AuthorizedUsers WHERE userName = @username", cn);
                 cmd.Parameters.AddWithValue("@username", username);
 
                 // Grabs and returns job from database
-                dr = cmd.ExecuteReader();
-                dr.Read();
+                reader = cmd.ExecuteReader();
+                reader.Read();
 
-                return dr.GetString(0);
+                return reader.GetString(0);
             }
             catch (Exception err)
             {
@@ -117,17 +117,14 @@ namespace workflowLoginForm
         {
             try
             {
-                SqlConnection connectionOne = new SqlConnection(connectionString); // Creating an instance of the database
-
                 // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
-                SqlCommand one = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", connectionOne);
-                one.Parameters.AddWithValue("@username", username);
-                one.Parameters.AddWithValue("@password", password);
-                one.Parameters.AddWithValue("@job", job);
+                cn.Open();
+                cmd = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", cn);
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@job", job);
 
-                connectionOne.Open(); // Open the sql connection
-                one.ExecuteNonQuery(); // Execute the sql command
-                connectionOne.Close(); // Close the sql connection
+                cmd.ExecuteNonQuery(); // Execute the sql command
                 MessageBox.Show("Sucessfully Registered!");
 
             }
@@ -143,20 +140,24 @@ namespace workflowLoginForm
 
         // Adds raw material to database with given name and quantity
         public void AddRawMaterial(string rawMaterialName, int quantity)
+                                   //List<RawMaterial> rawMaterials)
         {
             try
             {
-                // Create a new sql connection
-                SqlConnection connectionOne = new SqlConnection(connectionString);
+                /** For later use
+                foreach (var mat in rawMaterials)
+                {
+                    one.Parameters.AddWithValue("@RawMaterialName", mat.rawMaterialName);
+                    one.Parameters.AddWithValue("@Quantity", mat.quantity);
+                }
+                */
 
                 // Create a SQL command that takes user input -- raw material name, quantity -- and inputs into RawMaterials database
-                SqlCommand one = new SqlCommand("Insert into RawMaterials(RawMaterialName, Quantity) Values(@RawMaterialName,  @Quantity);", connectionOne);
-                one.Parameters.AddWithValue("@RawMaterialName", rawMaterialName);
-                one.Parameters.AddWithValue("@Quantity", quantity);
-
-                connectionOne.Open(); // Open the sql connection
-                one.ExecuteNonQuery(); // Execute the sql command
-                connectionOne.Close(); // Close the sql connection
+                cn.Open();
+                cmd = new SqlCommand("Insert into RawMaterials(RawMaterialName, Quantity) Values(@RawMaterialName,  @Quantity);", cn);
+                cmd.Parameters.AddWithValue("@RawMaterialName", rawMaterialName);
+                cmd.Parameters.AddWithValue("@Quantity", quantity);
+                cmd.ExecuteNonQuery(); // Execute the sql command
             }
             catch (Exception err)
             {
@@ -173,19 +174,15 @@ namespace workflowLoginForm
         {
             try
             {
-                // Create a new sql connection 
-                SqlConnection connectionOne = new SqlConnection(connectionString);
-
                 // Create a sql command that takes user input -- product name, quality, quantity, location -- and inputs into Products database
-                SqlCommand one = new SqlCommand("Insert into Products(ProductName, Quality, Quantity, Location) Values(@ProductName, @Quality, @Quantity, @Location);", connectionOne);
-                one.Parameters.AddWithValue("@ProductName", name);
-                one.Parameters.AddWithValue("@Quality", quality);
-                one.Parameters.AddWithValue("@Quantity", quantity);
-                one.Parameters.AddWithValue("@Location", location);
+                cmd = new SqlCommand("Insert into Products(ProductName, Quality, Quantity, Location) Values(@ProductName, @Quality, @Quantity, @Location);", cn);
+                cmd.Parameters.AddWithValue("@ProductName", name);
+                cmd.Parameters.AddWithValue("@Quality", quality);
+                cmd.Parameters.AddWithValue("@Quantity", quantity);
+                cmd.Parameters.AddWithValue("@Location", location);
 
-                connectionOne.Open(); // Open connection
-                one.ExecuteNonQuery(); // Execute the sql command
-                connectionOne.Close(); // Close the sql connection
+                cmd.ExecuteNonQuery(); // Execute the sql command
+
             }
             catch (Exception err)
             {
@@ -216,20 +213,23 @@ namespace workflowLoginForm
             // Error handling
             try
             {
-                SqlConnection connection = new SqlConnection(connectionString);
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, connection);
+                //SqlConnection connection = new SqlConnection(connectionString);
+                cn.Open();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, cn);
                 DataSet ds = new DataSet();
 
                 // Fill data grid on screen with data from given database
-                connection.Open(); // Open connection
                 dataAdapter.Fill(ds, dbName);
-                connection.Close(); // Close connection
                 dataGrid.DataSource = ds;
                 dataGrid.DataMember = dbName;
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Issue Creating DataGrid");
+            }
+            finally
+            {
+                cn.Close();
             }
 
             // Formatting the data grid
@@ -256,10 +256,11 @@ namespace workflowLoginForm
             try
             {
                 User tempUser;
-                
+
                 // Create the sql command
-                SqlCommand sqlCommand = new SqlCommand("SELECT username, userpassword FROM AuthorizedUsers WHERE userjob = " + "'" + job + "'", cn);
-                SqlDataReader reader = sqlCommand.ExecuteReader();
+                cn.Open();
+                cmd = new SqlCommand("SELECT username, userpassword FROM AuthorizedUsers WHERE userjob = " + "'" + job + "'", cn);
+                reader = cmd.ExecuteReader();
 
                 // Get the name of the user and add it to the list of User objects
                 while (reader.Read())
@@ -274,6 +275,10 @@ namespace workflowLoginForm
             catch (Exception err)
             {
                 MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
             }
 
             return users;

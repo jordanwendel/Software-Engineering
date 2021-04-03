@@ -18,27 +18,27 @@ namespace workflowLoginForm
 
         // Variables
         private string databaseName { get; set; }
+
+        // Constructor
         public ReportManagerForm()
         {
             InitializeComponent();
         }
 
-        private void Logout_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        // Event handler for Refresh button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
             dbTools = new DatabaseTools(this.databaseName);
             dbTools.RefreshDataGrid(prodDataGridView); // Refresh the data grid to see changes
         }
 
+        // Event handler for Log Out button click
         private void Logout_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        // Event handler for Form load
         private void ReportManagerForm_Load(object sender, EventArgs e)
         {
             // Fill the Product Manager form with Products database information upon creation
@@ -55,6 +55,7 @@ namespace workflowLoginForm
             }
         }
 
+        // Event handler for View Product Data button click
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
             this.databaseName = "Products"; // Set the name for the database we want to find
@@ -63,6 +64,7 @@ namespace workflowLoginForm
             dbTools.CloseConnection();
         }
 
+        // Event handler for View Raw Materials Data button click
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
             this.databaseName = "RawMaterials"; // Set the name for the database we want to find

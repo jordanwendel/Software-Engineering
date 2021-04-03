@@ -12,8 +12,8 @@ namespace workflowLoginForm
     {
         private DatabaseTools dbTools;
 
-        private string rawMaterialName { get; set; }
-        private int quantity { get; set; }
+        public string rawMaterialName { get; set; }
+        public int quantity { get; set; }
 
 
         // Constructor
@@ -31,7 +31,6 @@ namespace workflowLoginForm
             {
                 MessageBox.Show(err.Message, "Warning!");
             }
-            
         }
 
     }

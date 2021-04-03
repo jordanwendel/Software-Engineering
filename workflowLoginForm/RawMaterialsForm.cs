@@ -15,8 +15,6 @@ namespace workflowLoginForm
     {
 
         private RawMaterial objRawMaterial;
-        private DatabaseTools dbTools;
-        private StockiestForm stock;
 
         // Constructor
         public RawMaterialsForm()
