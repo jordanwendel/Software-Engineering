@@ -13,7 +13,8 @@ namespace workflowLoginForm
 {
     public partial class DeliveryManagerForm : Form
     {
-
+        //class level objects
+        private DatabaseTools dbTools;
         public DeliveryManagerForm()
         {
             InitializeComponent();
@@ -30,6 +31,24 @@ namespace workflowLoginForm
         }
 
         private void prodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            dbTools = new DatabaseTools("Products");
+            dbTools.RefreshDataGrid(prodDataGridView);
+        }
+
+        private void DeliveryManagerForm_Load(object sender, EventArgs e)
+        {
+            dbTools = new DatabaseTools("Products"); // Default data grid is Products database
+            dbTools.PopulateDataGrid(prodDataGridView);
+            dbTools.CloseConnection();
+        }
+
+        private void addItemBtn_Click(object sender, EventArgs e)
         {
 
         }
