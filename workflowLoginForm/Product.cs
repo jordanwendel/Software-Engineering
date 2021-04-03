@@ -18,11 +18,6 @@ namespace workflowLoginForm
         private int quantity { get; set; }
         private string location { get; set; }
 
-        public Product()
-        {
-
-        }
-
         // Constructor
         public Product(string productName, string quality, int quantity, string location)
         {

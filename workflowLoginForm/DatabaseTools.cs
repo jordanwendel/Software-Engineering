@@ -175,6 +175,7 @@ namespace workflowLoginForm
             try
             {
                 // Create a sql command that takes user input -- product name, quality, quantity, location -- and inputs into Products database
+                cn.Open();
                 cmd = new SqlCommand("Insert into Products(ProductName, Quality, Quantity, Location) Values(@ProductName, @Quality, @Quantity, @Location);", cn);
                 cmd.Parameters.AddWithValue("@ProductName", name);
                 cmd.Parameters.AddWithValue("@Quality", quality);
