@@ -61,7 +61,6 @@
             this.Admin.TabIndex = 2;
             this.Admin.Text = "Product Manager Page";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Admin.Click += new System.EventHandler(this.Admin_Click);
             // 
             // Logout
             // 
@@ -121,7 +120,6 @@
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(671, 454);
             this.prodDataGridView.TabIndex = 12;
-            this.prodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDataGridView_CellContentClick);
             // 
             // checkedListBox1
             // 
@@ -131,7 +129,7 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(194, 214);
             this.checkedListBox1.TabIndex = 18;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+
             // 
             // addItemLbl
             // 
@@ -143,7 +141,7 @@
             this.addItemLbl.Size = new System.Drawing.Size(104, 30);
             this.addItemLbl.TabIndex = 19;
             this.addItemLbl.Text = "Add Item";
-            this.addItemLbl.Click += new System.EventHandler(this.addItemLbl_Click);
+
             // 
             // nameMenu
             // 
@@ -153,7 +151,7 @@
             this.nameMenu.Size = new System.Drawing.Size(119, 21);
             this.nameMenu.TabIndex = 20;
             this.nameMenu.Text = "Click to expand...";
-            this.nameMenu.SelectedIndexChanged += new System.EventHandler(this.nameMenu_SelectedIndexChanged);
+
             // 
             // qualityMenu
             // 
@@ -163,7 +161,7 @@
             this.qualityMenu.Size = new System.Drawing.Size(119, 21);
             this.qualityMenu.TabIndex = 21;
             this.qualityMenu.Text = "Click to expand...";
-            this.qualityMenu.SelectedIndexChanged += new System.EventHandler(this.qualityMenu_SelectedIndexChanged);
+
             // 
             // quantityTxt
             // 
@@ -172,7 +170,7 @@
             this.quantityTxt.Size = new System.Drawing.Size(119, 20);
             this.quantityTxt.TabIndex = 22;
             this.quantityTxt.Text = "Enter Quantity";
-            this.quantityTxt.TextChanged += new System.EventHandler(this.quantityTxt_TextChanged);
+
             // 
             // locationMenu
             // 
@@ -182,7 +180,7 @@
             this.locationMenu.Size = new System.Drawing.Size(119, 21);
             this.locationMenu.TabIndex = 23;
             this.locationMenu.Text = "Click to expand...";
-            this.locationMenu.SelectedIndexChanged += new System.EventHandler(this.locationMenu_SelectedIndexChanged);
+
             // 
             // nameLbl
             // 
@@ -195,7 +193,7 @@
             this.nameLbl.TabIndex = 24;
             this.nameLbl.Text = "Item:";
             this.nameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.nameLbl.Click += new System.EventHandler(this.nameLbl_Click);
+
             // 
             // qualityLbl
             // 
@@ -208,7 +206,7 @@
             this.qualityLbl.TabIndex = 25;
             this.qualityLbl.Text = "Quality: ";
             this.qualityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.qualityLbl.Click += new System.EventHandler(this.qualityLbl_Click);
+
             // 
             // quantityLbl
             // 
@@ -221,7 +219,7 @@
             this.quantityLbl.TabIndex = 26;
             this.quantityLbl.Text = "Quantity:";
             this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.quantityLbl.Click += new System.EventHandler(this.quantityLbl_Click);
+
             // 
             // locationLbl
             // 
@@ -234,7 +232,7 @@
             this.locationLbl.TabIndex = 27;
             this.locationLbl.Text = "Location:";
             this.locationLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.locationLbl.Click += new System.EventHandler(this.locationLbl_Click);
+
             // 
             // filterLbl
             // 
@@ -247,7 +245,7 @@
             this.filterLbl.TabIndex = 28;
             this.filterLbl.Text = "Filter Items";
             this.filterLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.filterLbl.Click += new System.EventHandler(this.filterLbl_Click);
+
             // 
             // addItemBtn
             // 
@@ -261,7 +259,7 @@
             this.addItemBtn.TabIndex = 29;
             this.addItemBtn.Text = "ADD ";
             this.addItemBtn.UseVisualStyleBackColor = false;
-            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
+
             // 
             // viewProdBtn
             // 

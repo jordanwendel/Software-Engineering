@@ -17,7 +17,7 @@ namespace workflowLoginForm
         private SqlDataReader dr;
         private SqlCommand cmd;
         private SqlDataAdapter sqlDa;
-        private User user;
+
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
@@ -211,8 +211,6 @@ namespace workflowLoginForm
             {
                 sql = "SELECT RawMaterialName, Quantity FROM " + dbName; // Viewing all data from RawMaterials database except the ID
             }
-
-                
  
 
             // Error handling
@@ -246,6 +244,39 @@ namespace workflowLoginForm
             dataGrid.Update();
             dataGrid.Refresh();
             PopulateDataGrid(dataGrid);
+        }
+
+        // Returns a list of User objects. Pulls the names of users in a given job from the AuthorizedUsers database for each User object
+        public List<User> createUserList(string job)
+        {
+            // Create list of User objects
+            List<User> users;
+            users = new List<User>();
+
+            try
+            {
+                User tempUser;
+                
+                // Create the sql command
+                SqlCommand sqlCommand = new SqlCommand("SELECT username, userpassword FROM AuthorizedUsers WHERE userjob = " + "'" + job + "'", cn);
+                SqlDataReader reader = sqlCommand.ExecuteReader();
+
+                // Get the name of the user and add it to the list of User objects
+                while (reader.Read())
+                {
+                    string name = (string)reader["username"];
+                    tempUser = new User(name);
+                    users.Add(tempUser);
+                }
+
+                reader.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+
+            return users;
         }
 
     }

@@ -35,11 +35,11 @@
             this.delManagerBtn = new System.Windows.Forms.Button();
             this.repManagerBtn = new System.Windows.Forms.Button();
             this.qualAnalyzerBtn = new System.Windows.Forms.Button();
-            this.Names = new System.Windows.Forms.ListBox();
-            this.Names2 = new System.Windows.Forms.ListBox();
-            this.Names3 = new System.Windows.Forms.ListBox();
-            this.Names4 = new System.Windows.Forms.ListBox();
-            this.Names5 = new System.Windows.Forms.ListBox();
+            this.stockiestNames = new System.Windows.Forms.ListBox();
+            this.productManagerNames = new System.Windows.Forms.ListBox();
+            this.deliveryManagerNames = new System.Windows.Forms.ListBox();
+            this.reportManagerNames = new System.Windows.Forms.ListBox();
+            this.qualityAnalyzerNames = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // Admin
@@ -122,50 +122,50 @@
             this.qualAnalyzerBtn.UseVisualStyleBackColor = true;
             this.qualAnalyzerBtn.Click += new System.EventHandler(this.qualAnalyzerBtn_Click);
             // 
-            // Names
+            // stockiestNames
             // 
-            this.Names.FormattingEnabled = true;
-            this.Names.Location = new System.Drawing.Point(176, 79);
-            this.Names.Margin = new System.Windows.Forms.Padding(2);
-            this.Names.Name = "Names";
-            this.Names.Size = new System.Drawing.Size(129, 95);
-            this.Names.TabIndex = 11;
+            this.stockiestNames.FormattingEnabled = true;
+            this.stockiestNames.Location = new System.Drawing.Point(176, 79);
+            this.stockiestNames.Margin = new System.Windows.Forms.Padding(2);
+            this.stockiestNames.Name = "stockiestNames";
+            this.stockiestNames.Size = new System.Drawing.Size(129, 95);
+            this.stockiestNames.TabIndex = 11;
             // 
-            // Names2
+            // productManagerNames
             // 
-            this.Names2.FormattingEnabled = true;
-            this.Names2.Location = new System.Drawing.Point(308, 79);
-            this.Names2.Margin = new System.Windows.Forms.Padding(2);
-            this.Names2.Name = "Names2";
-            this.Names2.Size = new System.Drawing.Size(129, 95);
-            this.Names2.TabIndex = 12;
+            this.productManagerNames.FormattingEnabled = true;
+            this.productManagerNames.Location = new System.Drawing.Point(308, 79);
+            this.productManagerNames.Margin = new System.Windows.Forms.Padding(2);
+            this.productManagerNames.Name = "productManagerNames";
+            this.productManagerNames.Size = new System.Drawing.Size(129, 95);
+            this.productManagerNames.TabIndex = 12;
             // 
-            // Names3
+            // deliveryManagerNames
             // 
-            this.Names3.FormattingEnabled = true;
-            this.Names3.Location = new System.Drawing.Point(108, 198);
-            this.Names3.Margin = new System.Windows.Forms.Padding(2);
-            this.Names3.Name = "Names3";
-            this.Names3.Size = new System.Drawing.Size(129, 95);
-            this.Names3.TabIndex = 13;
+            this.deliveryManagerNames.FormattingEnabled = true;
+            this.deliveryManagerNames.Location = new System.Drawing.Point(108, 198);
+            this.deliveryManagerNames.Margin = new System.Windows.Forms.Padding(2);
+            this.deliveryManagerNames.Name = "deliveryManagerNames";
+            this.deliveryManagerNames.Size = new System.Drawing.Size(129, 95);
+            this.deliveryManagerNames.TabIndex = 13;
             // 
-            // Names4
+            // reportManagerNames
             // 
-            this.Names4.FormattingEnabled = true;
-            this.Names4.Location = new System.Drawing.Point(241, 198);
-            this.Names4.Margin = new System.Windows.Forms.Padding(2);
-            this.Names4.Name = "Names4";
-            this.Names4.Size = new System.Drawing.Size(129, 95);
-            this.Names4.TabIndex = 14;
+            this.reportManagerNames.FormattingEnabled = true;
+            this.reportManagerNames.Location = new System.Drawing.Point(241, 198);
+            this.reportManagerNames.Margin = new System.Windows.Forms.Padding(2);
+            this.reportManagerNames.Name = "reportManagerNames";
+            this.reportManagerNames.Size = new System.Drawing.Size(129, 95);
+            this.reportManagerNames.TabIndex = 14;
             // 
-            // Names5
+            // qualityAnalyzerNames
             // 
-            this.Names5.FormattingEnabled = true;
-            this.Names5.Location = new System.Drawing.Point(374, 198);
-            this.Names5.Margin = new System.Windows.Forms.Padding(2);
-            this.Names5.Name = "Names5";
-            this.Names5.Size = new System.Drawing.Size(129, 95);
-            this.Names5.TabIndex = 15;
+            this.qualityAnalyzerNames.FormattingEnabled = true;
+            this.qualityAnalyzerNames.Location = new System.Drawing.Point(374, 198);
+            this.qualityAnalyzerNames.Margin = new System.Windows.Forms.Padding(2);
+            this.qualityAnalyzerNames.Name = "qualityAnalyzerNames";
+            this.qualityAnalyzerNames.Size = new System.Drawing.Size(129, 95);
+            this.qualityAnalyzerNames.TabIndex = 15;
             // 
             // AdministratorForm
             // 
@@ -173,11 +173,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(626, 367);
-            this.Controls.Add(this.Names5);
-            this.Controls.Add(this.Names4);
-            this.Controls.Add(this.Names3);
-            this.Controls.Add(this.Names2);
-            this.Controls.Add(this.Names);
+            this.Controls.Add(this.qualityAnalyzerNames);
+            this.Controls.Add(this.reportManagerNames);
+            this.Controls.Add(this.deliveryManagerNames);
+            this.Controls.Add(this.productManagerNames);
+            this.Controls.Add(this.stockiestNames);
             this.Controls.Add(this.qualAnalyzerBtn);
             this.Controls.Add(this.repManagerBtn);
             this.Controls.Add(this.delManagerBtn);
@@ -188,6 +188,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdministratorForm";
             this.Text = "Admin Form";
+            this.Load += new System.EventHandler(this.AdministratorForm_Load);
             this.ResumeLayout(false);
 
         }
@@ -201,11 +202,11 @@
         private System.Windows.Forms.Button delManagerBtn;
         private System.Windows.Forms.Button repManagerBtn;
         private System.Windows.Forms.Button qualAnalyzerBtn;
-        private System.Windows.Forms.ListBox Names;
-        private System.Windows.Forms.ListBox Names2;
-        private System.Windows.Forms.ListBox Names3;
-        private System.Windows.Forms.ListBox Names4;
-        private System.Windows.Forms.ListBox Names5;
+        private System.Windows.Forms.ListBox stockiestNames;
+        private System.Windows.Forms.ListBox productManagerNames;
+        private System.Windows.Forms.ListBox deliveryManagerNames;
+        private System.Windows.Forms.ListBox reportManagerNames;
+        private System.Windows.Forms.ListBox qualityAnalyzerNames;
     }
 }
 

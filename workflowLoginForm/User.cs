@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace workflowLoginForm
 {
-    class User
+    public class User
     {
         // Class level objects
         private DatabaseTools databaseTools;
@@ -16,6 +16,11 @@ namespace workflowLoginForm
         public string Password { get; set; }
         public string Job { get; set; }
 
+        // Constructor for displaying names of users in a particular job on admin screen
+        public User (string username)
+        {
+            this.Username = username;
+        }
 
         // Constructor for login
         public User (string username, string password)
@@ -34,6 +39,11 @@ namespace workflowLoginForm
             user.Password = null;
             user.Job = null;
 
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Name: {0}", this.Username);      
         }
 
         /**
