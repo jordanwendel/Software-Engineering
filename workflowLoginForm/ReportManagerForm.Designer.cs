@@ -72,7 +72,7 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(11, 286);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(194, 229);
             this.checkedListBox1.TabIndex = 35;
@@ -100,7 +100,7 @@
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBtn.Location = new System.Drawing.Point(736, 557);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(118, 32);
             this.refreshBtn.TabIndex = 33;
@@ -114,7 +114,7 @@
             this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logout.Location = new System.Drawing.Point(17, 563);
-            this.Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Logout.Margin = new System.Windows.Forms.Padding(2);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(98, 27);
             this.Logout.TabIndex = 31;
@@ -220,7 +220,7 @@
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReportManagerForm";
             this.Text = "Report Manager Form";
             this.Load += new System.EventHandler(this.ReportManagerForm_Load);

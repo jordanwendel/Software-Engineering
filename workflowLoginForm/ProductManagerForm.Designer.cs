@@ -127,9 +127,8 @@
             this.checkedListBox1.Location = new System.Drawing.Point(11, 288);
             this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(194, 214);
+            this.checkedListBox1.Size = new System.Drawing.Size(194, 229);
             this.checkedListBox1.TabIndex = 18;
-
             // 
             // addItemLbl
             // 
@@ -141,7 +140,6 @@
             this.addItemLbl.Size = new System.Drawing.Size(104, 30);
             this.addItemLbl.TabIndex = 19;
             this.addItemLbl.Text = "Add Item";
-
             // 
             // nameMenu
             // 
@@ -151,7 +149,6 @@
             this.nameMenu.Size = new System.Drawing.Size(119, 21);
             this.nameMenu.TabIndex = 20;
             this.nameMenu.Text = "Click to expand...";
-
             // 
             // qualityMenu
             // 
@@ -161,7 +158,6 @@
             this.qualityMenu.Size = new System.Drawing.Size(119, 21);
             this.qualityMenu.TabIndex = 21;
             this.qualityMenu.Text = "Click to expand...";
-
             // 
             // quantityTxt
             // 
@@ -170,7 +166,6 @@
             this.quantityTxt.Size = new System.Drawing.Size(119, 20);
             this.quantityTxt.TabIndex = 22;
             this.quantityTxt.Text = "Enter Quantity";
-
             // 
             // locationMenu
             // 
@@ -180,7 +175,6 @@
             this.locationMenu.Size = new System.Drawing.Size(119, 21);
             this.locationMenu.TabIndex = 23;
             this.locationMenu.Text = "Click to expand...";
-
             // 
             // nameLbl
             // 
@@ -193,7 +187,6 @@
             this.nameLbl.TabIndex = 24;
             this.nameLbl.Text = "Item:";
             this.nameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-
             // 
             // qualityLbl
             // 
@@ -206,7 +199,6 @@
             this.qualityLbl.TabIndex = 25;
             this.qualityLbl.Text = "Quality: ";
             this.qualityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-
             // 
             // quantityLbl
             // 
@@ -219,7 +211,6 @@
             this.quantityLbl.TabIndex = 26;
             this.quantityLbl.Text = "Quantity:";
             this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-
             // 
             // locationLbl
             // 
@@ -232,7 +223,6 @@
             this.locationLbl.TabIndex = 27;
             this.locationLbl.Text = "Location:";
             this.locationLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-
             // 
             // filterLbl
             // 
@@ -245,7 +235,6 @@
             this.filterLbl.TabIndex = 28;
             this.filterLbl.Text = "Filter Items";
             this.filterLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // addItemBtn
             // 
@@ -259,7 +248,6 @@
             this.addItemBtn.TabIndex = 29;
             this.addItemBtn.Text = "ADD ";
             this.addItemBtn.UseVisualStyleBackColor = false;
-
             // 
             // viewProdBtn
             // 

@@ -54,7 +54,7 @@
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemBtn.Location = new System.Drawing.Point(141, 166);
-            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(66, 28);
             this.addItemBtn.TabIndex = 46;
@@ -171,9 +171,9 @@
             // 
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Location = new System.Drawing.Point(11, 284);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(194, 259);
+            this.checkedListBox1.Size = new System.Drawing.Size(194, 274);
             this.checkedListBox1.TabIndex = 35;
             // 
             // prodDataGridView
@@ -199,7 +199,7 @@
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBtn.Location = new System.Drawing.Point(751, 571);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(110, 35);
             this.refreshBtn.TabIndex = 33;
@@ -213,7 +213,7 @@
             this.addProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addProduct.Location = new System.Drawing.Point(17, 197);
-            this.addProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addProduct.Margin = new System.Windows.Forms.Padding(2);
             this.addProduct.Name = "addProduct";
             this.addProduct.Size = new System.Drawing.Size(188, 30);
             this.addProduct.TabIndex = 32;
@@ -226,7 +226,7 @@
             this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logout.Location = new System.Drawing.Point(13, 579);
-            this.Logout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Logout.Margin = new System.Windows.Forms.Padding(2);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(98, 27);
             this.Logout.TabIndex = 31;
@@ -270,7 +270,7 @@
             this.Controls.Add(this.addProduct);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QualityAnalyzerForm";
             this.Text = "Quality Analyzer Form";
             this.Load += new System.EventHandler(this.QualityAnalyzerForm_Load);
