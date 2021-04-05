@@ -40,15 +40,12 @@ namespace workflowLoginForm
             {
                 try
                 {
+                    // May want to create a new User object here and pass that into RegisterUser instead
                     dbTools.RegisterUser(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Register the user in the database
                 }
                 catch (Exception err)
                 {
                     MessageBox.Show(err.Message, "Warning!");
-                }
-                finally
-                {
-                    dbTools.CloseConnection();
                 }
                                         
                 // Clear values for other users

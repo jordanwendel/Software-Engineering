@@ -29,7 +29,6 @@ namespace workflowLoginForm
             this.Username = username;
             this.Password = password;
             this.Job = databaseTools.GetJob(username); // Sets job from the database with given username
-            databaseTools.CloseConnection();
         }
 
         // For future use to delete the user when exiting or logging out

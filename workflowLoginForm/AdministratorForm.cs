@@ -102,9 +102,6 @@ namespace workflowLoginForm
             users = dbTools.createUserList("Quality Analyzer");
             qualityAnalyzerNames.Items.AddRange(users.ToArray());
 
-            dbTools.CloseConnection();
-
-
         }
     }
 }

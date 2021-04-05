@@ -26,9 +26,10 @@ namespace workflowLoginForm
 
 
         // Constructor with an optional argument to set the name of the database directly from the parameters
-        public DatabaseTools(string db = "")
+        // This optional argument will be used to switch between databases on a datagrid
+        public DatabaseTools(string dbName = "")
         {
-            this.dbName = db; // For storing the optional database name parameter, if applicable
+            this.dbName = dbName; // For storing the optional database name parameter
 
             // Error handling
             try
@@ -226,6 +227,11 @@ namespace workflowLoginForm
                 dataAdapter.Fill(ds, dbName);
                 dataGrid.DataSource = ds;
                 dataGrid.DataMember = dbName;
+
+                // Formatting the data grid
+                dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+                dataGrid.RowsDefaultCellStyle.BackColor = Color.Wheat;
+                dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception err)
             {
@@ -236,10 +242,7 @@ namespace workflowLoginForm
                 cn.Close();
             }
 
-            // Formatting the data grid
-            dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-            dataGrid.RowsDefaultCellStyle.BackColor = Color.Wheat;
-            dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            
         }
 
 
