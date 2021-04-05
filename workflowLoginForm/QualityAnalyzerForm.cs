@@ -52,7 +52,6 @@ namespace workflowLoginForm
         {
             dbTools = new DatabaseTools("Products"); // Default data grid is Products database
             dbTools.PopulateDataGrid(prodDataGridView);
-            dbTools.CloseConnection();
         }
     }
 }

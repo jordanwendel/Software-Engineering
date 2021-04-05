@@ -45,13 +45,6 @@ namespace workflowLoginForm
 
         // Methods
 
-        // For closing connection manually
-        public void CloseConnection() 
-        {
-            cn.Close();
-        }
-
-
 
         // Validates user from the database upon login
         public bool ValidatePassword(string username, string enteredPassword)

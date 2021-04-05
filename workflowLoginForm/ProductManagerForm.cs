@@ -46,7 +46,6 @@ namespace workflowLoginForm
                 this.databaseName = "Products";
                 dbTools = new DatabaseTools(this.databaseName); // Default data grid is Products database
                 dbTools.PopulateDataGrid(prodDataGridView);
-                dbTools.CloseConnection();
             }
             catch (Exception err)
             {
@@ -67,8 +66,6 @@ namespace workflowLoginForm
             this.databaseName = "Products"; // Set the name for the database we want to find
             dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
             dbTools.PopulateDataGrid(prodDataGridView);
-            dbTools.CloseConnection();
-
         }
 
         private void viewMatBtn_Click(object sender, EventArgs e)
@@ -76,7 +73,6 @@ namespace workflowLoginForm
             this.databaseName = "RawMaterials"; // Set the name for the database we want to find
             dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
             dbTools.PopulateDataGrid(prodDataGridView);
-            dbTools.CloseConnection();
         }
     }
 }

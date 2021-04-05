@@ -45,7 +45,6 @@ namespace workflowLoginForm
         {
             dbTools = new DatabaseTools("Products");
             dbTools.PopulateDataGrid(prodDataGridView);
-            dbTools.CloseConnection();
         }
 
         private void addItemBtn_Click(object sender, EventArgs e)
