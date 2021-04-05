@@ -30,7 +30,7 @@ namespace workflowLoginForm
         {
             this.dbName = db; // For storing the optional database name parameter, if applicable
 
-            // Open connection and create a sql command for class use
+            // Error handling
             try
             {
                 cn = new SqlConnection(); // Establishing sql connection
@@ -52,11 +52,13 @@ namespace workflowLoginForm
         }
 
 
+
         // Validates user from the database upon login
         public bool ValidatePassword(string username, string enteredPassword)
         {
             bool isAuthorized = false;
            
+            // Open connection and execute sql command
             try
             {
                 cn.Open();
@@ -86,6 +88,7 @@ namespace workflowLoginForm
         }
 
 
+
         // Gets user job from database with given username
         public string GetJob(string username)
         {
@@ -111,9 +114,11 @@ namespace workflowLoginForm
                 cn.Close();
             }
         }
-       
-         // Inputs user into database with given username, password, and job
-        public void RegisterUser(string username, string password, string job)
+
+
+
+        // Inputs user into database with given username, password, and job
+        public void RegisterUser(string username, string password, string job) // May be better to pass in a User object instead
         {
             try
             {
@@ -138,8 +143,10 @@ namespace workflowLoginForm
             }
         }
 
+
+
         // Adds raw material to database with given name and quantity
-        public void AddRawMaterial(string rawMaterialName, int quantity)
+        public void AddRawMaterial(string rawMaterialName, int quantity) // May be better to use a RawMaterial object instead
                                    //List<RawMaterial> rawMaterials)
         {
             try
@@ -169,8 +176,10 @@ namespace workflowLoginForm
             }
         }
 
+
+
         // Adds product to database with given name, quality, quantity, and location
-        public void AddProduct(string name, string quality, int quantity, string location)
+        public void AddProduct(string name, string quality, int quantity, string location) // May be better to use a Product object instead
         {
             try
             {
@@ -195,6 +204,8 @@ namespace workflowLoginForm
             }
         }
 
+
+
         // Creates a data grid from a specified database
         public void PopulateDataGrid(DataGridView dataGrid)
         {
@@ -214,7 +225,6 @@ namespace workflowLoginForm
             // Error handling
             try
             {
-                //SqlConnection connection = new SqlConnection(connectionString);
                 cn.Open();
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, cn);
                 DataSet ds = new DataSet();
@@ -239,6 +249,8 @@ namespace workflowLoginForm
             dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+
+
         // Refreshing the data grid to update inventory
         public void RefreshDataGrid(DataGridView dataGrid)
         {
@@ -246,6 +258,8 @@ namespace workflowLoginForm
             dataGrid.Refresh();
             PopulateDataGrid(dataGrid);
         }
+
+
 
         // Returns a list of User objects. Pulls the names of users in a given job from the AuthorizedUsers database for each User object
         public List<User> createUserList(string job)

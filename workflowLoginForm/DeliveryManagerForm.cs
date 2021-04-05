@@ -43,7 +43,7 @@ namespace workflowLoginForm
 
         private void DeliveryManagerForm_Load(object sender, EventArgs e)
         {
-            dbTools = new DatabaseTools("Products"); // Default data grid is Products database
+            dbTools = new DatabaseTools("Products");
             dbTools.PopulateDataGrid(prodDataGridView);
             dbTools.CloseConnection();
         }

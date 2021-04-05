@@ -126,7 +126,6 @@ namespace workflowLoginForm
         // Event handler for Exit button click
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            //DbTools.CloseConnection();
             Application.Exit(); // Quit application
         }
 
