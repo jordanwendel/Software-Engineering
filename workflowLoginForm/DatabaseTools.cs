@@ -14,8 +14,8 @@ namespace workflowLoginForm
     {
         // Class level objects
         public SqlConnection cn { get; set; }
-        private SqlDataReader reader;
-        private SqlCommand cmd;
+        public SqlDataReader reader;
+        public SqlCommand cmd;
         //private SqlDataAdapter sqlDa;
 
 
@@ -293,6 +293,14 @@ namespace workflowLoginForm
             }
 
             return users;
+        }
+
+        public void LoadDataFromProductTable()
+        {
+
+
+            
+
         }
 
     }
