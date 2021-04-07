@@ -39,5 +39,14 @@ namespace workflowLoginForm
 
         }
 
+        public override string ToString()
+        {
+
+            string info = string.Format("Name: {0}, Quality {1}, Quanity: {2}, Location: {3}", productName, quality, quantity, location);
+            info = info.Trim();
+
+            return info;
+        }
+
     }
 }

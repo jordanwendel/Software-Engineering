@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -73,6 +74,53 @@ namespace workflowLoginForm
             this.databaseName = "RawMaterials"; // Set the name for the database we want to find
             dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
             dbTools.PopulateDataGrid(prodDataGridView);
+        }
+
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            List<Product> productList;
+            productList = new List<Product>();
+            dbTools = new DatabaseTools("trial");
+
+            Product tempProduct;
+            dbTools.cn.Open();
+
+            string info = txtFilterByItem.Text;
+
+            if(true)
+            {
+                dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE ProductName = @info", dbTools.cn);
+                dbTools.cmd.Parameters.AddWithValue("@info", info);
+            }
+            else
+            {
+               // dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS", dbTools.cn);
+            }
+
+            SqlDataReader reader = dbTools.cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string ProductName = (string)reader["ProductName"];
+                ProductName = ProductName.Trim() + "    ";
+                string quality = (string)reader["Quality"];
+                quality = quality.Trim() + "    ";
+                int quantity = (int)reader["Quantity"];
+                string location = (string)reader["Location"];
+                location = location.Trim() + "    ";
+
+                tempProduct = new Product(ProductName, quality, quantity, location);
+                productList.Add(tempProduct);
+            }
+
+            dbTools.cn.Close();
+
+            lstBoxProducts.Items.Clear();
+            lstBoxProducts.Items.AddRange(productList.ToArray());
+
+
+
         }
     }
 }
