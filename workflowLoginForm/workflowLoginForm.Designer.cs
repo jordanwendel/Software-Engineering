@@ -37,7 +37,6 @@ namespace workflowLoginForm
             this.loginBtn = new System.Windows.Forms.Button();
             this.clearBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
-            this.registerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // title
@@ -133,21 +132,6 @@ namespace workflowLoginForm
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
-            // registerBtn
-            // 
-            this.registerBtn.BackColor = System.Drawing.Color.LightGray;
-            this.registerBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerBtn.ForeColor = System.Drawing.Color.Black;
-            this.registerBtn.Location = new System.Drawing.Point(351, 269);
-            this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(102, 34);
-            this.registerBtn.TabIndex = 8;
-            this.registerBtn.Text = "REGISTER";
-            this.registerBtn.UseVisualStyleBackColor = false;
-            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
-            // 
             // workflowLoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,7 +139,6 @@ namespace workflowLoginForm
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.loginBtn);
@@ -181,7 +164,6 @@ namespace workflowLoginForm
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button clearBtn;
         private System.Windows.Forms.Button exitBtn;
-        private System.Windows.Forms.Button registerBtn;
     }
 }
 

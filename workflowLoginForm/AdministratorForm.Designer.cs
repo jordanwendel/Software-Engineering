@@ -40,6 +40,7 @@
             this.deliveryManagerNames = new System.Windows.Forms.ListBox();
             this.reportManagerNames = new System.Windows.Forms.ListBox();
             this.qualityAnalyzerNames = new System.Windows.Forms.ListBox();
+            this.registerBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Admin
@@ -167,12 +168,28 @@
             this.qualityAnalyzerNames.Size = new System.Drawing.Size(129, 95);
             this.qualityAnalyzerNames.TabIndex = 15;
             // 
+            // registerBtn
+            // 
+            this.registerBtn.BackColor = System.Drawing.Color.LightGray;
+            this.registerBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerBtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerBtn.ForeColor = System.Drawing.Color.Black;
+            this.registerBtn.Location = new System.Drawing.Point(209, 322);
+            this.registerBtn.Name = "registerBtn";
+            this.registerBtn.Size = new System.Drawing.Size(182, 34);
+            this.registerBtn.TabIndex = 16;
+            this.registerBtn.Text = "REGISTER NEW USER";
+            this.registerBtn.UseVisualStyleBackColor = false;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
+            // 
             // AdministratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(626, 367);
+            this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.qualityAnalyzerNames);
             this.Controls.Add(this.reportManagerNames);
             this.Controls.Add(this.deliveryManagerNames);
@@ -207,6 +224,7 @@
         private System.Windows.Forms.ListBox deliveryManagerNames;
         private System.Windows.Forms.ListBox reportManagerNames;
         private System.Windows.Forms.ListBox qualityAnalyzerNames;
+        private System.Windows.Forms.Button registerBtn;
     }
 }
 

@@ -103,5 +103,11 @@ namespace workflowLoginForm
             qualityAnalyzerNames.Items.AddRange(users.ToArray());
 
         }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            RegisterForm rform = new RegisterForm(); // Creates instance of Register Form class
+            rform.ShowDialog(); // Shows the register form on the screen
+        }
     }
 }
