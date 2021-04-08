@@ -17,7 +17,6 @@ namespace workflowLoginForm
         private DatabaseTools dbTools;
         private ProductForm stockpage;
         private string databaseName;
-
         // Constructor
         public ProductManagerForm()
         {
@@ -58,21 +57,23 @@ namespace workflowLoginForm
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
+            string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             dbTools = new DatabaseTools(this.databaseName);
-            dbTools.RefreshDataGrid(prodDataGridView); // Refresh the data grid to see changes
+            dbTools.RefreshDataGrid(prodDataGridView, statement); // Refresh the data grid to see changes
         }
 
 
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
+            string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             this.databaseName = "Products"; // Set the name for the database we want to find
             dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
-            dbTools.PopulateDataGrid(prodDataGridView);
+            dbTools.PopulateDataGrid(prodDataGridView, statement);
         }
 
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
-            lstBoxProducts.Items.Clear();
+            //lstBoxProducts.Items.Clear();
             this.databaseName = "RawMaterials"; // Set the name for the database we want to find
             dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
             dbTools.PopulateDataGrid(prodDataGridView);
@@ -81,7 +82,7 @@ namespace workflowLoginForm
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            lstBoxProducts.Items.Clear();
+            //lstBoxProducts.Items.Clear();
             List<Product> productList;
             productList = new List<Product>();
             dbTools = new DatabaseTools("trial");
@@ -89,40 +90,55 @@ namespace workflowLoginForm
             Product tempProduct;
             dbTools.cn.Open();
 
-            string qual = txtTest.Text;
+            string qual = cBoxQuality.Text;
             string info = txtFilterByItem.Text;
             if (radBtnName.Checked)
             {
+                string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName = "+"'"+ info+"'";
+                this.databaseName = "Products";
+                dbTools = new DatabaseTools(this.databaseName); // Default data grid is Products database
+                dbTools.PopulateDataGrid(prodDataGridView, statement);
                 //string info = txtFilterByItem.Text;
-                dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE ProductName = @info", dbTools.cn);
-                dbTools.cmd.Parameters.AddWithValue("@info", info);
+                //dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE ProductName = @info", dbTools.cn);
+                //dbTools.cmd.Parameters.AddWithValue("@info", info);
             }
             if(radBtnQuality.Checked)
             {
-                MessageBox.Show(qual);
-
-               // string qual = cBoxQuality.Text;
-                dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Quality = @qual", dbTools.cn);
-                dbTools.cmd.Parameters.AddWithValue("@qual", "");
+                //MessageBox.Show(qual);
+                string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
+                this.databaseName = "Products";
+                dbTools = new DatabaseTools(this.databaseName); // Default data grid is Products database
+                dbTools.PopulateDataGrid(prodDataGridView, statement);
+                // string qual = cBoxQuality.Text;
+                //dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Quality = @qual", dbTools.cn);
+                //dbTools.cmd.Parameters.AddWithValue("@qual", "");
             }
             if (radBtnQuantity.Checked)
             {
                 int num = int.Parse(txtNum.Text);
-                MessageBox.Show(txtNum.Text);
-                dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Quantity = @num", dbTools.cn);
-                dbTools.cmd.Parameters.AddWithValue("@num", num);
+                string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
+                this.databaseName = "Products";
+                dbTools = new DatabaseTools(this.databaseName); // Default data grid is Products database
+                dbTools.PopulateDataGrid(prodDataGridView, statement);
+                //MessageBox.Show(txtNum.Text);
+               // dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Quantity = @num", dbTools.cn);
+                //dbTools.cmd.Parameters.AddWithValue("@num", num);
             }
             if (radBtnLocation.Checked)
             {
                 string location = cBoxLocation.Text;
-                MessageBox.Show(location);
-                dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Location = @loc", dbTools.cn);
-                dbTools.cmd.Parameters.AddWithValue("@loc", location);
+                string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
+                this.databaseName = "Products";
+                dbTools = new DatabaseTools(this.databaseName); // Default data grid is Products database
+                dbTools.PopulateDataGrid(prodDataGridView, statement);
+                //MessageBox.Show(location);
+               // dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Location = @loc", dbTools.cn);
+                //dbTools.cmd.Parameters.AddWithValue("@loc", location);
 
             }
 
 
-            SqlDataReader reader = dbTools.cmd.ExecuteReader();
+            /*SqlDataReader reader = dbTools.cmd.ExecuteReader();
             
             while (reader.Read())
             {
@@ -136,18 +152,23 @@ namespace workflowLoginForm
 
                 tempProduct = new Product(ProductName, quality, quantity, location);
                 productList.Add(tempProduct);
-            }
+            }*/
 
             dbTools.cn.Close();
 
-            lstBoxProducts.Items.Clear();
-            lstBoxProducts.Items.AddRange(productList.ToArray());
+            //lstBoxProducts.Items.Clear();
+            //lstBoxProducts.Items.AddRange(productList.ToArray());
 
 
 
         }
 
         private void radBtnQuality_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

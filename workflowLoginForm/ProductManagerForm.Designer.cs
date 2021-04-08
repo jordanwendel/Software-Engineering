@@ -49,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilterByItem = new System.Windows.Forms.TextBox();
             this.btnFilter = new System.Windows.Forms.Button();
-            this.lstBoxProducts = new System.Windows.Forms.ListBox();
             this.radBtnName = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.radBtnQuality = new System.Windows.Forms.RadioButton();
@@ -57,7 +56,6 @@
             this.radBtnLocation = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.cBoxQuality = new System.Windows.Forms.ComboBox();
-            this.txtTest = new System.Windows.Forms.TextBox();
             this.txtNum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -133,7 +131,7 @@
             this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
-            this.prodDataGridView.Size = new System.Drawing.Size(895, 222);
+            this.prodDataGridView.Size = new System.Drawing.Size(895, 542);
             this.prodDataGridView.TabIndex = 12;
             // 
             // addItemLbl
@@ -295,26 +293,18 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(19, 642);
+            this.btnFilter.Location = new System.Drawing.Point(23, 610);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(75, 23);
+            this.btnFilter.Size = new System.Drawing.Size(241, 48);
             this.btnFilter.TabIndex = 34;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
-            // lstBoxProducts
-            // 
-            this.lstBoxProducts.FormattingEnabled = true;
-            this.lstBoxProducts.ItemHeight = 16;
-            this.lstBoxProducts.Location = new System.Drawing.Point(284, 323);
-            this.lstBoxProducts.Name = "lstBoxProducts";
-            this.lstBoxProducts.Size = new System.Drawing.Size(894, 324);
-            this.lstBoxProducts.TabIndex = 35;
-            // 
             // radBtnName
             // 
             this.radBtnName.AutoSize = true;
+            this.radBtnName.ForeColor = System.Drawing.Color.White;
             this.radBtnName.Location = new System.Drawing.Point(17, 396);
             this.radBtnName.Name = "radBtnName";
             this.radBtnName.Size = new System.Drawing.Size(66, 21);
@@ -326,6 +316,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(27, 355);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(141, 17);
@@ -335,6 +326,7 @@
             // radBtnQuality
             // 
             this.radBtnQuality.AutoSize = true;
+            this.radBtnQuality.ForeColor = System.Drawing.Color.White;
             this.radBtnQuality.Location = new System.Drawing.Point(116, 396);
             this.radBtnQuality.Name = "radBtnQuality";
             this.radBtnQuality.Size = new System.Drawing.Size(73, 21);
@@ -347,6 +339,7 @@
             // radBtnQuantity
             // 
             this.radBtnQuantity.AutoSize = true;
+            this.radBtnQuantity.ForeColor = System.Drawing.Color.White;
             this.radBtnQuantity.Location = new System.Drawing.Point(17, 423);
             this.radBtnQuantity.Name = "radBtnQuantity";
             this.radBtnQuantity.Size = new System.Drawing.Size(82, 21);
@@ -358,6 +351,7 @@
             // radBtnLocation
             // 
             this.radBtnLocation.AutoSize = true;
+            this.radBtnLocation.ForeColor = System.Drawing.Color.White;
             this.radBtnLocation.Location = new System.Drawing.Point(116, 423);
             this.radBtnLocation.Name = "radBtnLocation";
             this.radBtnLocation.Size = new System.Drawing.Size(83, 21);
@@ -381,19 +375,12 @@
             // 
             this.cBoxQuality.FormattingEnabled = true;
             this.cBoxQuality.Items.AddRange(new object[] {
-            "Good",
+            "Defective",
             "Satisfactory"});
             this.cBoxQuality.Location = new System.Drawing.Point(116, 496);
             this.cBoxQuality.Name = "cBoxQuality";
             this.cBoxQuality.Size = new System.Drawing.Size(163, 24);
             this.cBoxQuality.TabIndex = 42;
-            // 
-            // txtTest
-            // 
-            this.txtTest.Location = new System.Drawing.Point(178, 653);
-            this.txtTest.Name = "txtTest";
-            this.txtTest.Size = new System.Drawing.Size(141, 22);
-            this.txtTest.TabIndex = 43;
             // 
             // txtNum
             // 
@@ -410,8 +397,9 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 28);
             this.label4.TabIndex = 45;
-            this.label4.Text = "Quanity:";
+            this.label4.Text = "Quantity:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -428,7 +416,8 @@
             // 
             this.cBoxLocation.FormattingEnabled = true;
             this.cBoxLocation.Items.AddRange(new object[] {
-            "Sales"});
+            "Sales",
+            "Manufacturing"});
             this.cBoxLocation.Location = new System.Drawing.Point(116, 553);
             this.cBoxLocation.Name = "cBoxLocation";
             this.cBoxLocation.Size = new System.Drawing.Size(163, 24);
@@ -444,7 +433,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNum);
-            this.Controls.Add(this.txtTest);
             this.Controls.Add(this.cBoxQuality);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.radBtnLocation);
@@ -452,7 +440,6 @@
             this.Controls.Add(this.radBtnQuality);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.radBtnName);
-            this.Controls.Add(this.lstBoxProducts);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.txtFilterByItem);
             this.Controls.Add(this.label1);
@@ -507,7 +494,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFilterByItem;
         private System.Windows.Forms.Button btnFilter;
-        private System.Windows.Forms.ListBox lstBoxProducts;
         private System.Windows.Forms.RadioButton radBtnName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radBtnQuality;
@@ -515,7 +501,6 @@
         private System.Windows.Forms.RadioButton radBtnLocation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cBoxQuality;
-        private System.Windows.Forms.TextBox txtTest;
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

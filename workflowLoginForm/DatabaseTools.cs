@@ -248,11 +248,11 @@ namespace workflowLoginForm
 
 
         // Refreshing the data grid to update inventory
-        public void RefreshDataGrid(DataGridView dataGrid)
+        public void RefreshDataGrid(DataGridView dataGrid, string statement=null)
         {
             dataGrid.Update();
             dataGrid.Refresh();
-            PopulateDataGrid(dataGrid);
+            PopulateDataGrid(dataGrid, statement);
         }
 
 
