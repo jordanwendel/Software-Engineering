@@ -44,9 +44,10 @@ namespace workflowLoginForm
             // Fill the Product Manager form with Products database information upon creation
             try
             {
+                string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
                 this.databaseName = "Products";
                 dbTools = new DatabaseTools(this.databaseName); // Default data grid is Products database
-                dbTools.PopulateDataGrid(prodDataGridView);
+                dbTools.PopulateDataGrid(prodDataGridView, statement);
             }
             catch (Exception err)
             {
@@ -120,6 +121,7 @@ namespace workflowLoginForm
 
             }
 
+
             SqlDataReader reader = dbTools.cmd.ExecuteReader();
             
             while (reader.Read())
@@ -145,6 +147,9 @@ namespace workflowLoginForm
 
         }
 
+        private void radBtnQuality_CheckedChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

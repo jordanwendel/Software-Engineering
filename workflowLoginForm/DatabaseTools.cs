@@ -201,14 +201,14 @@ namespace workflowLoginForm
 
 
         // Creates a data grid from a specified database
-        public void PopulateDataGrid(DataGridView dataGrid)
+        public void PopulateDataGrid(DataGridView dataGrid, string statement= null)
         {
             string sql = "SELECT * FROM " + dbName; // Default value
 
             // Only displaying the data that we want from each database
             if (this.dbName.Equals("Products"))
             {
-                sql = "SELECT ProductName, Quality, Quantity, Location FROM " + dbName; // Viewing all data from Product database except the ID
+                sql = statement; // Viewing all data dependent on statement 
             }
             else if (this.dbName.Equals("RawMaterials"))
             {

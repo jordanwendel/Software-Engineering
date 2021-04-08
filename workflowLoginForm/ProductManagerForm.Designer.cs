@@ -326,12 +326,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(5, 352);
+            this.label2.Location = new System.Drawing.Point(27, 355);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(269, 25);
+            this.label2.Size = new System.Drawing.Size(141, 17);
             this.label2.TabIndex = 37;
-            this.label2.Text = "Select One Option to Filter By";
+            this.label2.Text = "Select one to filter by";
             // 
             // radBtnQuality
             // 
@@ -343,6 +342,7 @@
             this.radBtnQuality.TabStop = true;
             this.radBtnQuality.Text = "Quality";
             this.radBtnQuality.UseVisualStyleBackColor = true;
+            this.radBtnQuality.CheckedChanged += new System.EventHandler(this.radBtnQuality_CheckedChanged);
             // 
             // radBtnQuantity
             // 
@@ -387,7 +387,6 @@
             this.cBoxQuality.Name = "cBoxQuality";
             this.cBoxQuality.Size = new System.Drawing.Size(163, 24);
             this.cBoxQuality.TabIndex = 42;
-            this.cBoxQuality.Text = "Click to expand..";
             // 
             // txtTest
             // 
@@ -434,7 +433,6 @@
             this.cBoxLocation.Name = "cBoxLocation";
             this.cBoxLocation.Size = new System.Drawing.Size(163, 24);
             this.cBoxLocation.TabIndex = 47;
-            this.cBoxLocation.Text = "Click to expand..";
             // 
             // ProductManagerForm
             // 

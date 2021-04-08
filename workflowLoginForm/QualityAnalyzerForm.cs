@@ -50,8 +50,14 @@ namespace workflowLoginForm
 
         private void QualityAnalyzerForm_Load(object sender, EventArgs e)
         {
+            string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             dbTools = new DatabaseTools("Products"); // Default data grid is Products database
-            dbTools.PopulateDataGrid(prodDataGridView);
+            dbTools.PopulateDataGrid(prodDataGridView, statement);
+        }
+
+        private void addProduct_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

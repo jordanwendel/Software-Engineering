@@ -43,8 +43,9 @@ namespace workflowLoginForm
 
         private void DeliveryManagerForm_Load(object sender, EventArgs e)
         {
-            dbTools = new DatabaseTools("Products");
-            dbTools.PopulateDataGrid(prodDataGridView);
+            String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products Where Quality IN ('Satisfactory','Defective')";
+            dbTools = new DatabaseTools("Products" );
+            dbTools.PopulateDataGrid(prodDataGridView,statement);
         }
 
         private void addItemBtn_Click(object sender, EventArgs e)
