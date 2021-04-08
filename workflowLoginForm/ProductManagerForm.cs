@@ -71,6 +71,7 @@ namespace workflowLoginForm
 
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
+            lstBoxProducts.Items.Clear();
             this.databaseName = "RawMaterials"; // Set the name for the database we want to find
             dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
             dbTools.PopulateDataGrid(prodDataGridView);
@@ -79,6 +80,7 @@ namespace workflowLoginForm
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
+            lstBoxProducts.Items.Clear();
             List<Product> productList;
             productList = new List<Product>();
             dbTools = new DatabaseTools("trial");
@@ -86,20 +88,41 @@ namespace workflowLoginForm
             Product tempProduct;
             dbTools.cn.Open();
 
+            string qual = txtTest.Text;
             string info = txtFilterByItem.Text;
-
-            if(true)
+            if (radBtnName.Checked)
             {
+                //string info = txtFilterByItem.Text;
                 dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE ProductName = @info", dbTools.cn);
                 dbTools.cmd.Parameters.AddWithValue("@info", info);
             }
-            else
+            if(radBtnQuality.Checked)
             {
-               // dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS", dbTools.cn);
+                MessageBox.Show(qual);
+
+               // string qual = cBoxQuality.Text;
+                dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Quality = @qual", dbTools.cn);
+                dbTools.cmd.Parameters.AddWithValue("@qual", "");
+            }
+            if (radBtnQuantity.Checked)
+            {
+                int num = int.Parse(txtNum.Text);
+                MessageBox.Show(txtNum.Text);
+                dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Quantity = @num", dbTools.cn);
+                dbTools.cmd.Parameters.AddWithValue("@num", num);
+            }
+            if (radBtnLocation.Checked)
+            {
+                string location = cBoxLocation.Text;
+                MessageBox.Show(location);
+                dbTools.cmd = new SqlCommand("SELECT * FROM PRODUCTS WHERE Location = @loc", dbTools.cn);
+                dbTools.cmd.Parameters.AddWithValue("@loc", location);
+
             }
 
-            SqlDataReader reader = dbTools.cmd.ExecuteReader();
 
+            SqlDataReader reader = dbTools.cmd.ExecuteReader();
+            
             while (reader.Read())
             {
                 string ProductName = (string)reader["ProductName"];
@@ -122,5 +145,7 @@ namespace workflowLoginForm
 
 
         }
+
+ 
     }
 }
