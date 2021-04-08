@@ -94,7 +94,7 @@
             this.addProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.addProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addProduct.Location = new System.Drawing.Point(34, 386);
+            this.addProduct.Location = new System.Drawing.Point(34, 396);
             this.addProduct.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.addProduct.Name = "addProduct";
             this.addProduct.Size = new System.Drawing.Size(376, 58);
@@ -129,7 +129,7 @@
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.prodDataGridView.Location = new System.Drawing.Point(426, 122);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(6);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(1342, 847);
@@ -150,7 +150,7 @@
             // 
             this.nameMenu.FormattingEnabled = true;
             this.nameMenu.Location = new System.Drawing.Point(174, 122);
-            this.nameMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.nameMenu.Margin = new System.Windows.Forms.Padding(6);
             this.nameMenu.Name = "nameMenu";
             this.nameMenu.Size = new System.Drawing.Size(234, 33);
             this.nameMenu.TabIndex = 20;
@@ -160,7 +160,7 @@
             // 
             this.qualityMenu.FormattingEnabled = true;
             this.qualityMenu.Location = new System.Drawing.Point(174, 173);
-            this.qualityMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.qualityMenu.Margin = new System.Windows.Forms.Padding(6);
             this.qualityMenu.Name = "qualityMenu";
             this.qualityMenu.Size = new System.Drawing.Size(234, 33);
             this.qualityMenu.TabIndex = 21;
@@ -169,7 +169,7 @@
             // quantityTxt
             // 
             this.quantityTxt.Location = new System.Drawing.Point(174, 225);
-            this.quantityTxt.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.quantityTxt.Margin = new System.Windows.Forms.Padding(6);
             this.quantityTxt.Name = "quantityTxt";
             this.quantityTxt.Size = new System.Drawing.Size(234, 31);
             this.quantityTxt.TabIndex = 22;
@@ -179,7 +179,7 @@
             // 
             this.locationMenu.FormattingEnabled = true;
             this.locationMenu.Location = new System.Drawing.Point(174, 275);
-            this.locationMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.locationMenu.Margin = new System.Windows.Forms.Padding(6);
             this.locationMenu.Name = "locationMenu";
             this.locationMenu.Size = new System.Drawing.Size(234, 33);
             this.locationMenu.TabIndex = 23;
@@ -237,17 +237,17 @@
             // 
             this.filterLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterLbl.ForeColor = System.Drawing.Color.White;
-            this.filterLbl.Location = new System.Drawing.Point(56, 481);
+            this.filterLbl.Location = new System.Drawing.Point(68, 473);
             this.filterLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.filterLbl.Name = "filterLbl";
-            this.filterLbl.Size = new System.Drawing.Size(334, 69);
+            this.filterLbl.Size = new System.Drawing.Size(305, 69);
             this.filterLbl.TabIndex = 28;
             this.filterLbl.Text = "Filter Items";
             this.filterLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // addItemBtn
             // 
-            this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(248)))), ((int)(((byte)(1)))));
+            this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemBtn.Location = new System.Drawing.Point(282, 325);
@@ -262,7 +262,7 @@
             // viewProdBtn
             // 
             this.viewProdBtn.Location = new System.Drawing.Point(518, 1061);
-            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(6);
             this.viewProdBtn.Name = "viewProdBtn";
             this.viewProdBtn.Size = new System.Drawing.Size(276, 75);
             this.viewProdBtn.TabIndex = 30;
@@ -273,7 +273,7 @@
             // viewMatBtn
             // 
             this.viewMatBtn.Location = new System.Drawing.Point(1064, 1061);
-            this.viewMatBtn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.viewMatBtn.Margin = new System.Windows.Forms.Padding(6);
             this.viewMatBtn.Name = "viewMatBtn";
             this.viewMatBtn.Size = new System.Drawing.Size(276, 75);
             this.viewMatBtn.TabIndex = 31;
@@ -316,7 +316,7 @@
             // 
             this.radBtnName.AutoSize = true;
             this.radBtnName.ForeColor = System.Drawing.Color.White;
-            this.radBtnName.Location = new System.Drawing.Point(26, 619);
+            this.radBtnName.Location = new System.Drawing.Point(79, 611);
             this.radBtnName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radBtnName.Name = "radBtnName";
             this.radBtnName.Size = new System.Drawing.Size(99, 29);
@@ -329,7 +329,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(40, 555);
+            this.label2.Location = new System.Drawing.Point(111, 551);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(214, 25);
@@ -340,7 +340,7 @@
             // 
             this.radBtnQuality.AutoSize = true;
             this.radBtnQuality.ForeColor = System.Drawing.Color.White;
-            this.radBtnQuality.Location = new System.Drawing.Point(174, 619);
+            this.radBtnQuality.Location = new System.Drawing.Point(227, 611);
             this.radBtnQuality.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radBtnQuality.Name = "radBtnQuality";
             this.radBtnQuality.Size = new System.Drawing.Size(110, 29);
@@ -354,7 +354,7 @@
             // 
             this.radBtnQuantity.AutoSize = true;
             this.radBtnQuantity.ForeColor = System.Drawing.Color.White;
-            this.radBtnQuantity.Location = new System.Drawing.Point(26, 661);
+            this.radBtnQuantity.Location = new System.Drawing.Point(79, 653);
             this.radBtnQuantity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radBtnQuantity.Name = "radBtnQuantity";
             this.radBtnQuantity.Size = new System.Drawing.Size(123, 29);
@@ -367,7 +367,7 @@
             // 
             this.radBtnLocation.AutoSize = true;
             this.radBtnLocation.ForeColor = System.Drawing.Color.White;
-            this.radBtnLocation.Location = new System.Drawing.Point(174, 661);
+            this.radBtnLocation.Location = new System.Drawing.Point(227, 653);
             this.radBtnLocation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.radBtnLocation.Name = "radBtnLocation";
             this.radBtnLocation.Size = new System.Drawing.Size(125, 29);

@@ -77,7 +77,7 @@
             this.filterLbl.AutoSize = true;
             this.filterLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.filterLbl.Location = new System.Drawing.Point(168, 675);
+            this.filterLbl.Location = new System.Drawing.Point(168, 497);
             this.filterLbl.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.filterLbl.Name = "filterLbl";
             this.filterLbl.Size = new System.Drawing.Size(222, 44);
@@ -88,7 +88,7 @@
             // 
             this.locationLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.locationLbl.Location = new System.Drawing.Point(38, 309);
+            this.locationLbl.Location = new System.Drawing.Point(4, 303);
             this.locationLbl.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.locationLbl.Name = "locationLbl";
             this.locationLbl.Size = new System.Drawing.Size(208, 53);
@@ -100,7 +100,7 @@
             // 
             this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nameLbl.Location = new System.Drawing.Point(110, 224);
+            this.nameLbl.Location = new System.Drawing.Point(72, 224);
             this.nameLbl.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(122, 53);
@@ -114,8 +114,8 @@
             this.locationMenu.Items.AddRange(new object[] {
             "Manufacturing",
             "Sales"});
-            this.locationMenu.Location = new System.Drawing.Point(248, 317);
-            this.locationMenu.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.locationMenu.Location = new System.Drawing.Point(232, 303);
+            this.locationMenu.Margin = new System.Windows.Forms.Padding(8);
             this.locationMenu.Name = "locationMenu";
             this.locationMenu.Size = new System.Drawing.Size(310, 33);
             this.locationMenu.TabIndex = 40;
@@ -126,7 +126,7 @@
             this.addItemLbl.AutoSize = true;
             this.addItemLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addItemLbl.Location = new System.Drawing.Point(210, 154);
+            this.addItemLbl.Location = new System.Drawing.Point(146, 128);
             this.addItemLbl.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.addItemLbl.Name = "addItemLbl";
             this.addItemLbl.Size = new System.Drawing.Size(253, 44);
@@ -137,8 +137,8 @@
             // 
             this.checkedListBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(44, 728);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.checkedListBox1.Location = new System.Drawing.Point(32, 570);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(8);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(514, 452);
             this.checkedListBox1.TabIndex = 35;
@@ -152,7 +152,7 @@
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.prodDataGridView.Location = new System.Drawing.Point(596, 128);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(8);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(1176, 1069);
@@ -176,10 +176,10 @@
             // 
             // addItemBtn
             // 
-            this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(248)))), ((int)(((byte)(1)))));
+            this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(176, 401);
+            this.addItemBtn.Location = new System.Drawing.Point(232, 377);
             this.addItemBtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(132, 53);
@@ -190,17 +190,17 @@
             // 
             // txtItemName
             // 
-            this.txtItemName.Location = new System.Drawing.Point(248, 238);
+            this.txtItemName.Location = new System.Drawing.Point(232, 238);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(314, 31);
             this.txtItemName.TabIndex = 49;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(248)))), ((int)(((byte)(1)))));
+            this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(374, 401);
+            this.btnRefresh.Location = new System.Drawing.Point(414, 377);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(132, 53);
