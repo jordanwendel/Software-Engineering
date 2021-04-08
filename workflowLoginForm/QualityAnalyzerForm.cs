@@ -59,5 +59,35 @@ namespace workflowLoginForm
         {
 
         }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addItemBtn_Click(object sender, EventArgs e)
+        {
+            String ProductName = ItemName.Text;
+            String Quality = qualityMenu.Text;
+
+            dbTools.CheckProduct(ProductName);
+
+            if (dbTools.CheckProduct(ProductName).Equals(true))
+            {
+                try
+                {
+                    dbTools.EditQuality(ProductName, Quality);
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Warning!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("This item can not be found.");
+
+            }
+        }
     }
-}
+   }

@@ -295,14 +295,83 @@ namespace workflowLoginForm
             return users;
         }
 
-        public void LoadDataFromProductTable()
+        public bool CheckProduct(string ProductName)
         {
+            bool Exists = false;
+
+            // Open connection and execute sql command
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("SELECT Count (*) FROM Products WHERE ProductName = @ProductName", cn); // Grabs password from associated username in database that matches the username input on the login screen
+                cmd.Parameters.AddWithValue("@ProductName", ProductName);
+
+                // Opens database, grabs and returns password
+
+                int ProductExists = (int)cmd.ExecuteScalar();
 
 
-            
+                if (ProductExists >0) // Checks if entered password matches the one grabbed from database
+                {
+                    Exists = true;
+                }
 
+            }
+            catch (Exception err) // Handles exception
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return Exists;
+            }
+
+        public void EditLocation(string ProductName, string Location) 
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("Update Products Set Location=@Location Where ProductName=@ProductName", cn);
+                cmd.Parameters.AddWithValue("@ProductName", ProductName);
+                cmd.Parameters.AddWithValue("@Location", Location);
+
+                cmd.ExecuteNonQuery(); // Execute the sql command
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public void EditQuality(string ProductName, string Quality)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("Update Products Set Quality=@Quality Where ProductName=@ProductName", cn);
+                cmd.Parameters.AddWithValue("@ProductName", ProductName);
+                cmd.Parameters.AddWithValue("@Quality", Quality);
+
+                cmd.ExecuteNonQuery(); // Execute the sql command
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
     }
 
-}
+    }

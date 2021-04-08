@@ -50,6 +50,34 @@ namespace workflowLoginForm
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
+            String ProductName = txtItemName.Text;
+            String Location = locationMenu.Text;
+
+            dbTools.CheckProduct(ProductName);
+
+                if (dbTools.CheckProduct(ProductName).Equals(true))
+                {
+                    try
+                    {
+                        dbTools.EditLocation(ProductName, Location);
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message, "Warning!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This item can not be found.");
+
+                }
+            }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products Where Quality IN ('Satisfactory','Defective')";
+            dbTools = new DatabaseTools("Products");
+            dbTools.PopulateDataGrid(prodDataGridView, statement);
 
         }
     }
