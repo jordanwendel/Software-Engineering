@@ -50,6 +50,18 @@
             this.txtFilterByItem = new System.Windows.Forms.TextBox();
             this.btnFilter = new System.Windows.Forms.Button();
             this.lstBoxProducts = new System.Windows.Forms.ListBox();
+            this.radBtnName = new System.Windows.Forms.RadioButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.radBtnQuality = new System.Windows.Forms.RadioButton();
+            this.radBtnQuantity = new System.Windows.Forms.RadioButton();
+            this.radBtnLocation = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cBoxQuality = new System.Windows.Forms.ComboBox();
+            this.txtTest = new System.Windows.Forms.TextBox();
+            this.txtNum = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cBoxLocation = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -267,7 +279,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 366);
+            this.label1.Location = new System.Drawing.Point(10, 462);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 28);
             this.label1.TabIndex = 32;
@@ -276,14 +288,14 @@
             // 
             // txtFilterByItem
             // 
-            this.txtFilterByItem.Location = new System.Drawing.Point(86, 372);
+            this.txtFilterByItem.Location = new System.Drawing.Point(116, 468);
             this.txtFilterByItem.Name = "txtFilterByItem";
-            this.txtFilterByItem.Size = new System.Drawing.Size(173, 22);
+            this.txtFilterByItem.Size = new System.Drawing.Size(163, 22);
             this.txtFilterByItem.TabIndex = 33;
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(52, 572);
+            this.btnFilter.Location = new System.Drawing.Point(19, 642);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(75, 23);
             this.btnFilter.TabIndex = 34;
@@ -297,8 +309,129 @@
             this.lstBoxProducts.ItemHeight = 16;
             this.lstBoxProducts.Location = new System.Drawing.Point(284, 323);
             this.lstBoxProducts.Name = "lstBoxProducts";
-            this.lstBoxProducts.Size = new System.Drawing.Size(853, 324);
+            this.lstBoxProducts.Size = new System.Drawing.Size(894, 324);
             this.lstBoxProducts.TabIndex = 35;
+            // 
+            // radBtnName
+            // 
+            this.radBtnName.AutoSize = true;
+            this.radBtnName.Location = new System.Drawing.Point(17, 396);
+            this.radBtnName.Name = "radBtnName";
+            this.radBtnName.Size = new System.Drawing.Size(66, 21);
+            this.radBtnName.TabIndex = 36;
+            this.radBtnName.TabStop = true;
+            this.radBtnName.Text = "Name";
+            this.radBtnName.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 355);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 17);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Select one to filter by";
+            // 
+            // radBtnQuality
+            // 
+            this.radBtnQuality.AutoSize = true;
+            this.radBtnQuality.Location = new System.Drawing.Point(116, 396);
+            this.radBtnQuality.Name = "radBtnQuality";
+            this.radBtnQuality.Size = new System.Drawing.Size(73, 21);
+            this.radBtnQuality.TabIndex = 38;
+            this.radBtnQuality.TabStop = true;
+            this.radBtnQuality.Text = "Quality";
+            this.radBtnQuality.UseVisualStyleBackColor = true;
+            // 
+            // radBtnQuantity
+            // 
+            this.radBtnQuantity.AutoSize = true;
+            this.radBtnQuantity.Location = new System.Drawing.Point(17, 423);
+            this.radBtnQuantity.Name = "radBtnQuantity";
+            this.radBtnQuantity.Size = new System.Drawing.Size(82, 21);
+            this.radBtnQuantity.TabIndex = 39;
+            this.radBtnQuantity.TabStop = true;
+            this.radBtnQuantity.Text = "Quantity";
+            this.radBtnQuantity.UseVisualStyleBackColor = true;
+            // 
+            // radBtnLocation
+            // 
+            this.radBtnLocation.AutoSize = true;
+            this.radBtnLocation.Location = new System.Drawing.Point(116, 423);
+            this.radBtnLocation.Name = "radBtnLocation";
+            this.radBtnLocation.Size = new System.Drawing.Size(83, 21);
+            this.radBtnLocation.TabIndex = 40;
+            this.radBtnLocation.TabStop = true;
+            this.radBtnLocation.Text = "Location";
+            this.radBtnLocation.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(-21, 490);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 28);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Quality:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cBoxQuality
+            // 
+            this.cBoxQuality.FormattingEnabled = true;
+            this.cBoxQuality.Items.AddRange(new object[] {
+            "Good",
+            "Satisfactory"});
+            this.cBoxQuality.Location = new System.Drawing.Point(116, 496);
+            this.cBoxQuality.Name = "cBoxQuality";
+            this.cBoxQuality.Size = new System.Drawing.Size(163, 24);
+            this.cBoxQuality.TabIndex = 42;
+            // 
+            // txtTest
+            // 
+            this.txtTest.Location = new System.Drawing.Point(178, 653);
+            this.txtTest.Name = "txtTest";
+            this.txtTest.Size = new System.Drawing.Size(141, 22);
+            this.txtTest.TabIndex = 43;
+            // 
+            // txtNum
+            // 
+            this.txtNum.Location = new System.Drawing.Point(116, 526);
+            this.txtNum.Name = "txtNum";
+            this.txtNum.Size = new System.Drawing.Size(163, 22);
+            this.txtNum.TabIndex = 44;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(-11, 520);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(105, 28);
+            this.label4.TabIndex = 45;
+            this.label4.Text = "Quanity:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(-6, 551);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 28);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Location:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cBoxLocation
+            // 
+            this.cBoxLocation.FormattingEnabled = true;
+            this.cBoxLocation.Items.AddRange(new object[] {
+            "Sales"});
+            this.cBoxLocation.Location = new System.Drawing.Point(116, 553);
+            this.cBoxLocation.Name = "cBoxLocation";
+            this.cBoxLocation.Size = new System.Drawing.Size(163, 24);
+            this.cBoxLocation.TabIndex = 47;
             // 
             // ProductManagerForm
             // 
@@ -306,6 +439,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1193, 742);
+            this.Controls.Add(this.cBoxLocation);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtNum);
+            this.Controls.Add(this.txtTest);
+            this.Controls.Add(this.cBoxQuality);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.radBtnLocation);
+            this.Controls.Add(this.radBtnQuantity);
+            this.Controls.Add(this.radBtnQuality);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.radBtnName);
             this.Controls.Add(this.lstBoxProducts);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.txtFilterByItem);
@@ -362,6 +507,18 @@
         private System.Windows.Forms.TextBox txtFilterByItem;
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.ListBox lstBoxProducts;
+        private System.Windows.Forms.RadioButton radBtnName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton radBtnQuality;
+        private System.Windows.Forms.RadioButton radBtnQuantity;
+        private System.Windows.Forms.RadioButton radBtnLocation;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cBoxQuality;
+        private System.Windows.Forms.TextBox txtTest;
+        private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cBoxLocation;
     }
 }
 
