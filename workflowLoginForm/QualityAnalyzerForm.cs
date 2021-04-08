@@ -62,7 +62,9 @@ namespace workflowLoginForm
 
         private void Refresh_Click(object sender, EventArgs e)
         {
-
+            String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products";
+            dbTools = new DatabaseTools("Products");
+            dbTools.PopulateDataGrid(prodDataGridView, statement);
         }
 
         private void addItemBtn_Click(object sender, EventArgs e)
