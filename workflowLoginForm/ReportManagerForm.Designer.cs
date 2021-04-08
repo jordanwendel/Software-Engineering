@@ -48,10 +48,9 @@
             // 
             this.filterLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterLbl.ForeColor = System.Drawing.Color.White;
-            this.filterLbl.Location = new System.Drawing.Point(28, 249);
-            this.filterLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.filterLbl.Location = new System.Drawing.Point(37, 306);
             this.filterLbl.Name = "filterLbl";
-            this.filterLbl.Size = new System.Drawing.Size(167, 36);
+            this.filterLbl.Size = new System.Drawing.Size(223, 44);
             this.filterLbl.TabIndex = 45;
             this.filterLbl.Text = "Filter Items";
             this.filterLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -60,10 +59,9 @@
             // 
             this.locationLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationLbl.ForeColor = System.Drawing.Color.White;
-            this.locationLbl.Location = new System.Drawing.Point(10, 141);
-            this.locationLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.locationLbl.Location = new System.Drawing.Point(5, 183);
             this.locationLbl.Name = "locationLbl";
-            this.locationLbl.Size = new System.Drawing.Size(78, 23);
+            this.locationLbl.Size = new System.Drawing.Size(104, 28);
             this.locationLbl.TabIndex = 44;
             this.locationLbl.Text = "Location:";
             this.locationLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -71,10 +69,10 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(11, 286);
-            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBox1.Location = new System.Drawing.Point(15, 352);
+            this.checkedListBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(194, 229);
+            this.checkedListBox1.Size = new System.Drawing.Size(257, 276);
             this.checkedListBox1.TabIndex = 35;
             // 
             // prodDataGridView
@@ -85,10 +83,11 @@
             this.prodDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.prodDataGridView.Location = new System.Drawing.Point(212, 58);
+            this.prodDataGridView.Location = new System.Drawing.Point(283, 71);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
-            this.prodDataGridView.Size = new System.Drawing.Size(641, 462);
+            this.prodDataGridView.Size = new System.Drawing.Size(855, 569);
             this.prodDataGridView.TabIndex = 34;
             // 
             // refreshBtn
@@ -99,10 +98,10 @@
             this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.Location = new System.Drawing.Point(736, 557);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.refreshBtn.Location = new System.Drawing.Point(981, 686);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(118, 32);
+            this.refreshBtn.Size = new System.Drawing.Size(157, 39);
             this.refreshBtn.TabIndex = 33;
             this.refreshBtn.Text = "REFRESH";
             this.refreshBtn.UseVisualStyleBackColor = false;
@@ -113,10 +112,10 @@
             this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
             this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(17, 563);
-            this.Logout.Margin = new System.Windows.Forms.Padding(2);
+            this.Logout.Location = new System.Drawing.Point(23, 693);
+            this.Logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(98, 27);
+            this.Logout.Size = new System.Drawing.Size(131, 33);
             this.Logout.TabIndex = 31;
             this.Logout.Text = "LOG OUT";
             this.Logout.UseVisualStyleBackColor = false;
@@ -126,19 +125,19 @@
             // 
             this.Admin.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.Color.White;
-            this.Admin.Location = new System.Drawing.Point(295, 7);
-            this.Admin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Admin.Location = new System.Drawing.Point(393, 9);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(386, 41);
+            this.Admin.Size = new System.Drawing.Size(515, 50);
             this.Admin.TabIndex = 30;
             this.Admin.Text = "Report Manager Page";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // viewProdBtn
             // 
-            this.viewProdBtn.Location = new System.Drawing.Point(303, 552);
+            this.viewProdBtn.Location = new System.Drawing.Point(404, 679);
+            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewProdBtn.Name = "viewProdBtn";
-            this.viewProdBtn.Size = new System.Drawing.Size(138, 39);
+            this.viewProdBtn.Size = new System.Drawing.Size(184, 48);
             this.viewProdBtn.TabIndex = 47;
             this.viewProdBtn.Text = "View Product Data";
             this.viewProdBtn.UseVisualStyleBackColor = true;
@@ -146,9 +145,10 @@
             // 
             // viewMatBtn
             // 
-            this.viewMatBtn.Location = new System.Drawing.Point(543, 550);
+            this.viewMatBtn.Location = new System.Drawing.Point(724, 677);
+            this.viewMatBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewMatBtn.Name = "viewMatBtn";
-            this.viewMatBtn.Size = new System.Drawing.Size(138, 39);
+            this.viewMatBtn.Size = new System.Drawing.Size(184, 48);
             this.viewMatBtn.TabIndex = 48;
             this.viewMatBtn.Text = "View Raw Materials";
             this.viewMatBtn.UseVisualStyleBackColor = true;
@@ -158,10 +158,9 @@
             // 
             this.quantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityLbl.ForeColor = System.Drawing.Color.White;
-            this.quantityLbl.Location = new System.Drawing.Point(11, 112);
-            this.quantityLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.quantityLbl.Location = new System.Drawing.Point(15, 138);
             this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(77, 23);
+            this.quantityLbl.Size = new System.Drawing.Size(103, 28);
             this.quantityLbl.TabIndex = 43;
             this.quantityLbl.Text = "Quantity:";
             this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -170,10 +169,9 @@
             // 
             this.qualityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qualityLbl.ForeColor = System.Drawing.Color.White;
-            this.qualityLbl.Location = new System.Drawing.Point(17, 89);
-            this.qualityLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.qualityLbl.Location = new System.Drawing.Point(23, 110);
             this.qualityLbl.Name = "qualityLbl";
-            this.qualityLbl.Size = new System.Drawing.Size(68, 16);
+            this.qualityLbl.Size = new System.Drawing.Size(91, 20);
             this.qualityLbl.TabIndex = 42;
             this.qualityLbl.Text = "Quality: ";
             this.qualityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,10 +180,9 @@
             // 
             this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLbl.ForeColor = System.Drawing.Color.White;
-            this.nameLbl.Location = new System.Drawing.Point(36, 58);
-            this.nameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.nameLbl.Location = new System.Drawing.Point(48, 71);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(46, 23);
+            this.nameLbl.Size = new System.Drawing.Size(61, 28);
             this.nameLbl.TabIndex = 41;
             this.nameLbl.Text = "Item:";
             this.nameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -194,19 +191,18 @@
             // 
             this.addItemLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemLbl.ForeColor = System.Drawing.Color.White;
-            this.addItemLbl.Location = new System.Drawing.Point(39, 19);
-            this.addItemLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addItemLbl.Location = new System.Drawing.Point(52, 23);
             this.addItemLbl.Name = "addItemLbl";
-            this.addItemLbl.Size = new System.Drawing.Size(137, 30);
+            this.addItemLbl.Size = new System.Drawing.Size(183, 37);
             this.addItemLbl.TabIndex = 36;
             this.addItemLbl.Text = "Item Details";
             // 
             // ReportManagerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(863, 603);
+            this.ClientSize = new System.Drawing.Size(1151, 742);
             this.Controls.Add(this.viewMatBtn);
             this.Controls.Add(this.viewProdBtn);
             this.Controls.Add(this.filterLbl);
@@ -220,7 +216,7 @@
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ReportManagerForm";
             this.Text = "Report Manager Form";
             this.Load += new System.EventHandler(this.ReportManagerForm_Load);

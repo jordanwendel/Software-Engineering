@@ -28,8 +28,9 @@ namespace workflowLoginForm
         // Event handler for Refresh button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
+            string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             dbTools = new DatabaseTools(this.databaseName);
-            dbTools.RefreshDataGrid(prodDataGridView); // Refresh the data grid to see changes
+            dbTools.RefreshDataGrid(prodDataGridView,statement); // Refresh the data grid to see changes
         }
 
         // Event handler for Log Out button click
@@ -58,9 +59,10 @@ namespace workflowLoginForm
         // Event handler for View Product Data button click
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
+            string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             this.databaseName = "Products"; // Set the name for the database we want to find
             dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
-            dbTools.PopulateDataGrid(prodDataGridView);
+            dbTools.PopulateDataGrid(prodDataGridView,statement);
         }
 
         // Event handler for View Raw Materials Data button click
