@@ -200,10 +200,10 @@
             this.btnRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
             this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Location = new System.Drawing.Point(414, 377);
+            this.btnRefresh.Location = new System.Drawing.Point(394, 377);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(132, 53);
+            this.btnRefresh.Size = new System.Drawing.Size(152, 53);
             this.btnRefresh.TabIndex = 50;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;

@@ -53,5 +53,28 @@ namespace workflowLoginForm
             stockpage.ShowDialog(); // Open new display
             this.Show();
         }
+
+        private void addNewMatBtn_Click(object sender, EventArgs e)
+        {
+                String MatName = itembox.Text;
+                int Quant = int.Parse(qtnBox.Text);
+
+                if (dbTools.CheckMat(MatName).Equals(true))
+                {
+                    try
+                    {
+                        dbTools.EditQuant(MatName, Quant);
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message, "Warning!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This item can not be found.");
+
+                }
+            }
+        }
     }
-}

@@ -183,7 +183,7 @@
             this.Refresh.Location = new System.Drawing.Point(226, 323);
             this.Refresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(172, 53);
+            this.Refresh.Size = new System.Drawing.Size(188, 53);
             this.Refresh.TabIndex = 48;
             this.Refresh.Text = "REFRESH";
             this.Refresh.UseVisualStyleBackColor = false;

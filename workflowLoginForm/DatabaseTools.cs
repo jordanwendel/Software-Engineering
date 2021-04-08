@@ -295,7 +295,7 @@ namespace workflowLoginForm
             return users;
         }
 
-        public bool CheckProduct(string ProductName)
+        public bool CheckMat(string RawMaterialName)
         {
             bool Exists = false;
 
@@ -303,15 +303,13 @@ namespace workflowLoginForm
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("SELECT Count (*) FROM Products WHERE ProductName = @ProductName", cn); // Grabs password from associated username in database that matches the username input on the login screen
-                cmd.Parameters.AddWithValue("@ProductName", ProductName);
-
+                cmd = new SqlCommand("SELECT Count (*) From RawMaterials WHERE RawMaterialName = Trim(@RawMaterialName)", cn);
+                cmd.Parameters.AddWithValue("@RawMaterialName", RawMaterialName);
+      
                 // Opens database, grabs and returns password
+                int MatExists = (int)cmd.ExecuteScalar();
 
-                int ProductExists = (int)cmd.ExecuteScalar();
-
-
-                if (ProductExists >0) // Checks if entered password matches the one grabbed from database
+                if (MatExists > 0) // Checks if entered password matches the one grabbed from database
                 {
                     Exists = true;
                 }
@@ -328,6 +326,58 @@ namespace workflowLoginForm
             return Exists;
             }
 
+        public bool CheckProduct(string ProductName)
+        {
+            bool Exists = false;
+
+            // Open connection and execute sql command
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("SELECT Count (*) FROM Products WHERE ProductName = @ProductName", cn); // Grabs password from associated username in database that matches the username input on the login screen
+                cmd.Parameters.AddWithValue("@ProductName", ProductName);
+
+                // Opens database, grabs and returns password
+
+                int ProductExists = (int)cmd.ExecuteScalar();
+
+                if (ProductExists > 0) // Checks if entered password matches the one grabbed from database
+                {
+                    Exists = true;
+                }
+
+            }
+            catch (Exception err) // Handles exception
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return Exists;
+        }
+
+
+        public void EditQuant(string RawMaterialName, int Quant)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("Update RawMaterials Set Quant=@Quantity Where RawMaterialName=@RawMaterialName", cn);
+                cmd.Parameters.AddWithValue("@RawMaterialName", RawMaterialName);
+                cmd.Parameters.AddWithValue("@Quantity", Quant);
+                cmd.ExecuteNonQuery(); // Execute the sql command
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public void EditLocation(string ProductName, string Location) 
         {
             try
