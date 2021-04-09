@@ -120,5 +120,44 @@ namespace workflowLoginForm
                 cn.Close();
             }
         }
+
+
+        // Returns a list of User objects. Pulls the names of users in a given job from the AuthorizedUsers database for each User object
+        public List<User> CreateUserList(string job)
+        {
+            // Create list of User objects
+            List<User> users;
+            users = new List<User>();
+
+            try
+            {
+                User tempUser;
+
+                // Create the sql command
+                cn.Open();
+                cmd = new SqlCommand("SELECT username, userpassword FROM AuthorizedUsers WHERE userjob = " + "'" + job + "'", cn);
+                reader = cmd.ExecuteReader();
+
+                // Get the name of the user and add it to the list of User objects
+                while (reader.Read())
+                {
+                    string name = (string)reader["username"];
+                    tempUser = new User(name);
+                    users.Add(tempUser);
+                }
+
+                reader.Close();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+            return users;
+        }
     }
 }

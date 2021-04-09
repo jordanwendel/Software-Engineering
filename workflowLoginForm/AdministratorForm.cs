@@ -80,26 +80,26 @@ namespace workflowLoginForm
 
         private void AdministratorForm_Load(object sender, EventArgs e)
         {
-            DatabaseTools dbTools = new DatabaseTools();
+            UserManager userManager = new UserManager();
 
             // Show Stockiests
-            users = dbTools.CreateUserList("Stockiest");
+            users = userManager.CreateUserList("Stockiest");
             stockiestNames.Items.AddRange(users.ToArray());
 
             // Show Product Managers
-            users = dbTools.CreateUserList("Product Manager");
+            users = userManager.CreateUserList("Product Manager");
             productManagerNames.Items.AddRange(users.ToArray());
 
             // Show Delivery Managers
-            users = dbTools.CreateUserList("Delivery Manager");
+            users = userManager.CreateUserList("Delivery Manager");
             deliveryManagerNames.Items.AddRange(users.ToArray());
 
             // Show Report Managers
-            users = dbTools.CreateUserList("Report Manager");
+            users = userManager.CreateUserList("Report Manager");
             reportManagerNames.Items.AddRange(users.ToArray());
 
             // Show Quality Analyzers
-            users = dbTools.CreateUserList("Quality Analyzer");
+            users = userManager.CreateUserList("Quality Analyzer");
             qualityAnalyzerNames.Items.AddRange(users.ToArray());
 
         }

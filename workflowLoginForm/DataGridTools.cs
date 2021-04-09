@@ -20,6 +20,8 @@ namespace workflowLoginForm
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
         public string dbName { get; set; }
 
+        // Constructor with an optional argument to set the name of the database directly from the parameters
+        // This optional argument will be used to switch between databases on a datagrid
         public DataGridTools(string dbName = null)
         {
             this.dbName = dbName;

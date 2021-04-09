@@ -10,7 +10,7 @@ using System.Drawing;
 
 namespace workflowLoginForm
 {
-    public partial class DatabaseTools
+    public partial class DatabaseTools // For manipulating data in a database
     {
         // Class level objects
         public SqlConnection cn { get; set; }
@@ -21,13 +21,8 @@ namespace workflowLoginForm
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
-                                                                                                 //public string dbName { get; set; }
 
-
-
-        // Constructor with an optional argument to set the name of the database directly from the parameters
-        // This optional argument will be used to switch between databases on a datagrid
-        public DatabaseTools()//string dbName = "")
+        public DatabaseTools()
         {
             //this.dbName = dbName; // For storing the optional database name parameter
 
@@ -97,45 +92,6 @@ namespace workflowLoginForm
             }
         }
 
-
-
-        // Returns a list of User objects. Pulls the names of users in a given job from the AuthorizedUsers database for each User object
-        public List<User> CreateUserList(string job)
-        {
-            // Create list of User objects
-            List<User> users;
-            users = new List<User>();
-
-            try
-            {
-                User tempUser;
-
-                // Create the sql command
-                cn.Open();
-                cmd = new SqlCommand("SELECT username, userpassword FROM AuthorizedUsers WHERE userjob = " + "'" + job + "'", cn);
-                reader = cmd.ExecuteReader();
-
-                // Get the name of the user and add it to the list of User objects
-                while (reader.Read())
-                {
-                    string name = (string)reader["username"];
-                    tempUser = new User(name);
-                    users.Add(tempUser);
-                }
-
-                reader.Close();
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Warning!");
-            }
-            finally
-            {
-                cn.Close();
-            }
-
-            return users;
-        }
 
 
         public bool CheckMat(string RawMaterialName)

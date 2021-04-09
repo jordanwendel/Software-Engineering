@@ -56,6 +56,7 @@ namespace workflowLoginForm
         {
             String ProductName = txtItemName.Text;
             String Location = locationMenu.Text;
+            dbTools = new DatabaseTools();
 
             dbTools.CheckProduct(ProductName);
 
