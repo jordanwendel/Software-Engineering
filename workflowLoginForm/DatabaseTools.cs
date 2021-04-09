@@ -49,7 +49,6 @@ namespace workflowLoginForm
 
         // Adds raw material to database with given name and quantity
         public void AddRawMaterial(string rawMaterialName, int quantity) // May be better to use a RawMaterial object instead
-
         {
             try
             {
@@ -138,6 +137,7 @@ namespace workflowLoginForm
             return users;
         }
 
+
         public bool CheckMat(string RawMaterialName)
         {
             bool Exists = false;
@@ -209,7 +209,7 @@ namespace workflowLoginForm
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("Update RawMaterials Set Quant=@Quantity Where RawMaterialName=@RawMaterialName", cn);
+                cmd = new SqlCommand("Update RawMaterials Set Quant = @Quantity Where RawMaterialName = @RawMaterialName", cn);
                 cmd.Parameters.AddWithValue("@RawMaterialName", RawMaterialName);
                 cmd.Parameters.AddWithValue("@Quantity", Quant);
                 cmd.ExecuteNonQuery(); // Execute the sql command
@@ -230,7 +230,7 @@ namespace workflowLoginForm
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("Update Products Set Location=@Location Where ProductName=@ProductName", cn);
+                cmd = new SqlCommand("Update Products Set Location = @Location Where ProductName = @ProductName", cn);
                 cmd.Parameters.AddWithValue("@ProductName", ProductName);
                 cmd.Parameters.AddWithValue("@Location", Location);
 
@@ -252,7 +252,7 @@ namespace workflowLoginForm
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("Update Products Set Quality=@Quality Where ProductName=@ProductName", cn);
+                cmd = new SqlCommand("Update Products Set Quality = @Quality Where ProductName = @ProductName", cn);
                 cmd.Parameters.AddWithValue("@ProductName", ProductName);
                 cmd.Parameters.AddWithValue("@Quality", Quality);
 
