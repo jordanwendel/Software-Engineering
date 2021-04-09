@@ -15,6 +15,7 @@ namespace workflowLoginForm
         // Class level objects
         private DatabaseTools dbTools;
         private RawMaterialsForm stockpage;
+        private DataGridTools dgTools;
 
         // Constructor
         public StockiestForm()
@@ -26,9 +27,8 @@ namespace workflowLoginForm
         private void StockiestForm_Load(object sender, EventArgs e)
         {
             // Fill the data grid view on form with contents of given database using a data grid object
-            dbTools = new DatabaseTools();
-            dbTools.dbName = "RawMaterials";
-            dbTools.PopulateDataGrid(stockDataGridView);
+            dgTools = new DataGridTools("RawMaterials");
+            dgTools.PopulateDataGrid(stockDataGridView);
 
         }
 
@@ -41,9 +41,9 @@ namespace workflowLoginForm
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dbTools = new DatabaseTools();
-            dbTools.dbName = "RawMaterials";
-            dbTools.RefreshDataGrid(stockDataGridView); // Refresh the grid to see changes
+            dgTools = new DataGridTools("RawMaterials");
+            dgTools.RefreshDataGrid(stockDataGridView);
+
         }
 
         // Event handler for Add New button click
@@ -58,6 +58,7 @@ namespace workflowLoginForm
         {
                 String MatName = itembox.Text;
                 int Quant = int.Parse(qtnBox.Text);
+                dbTools = new DatabaseTools();
 
                 if (dbTools.CheckMat(MatName).Equals(true))
                 {

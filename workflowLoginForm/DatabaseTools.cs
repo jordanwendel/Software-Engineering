@@ -27,7 +27,7 @@ namespace workflowLoginForm
 
         // Constructor with an optional argument to set the name of the database directly from the parameters
         // This optional argument will be used to switch between databases on a datagrid
-        public DatabaseTools(string dbName = "")
+        public DatabaseTools()//string dbName = "")
         {
             this.dbName = dbName; // For storing the optional database name parameter
 
@@ -196,63 +196,6 @@ namespace workflowLoginForm
             {
                 cn.Close();
             }
-        }
-
-
-
-        // Creates a data grid from a specified database
-        public void PopulateDataGrid(DataGridView dataGrid, string statement= null)
-        {
-            string sql = "SELECT * FROM " + dbName; // Default value
-
-            // Only displaying the data that we want from each database
-            if (this.dbName.Equals("Products"))
-            {
-                sql = statement; // Viewing all data dependent on statement 
-            }
-            else if (this.dbName.Equals("RawMaterials"))
-            {
-                sql = "SELECT RawMaterialName, Quantity FROM " + dbName; // Viewing all data from RawMaterials database except the ID
-            }
- 
-
-            // Error handling
-            try
-            {
-                cn.Open();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, cn);
-                DataSet ds = new DataSet();
-
-                // Fill data grid on screen with data from given database
-                dataAdapter.Fill(ds, dbName);
-                dataGrid.DataSource = ds;
-                dataGrid.DataMember = dbName;
-
-                // Formatting the data grid
-                dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
-                dataGrid.RowsDefaultCellStyle.BackColor = Color.Wheat;
-                dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Issue Creating DataGrid");
-            }
-            finally
-            {
-                cn.Close();
-            }
-
-            
-        }
-
-
-
-        // Refreshing the data grid to update inventory
-        public void RefreshDataGrid(DataGridView dataGrid, string statement=null)
-        {
-            dataGrid.Update();
-            dataGrid.Refresh();
-            PopulateDataGrid(dataGrid, statement);
         }
 
 

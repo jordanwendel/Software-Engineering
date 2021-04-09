@@ -14,7 +14,7 @@ namespace workflowLoginForm
     {
 
         // Class level objects
-        private DatabaseTools dbTools;
+        private DataGridTools dgTools;
 
         // Variables
         private string databaseName { get; set; }
@@ -29,8 +29,10 @@ namespace workflowLoginForm
         private void refreshBtn_Click(object sender, EventArgs e)
         {
             string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
-            dbTools = new DatabaseTools(this.databaseName);
-            dbTools.RefreshDataGrid(prodDataGridView,statement); // Refresh the data grid to see changes
+
+            dgTools = new DataGridTools(this.databaseName);
+            dgTools.RefreshDataGrid(prodDataGridView, statement);
+
         }
 
         // Event handler for Log Out button click
@@ -47,8 +49,10 @@ namespace workflowLoginForm
             {
                 string statement = "SELECT ProductName, Quality , Quantity, Location FROM Products " ;
                 this.databaseName = "Products";
-                dbTools = new DatabaseTools(this.databaseName); // Default data grid is Products database
-                dbTools.PopulateDataGrid(prodDataGridView, statement);
+
+                dgTools = new DataGridTools(this.databaseName);
+                dgTools.PopulateDataGrid(prodDataGridView, statement);
+
             }
             catch (Exception err)
             {
@@ -61,16 +65,20 @@ namespace workflowLoginForm
         {
             string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             this.databaseName = "Products"; // Set the name for the database we want to find
-            dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
-            dbTools.PopulateDataGrid(prodDataGridView,statement);
+
+            dgTools = new DataGridTools(this.databaseName);
+            dgTools.PopulateDataGrid(prodDataGridView, statement);
+
         }
 
         // Event handler for View Raw Materials Data button click
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
             this.databaseName = "RawMaterials"; // Set the name for the database we want to find
-            dbTools = new DatabaseTools(this.databaseName); // Pass the database name to the constructor
-            dbTools.PopulateDataGrid(prodDataGridView);
+
+            dgTools = new DataGridTools(this.databaseName);
+            dgTools.PopulateDataGrid(prodDataGridView);
+
         }
     }
 }

@@ -14,6 +14,7 @@ namespace workflowLoginForm
     {
         // Class level objects
         private DatabaseTools dbTools;
+        private DataGridTools dgTools;
 
         // Variables
 
@@ -34,8 +35,9 @@ namespace workflowLoginForm
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dbTools = new DatabaseTools("Products");
-            dbTools.RefreshDataGrid(prodDataGridView); // Refresh the data grid to see changes
+            dgTools = new DataGridTools("Products");
+            dgTools.RefreshDataGrid(prodDataGridView);
+
         }
 
         private void Admin_Click_1(object sender, EventArgs e)
@@ -51,8 +53,9 @@ namespace workflowLoginForm
         private void QualityAnalyzerForm_Load(object sender, EventArgs e)
         {
             string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
-            dbTools = new DatabaseTools("Products"); // Default data grid is Products database
-            dbTools.PopulateDataGrid(prodDataGridView, statement);
+            dgTools = new DataGridTools("Products");
+            dgTools.PopulateDataGrid(prodDataGridView, statement);
+
         }
 
         private void addProduct_Click(object sender, EventArgs e)
@@ -63,14 +66,16 @@ namespace workflowLoginForm
         private void Refresh_Click(object sender, EventArgs e)
         {
             String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products";
-            dbTools = new DatabaseTools("Products");
-            dbTools.PopulateDataGrid(prodDataGridView, statement);
+            dgTools = new DataGridTools("Products");
+            dgTools.PopulateDataGrid(prodDataGridView, statement);
+
         }
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
             String ProductName = ItemName.Text;
             String Quality = qualityMenu.Text;
+            dbTools = new DatabaseTools();
 
             dbTools.CheckProduct(ProductName);
 

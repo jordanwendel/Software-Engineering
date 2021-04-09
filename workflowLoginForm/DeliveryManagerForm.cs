@@ -15,6 +15,7 @@ namespace workflowLoginForm
     {
         //class level objects
         private DatabaseTools dbTools;
+        private DataGridTools dgTools;
         public DeliveryManagerForm()
         {
             InitializeComponent();
@@ -37,15 +38,17 @@ namespace workflowLoginForm
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dbTools = new DatabaseTools("Products");
-            dbTools.RefreshDataGrid(prodDataGridView);
+            dgTools = new DataGridTools("Products");
+            dgTools.RefreshDataGrid(prodDataGridView);
+
         }
 
         private void DeliveryManagerForm_Load(object sender, EventArgs e)
         {
             String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products Where Quality IN ('Satisfactory','Defective')";
-            dbTools = new DatabaseTools("Products" );
-            dbTools.PopulateDataGrid(prodDataGridView,statement);
+            dgTools = new DataGridTools("Products");
+            dgTools.PopulateDataGrid(prodDataGridView, statement);
+
         }
 
         private void addItemBtn_Click(object sender, EventArgs e)
@@ -76,8 +79,9 @@ namespace workflowLoginForm
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products Where Quality IN ('Satisfactory','Defective')";
-            dbTools = new DatabaseTools("Products");
-            dbTools.PopulateDataGrid(prodDataGridView, statement);
+
+            dgTools = new DataGridTools("Products");
+            dgTools.PopulateDataGrid(prodDataGridView, statement);
 
         }
     }
