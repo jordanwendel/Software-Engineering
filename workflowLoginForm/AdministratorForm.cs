@@ -83,23 +83,23 @@ namespace workflowLoginForm
             DatabaseTools dbTools = new DatabaseTools();
 
             // Show Stockiests
-            users = dbTools.createUserList("Stockiest");
+            users = dbTools.CreateUserList("Stockiest");
             stockiestNames.Items.AddRange(users.ToArray());
 
             // Show Product Managers
-            users = dbTools.createUserList("Product Manager");
+            users = dbTools.CreateUserList("Product Manager");
             productManagerNames.Items.AddRange(users.ToArray());
 
             // Show Delivery Managers
-            users = dbTools.createUserList("Delivery Manager");
+            users = dbTools.CreateUserList("Delivery Manager");
             deliveryManagerNames.Items.AddRange(users.ToArray());
 
             // Show Report Managers
-            users = dbTools.createUserList("Report Manager");
+            users = dbTools.CreateUserList("Report Manager");
             reportManagerNames.Items.AddRange(users.ToArray());
 
             // Show Quality Analyzers
-            users = dbTools.createUserList("Quality Analyzer");
+            users = dbTools.CreateUserList("Quality Analyzer");
             qualityAnalyzerNames.Items.AddRange(users.ToArray());
 
         }

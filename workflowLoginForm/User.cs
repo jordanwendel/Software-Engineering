@@ -10,6 +10,7 @@ namespace workflowLoginForm
     {
         // Class level objects
         private DatabaseTools databaseTools;
+        private UserManager userManager;
 
         // Variables
         public string Username { get; set; }
@@ -25,10 +26,10 @@ namespace workflowLoginForm
         // Constructor for login
         public User (string username, string password)
         {
-            databaseTools = new DatabaseTools();
+            userManager = new UserManager();
             this.Username = username;
             this.Password = password;
-            this.Job = databaseTools.GetJob(username); // Sets job from the database with given username
+            this.Job = userManager.GetJob(username); // Sets job from the database with given username
         }
 
         // For future use to delete the user when exiting or logging out

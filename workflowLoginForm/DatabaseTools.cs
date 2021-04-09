@@ -21,15 +21,15 @@ namespace workflowLoginForm
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
-        public string dbName { get; set; }
-        
+                                                                                                 //public string dbName { get; set; }
+
 
 
         // Constructor with an optional argument to set the name of the database directly from the parameters
         // This optional argument will be used to switch between databases on a datagrid
         public DatabaseTools()//string dbName = "")
         {
-            this.dbName = dbName; // For storing the optional database name parameter
+            //this.dbName = dbName; // For storing the optional database name parameter
 
             // Error handling
             try
@@ -42,117 +42,17 @@ namespace workflowLoginForm
                 MessageBox.Show(err.Message, "Warning!");
             }
         }
-        
+
 
         // Methods
 
 
-        // Validates user from the database upon login
-        public bool ValidatePassword(string username, string enteredPassword)
-        {
-            bool isAuthorized = false;
-           
-            // Open connection and execute sql command
-            try
-            {
-                cn.Open();
-                cmd = new SqlCommand("SELECT userpassword FROM AuthorizedUsers WHERE username = @username", cn); // Grabs password from associated username in database that matches the username input on the login screen
-                cmd.Parameters.AddWithValue("@username", username);
-
-                // Opens database, grabs and returns password
-                reader = cmd.ExecuteReader();
-                reader.Read();
-
-                if (enteredPassword.Equals(reader.GetString(0))) // Checks if entered password matches the one grabbed from database
-                {
-                    isAuthorized = true;
-                }
-
-            }
-            catch (Exception err) // Handles exception
-            {
-                MessageBox.Show(err.Message, "Warning!");
-            }
-            finally
-            {
-                cn.Close();
-            }
-
-            return isAuthorized;
-        }
-
-
-
-        // Gets user job from database with given username
-        public string GetJob(string username)
-        {
-            try
-            {
-                cn.Open();
-                cmd = new SqlCommand("SELECT userjob FROM AuthorizedUsers WHERE userName = @username", cn);
-                cmd.Parameters.AddWithValue("@username", username);
-
-                // Grabs and returns job from database
-                reader = cmd.ExecuteReader();
-                reader.Read();
-
-                return reader.GetString(0);
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Warning!");
-                return null;
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-
-
-        // Inputs user into database with given username, password, and job
-        public void RegisterUser(string username, string password, string job) // May be better to pass in a User object instead
-        {
-            try
-            {
-                // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
-                cn.Open();
-                cmd = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", cn);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-                cmd.Parameters.AddWithValue("@job", job);
-
-                cmd.ExecuteNonQuery(); // Execute the sql command
-                MessageBox.Show("Sucessfully Registered!");
-
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Warning!");
-            }
-            finally
-            {
-                cn.Close();
-            }
-        }
-
-
-
         // Adds raw material to database with given name and quantity
         public void AddRawMaterial(string rawMaterialName, int quantity) // May be better to use a RawMaterial object instead
-                                   //List<RawMaterial> rawMaterials)
+
         {
             try
             {
-                /** For later use
-                foreach (var mat in rawMaterials)
-                {
-                    one.Parameters.AddWithValue("@RawMaterialName", mat.rawMaterialName);
-                    one.Parameters.AddWithValue("@Quantity", mat.quantity);
-                }
-                */
-
                 // Create a SQL command that takes user input -- raw material name, quantity -- and inputs into RawMaterials database
                 cn.Open();
                 cmd = new SqlCommand("Insert into RawMaterials(RawMaterialName, Quantity) Values(@RawMaterialName,  @Quantity);", cn);
@@ -201,7 +101,7 @@ namespace workflowLoginForm
 
 
         // Returns a list of User objects. Pulls the names of users in a given job from the AuthorizedUsers database for each User object
-        public List<User> createUserList(string job)
+        public List<User> CreateUserList(string job)
         {
             // Create list of User objects
             List<User> users;
@@ -248,7 +148,7 @@ namespace workflowLoginForm
                 cn.Open();
                 cmd = new SqlCommand("SELECT Count (*) From RawMaterials WHERE RawMaterialName = Trim(@RawMaterialName)", cn);
                 cmd.Parameters.AddWithValue("@RawMaterialName", RawMaterialName);
-      
+
                 // Opens database, grabs and returns password
                 int MatExists = (int)cmd.ExecuteScalar();
 
@@ -266,8 +166,10 @@ namespace workflowLoginForm
             {
                 cn.Close();
             }
+
             return Exists;
-            }
+        }
+    
 
         public bool CheckProduct(string ProductName)
         {
@@ -321,6 +223,8 @@ namespace workflowLoginForm
                 cn.Close();
             }
         }
+
+
         public void EditLocation(string ProductName, string Location) 
         {
             try

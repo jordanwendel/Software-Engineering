@@ -21,7 +21,7 @@ namespace workflowLoginForm
         private ReportManagerForm ReportManager;
         private StockiestForm Stockpage;
         private QualityAnalyzerForm QualityAnalyzer;
-        private DatabaseTools DbTools;
+        private UserManager userManager;
 
         // Constructor
         public workflowLoginForm()
@@ -40,8 +40,8 @@ namespace workflowLoginForm
 
             try
             {
-                DbTools = new DatabaseTools();
-                if (DbTools.ValidatePassword(enteredUsername, enteredPassword).Equals(true)) // Validating if the user's password matches in the database
+                userManager = new UserManager();
+                if (userManager.ValidatePassword(enteredUsername, enteredPassword).Equals(true)) // Validating if the user's password matches in the database
                 {
                     //MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

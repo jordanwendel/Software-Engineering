@@ -14,6 +14,7 @@ namespace workflowLoginForm
     public partial class RegisterForm : Form
     {
         private DatabaseTools dbTools;
+        private UserManager userManager;
 
         // Constructor
         public RegisterForm()
@@ -35,13 +36,14 @@ namespace workflowLoginForm
         private void registerBtn_Click(object sender, EventArgs e)
         {
             dbTools = new DatabaseTools();
+            userManager = new UserManager();
 
             if (passwordTxt.Text.Equals(confirmpasswordtxt.Text))
             {
                 try
                 {
                     // May want to create a new User object here and pass that into RegisterUser instead
-                    dbTools.RegisterUser(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Register the user in the database
+                    userManager.RegisterUser(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Register the user in the database
                 }
                 catch (Exception err)
                 {

@@ -122,6 +122,7 @@
       <DependentUpon>StockiestForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <Compile Include="UserManager.cs" />
     <Compile Include="workflowLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
