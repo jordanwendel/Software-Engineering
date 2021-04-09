@@ -15,11 +15,13 @@ namespace workflowLoginForm
     {
         // Class level objects
         private Product objProduct;
+        private DatabaseTools dbTools;
 
         // Constructor
         public ProductForm()
         {
             InitializeComponent();
+            dbTools = new DatabaseTools();
         }
 
         // Event handler for Insert Information button
@@ -28,7 +30,9 @@ namespace workflowLoginForm
             try
             {
                 // Assign objProduct
-                objProduct = new Product(txtProductName.Text, txtQuality.Text, int.Parse(txtQuantity.Text), txtLocation.Text); // Create a new product object and put it into the Product database automatically
+                objProduct = new Product(txtProductName.Text, txtQuality.Text, int.Parse(txtQuantity.Text), txtLocation.Text); // Create a new product object
+                dbTools.AddProduct(objProduct); // Add product object to database
+
                 lblProductAddedStatus.Text = "Item Added Successfully!"; // Display a success message on screen
 
                 //clear text boxes

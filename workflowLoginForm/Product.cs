@@ -8,15 +8,15 @@ using System.Windows.Forms;
 
 namespace workflowLoginForm
 {
-    class Product
+    public class Product
     {
 
         private DatabaseTools dbTools;
 
-        private string productName { get; set; }
-        private string quality { get; set; }
-        private int quantity { get; set; }
-        private string location { get; set; }
+        public string productName { get; set; }
+        public string quality { get; set; }
+        public int quantity { get; set; }
+        public string location { get; set; }
 
         // Constructor
         public Product(string productName, string quality, int quantity, string location)
@@ -25,18 +25,6 @@ namespace workflowLoginForm
             this.quality = quality;
             this.quantity = quantity;
             this.location = location;
-
-            // Put product into Product database
-            dbTools = new DatabaseTools();
-            try
-            {
-                dbTools.AddProduct(productName, quality, quantity, location); // Automatically enters the product into the database when called
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Warning!");
-            }
-
         }
 
         public override string ToString()

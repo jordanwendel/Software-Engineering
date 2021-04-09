@@ -16,7 +16,6 @@ namespace workflowLoginForm
         public SqlConnection cn { get; set; }
         public SqlDataReader reader;
         public SqlCommand cmd;
-        //private SqlDataAdapter sqlDa;
 
 
         // Variables
@@ -24,8 +23,6 @@ namespace workflowLoginForm
 
         public DatabaseTools()
         {
-            //this.dbName = dbName; // For storing the optional database name parameter
-
             // Error handling
             try
             {
@@ -43,15 +40,15 @@ namespace workflowLoginForm
 
 
         // Adds raw material to database with given name and quantity
-        public void AddRawMaterial(string rawMaterialName, int quantity) // May be better to use a RawMaterial object instead
+        public void AddRawMaterial(RawMaterial rawMaterial) // May be better to use a RawMaterial object instead
         {
             try
             {
                 // Create a SQL command that takes user input -- raw material name, quantity -- and inputs into RawMaterials database
                 cn.Open();
                 cmd = new SqlCommand("Insert into RawMaterials(RawMaterialName, Quantity) Values(@RawMaterialName,  @Quantity);", cn);
-                cmd.Parameters.AddWithValue("@RawMaterialName", rawMaterialName);
-                cmd.Parameters.AddWithValue("@Quantity", quantity);
+                cmd.Parameters.AddWithValue("@RawMaterialName", rawMaterial.rawMaterialName);
+                cmd.Parameters.AddWithValue("@Quantity", rawMaterial.quantity);
                 cmd.ExecuteNonQuery(); // Execute the sql command
             }
             catch (Exception err)
@@ -67,17 +64,17 @@ namespace workflowLoginForm
 
 
         // Adds product to database with given name, quality, quantity, and location
-        public void AddProduct(string name, string quality, int quantity, string location) // May be better to use a Product object instead
+        public void AddProduct(Product product) // May be better to use a Product object instead
         {
             try
             {
                 // Create a sql command that takes user input -- product name, quality, quantity, location -- and inputs into Products database
                 cn.Open();
                 cmd = new SqlCommand("Insert into Products(ProductName, Quality, Quantity, Location) Values(@ProductName, @Quality, @Quantity, @Location);", cn);
-                cmd.Parameters.AddWithValue("@ProductName", name);
-                cmd.Parameters.AddWithValue("@Quality", quality);
-                cmd.Parameters.AddWithValue("@Quantity", quantity);
-                cmd.Parameters.AddWithValue("@Location", location);
+                cmd.Parameters.AddWithValue("@ProductName", product.productName);
+                cmd.Parameters.AddWithValue("@Quality", product.quality);
+                cmd.Parameters.AddWithValue("@Quantity", product.quantity);
+                cmd.Parameters.AddWithValue("@Location", product.location);
 
                 cmd.ExecuteNonQuery(); // Execute the sql command
 

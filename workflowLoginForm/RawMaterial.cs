@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace workflowLoginForm
 {
-    class RawMaterial
+    public class RawMaterial
     {
         private DatabaseTools dbTools;
 
@@ -22,15 +22,6 @@ namespace workflowLoginForm
             dbTools = new DatabaseTools();
             this.rawMaterialName = rawMaterialName;
             this.quantity = quantity;
-
-            try
-            {
-                dbTools.AddRawMaterial(rawMaterialName, quantity); // Automatically enters the raw material into the database when called
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.Message, "Warning!");
-            }
         }
 
     }

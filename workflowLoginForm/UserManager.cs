@@ -14,6 +14,7 @@ namespace workflowLoginForm
         private SqlConnection cn { get; set; }
         private SqlCommand cmd;
         private SqlDataReader reader;
+        private User user;
         
 
         // Variables
@@ -34,16 +35,16 @@ namespace workflowLoginForm
 
 
         // Inputs user into database with given username, password, and job
-        public void RegisterUser(string username, string password, string job) // May be better to pass in a User object instead
+        public void RegisterUser(User user) // May be better to pass in a User object instead
         {
             try
             {
                 // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
                 cn.Open();
                 cmd = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", cn);
-                cmd.Parameters.AddWithValue("@username", username);
-                cmd.Parameters.AddWithValue("@password", password);
-                cmd.Parameters.AddWithValue("@job", job);
+                cmd.Parameters.AddWithValue("@username", user.Username);
+                cmd.Parameters.AddWithValue("@password", user.Password);
+                cmd.Parameters.AddWithValue("@job", user.Job);
 
                 cmd.ExecuteNonQuery(); // Execute the sql command
                 MessageBox.Show("Sucessfully Registered!");

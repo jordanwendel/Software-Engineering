@@ -32,6 +32,14 @@ namespace workflowLoginForm
             this.Job = userManager.GetJob(username); // Sets job from the database with given username
         }
 
+        // Constructor for registering a new user
+        public User (string username, string password, string job)
+        {
+            this.Username = username;
+            this.Password = password;
+            this.Job = job;
+        }
+
         // For future use to delete the user when exiting or logging out
         public void LogOut (User user)
         {

@@ -42,8 +42,8 @@ namespace workflowLoginForm
             {
                 try
                 {
-                    // May want to create a new User object here and pass that into RegisterUser instead
-                    userManager.RegisterUser(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text); // Register the user in the database
+                    User newUser = new User(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text);
+                    userManager.RegisterUser(newUser); // Register the user in the database
                 }
                 catch (Exception err)
                 {
