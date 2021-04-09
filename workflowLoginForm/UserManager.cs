@@ -14,7 +14,7 @@ namespace workflowLoginForm
         private SqlConnection cn { get; set; }
         private SqlCommand cmd;
         private SqlDataReader reader;
-        private User user;
+        //private User user;
         
 
         // Variables
