@@ -102,7 +102,7 @@ namespace workflowLoginForm
 
         }
 
-
+        // ADD FUNCTIONALITY HERE TO FILTER BOTH DATABASES
         private void btnFilter_Click(object sender, EventArgs e)
         {
             string qual = cBoxQuality.Text;

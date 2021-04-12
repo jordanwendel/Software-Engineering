@@ -40,7 +40,7 @@ namespace workflowLoginForm
 
 
         // Creates a data grid from a specified database
-        public void PopulateDataGrid(DataGridView dataGrid) //string statement) //= null)
+        public void PopulateDataGrid(DataGridView dataGrid)
         {
 
             // Error handling
@@ -73,7 +73,7 @@ namespace workflowLoginForm
 
 
         // Refreshing the data grid to update inventory
-        public void RefreshDataGrid(DataGridView dataGrid) //, string statement) //= null)
+        public void RefreshDataGrid(DataGridView dataGrid)
         {
             dataGrid.Update();
             dataGrid.Refresh();
