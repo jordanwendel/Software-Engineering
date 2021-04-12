@@ -172,7 +172,6 @@
             this.refreshBtn.TabIndex = 47;
             this.refreshBtn.Text = "REFRESH";
             this.refreshBtn.UseVisualStyleBackColor = false;
-            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
             // 
             // addItemBtn
             // 

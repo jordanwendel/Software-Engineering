@@ -45,9 +45,7 @@ namespace workflowLoginForm
 
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
-        {
-            dgTools.dbName = "RawMaterials";
-            
+        {   
             dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
             
             dgTools.RefreshDataGrid(stockDataGridView);

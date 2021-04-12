@@ -62,15 +62,21 @@ namespace workflowLoginForm
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
+            // Clear the filtering text fields when refreshing data grid
+            txtFilterByItem.Clear();
+            cBoxLocation.Text = null;
+            cBoxQuality.Text = null;
+            txtNum.Clear();
  
+            // Viewing Products
             if (dgTools.dbName.Equals("Products"))
             {
-
                 dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
 
                 dgTools.RefreshDataGrid(prodDataGridView);
             }
 
+            // Viewing Raw Materials
             else if (dgTools.dbName.Equals("RawMaterials"))
             {
                 dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
@@ -110,17 +116,13 @@ namespace workflowLoginForm
 
             if (radBtnName.Checked)
             {
-                dgTools.dbName = "Products";
-
-                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName = "+"'"+ info+"'";
+                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName = " + "'" + info + "'";
 
                 dgTools.PopulateDataGrid(prodDataGridView);
 
             }
             if(radBtnQuality.Checked)
             {
-                dgTools.dbName = "Products";
-
                 dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
 
                 dgTools.PopulateDataGrid(prodDataGridView);
@@ -130,8 +132,6 @@ namespace workflowLoginForm
             {
                 int num = int.Parse(txtNum.Text);
 
-                dgTools.dbName = "Products";
-
                 dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
 
                 dgTools.PopulateDataGrid(prodDataGridView);
@@ -140,8 +140,6 @@ namespace workflowLoginForm
             if (radBtnLocation.Checked)
             {
                 string location = cBoxLocation.Text;
-
-                dgTools.dbName = "Products";
 
                 dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
 

@@ -39,15 +39,6 @@ namespace workflowLoginForm
 
         }
 
-        private void refreshBtn_Click(object sender, EventArgs e)
-        {
-            dgTools.dbName = "Products";
-            
-            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products Where Quality IN ('Satisfactory','Defective')";
-            
-            dgTools.RefreshDataGrid(prodDataGridView);
-
-        }
 
         private void DeliveryManagerForm_Load(object sender, EventArgs e)
         {
@@ -87,12 +78,9 @@ namespace workflowLoginForm
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            dgTools.dbName = "Products";
-
             dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products Where Quality IN ('Satisfactory','Defective')";
             
             dgTools.PopulateDataGrid(prodDataGridView);
-
         }
     }
 }

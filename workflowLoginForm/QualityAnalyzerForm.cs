@@ -36,7 +36,7 @@ namespace workflowLoginForm
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dgTools.dbName = "Products";
+            //dgTools.dbName = "Products";
             
             dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             
@@ -71,7 +71,7 @@ namespace workflowLoginForm
 
         private void Refresh_Click(object sender, EventArgs e)
         {
-            dgTools.dbName = "Products";
+            //dgTools.dbName = "Products";
 
             dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
 
