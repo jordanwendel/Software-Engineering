@@ -18,8 +18,8 @@ namespace workflowLoginForm
 
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
-        public string dbName { get; set; }
-        public string SqlCommand { get; set; }
+        public string dbName { get; set; } // Name of the database we want to query from
+        public string SqlCommand { get; set; } // Query that we want to run on the database
 
 
 
