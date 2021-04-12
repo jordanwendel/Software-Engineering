@@ -19,13 +19,13 @@ namespace workflowLoginForm
         // Variables
         private readonly string connectionString = Properties.Settings.Default.connectionString; // Database connection string stored in Properties -> Settings.settings
         public string dbName { get; set; }
+        public string SqlCommand { get; set; }
 
-        // Constructor with an optional argument to set the name of the database directly from the parameters
-        // This optional argument will be used to switch between databases on a datagrid
-        public DataGridTools(string dbName = null)
+
+
+        // Constructor
+        public DataGridTools()
         {
-            this.dbName = dbName;
-
             // Error handling
             try
             {
@@ -40,27 +40,14 @@ namespace workflowLoginForm
 
 
         // Creates a data grid from a specified database
-        public void PopulateDataGrid(DataGridView dataGrid, string statement = null)
+        public void PopulateDataGrid(DataGridView dataGrid) //string statement) //= null)
         {
-            string sql = "SELECT * FROM " + dbName; // Default value
-
-            // Only displaying the data that we want from each database
-            if (this.dbName.Equals("Products"))
-            {
-                sql = statement; // Viewing all data dependent on statement 
-            }
-            else if (this.dbName.Equals("RawMaterials"))
-            {
-                sql = "SELECT RawMaterialName, Quantity FROM " + dbName; // Viewing all data from RawMaterials database except the ID
-                //sql = statement;
-            }
-
 
             // Error handling
             try
             {
                 cn.Open();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(sql, cn);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(SqlCommand, cn);
                 DataSet ds = new DataSet();
 
                 // Fill data grid on screen with data from given database
@@ -75,7 +62,7 @@ namespace workflowLoginForm
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Issue Creating DataGrid");
+                MessageBox.Show(err.Message, "Issue Creating Data Grid");
             }
             finally
             {
@@ -86,11 +73,11 @@ namespace workflowLoginForm
 
 
         // Refreshing the data grid to update inventory
-        public void RefreshDataGrid(DataGridView dataGrid, string statement = null)
+        public void RefreshDataGrid(DataGridView dataGrid) //, string statement) //= null)
         {
             dataGrid.Update();
             dataGrid.Refresh();
-            PopulateDataGrid(dataGrid, statement);
+            PopulateDataGrid(dataGrid);
         }
 
 

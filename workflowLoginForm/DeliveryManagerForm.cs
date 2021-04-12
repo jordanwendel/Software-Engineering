@@ -17,9 +17,11 @@ namespace workflowLoginForm
         private DatabaseTools dbTools;
         private DataGridTools dgTools;
 
+        
         public DeliveryManagerForm()
         {
             InitializeComponent();
+            dgTools = new DataGridTools();
         }
 
         private void Logout_Click(object sender, EventArgs e)
@@ -39,16 +41,21 @@ namespace workflowLoginForm
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dgTools = new DataGridTools("Products");
+            dgTools.dbName = "Products";
+            
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products Where Quality IN ('Satisfactory','Defective')";
+            
             dgTools.RefreshDataGrid(prodDataGridView);
 
         }
 
         private void DeliveryManagerForm_Load(object sender, EventArgs e)
         {
-            String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products Where Quality IN ('Satisfactory','Defective')";
-            dgTools = new DataGridTools("Products");
-            dgTools.PopulateDataGrid(prodDataGridView, statement);
+            dgTools.dbName = "Products";
+
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products Where Quality IN ('Satisfactory','Defective')";
+            
+            dgTools.PopulateDataGrid(prodDataGridView);
 
         }
 
@@ -80,10 +87,11 @@ namespace workflowLoginForm
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products Where Quality IN ('Satisfactory','Defective')";
+            dgTools.dbName = "Products";
 
-            dgTools = new DataGridTools("Products");
-            dgTools.PopulateDataGrid(prodDataGridView, statement);
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products Where Quality IN ('Satisfactory','Defective')";
+            
+            dgTools.PopulateDataGrid(prodDataGridView);
 
         }
     }

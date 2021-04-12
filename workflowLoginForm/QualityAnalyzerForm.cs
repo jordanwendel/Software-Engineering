@@ -21,6 +21,7 @@ namespace workflowLoginForm
         public QualityAnalyzerForm()
         {
             InitializeComponent();
+            dgTools = new DataGridTools();
         }
 
         private void Admin_Click(object sender, EventArgs e)
@@ -35,7 +36,10 @@ namespace workflowLoginForm
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dgTools = new DataGridTools("Products");
+            dgTools.dbName = "Products";
+            
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+            
             dgTools.RefreshDataGrid(prodDataGridView);
 
         }
@@ -52,9 +56,11 @@ namespace workflowLoginForm
 
         private void QualityAnalyzerForm_Load(object sender, EventArgs e)
         {
-            string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
-            dgTools = new DataGridTools("Products");
-            dgTools.PopulateDataGrid(prodDataGridView, statement);
+            dgTools.dbName = "Products";
+            
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+            
+            dgTools.PopulateDataGrid(prodDataGridView);
 
         }
 
@@ -65,9 +71,11 @@ namespace workflowLoginForm
 
         private void Refresh_Click(object sender, EventArgs e)
         {
-            String statement = "SELECT ProductName, Quality, Quantity, Location FROM  Products";
-            dgTools = new DataGridTools("Products");
-            dgTools.PopulateDataGrid(prodDataGridView, statement);
+            dgTools.dbName = "Products";
+
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+
+            dgTools.PopulateDataGrid(prodDataGridView);
 
         }
 

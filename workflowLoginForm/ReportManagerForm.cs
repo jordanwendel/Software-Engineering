@@ -17,21 +17,22 @@ namespace workflowLoginForm
         private DataGridTools dgTools;
 
         // Variables
-        private string databaseName { get; set; }
 
         // Constructor
         public ReportManagerForm()
         {
             InitializeComponent();
+            dgTools = new DataGridTools();
         }
 
         // Event handler for Refresh button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+            dgTools.dbName = "Products";
 
-            dgTools = new DataGridTools(this.databaseName);
-            dgTools.RefreshDataGrid(prodDataGridView, statement);
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+
+            dgTools.RefreshDataGrid(prodDataGridView);
 
         }
 
@@ -47,11 +48,10 @@ namespace workflowLoginForm
             // Fill the Product Manager form with Products database information upon creation
             try
             {
-                string statement = "SELECT ProductName, Quality , Quantity, Location FROM Products " ;
-                this.databaseName = "Products";
+                dgTools.dbName = "Products";
 
-                dgTools = new DataGridTools(this.databaseName);
-                dgTools.PopulateDataGrid(prodDataGridView, statement);
+                dgTools.SqlCommand = "SELECT ProductName, Quality , Quantity, Location FROM Products";
+                dgTools.PopulateDataGrid(prodDataGridView);
 
             }
             catch (Exception err)
@@ -63,20 +63,21 @@ namespace workflowLoginForm
         // Event handler for View Product Data button click
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
-            string statement = "SELECT ProductName, Quality, Quantity, Location FROM Products";
-            this.databaseName = "Products"; // Set the name for the database we want to find
+            dgTools.dbName = "Products";
 
-            dgTools = new DataGridTools(this.databaseName);
-            dgTools.PopulateDataGrid(prodDataGridView, statement);
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+
+            dgTools.PopulateDataGrid(prodDataGridView);
 
         }
 
         // Event handler for View Raw Materials Data button click
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
-            this.databaseName = "RawMaterials"; // Set the name for the database we want to find
-
-            dgTools = new DataGridTools(this.databaseName);
+            dgTools.dbName = "RawMaterials";
+            
+            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+            
             dgTools.PopulateDataGrid(prodDataGridView);
 
         }

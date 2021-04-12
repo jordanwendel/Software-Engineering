@@ -17,17 +17,22 @@ namespace workflowLoginForm
         private RawMaterialsForm stockpage;
         private DataGridTools dgTools;
 
+
         // Constructor
         public StockiestForm()
         {
             InitializeComponent();
+            dgTools = new DataGridTools();
         }
 
         // Event handler for Stockiest Form load
         private void StockiestForm_Load(object sender, EventArgs e)
         {
             // Fill the data grid view on form with contents of given database using a data grid object
-            dgTools = new DataGridTools("RawMaterials");
+            dgTools.dbName = "RawMaterials";
+
+            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+            
             dgTools.PopulateDataGrid(stockDataGridView);
 
         }
@@ -41,7 +46,10 @@ namespace workflowLoginForm
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dgTools = new DataGridTools("RawMaterials");
+            dgTools.dbName = "RawMaterials";
+            
+            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+            
             dgTools.RefreshDataGrid(stockDataGridView);
 
         }
