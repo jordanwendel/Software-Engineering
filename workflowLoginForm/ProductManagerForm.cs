@@ -62,13 +62,23 @@ namespace workflowLoginForm
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            // ADD A FUNCTIONALITY FOR REFRESHING THE CURRENT DATABSE
+ 
+            if (dgTools.dbName.Equals("Products"))
+            {
 
-            dgTools.dbName = "Products";
+                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
 
-            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+                dgTools.RefreshDataGrid(prodDataGridView);
+            }
+
+            else if (dgTools.dbName.Equals("RawMaterials"))
+            {
+                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+
+                dgTools.RefreshDataGrid(prodDataGridView);
+            }
+
             
-            dgTools.RefreshDataGrid(prodDataGridView);
         }
 
 

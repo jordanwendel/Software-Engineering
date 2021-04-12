@@ -28,11 +28,19 @@ namespace workflowLoginForm
         // Event handler for Refresh button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            dgTools.dbName = "Products";
+            if (dgTools.dbName.Equals("Products"))
+            {
+                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
 
-            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+                dgTools.RefreshDataGrid(prodDataGridView);
+            }
 
-            dgTools.RefreshDataGrid(prodDataGridView);
+            else if (dgTools.dbName.Equals("RawMaterials"))
+            {
+                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+
+                dgTools.RefreshDataGrid(prodDataGridView);
+            }
 
         }
 
