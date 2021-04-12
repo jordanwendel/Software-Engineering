@@ -48,11 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilterByItem = new System.Windows.Forms.TextBox();
             this.btnFilter = new System.Windows.Forms.Button();
-            this.radBtnName = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.radBtnQuality = new System.Windows.Forms.RadioButton();
-            this.radBtnQuantity = new System.Windows.Forms.RadioButton();
-            this.radBtnLocation = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.cBoxQuality = new System.Windows.Forms.ComboBox();
             this.txtNum = new System.Windows.Forms.TextBox();
@@ -60,6 +56,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cBoxLocation = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.filterMenu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,10 +125,10 @@
             this.prodDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.prodDataGridView.Location = new System.Drawing.Point(213, 63);
+            this.prodDataGridView.Location = new System.Drawing.Point(229, 63);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
-            this.prodDataGridView.Size = new System.Drawing.Size(671, 440);
+            this.prodDataGridView.Size = new System.Drawing.Size(655, 472);
             this.prodDataGridView.TabIndex = 12;
             // 
             // addItemLbl
@@ -275,17 +272,17 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(8, 375);
+            this.label1.Location = new System.Drawing.Point(6, 377);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 23);
+            this.label1.Size = new System.Drawing.Size(94, 23);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Item:";
+            this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtFilterByItem
             // 
-            this.txtFilterByItem.Location = new System.Drawing.Point(87, 380);
+            this.txtFilterByItem.Location = new System.Drawing.Point(101, 380);
             this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFilterByItem.Name = "txtFilterByItem";
             this.txtFilterByItem.Size = new System.Drawing.Size(123, 20);
@@ -293,7 +290,7 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(17, 496);
+            this.btnFilter.Location = new System.Drawing.Point(29, 496);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(181, 39);
@@ -302,75 +299,24 @@
             this.btnFilter.UseVisualStyleBackColor = true;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
-            // radBtnName
-            // 
-            this.radBtnName.AutoSize = true;
-            this.radBtnName.ForeColor = System.Drawing.Color.White;
-            this.radBtnName.Location = new System.Drawing.Point(40, 318);
-            this.radBtnName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.radBtnName.Name = "radBtnName";
-            this.radBtnName.Size = new System.Drawing.Size(53, 17);
-            this.radBtnName.TabIndex = 36;
-            this.radBtnName.TabStop = true;
-            this.radBtnName.Text = "Name";
-            this.radBtnName.UseVisualStyleBackColor = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(56, 287);
+            this.label2.Location = new System.Drawing.Point(14, 300);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 37;
-            this.label2.Text = "Select one to filter by";
-            // 
-            // radBtnQuality
-            // 
-            this.radBtnQuality.AutoSize = true;
-            this.radBtnQuality.ForeColor = System.Drawing.Color.White;
-            this.radBtnQuality.Location = new System.Drawing.Point(114, 318);
-            this.radBtnQuality.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.radBtnQuality.Name = "radBtnQuality";
-            this.radBtnQuality.Size = new System.Drawing.Size(57, 17);
-            this.radBtnQuality.TabIndex = 38;
-            this.radBtnQuality.TabStop = true;
-            this.radBtnQuality.Text = "Quality";
-            this.radBtnQuality.UseVisualStyleBackColor = true;
-            this.radBtnQuality.CheckedChanged += new System.EventHandler(this.radBtnQuality_CheckedChanged);
-            // 
-            // radBtnQuantity
-            // 
-            this.radBtnQuantity.AutoSize = true;
-            this.radBtnQuantity.ForeColor = System.Drawing.Color.White;
-            this.radBtnQuantity.Location = new System.Drawing.Point(40, 340);
-            this.radBtnQuantity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.radBtnQuantity.Name = "radBtnQuantity";
-            this.radBtnQuantity.Size = new System.Drawing.Size(64, 17);
-            this.radBtnQuantity.TabIndex = 39;
-            this.radBtnQuantity.TabStop = true;
-            this.radBtnQuantity.Text = "Quantity";
-            this.radBtnQuantity.UseVisualStyleBackColor = true;
-            // 
-            // radBtnLocation
-            // 
-            this.radBtnLocation.AutoSize = true;
-            this.radBtnLocation.ForeColor = System.Drawing.Color.White;
-            this.radBtnLocation.Location = new System.Drawing.Point(114, 340);
-            this.radBtnLocation.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.radBtnLocation.Name = "radBtnLocation";
-            this.radBtnLocation.Size = new System.Drawing.Size(66, 17);
-            this.radBtnLocation.TabIndex = 40;
-            this.radBtnLocation.TabStop = true;
-            this.radBtnLocation.Text = "Location";
-            this.radBtnLocation.UseVisualStyleBackColor = true;
+            this.label2.Text = "Filter By:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(-16, 398);
+            this.label3.Location = new System.Drawing.Point(19, 403);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 23);
@@ -382,9 +328,9 @@
             // 
             this.cBoxQuality.FormattingEnabled = true;
             this.cBoxQuality.Items.AddRange(new object[] {
-            "Defective",
-            "Satisfactory"});
-            this.cBoxQuality.Location = new System.Drawing.Point(87, 403);
+            "Satisfactory",
+            "Defective"});
+            this.cBoxQuality.Location = new System.Drawing.Point(101, 403);
             this.cBoxQuality.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cBoxQuality.Name = "cBoxQuality";
             this.cBoxQuality.Size = new System.Drawing.Size(123, 21);
@@ -392,7 +338,7 @@
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(87, 427);
+            this.txtNum.Location = new System.Drawing.Point(101, 427);
             this.txtNum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(123, 20);
@@ -402,7 +348,7 @@
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(-8, 422);
+            this.label4.Location = new System.Drawing.Point(21, 426);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 23);
@@ -415,7 +361,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(-4, 448);
+            this.label5.Location = new System.Drawing.Point(21, 449);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 23);
@@ -429,7 +375,7 @@
             this.cBoxLocation.Items.AddRange(new object[] {
             "Sales",
             "Manufacturing"});
-            this.cBoxLocation.Location = new System.Drawing.Point(87, 449);
+            this.cBoxLocation.Location = new System.Drawing.Point(101, 449);
             this.cBoxLocation.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cBoxLocation.Name = "cBoxLocation";
             this.cBoxLocation.Size = new System.Drawing.Size(123, 21);
@@ -443,13 +389,29 @@
             this.txtName.TabIndex = 48;
             this.txtName.Text = "Enter Name";
             // 
+            // filterMenu
+            // 
+            this.filterMenu.FormattingEnabled = true;
+            this.filterMenu.Items.AddRange(new object[] {
+            "Name",
+            "Quality",
+            "Quantity",
+            "Location"});
+            this.filterMenu.Location = new System.Drawing.Point(87, 301);
+            this.filterMenu.Name = "filterMenu";
+            this.filterMenu.Size = new System.Drawing.Size(123, 21);
+            this.filterMenu.TabIndex = 49;
+            this.filterMenu.Text = "Click to expand...";
+            this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
+            // 
             // ProductManagerForm
             // 
-            this.AcceptButton = this.addItemBtn;
+            this.AcceptButton = this.btnFilter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(895, 601);
+            this.Controls.Add(this.filterMenu);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.cBoxLocation);
             this.Controls.Add(this.label5);
@@ -457,11 +419,7 @@
             this.Controls.Add(this.txtNum);
             this.Controls.Add(this.cBoxQuality);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.radBtnLocation);
-            this.Controls.Add(this.radBtnQuantity);
-            this.Controls.Add(this.radBtnQuality);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.radBtnName);
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.txtFilterByItem);
             this.Controls.Add(this.label1);
@@ -514,11 +472,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFilterByItem;
         private System.Windows.Forms.Button btnFilter;
-        private System.Windows.Forms.RadioButton radBtnName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RadioButton radBtnQuality;
-        private System.Windows.Forms.RadioButton radBtnQuantity;
-        private System.Windows.Forms.RadioButton radBtnLocation;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cBoxQuality;
         private System.Windows.Forms.TextBox txtNum;
@@ -526,6 +480,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cBoxLocation;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.ComboBox filterMenu;
     }
 }
 

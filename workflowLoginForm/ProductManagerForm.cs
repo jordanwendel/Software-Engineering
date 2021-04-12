@@ -69,7 +69,14 @@ namespace workflowLoginForm
             cBoxLocation.Text = null;
             cBoxQuality.Text = null;
             txtNum.Clear();
- 
+
+            // Re-enabling all search fields
+            cBoxQuality.Enabled = true;
+            cBoxLocation.Enabled = true;
+            txtFilterByItem.Enabled = true;
+            txtNum.Enabled = true;
+
+
             // Viewing Products
             if (dgTools.dbName.Equals("Products"))
             {
@@ -92,25 +99,51 @@ namespace workflowLoginForm
 
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
+            filterMenu.Text = "Click to expand...";
+            // Clear filtering fields
+            txtFilterByItem.Clear();
+            cBoxLocation.Text = null;
+            cBoxQuality.Text = null;
+            txtNum.Clear();
+
             dgTools.dbName = "Products";
 
             dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             
             dgTools.PopulateDataGrid(prodDataGridView);
 
+            // Add the filtering options specifically for Products
+            filterMenu.Items.Clear();
+            filterMenu.Items.Add("Name");
+            filterMenu.Items.Add("Quality");
+            filterMenu.Items.Add("Quantity");
+            filterMenu.Items.Add("Location");
+
         }
 
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
+            filterMenu.Text = "Click to expand...";
+
+            // Clear filtering fields
+            txtFilterByItem.Clear();
+            cBoxLocation.Text = null;
+            cBoxQuality.Text = null;
+            txtNum.Clear();
+
             dgTools.dbName = "RawMaterials";
             
             dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
             
             dgTools.PopulateDataGrid(prodDataGridView);
 
+            // Add the filtering options specifically for Raw Materials
+            filterMenu.Items.Clear();
+            filterMenu.Items.Add("Name");
+            filterMenu.Items.Add("Quantity");
         }
 
-        // ADD FUNCTIONALITY HERE TO FILTER BOTH DATABASES
+        // NEED TO ERROR CATCH WHEN INCORRECT STRING INPUT IS USED
         private void btnFilter_Click(object sender, EventArgs e)
         {
             string qual = cBoxQuality.Text;
@@ -119,64 +152,74 @@ namespace workflowLoginForm
             // Filtering Products database
             if (dgTools.dbName.Equals("Products"))
             {
-                if (radBtnName.Checked)
+                try
                 {
-                    dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName = " + "'" + info + "'";
+                    if (filterMenu.Text.Equals("Name"))
+                    {
+                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
 
-                    dgTools.PopulateDataGrid(prodDataGridView);
+                        dgTools.PopulateDataGrid(prodDataGridView);
 
+                    }
+                    else if (filterMenu.Equals("Quality"))
+                    {
+                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
+
+                        dgTools.PopulateDataGrid(prodDataGridView);
+
+                    }
+                    else if (filterMenu.Text.Equals("Quantity"))
+                    {
+                        int num = int.Parse(txtNum.Text);
+
+                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
+
+                        dgTools.PopulateDataGrid(prodDataGridView);
+
+                    }
+                    else if (filterMenu.Text.Equals("Location"))
+                    {
+                        string location = cBoxLocation.Text;
+
+                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
+
+                        dgTools.PopulateDataGrid(prodDataGridView);
+                    }
                 }
-                else if (radBtnQuality.Checked)
+                catch(FormatException)
                 {
-                    dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
-
-                    dgTools.PopulateDataGrid(prodDataGridView);
-
-                }
-                else if (radBtnQuantity.Checked)
-                {
-                    int num = int.Parse(txtNum.Text);
-
-                    dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
-
-                    dgTools.PopulateDataGrid(prodDataGridView);
-
-                }
-                else if (radBtnLocation.Checked)
-                {
-                    string location = cBoxLocation.Text;
-
-                    dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
-
-                    dgTools.PopulateDataGrid(prodDataGridView);
-
+                    MessageBox.Show("Please input the correct information");
+                    throw;
                 }
             }
 
             // Filtering Raw Materials database
             else if (dgTools.dbName.Equals("RawMaterials"))
             {
-                if (radBtnName.Checked)
+                try
                 {
-                    dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE RawMaterialName = " + "'" + info + "'";
+                    if (filterMenu.Text.Equals("Name"))
+                    {
+                        dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE RawMaterialName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
 
-                    dgTools.PopulateDataGrid(prodDataGridView);
+                        dgTools.PopulateDataGrid(prodDataGridView);
+                    }
+                    else if (filterMenu.Text.Equals("Quantity"))
+                    {
+                        int num = int.Parse(txtNum.Text);
+
+                        dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + num + "'";
+
+                        dgTools.PopulateDataGrid(prodDataGridView);
+                    }
                 }
-                else if (radBtnQuantity.Checked)
+                catch (FormatException)
                 {
-                    int num = int.Parse(txtNum.Text);
-
-                    dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + num + "'";
-
-                    dgTools.PopulateDataGrid(prodDataGridView);
+                    //MessageBox.Show(err.Message, "Please input the correct information");
+                    throw;
                 }
             }
             
-
-        }
-
-        private void radBtnQuality_CheckedChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -199,6 +242,61 @@ namespace workflowLoginForm
             locationMenu.Text = null;
         }
 
-       
+        private void filterMenu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dgTools.dbName.Equals("Products"))
+            {
+                if (filterMenu.SelectedItem.Equals("Name"))
+                {
+                    // Disabling other options when searching for a name
+                    cBoxQuality.Enabled = false;
+                    txtNum.Enabled = false;
+                    cBoxLocation.Enabled = false;
+                    txtFilterByItem.Enabled = true;
+                }
+                else if (filterMenu.SelectedItem.Equals("Quality"))
+                {
+                    // Disabling other options when searching for a quality
+                    txtNum.Enabled = false;
+                    cBoxLocation.Enabled = false;
+                    txtFilterByItem.Enabled = false;
+                    cBoxQuality.Enabled = true;
+                }
+                else if (filterMenu.SelectedItem.Equals("Quantity"))
+                {
+                    // Disabling other options when searching for a quality
+                    cBoxQuality.Enabled = false;
+                    cBoxLocation.Enabled = false;
+                    txtFilterByItem.Enabled = false;
+                    txtNum.Enabled = true;
+                }
+                else if (filterMenu.SelectedItem.Equals("Location"))
+                {
+                    // Disabling other options when searching for a quality
+                    txtFilterByItem.Enabled = false;
+                    cBoxQuality.Enabled = false;
+                    txtNum.Enabled = false;
+                    cBoxLocation.Enabled = true;
+                }
+            }
+            else if (dgTools.dbName.Equals("RawMaterials"))
+            {
+                if (filterMenu.SelectedItem.Equals("Name"))
+                {
+                    // Disabling other options when searching for a name
+                    cBoxQuality.Enabled = false;
+                    txtNum.Enabled = false;
+                    cBoxLocation.Enabled = false;
+                    txtFilterByItem.Enabled = true;
+                }
+                else if (filterMenu.SelectedItem.Equals("Quantity"))
+                {
+                    cBoxLocation.Enabled = false;
+                    cBoxQuality.Enabled = false;
+                    txtFilterByItem.Enabled = false;
+                    txtNum.Enabled = true;
+                }
+            }
+        }
     }
 }

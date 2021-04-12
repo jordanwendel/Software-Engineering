@@ -116,20 +116,5 @@ namespace workflowLoginForm
 
         }
 
-
-        // Event handler for Clear button click
-        private void clearBtn_Click(object sender, EventArgs e)
-        {
-            // Clear text fields
-            txtUserName.Text = string.Empty; 
-            txtPassword.Text = string.Empty;
-        }
-
-        // Event handler for Exit button click
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit(); // Quit application
-        }
-
     }
 }
