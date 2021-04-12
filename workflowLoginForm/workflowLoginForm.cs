@@ -66,7 +66,7 @@ namespace workflowLoginForm
                     }
                     else if (loggedInUser.Job.Equals("Product Manager")) // Product manager page
                     {
-                        this.Hide(); 
+                        this.Hide();
                         ProductManager = new ProductManagerForm();
                         ProductManager.ShowDialog();
                         txtUserName.Text = string.Empty;
@@ -112,8 +112,10 @@ namespace workflowLoginForm
             {
                 MessageBox.Show(err.Message, "Something Broke"); // Show error message
             }
+            
 
         }
+
 
         // Event handler for Clear button click
         private void clearBtn_Click(object sender, EventArgs e)

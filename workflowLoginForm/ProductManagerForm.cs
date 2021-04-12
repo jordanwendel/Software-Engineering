@@ -15,6 +15,7 @@ namespace workflowLoginForm
     {
         // Class level objects
         private DataGridTools dgTools;
+        private DatabaseTools dbTools;
         private ProductForm stockpage;
 
         // Variables
@@ -24,6 +25,7 @@ namespace workflowLoginForm
         {
             InitializeComponent();
             dgTools = new DataGridTools();
+            dbTools = new DatabaseTools();
         }
 
         // Event handler to Logout button click
@@ -114,38 +116,62 @@ namespace workflowLoginForm
             string qual = cBoxQuality.Text;
             string info = txtFilterByItem.Text;
 
-            if (radBtnName.Checked)
+            // Filtering Products database
+            if (dgTools.dbName.Equals("Products"))
             {
-                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName = " + "'" + info + "'";
+                if (radBtnName.Checked)
+                {
+                    dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName = " + "'" + info + "'";
 
-                dgTools.PopulateDataGrid(prodDataGridView);
+                    dgTools.PopulateDataGrid(prodDataGridView);
 
+                }
+                else if (radBtnQuality.Checked)
+                {
+                    dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
+
+                    dgTools.PopulateDataGrid(prodDataGridView);
+
+                }
+                else if (radBtnQuantity.Checked)
+                {
+                    int num = int.Parse(txtNum.Text);
+
+                    dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
+
+                    dgTools.PopulateDataGrid(prodDataGridView);
+
+                }
+                else if (radBtnLocation.Checked)
+                {
+                    string location = cBoxLocation.Text;
+
+                    dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
+
+                    dgTools.PopulateDataGrid(prodDataGridView);
+
+                }
             }
-            if(radBtnQuality.Checked)
+
+            // Filtering Raw Materials database
+            else if (dgTools.dbName.Equals("RawMaterials"))
             {
-                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
+                if (radBtnName.Checked)
+                {
+                    dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE RawMaterialName = " + "'" + info + "'";
 
-                dgTools.PopulateDataGrid(prodDataGridView);
+                    dgTools.PopulateDataGrid(prodDataGridView);
+                }
+                else if (radBtnQuantity.Checked)
+                {
+                    int num = int.Parse(txtNum.Text);
 
+                    dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + num + "'";
+
+                    dgTools.PopulateDataGrid(prodDataGridView);
+                }
             }
-            if (radBtnQuantity.Checked)
-            {
-                int num = int.Parse(txtNum.Text);
-
-                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
-
-                dgTools.PopulateDataGrid(prodDataGridView);
-
-            }
-            if (radBtnLocation.Checked)
-            {
-                string location = cBoxLocation.Text;
-
-                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
-
-                dgTools.PopulateDataGrid(prodDataGridView);
-
-            }
+            
 
         }
 
@@ -161,7 +187,18 @@ namespace workflowLoginForm
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
+            // Creating a new product object, adding it to the database, and auto refreshing the datagrid
+            Product newProduct = new Product(txtName.Text, qualityMenu.Text, int.Parse(txtQuantity.Text), locationMenu.Text);
+            dbTools.AddProduct(newProduct);
+            dgTools.RefreshDataGrid(prodDataGridView);
 
+            // Clearing entered values
+            txtName.Clear();
+            qualityMenu.Text = null;
+            txtQuantity.Clear();
+            locationMenu.Text = null;
         }
+
+       
     }
 }
