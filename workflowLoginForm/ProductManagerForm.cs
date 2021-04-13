@@ -359,5 +359,25 @@ namespace workflowLoginForm
                 }
             }
         }
+
+        private void txtFilterByItem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cBoxQuality_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quantityEquations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cBoxLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
