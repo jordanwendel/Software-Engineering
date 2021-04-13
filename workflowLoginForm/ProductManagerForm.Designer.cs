@@ -50,13 +50,13 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cBoxQuality = new System.Windows.Forms.ComboBox();
             this.txtNum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cBoxLocation = new System.Windows.Forms.ComboBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.filterMenu = new System.Windows.Forms.ComboBox();
+            this.cBoxQuality = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -324,18 +324,6 @@
             this.label3.Text = "Quality:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cBoxQuality
-            // 
-            this.cBoxQuality.FormattingEnabled = true;
-            this.cBoxQuality.Items.AddRange(new object[] {
-            "Satisfactory",
-            "Defective"});
-            this.cBoxQuality.Location = new System.Drawing.Point(101, 403);
-            this.cBoxQuality.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.cBoxQuality.Name = "cBoxQuality";
-            this.cBoxQuality.Size = new System.Drawing.Size(123, 21);
-            this.cBoxQuality.TabIndex = 42;
-            // 
             // txtNum
             // 
             this.txtNum.Location = new System.Drawing.Point(101, 427);
@@ -404,6 +392,17 @@
             this.filterMenu.Text = "Click to expand...";
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
             // 
+            // cBoxQuality
+            // 
+            this.cBoxQuality.FormattingEnabled = true;
+            this.cBoxQuality.Items.AddRange(new object[] {
+            "Satisfactory",
+            "Defective"});
+            this.cBoxQuality.Location = new System.Drawing.Point(101, 403);
+            this.cBoxQuality.Name = "cBoxQuality";
+            this.cBoxQuality.Size = new System.Drawing.Size(123, 21);
+            this.cBoxQuality.TabIndex = 50;
+            // 
             // ProductManagerForm
             // 
             this.AcceptButton = this.btnFilter;
@@ -411,13 +410,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(895, 601);
+            this.Controls.Add(this.cBoxQuality);
             this.Controls.Add(this.filterMenu);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.cBoxLocation);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNum);
-            this.Controls.Add(this.cBoxQuality);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnFilter);
@@ -474,13 +473,13 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cBoxQuality;
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cBoxLocation;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox filterMenu;
+        private System.Windows.Forms.ComboBox cBoxQuality;
     }
 }
 

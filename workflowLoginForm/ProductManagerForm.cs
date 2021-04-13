@@ -99,7 +99,7 @@ namespace workflowLoginForm
 
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
-            filterMenu.Text = "Click to expand...";
+            filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
             // Clear filtering fields
             txtFilterByItem.Clear();
             cBoxLocation.Text = null;
@@ -123,7 +123,7 @@ namespace workflowLoginForm
 
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
-            filterMenu.Text = "Click to expand...";
+            filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
 
             // Clear filtering fields
             txtFilterByItem.Clear();
@@ -146,8 +146,8 @@ namespace workflowLoginForm
         // NEED TO ERROR CATCH WHEN INCORRECT STRING INPUT IS USED
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            string qual = cBoxQuality.Text;
             string info = txtFilterByItem.Text;
+            string qual = cBoxQuality.Text;
 
             // Filtering Products database
             if (dgTools.dbName.Equals("Products"))
@@ -156,6 +156,7 @@ namespace workflowLoginForm
                 {
                     if (filterMenu.Text.Equals("Name"))
                     {
+
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
 
                         dgTools.PopulateDataGrid(prodDataGridView);
@@ -164,7 +165,7 @@ namespace workflowLoginForm
                     else if (filterMenu.Equals("Quality"))
                     {
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
-
+                        
                         dgTools.PopulateDataGrid(prodDataGridView);
 
                     }

@@ -35,5 +35,16 @@ namespace workflowLoginForm.Properties {
                 this["connectionString"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=docker-1.butler.edu;Initial Catalog=WORKFLOW;Persist Security Info=Tr" +
+            "ue;User ID=workflow")]
+        public string WORKFLOWConnectionString {
+            get {
+                return ((string)(this["WORKFLOWConnectionString"]));
+            }
+        }
     }
 }
