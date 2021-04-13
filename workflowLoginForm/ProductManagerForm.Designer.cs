@@ -57,6 +57,7 @@
             this.filterMenu = new System.Windows.Forms.ComboBox();
             this.cBoxQuality = new System.Windows.Forms.ComboBox();
             this.quantityEquations = new System.Windows.Forms.ComboBox();
+            this.viewDbLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,12 +120,13 @@
             // 
             this.addItemLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemLbl.ForeColor = System.Drawing.Color.White;
-            this.addItemLbl.Location = new System.Drawing.Point(62, 30);
+            this.addItemLbl.Location = new System.Drawing.Point(62, 31);
             this.addItemLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addItemLbl.Name = "addItemLbl";
             this.addItemLbl.Size = new System.Drawing.Size(136, 30);
             this.addItemLbl.TabIndex = 19;
             this.addItemLbl.Text = "Add Product";
+            this.addItemLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // qualityMenu
             // 
@@ -399,6 +401,18 @@
             this.quantityEquations.Size = new System.Drawing.Size(97, 21);
             this.quantityEquations.TabIndex = 51;
             // 
+            // viewDbLbl
+            // 
+            this.viewDbLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewDbLbl.ForeColor = System.Drawing.Color.White;
+            this.viewDbLbl.Location = new System.Drawing.Point(34, 220);
+            this.viewDbLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.viewDbLbl.Name = "viewDbLbl";
+            this.viewDbLbl.Size = new System.Drawing.Size(178, 30);
+            this.viewDbLbl.TabIndex = 52;
+            this.viewDbLbl.Text = "Switch Data";
+            this.viewDbLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ProductManagerForm
             // 
             this.AcceptButton = this.btnFilter;
@@ -406,6 +420,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(895, 534);
+            this.Controls.Add(this.viewDbLbl);
             this.Controls.Add(this.quantityEquations);
             this.Controls.Add(this.cBoxQuality);
             this.Controls.Add(this.filterMenu);
@@ -476,6 +491,7 @@
         private System.Windows.Forms.ComboBox filterMenu;
         private System.Windows.Forms.ComboBox cBoxQuality;
         private System.Windows.Forms.ComboBox quantityEquations;
+        private System.Windows.Forms.Label viewDbLbl;
     }
 }
 
