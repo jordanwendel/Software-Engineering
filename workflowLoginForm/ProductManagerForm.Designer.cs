@@ -181,10 +181,8 @@
             // 
             // viewProdBtn
             // 
-            this.viewProdBtn.Location = new System.Drawing.Point(9, 311);
-            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewProdBtn.Location = new System.Drawing.Point(11, 312);
-            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewProdBtn.Name = "viewProdBtn";
             this.viewProdBtn.Size = new System.Drawing.Size(144, 48);
             this.viewProdBtn.TabIndex = 30;
@@ -213,6 +211,7 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtFilterByItem
             // 
@@ -245,6 +244,7 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "Filter By:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -256,6 +256,7 @@
             this.label3.TabIndex = 41;
             this.label3.Text = "Quality:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtNum
             // 
@@ -264,6 +265,7 @@
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(27, 22);
             this.txtNum.TabIndex = 44;
+            this.txtNum.TextChanged += new System.EventHandler(this.txtNum_TextChanged);
             // 
             // label4
             // 
@@ -287,6 +289,7 @@
             this.label5.TabIndex = 46;
             this.label5.Text = "Location:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // cBoxLocation
             // 
@@ -318,8 +321,6 @@
             "Quality",
             "Quantity",
             "Location"});
-            this.filterMenu.Location = new System.Drawing.Point(135, 436);
-            this.filterMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterMenu.Location = new System.Drawing.Point(133, 434);
             this.filterMenu.Margin = new System.Windows.Forms.Padding(4);
             this.filterMenu.Name = "filterMenu";
