@@ -65,16 +65,19 @@ namespace workflowLoginForm
         private void refreshBtn_Click(object sender, EventArgs e)
         {
             // Clear the filtering text fields when refreshing data grid
+            filterMenu.Text = "Click to expand...";
             txtFilterByItem.Clear();
             cBoxLocation.Text = null;
             cBoxQuality.Text = null;
             txtNum.Clear();
+            quantityEquations.Text = null;
 
             // Re-enabling all search fields
             cBoxQuality.Enabled = true;
             cBoxLocation.Enabled = true;
             txtFilterByItem.Enabled = true;
             txtNum.Enabled = true;
+            quantityEquations.Enabled = true;
 
 
             // Viewing Products
@@ -171,9 +174,21 @@ namespace workflowLoginForm
                     }
                     else if (filterMenu.Text.Equals("Quantity"))
                     {
-                        int num = int.Parse(txtNum.Text);
+                        int num = int.Parse(txtNum.Text); // Getting input for quantity
 
-                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
+                        // Adding functionality for inequality comparisons for quantity
+                        if (quantityEquations.Text.Equals("GREATER THAN"))
+                        {
+                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity > " + "'" + num + "'";
+                        }
+                        else if (quantityEquations.Text.Equals("LESS THAN"))
+                        {
+                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity < " + "'" + num + "'";
+                        }
+                        else if (quantityEquations.Text.Equals("EQUAL TO"))
+                        {
+                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
+                        }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
@@ -209,7 +224,19 @@ namespace workflowLoginForm
                     {
                         int num = int.Parse(txtNum.Text);
 
-                        dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + num + "'";
+                        // Adding functionality for inequality comparisons for quantity
+                        if (quantityEquations.Text.Equals("GREATER THAN"))
+                        {
+                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity > " + "'" + num + "'";
+                        }
+                        else if (quantityEquations.Text.Equals("LESS THAN"))
+                        {
+                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity < " + "'" + num + "'";
+                        }
+                        else if (quantityEquations.Text.Equals("EQUAL TO"))
+                        {
+                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + num + "'";
+                        }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
                     }
@@ -241,6 +268,7 @@ namespace workflowLoginForm
             qualityMenu.Text = null;
             txtQuantity.Clear();
             locationMenu.Text = null;
+            quantityEquations.Text = null;
         }
 
         private void filterMenu_SelectedIndexChanged(object sender, EventArgs e)
@@ -253,6 +281,7 @@ namespace workflowLoginForm
                     cBoxQuality.Enabled = false;
                     txtNum.Enabled = false;
                     cBoxLocation.Enabled = false;
+                    quantityEquations.Enabled = false;
                     txtFilterByItem.Enabled = true;
                 }
                 else if (filterMenu.SelectedItem.Equals("Quality"))
@@ -261,6 +290,7 @@ namespace workflowLoginForm
                     txtNum.Enabled = false;
                     cBoxLocation.Enabled = false;
                     txtFilterByItem.Enabled = false;
+                    quantityEquations.Enabled = false;
                     cBoxQuality.Enabled = true;
                 }
                 else if (filterMenu.SelectedItem.Equals("Quantity"))
@@ -270,6 +300,7 @@ namespace workflowLoginForm
                     cBoxLocation.Enabled = false;
                     txtFilterByItem.Enabled = false;
                     txtNum.Enabled = true;
+                    quantityEquations.Enabled = true;
                 }
                 else if (filterMenu.SelectedItem.Equals("Location"))
                 {
@@ -277,6 +308,7 @@ namespace workflowLoginForm
                     txtFilterByItem.Enabled = false;
                     cBoxQuality.Enabled = false;
                     txtNum.Enabled = false;
+                    quantityEquations.Enabled = false;
                     cBoxLocation.Enabled = true;
                 }
             }
@@ -288,6 +320,7 @@ namespace workflowLoginForm
                     cBoxQuality.Enabled = false;
                     txtNum.Enabled = false;
                     cBoxLocation.Enabled = false;
+                    quantityEquations.Enabled = false;
                     txtFilterByItem.Enabled = true;
                 }
                 else if (filterMenu.SelectedItem.Equals("Quantity"))
@@ -295,6 +328,7 @@ namespace workflowLoginForm
                     cBoxLocation.Enabled = false;
                     cBoxQuality.Enabled = false;
                     txtFilterByItem.Enabled = false;
+                    quantityEquations.Enabled = true;
                     txtNum.Enabled = true;
                 }
             }

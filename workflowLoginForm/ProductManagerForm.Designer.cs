@@ -57,6 +57,7 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.filterMenu = new System.Windows.Forms.ComboBox();
             this.cBoxQuality = new System.Windows.Forms.ComboBox();
+            this.quantityEquations = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,10 +109,10 @@
             this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.Location = new System.Drawing.Point(787, 552);
+            this.refreshBtn.Location = new System.Drawing.Point(20, 476);
             this.refreshBtn.Margin = new System.Windows.Forms.Padding(2);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(97, 40);
+            this.refreshBtn.Size = new System.Drawing.Size(97, 38);
             this.refreshBtn.TabIndex = 11;
             this.refreshBtn.Text = "REFRESH";
             this.refreshBtn.UseVisualStyleBackColor = false;
@@ -290,10 +291,10 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(29, 496);
+            this.btnFilter.Location = new System.Drawing.Point(121, 476);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(181, 39);
+            this.btnFilter.Size = new System.Drawing.Size(103, 39);
             this.btnFilter.TabIndex = 34;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
@@ -304,7 +305,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(14, 300);
+            this.label2.Location = new System.Drawing.Point(25, 301);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 18);
@@ -326,10 +327,10 @@
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(101, 427);
+            this.txtNum.Location = new System.Drawing.Point(203, 427);
             this.txtNum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(123, 20);
+            this.txtNum.Size = new System.Drawing.Size(21, 20);
             this.txtNum.TabIndex = 44;
             // 
             // label4
@@ -385,11 +386,11 @@
             "Quality",
             "Quantity",
             "Location"});
-            this.filterMenu.Location = new System.Drawing.Point(87, 301);
+            this.filterMenu.Location = new System.Drawing.Point(101, 301);
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(123, 21);
             this.filterMenu.TabIndex = 49;
-            this.filterMenu.Text = "Click to expand...";
+            this.filterMenu.Text = "Click to Expand...";
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
             // 
             // cBoxQuality
@@ -403,6 +404,18 @@
             this.cBoxQuality.Size = new System.Drawing.Size(123, 21);
             this.cBoxQuality.TabIndex = 50;
             // 
+            // quantityEquations
+            // 
+            this.quantityEquations.FormattingEnabled = true;
+            this.quantityEquations.Items.AddRange(new object[] {
+            "GREATER THAN",
+            "LESS THAN",
+            "EQUAL TO"});
+            this.quantityEquations.Location = new System.Drawing.Point(101, 426);
+            this.quantityEquations.Name = "quantityEquations";
+            this.quantityEquations.Size = new System.Drawing.Size(97, 21);
+            this.quantityEquations.TabIndex = 51;
+            // 
             // ProductManagerForm
             // 
             this.AcceptButton = this.btnFilter;
@@ -410,6 +423,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(895, 601);
+            this.Controls.Add(this.quantityEquations);
             this.Controls.Add(this.cBoxQuality);
             this.Controls.Add(this.filterMenu);
             this.Controls.Add(this.txtName);
@@ -480,6 +494,7 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.ComboBox filterMenu;
         private System.Windows.Forms.ComboBox cBoxQuality;
+        private System.Windows.Forms.ComboBox quantityEquations;
     }
 }
 
