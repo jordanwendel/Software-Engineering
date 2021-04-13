@@ -40,7 +40,7 @@ namespace workflowLoginForm
 
 
         // Adds raw material to database with given name and quantity
-        public void AddRawMaterial(RawMaterial rawMaterial) // May be better to use a RawMaterial object instead
+        public void AddRawMaterial(RawMaterial rawMaterial)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace workflowLoginForm
 
 
         // Adds product to database with given name, quality, quantity, and location
-        public void AddProduct(Product product) // May be better to use a Product object instead
+        public void AddProduct(Product product)
         {
             try
             {
