@@ -150,6 +150,7 @@ namespace workflowLoginForm
         {
             string info = txtFilterByItem.Text;
             string qual = cBoxQuality.Text;
+            string location = cBoxLocation.Text;
 
             // Filtering Products database
             if (dgTools.dbName.Equals("Products"))
@@ -164,6 +165,7 @@ namespace workflowLoginForm
                         dgTools.PopulateDataGrid(prodDataGridView);
 
                     }
+
                     // Filtering by Quality
                     else if (filterMenu.Equals("Quality"))
                     {
@@ -172,33 +174,43 @@ namespace workflowLoginForm
                         dgTools.PopulateDataGrid(prodDataGridView);
 
                     }
+
                     // Filtering by Quantity
                     else if (filterMenu.Text.Equals("Quantity"))
                     {
-                        int N = int.Parse(txtNum.Text); // Getting input for quantity
+                        int N = int.Parse(txtNum.Text);
 
-                        // Inequality comparisons for quantity
-                        if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
+                        // Valid quanitity input greater than zero
+                        if (N > 0)
                         {
-                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity > " + "'" + N + "'";
+                            // Inequality comparisons for quantity
+                            if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
+                            {
+                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity > " + "'" + N + "'";
+                            }
+                            else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
+                            {
+                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity < " + "'" + N + "'";
+                            }
+                            else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
+                            {
+                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + N + "'";
+                            }
                         }
-                        else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
+
+                        // Entered quanitity is negative
+                        else
                         {
-                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity < " + "'" + N + "'";
-                        }
-                        else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
-                        {
-                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + N + "'";
+                            MessageBox.Show("Quantity must be greater than zero");
                         }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
                     }
+
                     // Filtering by Location
                     else if (filterMenu.Text.Equals("Location"))
                     {
-                        string location = cBoxLocation.Text;
-
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
 
                         dgTools.PopulateDataGrid(prodDataGridView);
@@ -223,23 +235,34 @@ namespace workflowLoginForm
 
                         dgTools.PopulateDataGrid(prodDataGridView);
                     }
+
                     // Filtering by Quantity
                     else if (filterMenu.Text.Equals("Quantity"))
                     {
                         int N = int.Parse(txtNum.Text);
 
-                        // Inequality comparisons for quantity
-                        if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
+                        // Valid quanitity input greater than zero
+                        if (N > 0)
                         {
-                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity > " + "'" + N + "'";
+                            // Inequality comparisons for quantity
+                            if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
+                            {
+                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity > " + "'" + N + "'";
+                            }
+                            else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
+                            {
+                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity < " + "'" + N + "'";
+                            }
+                            else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
+                            {
+                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + N + "'";
+                            }
                         }
-                        else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
+
+                        // Entered quanitity is less than or equal to zero
+                        else
                         {
-                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity < " + "'" + N + "'";
-                        }
-                        else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
-                        {
-                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + N + "'";
+                            MessageBox.Show("Quanitity must be greater than zero");
                         }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
