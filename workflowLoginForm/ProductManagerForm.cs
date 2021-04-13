@@ -286,15 +286,13 @@ namespace workflowLoginForm
         private void addItemBtn_Click(object sender, EventArgs e)
         {
             // Creating a new product object, adding it to the database, and auto refreshing the datagrid
-            Product newProduct = new Product(txtName.Text, qualityMenu.Text, int.Parse(txtQuantity.Text), locationMenu.Text);
+            Product newProduct = new Product(txtName.Text, "", int.Parse(txtQuantity.Text), "");
             dbTools.AddProduct(newProduct);
             dgTools.RefreshDataGrid(prodDataGridView);
 
             // Clearing entered values
             txtName.Clear();
-            qualityMenu.Text = null;
             txtQuantity.Clear();
-            locationMenu.Text = null;
             quantityEquations.Text = null;
         }
 
