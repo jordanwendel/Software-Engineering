@@ -110,7 +110,7 @@
             "Satisfactory",
             "Defective"});
             this.qualityMenu.Location = new System.Drawing.Point(131, 149);
-            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4);
             this.qualityMenu.Name = "qualityMenu";
             this.qualityMenu.Size = new System.Drawing.Size(157, 24);
             this.qualityMenu.TabIndex = 38;
@@ -135,7 +135,7 @@
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.prodDataGridView.Location = new System.Drawing.Point(301, 70);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(831, 615);
@@ -170,7 +170,7 @@
             // ItemName
             // 
             this.ItemName.Location = new System.Drawing.Point(131, 118);
-            this.ItemName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ItemName.Margin = new System.Windows.Forms.Padding(2);
             this.ItemName.Name = "ItemName";
             this.ItemName.Size = new System.Drawing.Size(157, 22);
             this.ItemName.TabIndex = 47;
@@ -332,6 +332,7 @@
             // 
             // QualityAnalyzerForm
             // 
+            this.AcceptButton = this.btnFilter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
