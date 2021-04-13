@@ -34,13 +34,13 @@ namespace workflowLoginForm
             this.Close();
         }
 
-        // Event handler for Add New button click
+        /*// Event handler for Add New button click
         private void addProduct_Click(object sender, EventArgs e)
         {
             stockpage = new ProductForm();
             stockpage.ShowDialog(); // Open new display
             this.Show();
-        }
+        }*/
 
         // Event handler for Product Manager Form load
         private void ProductManagerForm_Load(object sender, EventArgs e)
