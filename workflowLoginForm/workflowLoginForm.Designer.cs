@@ -103,7 +103,7 @@ namespace workflowLoginForm
             this.loginBtn.Location = new System.Drawing.Point(350, 255);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(102, 34);
-            this.loginBtn.TabIndex = 4;
+            this.loginBtn.TabIndex = 3;
             this.loginBtn.Text = "LOGIN";
             this.loginBtn.UseVisualStyleBackColor = false;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);

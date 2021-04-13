@@ -123,11 +123,6 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="UserManager.cs" />
-    <Compile Include="WORKFLOWDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WORKFLOWDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="workflowLoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,17 +181,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="WORKFLOWDataSet.xsc">
-      <DependentUpon>WORKFLOWDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="WORKFLOWDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>WORKFLOWDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="WORKFLOWDataSet.xss">
-      <DependentUpon>WORKFLOWDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
