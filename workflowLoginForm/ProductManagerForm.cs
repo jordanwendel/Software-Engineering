@@ -103,16 +103,16 @@ namespace workflowLoginForm
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
             filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
+
             // Clear filtering fields
             txtFilterByItem.Clear();
             cBoxLocation.Text = null;
             cBoxQuality.Text = null;
             txtNum.Clear();
 
+            // Populate data grid
             dgTools.dbName = "Products";
-
             dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
-            
             dgTools.PopulateDataGrid(prodDataGridView);
 
             // Add the filtering options specifically for Products
@@ -134,10 +134,9 @@ namespace workflowLoginForm
             cBoxQuality.Text = null;
             txtNum.Clear();
 
+            // Populate the data grid
             dgTools.dbName = "RawMaterials";
-            
             dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
-            
             dgTools.PopulateDataGrid(prodDataGridView);
 
             // Add the filtering options specifically for Raw Materials
@@ -157,14 +156,15 @@ namespace workflowLoginForm
             {
                 try
                 {
+                    // Filtering by Name
                     if (filterMenu.Text.Equals("Name"))
                     {
-
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
                     }
+                    // Filtering by Quality
                     else if (filterMenu.Equals("Quality"))
                     {
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
@@ -172,27 +172,29 @@ namespace workflowLoginForm
                         dgTools.PopulateDataGrid(prodDataGridView);
 
                     }
+                    // Filtering by Quantity
                     else if (filterMenu.Text.Equals("Quantity"))
                     {
-                        int num = int.Parse(txtNum.Text); // Getting input for quantity
+                        int N = int.Parse(txtNum.Text); // Getting input for quantity
 
-                        // Adding functionality for inequality comparisons for quantity
-                        if (quantityEquations.Text.Equals("GREATER THAN"))
+                        // Inequality comparisons for quantity
+                        if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
                         {
-                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity > " + "'" + num + "'";
+                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity > " + "'" + N + "'";
                         }
-                        else if (quantityEquations.Text.Equals("LESS THAN"))
+                        else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
                         {
-                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity < " + "'" + num + "'";
+                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity < " + "'" + N + "'";
                         }
-                        else if (quantityEquations.Text.Equals("EQUAL TO"))
+                        else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
                         {
-                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + num + "'";
+                            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + N + "'";
                         }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
                     }
+                    // Filtering by Location
                     else if (filterMenu.Text.Equals("Location"))
                     {
                         string location = cBoxLocation.Text;
@@ -214,28 +216,30 @@ namespace workflowLoginForm
             {
                 try
                 {
+                    // Filtering by Name
                     if (filterMenu.Text.Equals("Name"))
                     {
                         dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE RawMaterialName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
 
                         dgTools.PopulateDataGrid(prodDataGridView);
                     }
+                    // Filtering by Quantity
                     else if (filterMenu.Text.Equals("Quantity"))
                     {
-                        int num = int.Parse(txtNum.Text);
+                        int N = int.Parse(txtNum.Text);
 
-                        // Adding functionality for inequality comparisons for quantity
-                        if (quantityEquations.Text.Equals("GREATER THAN"))
+                        // Inequality comparisons for quantity
+                        if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
                         {
-                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity > " + "'" + num + "'";
+                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity > " + "'" + N + "'";
                         }
-                        else if (quantityEquations.Text.Equals("LESS THAN"))
+                        else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
                         {
-                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity < " + "'" + num + "'";
+                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity < " + "'" + N + "'";
                         }
-                        else if (quantityEquations.Text.Equals("EQUAL TO"))
+                        else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
                         {
-                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + num + "'";
+                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + N + "'";
                         }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
@@ -286,7 +290,7 @@ namespace workflowLoginForm
                 }
                 else if (filterMenu.SelectedItem.Equals("Quality"))
                 {
-                    // Disabling other options when searching for a quality
+                    // Disabling other options when searching for quality
                     txtNum.Enabled = false;
                     cBoxLocation.Enabled = false;
                     txtFilterByItem.Enabled = false;
@@ -295,7 +299,7 @@ namespace workflowLoginForm
                 }
                 else if (filterMenu.SelectedItem.Equals("Quantity"))
                 {
-                    // Disabling other options when searching for a quality
+                    // Disabling other options when searching for quantity
                     cBoxQuality.Enabled = false;
                     cBoxLocation.Enabled = false;
                     txtFilterByItem.Enabled = false;
@@ -304,7 +308,7 @@ namespace workflowLoginForm
                 }
                 else if (filterMenu.SelectedItem.Equals("Location"))
                 {
-                    // Disabling other options when searching for a quality
+                    // Disabling other options when searching for location
                     txtFilterByItem.Enabled = false;
                     cBoxQuality.Enabled = false;
                     txtNum.Enabled = false;
@@ -325,6 +329,7 @@ namespace workflowLoginForm
                 }
                 else if (filterMenu.SelectedItem.Equals("Quantity"))
                 {
+                    // Disabling other options when searching for quantity
                     cBoxLocation.Enabled = false;
                     cBoxQuality.Enabled = false;
                     txtFilterByItem.Enabled = false;
