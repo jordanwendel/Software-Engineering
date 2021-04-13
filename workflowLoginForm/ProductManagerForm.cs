@@ -167,7 +167,7 @@ namespace workflowLoginForm
                     }
 
                     // Filtering by Quality
-                    else if (filterMenu.Equals("Quality"))
+                    else if (filterMenu.Text.Equals("Quality"))
                     {
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
                         
@@ -262,7 +262,7 @@ namespace workflowLoginForm
                         // Entered quanitity is less than or equal to zero
                         else
                         {
-                            MessageBox.Show("Quanitity must be greater than zero");
+                            MessageBox.Show("Quantity must be greater than zero");
                         }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
