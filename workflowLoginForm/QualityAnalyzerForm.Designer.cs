@@ -256,6 +256,7 @@
             this.label5.TabIndex = 60;
             this.label5.Text = "Location:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -267,6 +268,7 @@
             this.label4.TabIndex = 59;
             this.label4.Text = "Quantity:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtNum
             // 
@@ -275,6 +277,7 @@
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(27, 22);
             this.txtNum.TabIndex = 58;
+            this.txtNum.TextChanged += new System.EventHandler(this.txtNum_TextChanged);
             // 
             // label3
             // 
@@ -286,6 +289,7 @@
             this.label3.TabIndex = 57;
             this.label3.Text = "Quality:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -298,6 +302,7 @@
             this.label2.TabIndex = 56;
             this.label2.Text = "Filter By:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnFilter
             // 
@@ -329,6 +334,7 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // QualityAnalyzerForm
             // 
