@@ -89,10 +89,10 @@
             this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.Location = new System.Drawing.Point(27, 586);
+            this.refreshBtn.Location = new System.Drawing.Point(12, 586);
             this.refreshBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(129, 47);
+            this.refreshBtn.Size = new System.Drawing.Size(143, 47);
             this.refreshBtn.TabIndex = 11;
             this.refreshBtn.Text = "REFRESH";
             this.refreshBtn.UseVisualStyleBackColor = false;
@@ -181,7 +181,7 @@
             // 
             // viewProdBtn
             // 
-            this.viewProdBtn.Location = new System.Drawing.Point(9, 311);
+            this.viewProdBtn.Location = new System.Drawing.Point(11, 312);
             this.viewProdBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.viewProdBtn.Name = "viewProdBtn";
             this.viewProdBtn.Size = new System.Drawing.Size(144, 48);
@@ -222,10 +222,10 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(161, 586);
+            this.btnFilter.Location = new System.Drawing.Point(154, 586);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(137, 48);
+            this.btnFilter.Size = new System.Drawing.Size(144, 48);
             this.btnFilter.TabIndex = 34;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
@@ -236,7 +236,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(33, 433);
+            this.label2.Location = new System.Drawing.Point(41, 433);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 24);
             this.label2.TabIndex = 37;
@@ -314,7 +314,7 @@
             "Quality",
             "Quantity",
             "Location"});
-            this.filterMenu.Location = new System.Drawing.Point(133, 434);
+            this.filterMenu.Location = new System.Drawing.Point(135, 436);
             this.filterMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
