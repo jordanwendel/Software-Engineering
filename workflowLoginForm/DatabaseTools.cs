@@ -157,14 +157,34 @@ namespace workflowLoginForm
         }
 
 
-        public void EditQuant(string RawMaterialName, int Quant)
+        public void EditQuant(string RawMaterialName, int Quantity)
         {
             try
             {
                 cn.Open();
-                cmd = new SqlCommand("Update RawMaterials Set Quant = @Quantity Where RawMaterialName = @RawMaterialName", cn);
+                cmd = new SqlCommand("Update RawMaterials Set Quantity = @Quantity Where RawMaterialName = @RawMaterialName", cn);
                 cmd.Parameters.AddWithValue("@RawMaterialName", RawMaterialName);
-                cmd.Parameters.AddWithValue("@Quantity", Quant);
+                cmd.Parameters.AddWithValue("@Quantity", Quantity);
+                cmd.ExecuteNonQuery(); // Execute the sql command
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        public void EditProductQuant(string ProductName, int Quantity)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new SqlCommand("Update Products Set Quantity = @Quantity Where ProductName = @ProductName", cn);
+                cmd.Parameters.AddWithValue("@ProductName", ProductName);
+                cmd.Parameters.AddWithValue("@Quantity", Quantity);
                 cmd.ExecuteNonQuery(); // Execute the sql command
             }
             catch (Exception err)

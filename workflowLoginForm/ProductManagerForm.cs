@@ -285,9 +285,24 @@ namespace workflowLoginForm
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
+            string ProductName = txtName.Text;
+            int Quantity = int.Parse(txtQuantity.Text);
+            dbTools = new DatabaseTools();
+
+            dbTools.CheckProduct(ProductName);
+
             // Creating a new product object, adding it to the database, and auto refreshing the datagrid
-            Product newProduct = new Product(txtName.Text, "", int.Parse(txtQuantity.Text), "");
-            dbTools.AddProduct(newProduct);
+            if (dbTools.CheckProduct(ProductName).Equals(true))
+            {
+                dbTools.EditProductQuant(ProductName, Quantity);
+            }
+            else
+            {
+
+                MessageBox.Show("Why is this running?");
+                Product newProduct = new Product(txtName.Text, "", int.Parse(txtQuantity.Text), "");
+                dbTools.AddProduct(newProduct);
+            }
             dgTools.RefreshDataGrid(prodDataGridView);
 
             // Clearing entered values

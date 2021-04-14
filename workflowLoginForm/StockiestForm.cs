@@ -60,10 +60,10 @@ namespace workflowLoginForm
 
             // Viewing Raw Materials
             if (dgTools.dbName.Equals("RawMaterials"))
-            {
-                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+            { dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
 
                 dgTools.RefreshDataGrid(stockDataGridView);
+               
             }
 
         }
@@ -87,7 +87,9 @@ namespace workflowLoginForm
                     try
                     {
                         dbTools.EditQuant(MatName, Quant);
-                    }
+                        dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+                         dgTools.RefreshDataGrid(stockDataGridView);
+                }
                     catch (Exception err)
                     {
                         MessageBox.Show(err.Message, "Warning!");
