@@ -69,7 +69,20 @@
     <Compile Include="AdministratorForm.Designer.cs">
       <DependentUpon>AdministratorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseReport.cs" />
     <Compile Include="DataGridTools.cs" />
+    <Compile Include="ProductReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductReport.Designer.cs">
+      <DependentUpon>ProductReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RawMaterialsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RawMaterialsReport.Designer.cs">
+      <DependentUpon>RawMaterialsReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="RawMaterial.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="DatabaseTools.cs" />
@@ -109,11 +122,11 @@
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReportManagerForm.cs">
+    <Compile Include="ReportManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportManagerForm.Designer.cs">
-      <DependentUpon>ReportManagerForm.cs</DependentUpon>
+    <Compile Include="ReportManager.Designer.cs">
+      <DependentUpon>ReportManager.cs</DependentUpon>
     </Compile>
     <Compile Include="StockiestForm.cs">
       <SubType>Form</SubType>
@@ -143,6 +156,9 @@
     <EmbeddedResource Include="ProductManagerForm.resx">
       <DependentUpon>ProductManagerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProductReport.resx">
+      <DependentUpon>ProductReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -159,11 +175,14 @@
     <EmbeddedResource Include="RawMaterialsForm.resx">
       <DependentUpon>RawMaterialsForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RawMaterialsReport.resx">
+      <DependentUpon>RawMaterialsReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportManagerForm.resx">
-      <DependentUpon>ReportManagerForm.cs</DependentUpon>
+    <EmbeddedResource Include="ReportManager.resx">
+      <DependentUpon>ReportManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockiestForm.resx">
       <DependentUpon>StockiestForm.cs</DependentUpon>

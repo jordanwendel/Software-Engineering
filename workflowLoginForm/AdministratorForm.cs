@@ -15,7 +15,7 @@ namespace workflowLoginForm
         // Class level objects
         private DeliveryManagerForm DeliveryManager;
         private ProductManagerForm ProductManager;
-        private ReportManagerForm ReportManager;
+        private ReportManager ReportManager;
         private StockiestForm Stockpage;
         private QualityAnalyzerForm QualityAnalyzer;
         private List<User> users;
@@ -63,7 +63,7 @@ namespace workflowLoginForm
         // Event handler for Report Manager button click
         private void repManagerBtn_Click(object sender, EventArgs e)
         {
-            ReportManager = new ReportManagerForm();
+            ReportManager = new ReportManager();
             this.Hide();
             ReportManager.ShowDialog();
             this.Show();

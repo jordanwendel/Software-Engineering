@@ -18,7 +18,7 @@ namespace workflowLoginForm
         private DeliveryManagerForm DeliveryManager;
         private AdministratorForm Admin;
         private ProductManagerForm ProductManager;
-        private ReportManagerForm ReportManager;
+        private ReportManager ReportManager;
         private StockiestForm Stockpage;
         private QualityAnalyzerForm QualityAnalyzer;
         private UserManager userManager;
@@ -85,7 +85,7 @@ namespace workflowLoginForm
                     else if (loggedInUser.Job.Equals("Report Manager")) // Report manager page
                     {
                         this.Hide();
-                        ReportManager = new ReportManagerForm();
+                        ReportManager = new ReportManager();
                         ReportManager.ShowDialog();
                         txtUserName.Text = string.Empty;
                         txtPassword.Text = string.Empty;
