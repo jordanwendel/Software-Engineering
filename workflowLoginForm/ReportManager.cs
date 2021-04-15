@@ -14,12 +14,12 @@ namespace workflowLoginForm
     {
         private RawMaterialsReport RawMaterialsReport;
         private ProductReport ProductReport;
-        private ReportGenerator rg;
+        private ReportGenerator ReportGen;
 
         public ReportManager()
         {
             InitializeComponent();
-            rg = new ReportGenerator();
+            ReportGen = new ReportGenerator();
         }
 
         private void RawMatbtn_Click(object sender, EventArgs e)
@@ -38,6 +38,7 @@ namespace workflowLoginForm
             this.Show();
         }
 
+        // Event handler for Generate Raw Material CSV button click
         private void RawMatCSVbtn_Click(object sender, EventArgs e)
         {
             // Save file to chosen directory
@@ -48,7 +49,7 @@ namespace workflowLoginForm
             try
             {
                 //string filePath = rawMatCsvSave.FileName;//@"C:\Users\jwend\source\repos\WORK-FLOW\workflowLoginForm\bin\test2.csv";
-                rg.GenerateRawMaterialsReport(filePath);
+                ReportGen.GenerateRawMaterialsReport(filePath);
             }
             catch (Exception err)
             {
@@ -58,6 +59,7 @@ namespace workflowLoginForm
             csvStatusLbl.Text = "Successfully wrote to CSV!";
         }
 
+        // Event handler for Generate Product CSV button click
         private void prodCsvBtn_Click(object sender, EventArgs e)
         {
             // Save file to chosen directory
@@ -65,9 +67,11 @@ namespace workflowLoginForm
             productCsvSave.ShowDialog();
             string filePath = productCsvSave.FileName;
 
+
+            // MAKE SURE C BOX HAS A SELECTION BEFORE BEING ABLE TO PRESS THE BUTTON
             try
             {
-                rg.GenerateProductReport(filePath, cBoxProductRep.Text);
+                ReportGen.GenerateProductReport(filePath, cBoxProductRep.Text);
             }
             catch (Exception err)
             {
