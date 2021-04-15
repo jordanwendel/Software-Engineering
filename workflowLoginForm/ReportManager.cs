@@ -14,9 +14,12 @@ namespace workflowLoginForm
     {
         private RawMaterialsReport RawMaterialsReport;
         private ProductReport ProductReport;
+        private ReportGenerator rg;
+
         public ReportManager()
         {
             InitializeComponent();
+            rg = new ReportGenerator();
         }
 
         private void RawMatbtn_Click(object sender, EventArgs e)
@@ -33,6 +36,45 @@ namespace workflowLoginForm
             this.Hide();
             ProductReport.ShowDialog();
             this.Show();
+        }
+
+        private void RawMatCSVbtn_Click(object sender, EventArgs e)
+        {
+            // Save file to chosen directory
+            rawMatCsvSave = new SaveFileDialog();
+            rawMatCsvSave.ShowDialog();
+            string filePath = rawMatCsvSave.FileName;
+
+            try
+            {
+                //string filePath = rawMatCsvSave.FileName;//@"C:\Users\jwend\source\repos\WORK-FLOW\workflowLoginForm\bin\test2.csv";
+                rg.GenerateRawMaterialsReport(filePath);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Issue writing to CSV");
+            }
+
+            csvStatusLbl.Text = "Successfully wrote to CSV!";
+        }
+
+        private void prodCsvBtn_Click(object sender, EventArgs e)
+        {
+            // Save file to chosen directory
+            productCsvSave = new SaveFileDialog();
+            productCsvSave.ShowDialog();
+            string filePath = productCsvSave.FileName;
+
+            try
+            {
+                rg.GenerateProductReport(filePath, cBoxProductRep.Text);
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Issue writing to CSV");
+            }
+
+            csvStatusLbl.Text = "Successfully wrote to CSV!";
         }
     }
 }

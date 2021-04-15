@@ -29,11 +29,7 @@ namespace workflowLoginForm
 
         public override string ToString()
         {
-
-            string info = string.Format("Name: {0}, Quality {1}, Quanity: {2}, Location: {3}", productName, quality, quantity, location);
-            info = info.Trim();
-
-            return info;
+             return string.Format("{0},{1},{2},{3}\n", productName, quality, quantity, location);
         }
 
     }

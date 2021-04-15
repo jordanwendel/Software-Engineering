@@ -24,5 +24,10 @@ namespace workflowLoginForm
             this.quantity = quantity;
         }
 
+        public override string ToString()
+        {
+            return string.Format("{0},{1}\n", rawMaterialName, quantity);
+        }
+
     }
 }
