@@ -109,6 +109,8 @@ namespace workflowLoginForm
             cBoxLocation.Text = null;
             cBoxQuality.Text = null;
             txtNum.Clear();
+            quantityEquations.ResetText();
+            stsStripLabel.Text = "";
 
             // Populate data grid
             dgTools.dbName = "Products";
@@ -133,6 +135,8 @@ namespace workflowLoginForm
             cBoxLocation.Text = null;
             cBoxQuality.Text = null;
             txtNum.Clear();
+            quantityEquations.ResetText();
+            stsStripLabel.Text = "";
 
             // Populate the data grid
             dgTools.dbName = "RawMaterials";
@@ -164,6 +168,15 @@ namespace workflowLoginForm
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
+                        //get the size of each result
+                        int dataGridSize = 0;
+                        foreach (DataGridViewRow row in prodDataGridView.Rows)
+                        {
+                            dataGridSize++;
+                        }
+
+                        stsStripLabel.Text = "There is/are " + (dataGridSize - 1) + " result(s) that matched your filter";
+
                     }
 
                     // Filtering by Quality
@@ -172,6 +185,14 @@ namespace workflowLoginForm
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
                         
                         dgTools.PopulateDataGrid(prodDataGridView);
+                        
+                        int dataGridSize = 0;
+                        foreach (DataGridViewRow row in prodDataGridView.Rows)
+                        {
+                            dataGridSize++;
+                        }
+
+                        stsStripLabel.Text = "There is/are " + (dataGridSize - 1) + " result(s) that matched your filter";
 
                     }
 
@@ -179,7 +200,7 @@ namespace workflowLoginForm
                     else if (filterMenu.Text.Equals("Quantity"))
                     {
                         int N = int.Parse(txtNum.Text);
-
+                        
                         // Valid quanitity input greater than zero
                         if (N > 0)
                         {
@@ -196,15 +217,27 @@ namespace workflowLoginForm
                             {
                                 dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + N + "'";
                             }
+
                         }
 
                         // Entered quanitity is negative
+                        
                         else
                         {
                             MessageBox.Show("Quantity must be greater than zero");
+                            
+                            stsStripLabel.Text = "";
                         }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
+
+                        int dataGridSize = 0;
+                        foreach (DataGridViewRow row in prodDataGridView.Rows)
+                        {
+                            dataGridSize++;
+                        }
+
+                        stsStripLabel.Text = "There is/are " + (dataGridSize - 1) + " result(s) that matched your filter";
 
                     }
 
@@ -214,6 +247,14 @@ namespace workflowLoginForm
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
 
                         dgTools.PopulateDataGrid(prodDataGridView);
+
+                        int dataGridSize = 0;
+                        foreach (DataGridViewRow row in prodDataGridView.Rows)
+                        {
+                            dataGridSize++;
+                        }
+
+                        stsStripLabel.Text = "There is/are " + (dataGridSize - 1) + " result(s) that matched your filter";
                     }
                 }
                 catch(FormatException)
@@ -234,6 +275,14 @@ namespace workflowLoginForm
                         dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE RawMaterialName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
 
                         dgTools.PopulateDataGrid(prodDataGridView);
+
+                        int dataGridSize = 0;
+                        foreach (DataGridViewRow row in prodDataGridView.Rows)
+                        {
+                            dataGridSize++;
+                        }
+
+                        stsStripLabel.Text = "There is/are " + (dataGridSize - 1) + " result(s) that matched your filter";
                     }
 
                     // Filtering by Quantity
@@ -257,12 +306,21 @@ namespace workflowLoginForm
                             {
                                 dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + N + "'";
                             }
+
+                            int dataGridSize = 0;
+                            foreach (DataGridViewRow row in prodDataGridView.Rows)
+                            {
+                                dataGridSize++;
+                            }
+
+                            stsStripLabel.Text = "There is/are " + (dataGridSize - 1) + " result(s) that matched your filter";
                         }
 
                         // Entered quanitity is less than or equal to zero
                         else
                         {
                             MessageBox.Show("Quantity must be greater than zero");
+                            
                         }
 
                         dgTools.PopulateDataGrid(prodDataGridView);
