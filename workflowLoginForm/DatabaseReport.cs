@@ -107,8 +107,8 @@ namespace workflowLoginForm
             {
                 cn.Open();
                 int goodcount = 0;
-                cmd = new SqlCommand("SELECT Count (*) From Products WHERE'Satisfactory'=@Quality", cn);
-                //goodcount = (dec)cmd.ExecuteScalar();
+                cmd = new SqlCommand("SELECT Count (*) From Products WHERE Quality = 'Satisfactory' ", cn);
+                goodcount = (int)cmd.ExecuteScalar();
                 return goodcount;
             }
             finally
@@ -118,6 +118,22 @@ namespace workflowLoginForm
 
         }
 
+        public int SalesProducts()
+        {
+            try
+            {
+                cn.Open();
+                int salescount = 0;
+                cmd = new SqlCommand("SELECT Count (*) From Products WHERE Location = 'Sales' ", cn);
+                salescount = (int)cmd.ExecuteScalar();
+                return salescount;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
 
     }
 }

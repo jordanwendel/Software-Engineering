@@ -36,7 +36,7 @@ namespace workflowLoginForm
             countlbl.Text = Counter;
 
             int Avg = dbReport.AvgQuantMaterials();
-            string Average = Count.ToString();
+            string Average = Avg.ToString();
             averagelbl.Text = Average;
         }
     }

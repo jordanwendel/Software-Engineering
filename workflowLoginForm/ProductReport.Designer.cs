@@ -36,8 +36,12 @@ namespace workflowLoginForm
             this.lblNumbers = new System.Windows.Forms.Label();
             this.stockDataGridView = new System.Windows.Forms.DataGridView();
             this.Stockiest = new System.Windows.Forms.Label();
-            this.qualitylbl = new System.Windows.Forms.Label();
+            this.quality2lbl = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.qualitylbl = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.saleslbl = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,29 +130,77 @@ namespace workflowLoginForm
             this.Stockiest.Text = "Product Report";
             this.Stockiest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // qualitylbl
+            // quality2lbl
             // 
-            this.qualitylbl.Font = new System.Drawing.Font("Impact", 10F);
-            this.qualitylbl.ForeColor = System.Drawing.Color.White;
-            this.qualitylbl.Location = new System.Drawing.Point(65, 278);
-            this.qualitylbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.qualitylbl.Name = "qualitylbl";
-            this.qualitylbl.Size = new System.Drawing.Size(241, 44);
-            this.qualitylbl.TabIndex = 83;
-            this.qualitylbl.Text = "Unknown";
-            this.qualitylbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.quality2lbl.Font = new System.Drawing.Font("Impact", 10F);
+            this.quality2lbl.ForeColor = System.Drawing.Color.White;
+            this.quality2lbl.Location = new System.Drawing.Point(65, 278);
+            this.quality2lbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.quality2lbl.Name = "quality2lbl";
+            this.quality2lbl.Size = new System.Drawing.Size(241, 44);
+            this.quality2lbl.TabIndex = 83;
+            this.quality2lbl.Text = "Unknown";
+            this.quality2lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Impact", 14F);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(24, 234);
+            this.label3.Location = new System.Drawing.Point(-3, 234);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(326, 44);
+            this.label3.Size = new System.Drawing.Size(353, 44);
             this.label3.TabIndex = 82;
-            this.label3.Text = "Percent of Satisfatory Products";
+            this.label3.Text = "Number of Satisfactory Products";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // qualitylbl
+            // 
+            this.qualitylbl.Font = new System.Drawing.Font("Impact", 10F);
+            this.qualitylbl.ForeColor = System.Drawing.Color.White;
+            this.qualitylbl.Location = new System.Drawing.Point(65, 366);
+            this.qualitylbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.qualitylbl.Name = "qualitylbl";
+            this.qualitylbl.Size = new System.Drawing.Size(241, 44);
+            this.qualitylbl.TabIndex = 85;
+            this.qualitylbl.Text = "Unknown";
+            this.qualitylbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Impact", 14F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(24, 322);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(326, 44);
+            this.label4.TabIndex = 84;
+            this.label4.Text = "Percent of Satisfatory Products";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // saleslbl
+            // 
+            this.saleslbl.Font = new System.Drawing.Font("Impact", 10F);
+            this.saleslbl.ForeColor = System.Drawing.Color.White;
+            this.saleslbl.Location = new System.Drawing.Point(65, 464);
+            this.saleslbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.saleslbl.Name = "saleslbl";
+            this.saleslbl.Size = new System.Drawing.Size(241, 44);
+            this.saleslbl.TabIndex = 87;
+            this.saleslbl.Text = "Unknown";
+            this.saleslbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Impact", 14F);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(24, 420);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(326, 44);
+            this.label6.TabIndex = 86;
+            this.label6.Text = "Number of products in sales";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ProductReport
             // 
@@ -156,7 +208,11 @@ namespace workflowLoginForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(936, 540);
+            this.Controls.Add(this.saleslbl);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.qualitylbl);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.quality2lbl);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.averagelbl);
             this.Controls.Add(this.label1);
@@ -181,7 +237,11 @@ namespace workflowLoginForm
         private System.Windows.Forms.Label lblNumbers;
         private System.Windows.Forms.DataGridView stockDataGridView;
         private System.Windows.Forms.Label Stockiest;
-        public System.Windows.Forms.Label qualitylbl;
+        public System.Windows.Forms.Label quality2lbl;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label qualitylbl;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label saleslbl;
+        private System.Windows.Forms.Label label6;
     }
 }

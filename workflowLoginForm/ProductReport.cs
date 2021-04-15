@@ -31,12 +31,18 @@ namespace workflowLoginForm
             string Average = Avg.ToString();
             averagelbl.Text = Average;
 
-            int Quality = dbReport.AvgQuantProducts();
-            MessageBox.Show(Quality.ToString());
-            decimal QualPercent = Quality / Count * 100;
-            Decimal QualPercent2 = Decimal.Truncate(QualPercent);
-            string QualityPercent = QualPercent2.ToString();
-            qualitylbl.Text = QualityPercent;
+            int Quality = dbReport.GoodProducts();
+            string Qualitylabel = Quality.ToString();
+            quality2lbl.Text = Qualitylabel;
+
+            decimal QualPercent = (Quality * 100 / Count);
+           // Decimal QualPercent2 = Decimal.Truncate(QualPercent);
+            string QualityPercent = QualPercent.ToString();
+            qualitylbl.Text = QualityPercent + "%";
+
+            int salescount = dbReport.SalesProducts();
+            string SalesCount = salescount.ToString();
+            saleslbl.Text = SalesCount;
         }
     }
 }
