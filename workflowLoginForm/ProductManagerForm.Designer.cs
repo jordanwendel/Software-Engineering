@@ -54,7 +54,10 @@
             this.cBoxQuality = new System.Windows.Forms.ComboBox();
             this.quantityEquations = new System.Windows.Forms.ComboBox();
             this.viewDbLbl = new System.Windows.Forms.Label();
+            this.stsStripDisplayInfo = new System.Windows.Forms.StatusStrip();
+            this.stsStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
+            this.stsStripDisplayInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // Admin
@@ -367,6 +370,22 @@
             this.viewDbLbl.Text = "Switch Data";
             this.viewDbLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // stsStripDisplayInfo
+            // 
+            this.stsStripDisplayInfo.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.stsStripDisplayInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stsStripLabel});
+            this.stsStripDisplayInfo.Location = new System.Drawing.Point(0, 633);
+            this.stsStripDisplayInfo.Name = "stsStripDisplayInfo";
+            this.stsStripDisplayInfo.Size = new System.Drawing.Size(1193, 24);
+            this.stsStripDisplayInfo.TabIndex = 53;
+            // 
+            // stsStripLabel
+            // 
+            this.stsStripLabel.BackColor = System.Drawing.Color.White;
+            this.stsStripLabel.Name = "stsStripLabel";
+            this.stsStripLabel.Size = new System.Drawing.Size(0, 18);
+            // 
             // ProductManagerForm
             // 
             this.AcceptButton = this.btnFilter;
@@ -374,6 +393,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1193, 657);
+            this.Controls.Add(this.stsStripDisplayInfo);
             this.Controls.Add(this.viewDbLbl);
             this.Controls.Add(this.quantityEquations);
             this.Controls.Add(this.cBoxQuality);
@@ -405,6 +425,8 @@
             this.Text = "Product Manager Form";
             this.Load += new System.EventHandler(this.ProductManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).EndInit();
+            this.stsStripDisplayInfo.ResumeLayout(false);
+            this.stsStripDisplayInfo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,6 +460,8 @@
         private System.Windows.Forms.ComboBox cBoxQuality;
         private System.Windows.Forms.ComboBox quantityEquations;
         private System.Windows.Forms.Label viewDbLbl;
+        private System.Windows.Forms.StatusStrip stsStripDisplayInfo;
+        private System.Windows.Forms.ToolStripStatusLabel stsStripLabel;
     }
 }
 
