@@ -343,6 +343,35 @@ namespace workflowLoginForm
             }
         }
 
+        public RawMaterial GetRawMaterial(string rawMaterialName)
+        {
+            RawMaterial mat = new RawMaterial(rawMaterialName, 0);
+
+            try
+            {
+                Cn.Open();
+                cmd = new SqlCommand("SELECT Quantity FROM RawMaterials WHERE RawMaterialName = " + "'" + rawMaterialName + "'", Cn);
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int quantity = (int)reader["Quantity"];
+                    //mat.rawMaterialName = rawMaterialName;
+                    mat.quantity = quantity;
+                }
+                reader.Close();
+            }
+            catch (Exception err)
+            {
+                throw;
+            }
+            finally
+            {
+                Cn.Close();
+            }
+            return mat;
+        }
+
     }
 
     }

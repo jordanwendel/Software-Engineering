@@ -16,7 +16,6 @@ namespace workflowLoginForm
         // Class level objects
         private DataGridTools dgTools;
         private DatabaseTools dbTools;
-        private ProductForm stockpage;
 
         // Variables
         
@@ -33,14 +32,6 @@ namespace workflowLoginForm
         { 
             this.Close();
         }
-
-        /*// Event handler for Add New button click
-        private void addProduct_Click(object sender, EventArgs e)
-        {
-            stockpage = new ProductForm();
-            stockpage.ShowDialog(); // Open new display
-            this.Show();
-        }*/
 
         // Event handler for Product Manager Form load
         private void ProductManagerForm_Load(object sender, EventArgs e)
@@ -59,6 +50,8 @@ namespace workflowLoginForm
             {
                 MessageBox.Show(err.Message, "Warning!");
             }
+
+            removeItemBtn.Visible = false;
         }
 
         // Event handler for Refresh Inventory button click
@@ -347,20 +340,36 @@ namespace workflowLoginForm
             int Quantity = int.Parse(txtQuantity.Text);
             dbTools = new DatabaseTools();
 
-            dbTools.CheckProduct(ProductName);
+            // CHECK TO SEE IF CURRENT VIEW IS PRODUCT
+            if (dgTools.dbName.Equals("Product"))
+            {
 
-            // Creating a new product object, adding it to the database, and auto refreshing the datagrid
+            }
+            Product newProduct = new Product(ProductName, "", Quantity, "");
+
+            MessageBox.Show("Please Remove Necessary Raw Materials");
+
+            viewMatBtn_Click(sender, e);
+
+            addItemLbl.Text = "Remove Materials";
+
+            addItemBtn.Visible = false;
+
+            removeItemBtn.Visible = true;
+
+
+
+           /* // Creating a new product object, adding it to the database, and auto refreshing the datagrid
             if (dbTools.CheckProduct(ProductName).Equals(true))
             {
                 dbTools.EditProductQuant(ProductName, Quantity);
             }
             else
             {
-
-                MessageBox.Show("Why is this running?");
+                //MessageBox.Show("Why is this running?");
                 Product newProduct = new Product(txtName.Text, "", int.Parse(txtQuantity.Text), "");
                 dbTools.AddProduct(newProduct);
-            }
+            }*/
             dgTools.RefreshDataGrid(prodDataGridView);
 
             // Clearing entered values
@@ -476,6 +485,35 @@ namespace workflowLoginForm
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void removeItemBtn_Click(object sender, EventArgs e)
+        {
+            RawMaterial tempMaterial;
+
+            if (dbTools.CheckMat(txtName.Text).Equals(true))
+            {
+                RawMaterial material = dbTools.GetRawMaterial(txtName.Text);
+                int newQuantity = material.quantity - int.Parse(txtQuantity.Text);
+
+                if (newQuantity > 0)
+                {
+                    dbTools.EditQuant(material.rawMaterialName, newQuantity);
+                    //dgTools.RefreshDataGrid(prodDataGridView);
+                }
+                else
+                {
+                    MessageBox.Show("Not enough raw materials!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Material does not exist!");
+            }
+
+            removeItemBtn.Visible = false;
+            addItemBtn.Visible = true;
+            
         }
     }
 }
