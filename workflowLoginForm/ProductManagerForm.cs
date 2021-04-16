@@ -16,6 +16,9 @@ namespace workflowLoginForm
         // Class level objects
         private DataGridTools dgTools;
         private DatabaseTools dbTools;
+        private Product newProduct;
+        private List<Product> newProducts;
+        private List<RawMaterial> matsRemoved;
 
         // Variables
         
@@ -25,6 +28,8 @@ namespace workflowLoginForm
             InitializeComponent();
             dgTools = new DataGridTools();
             dbTools = new DatabaseTools();
+            newProducts = new List<Product>();
+            matsRemoved = new List<RawMaterial>();
         }
 
         // Event handler to Logout button click
@@ -336,28 +341,23 @@ namespace workflowLoginForm
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
-            string ProductName = txtName.Text;
-            int Quantity = int.Parse(txtQuantity.Text);
-            dbTools = new DatabaseTools();
 
-            // CHECK TO SEE IF CURRENT VIEW IS PRODUCT
-            if (dgTools.dbName.Equals("Product"))
+            if (dgTools.dbName.Equals("Products"))
             {
+                string ProductName = txtName.Text;
+                int Quantity = int.Parse(txtQuantity.Text);
+                dbTools = new DatabaseTools();
 
+                newProduct = new Product(ProductName, "", Quantity, "");
+                newProducts.Add(newProduct);
+                itemsView.Items.Clear();
+
+                foreach (Product prod in newProducts)
+                {
+                    string s = prod.quantity.ToString() + "x " + prod.productName;
+                    itemsView.Items.Add(s);
+                }
             }
-            Product newProduct = new Product(ProductName, "", Quantity, "");
-
-            MessageBox.Show("Please Remove Necessary Raw Materials");
-
-            viewMatBtn_Click(sender, e);
-
-            addItemLbl.Text = "Remove Materials";
-
-            addItemBtn.Visible = false;
-
-            removeItemBtn.Visible = true;
-
-
 
            /* // Creating a new product object, adding it to the database, and auto refreshing the datagrid
             if (dbTools.CheckProduct(ProductName).Equals(true))
@@ -489,16 +489,44 @@ namespace workflowLoginForm
 
         private void removeItemBtn_Click(object sender, EventArgs e)
         {
+
+            if (dgTools.dbName.Equals("Products"))
+            {
+                string ProductName = txtName.Text;
+                int Quantity = int.Parse(txtQuantity.Text);
+                dbTools = new DatabaseTools();
+
+                newProduct = new Product(ProductName, "", Quantity, "");
+                newProducts.Add(newProduct);
+                itemsView.Items.Clear();
+
+                foreach (Product prod in newProducts)
+                {
+                    string s = prod.quantity.ToString() + "x " + prod.productName;
+                    itemsView.Items.Add(s);
+                }
+            }
+
             RawMaterial tempMaterial;
 
             if (dbTools.CheckMat(txtName.Text).Equals(true))
             {
                 RawMaterial material = dbTools.GetRawMaterial(txtName.Text);
+                matsRemoved.Add(material);
+
                 int newQuantity = material.quantity - int.Parse(txtQuantity.Text);
 
+                // NO DUPLICATE ENTRIES
                 if (newQuantity > 0)
                 {
-                    dbTools.EditQuant(material.rawMaterialName, newQuantity);
+                    rawMatsView.Clear();
+                    foreach (RawMaterial mat in matsRemoved)
+                    {
+                        string s = txtQuantity.Text + "x " + material.rawMaterialName;
+                        rawMatsView.Items.Add(s);
+                    }
+                    //dbTools.EditQuant(material.rawMaterialName, newQuantity);
+                    //rawMatsView.Items.Add(material.rawMaterialName);
                     //dgTools.RefreshDataGrid(prodDataGridView);
                 }
                 else
@@ -511,8 +539,30 @@ namespace workflowLoginForm
                 MessageBox.Show("Material does not exist!");
             }
 
-            removeItemBtn.Visible = false;
-            addItemBtn.Visible = true;
+            //removeItemBtn.Visible = false;
+            //addItemBtn.Visible = true;
+        }
+
+        private void confirmChangesBtn_Click(object sender, EventArgs e)
+        {
+            if (dgTools.dbName.Equals("Products"))
+            {
+                MessageBox.Show("Please Remove Necessary Raw Materials");
+
+                viewMatBtn_Click(sender, e);
+
+                addItemLbl.Text = "Remove Materials";
+
+                addItemBtn.Visible = false;
+
+                removeItemBtn.Visible = true;
+            }
+            else
+            {
+                addItemBtn.Visible = true;
+
+                removeItemBtn.Visible = false;
+            }
             
         }
     }
