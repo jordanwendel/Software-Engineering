@@ -179,5 +179,11 @@ namespace workflowLoginForm
                 }
             }
         }
+
+        // Automatically filtering by name as user types in the field
+        private void txtFilterByItem_TextChanged(object sender, EventArgs e)
+        {
+            btnFilter_Click(sender, e);
+        }
     }
-    }
+}
