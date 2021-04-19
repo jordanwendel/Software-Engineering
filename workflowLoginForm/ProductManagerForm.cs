@@ -17,11 +17,15 @@ namespace workflowLoginForm
         private DataGridTools dgTools;
         private DatabaseTools dbTools;
         private Product newProduct;
+        private RawMaterial newMaterial;
         private List<Product> newProducts;
         private List<RawMaterial> matsRemoved;
+        private List<RawMaterial> matsToRemove;
+        private List<String> productsAdding;
+        private List<String> matsRemoving;
 
         // Variables
-        
+
         // Constructor
         public ProductManagerForm()
         {
@@ -341,22 +345,20 @@ namespace workflowLoginForm
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
+            productsAdding = new List<String>();
+            string ProductName = txtName.Text;
+            int Quantity = int.Parse(txtQuantity.Text);
+            dbTools = new DatabaseTools();
 
-            if (dgTools.dbName.Equals("Products"))
+            newProduct = new Product(ProductName, "", Quantity, "");
+            newProducts.Add(newProduct);
+            itemsView.Items.Clear();
+
+            foreach (Product prod in newProducts)
             {
-                string ProductName = txtName.Text;
-                int Quantity = int.Parse(txtQuantity.Text);
-                dbTools = new DatabaseTools();
-
-                newProduct = new Product(ProductName, "", Quantity, "");
-                newProducts.Add(newProduct);
-                itemsView.Items.Clear();
-
-                foreach (Product prod in newProducts)
-                {
-                    string s = prod.quantity.ToString() + "x " + prod.productName;
-                    itemsView.Items.Add(s);
-                }
+                string s = prod.quantity.ToString() + "x " + prod.productName;
+                productsAdding.Add(s);
+                itemsView.Items.Add(s);
             }
 
            /* // Creating a new product object, adding it to the database, and auto refreshing the datagrid
@@ -442,89 +444,47 @@ namespace workflowLoginForm
             }
         }
 
-        private void txtFilterByItem_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cBoxQuality_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void quantityEquations_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cBoxLocation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNum_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void removeItemBtn_Click(object sender, EventArgs e)
         {
+            matsRemoving = new List<String>();
+            matsToRemove = new List<RawMaterial>();
 
-            if (dgTools.dbName.Equals("Products"))
+           
+            dbTools = new DatabaseTools();
+
+            if (dbTools.CheckMat(txtName.Text).Equals(true)) // Checking if the material exists in the database
             {
-                string ProductName = txtName.Text;
-                int Quantity = int.Parse(txtQuantity.Text);
-                dbTools = new DatabaseTools();
+                RawMaterial material = dbTools.GetRawMaterial(txtName.Text); // Creating a new raw material object from Database Tools class
+                int newQuantity = material.quantity - int.Parse(txtQuantity.Text); // Calculating the new quantity after subtracting the amount being taken out
 
-                newProduct = new Product(ProductName, "", Quantity, "");
-                newProducts.Add(newProduct);
-                itemsView.Items.Clear();
-
-                foreach (Product prod in newProducts)
-                {
-                    string s = prod.quantity.ToString() + "x " + prod.productName;
-                    itemsView.Items.Add(s);
-                }
-            }
-
-            RawMaterial tempMaterial;
-
-            if (dbTools.CheckMat(txtName.Text).Equals(true))
-            {
-                RawMaterial material = dbTools.GetRawMaterial(txtName.Text);
-                matsRemoved.Add(material);
-
-                int newQuantity = material.quantity - int.Parse(txtQuantity.Text);
 
                 // NO DUPLICATE ENTRIES
+                // Quantity cannot be negative after subtracting
                 if (newQuantity > 0)
                 {
-                    rawMatsView.Clear();
+
+                    material.quantity = int.Parse(txtQuantity.Text); // Setting the object quantity to what the user inputs for future use
+                    matsRemoved.Add(material); // Adding material to list
+
+
+                    newMaterial = new RawMaterial(material.rawMaterialName, newQuantity); // What we want the product to be after making changes
+                    matsToRemove.Add(newMaterial); // Adding that to a list to track values
+
+
+                    rawMatsView.Items.Clear(); // Clearing list box
+                    string quantity = txtQuantity.Text;
+
                     foreach (RawMaterial mat in matsRemoved)
                     {
-                        string s = txtQuantity.Text + "x " + material.rawMaterialName;
+                        //mat.quantity = int.Parse(txtQuantity.Text);
+                        string s = mat.quantity.ToString() + "x " + mat.rawMaterialName;
+                        matsRemoving.Add(s);
                         rawMatsView.Items.Add(s);
                     }
+                    txtName.Clear();
+                    txtQuantity.Clear();
+
                     //dbTools.EditQuant(material.rawMaterialName, newQuantity);
                     //rawMatsView.Items.Add(material.rawMaterialName);
                     //dgTools.RefreshDataGrid(prodDataGridView);
@@ -532,16 +492,15 @@ namespace workflowLoginForm
                 else
                 {
                     MessageBox.Show("Not enough raw materials!");
+                    txtQuantity.Clear();
                 }
             }
             else
             {
                 MessageBox.Show("Material does not exist!");
             }
-
-            //removeItemBtn.Visible = false;
-            //addItemBtn.Visible = true;
         }
+
 
         private void confirmChangesBtn_Click(object sender, EventArgs e)
         {
@@ -559,11 +518,57 @@ namespace workflowLoginForm
             }
             else
             {
+                string prod = String.Join("\n", productsAdding);
+                string mat = String.Join("\n", matsRemoving);
+
                 addItemBtn.Visible = true;
 
                 removeItemBtn.Visible = false;
+                string confirm ="You are adding:\n" +
+                                    prod + "\n\n" +
+                                 "You are removing:\n" +
+                                    mat + "\n\n" +
+                                    "Is this correct?";
+
+                DialogResult result = MessageBox.Show(confirm, "Confirm Changes", MessageBoxButtons.YesNo); // Confirming changes
+
+                if (result.Equals(DialogResult.Yes))
+                {
+                    try
+                    {
+                        // Clear items from list boxes
+                        itemsView.Items.Clear();
+                        rawMatsView.Items.Clear();
+
+                        // Adding all new products to the database
+                        foreach (Product p in newProducts)
+                        {
+                            dbTools.AddProduct(p);
+                        }
+
+                        // Updating the raw materials database to the new values
+                        foreach (RawMaterial m in matsToRemove)
+                        {
+                            dbTools.EditQuant(m.rawMaterialName, m.quantity);
+                        }
+
+                        stsStripDisplayInfo.Text = "Successfully created new product(s) with raw material(s)!";
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message, "A database issue occurred. Please try again");
+                    }
+
+                    // Going back to product view
+                    viewProdBtn_Click(sender, e);
+                }
             }
             
+        }
+
+        private void txtFilterByItem_TextChanged(object sender, EventArgs e)
+        {
+            btnFilter_Click(sender, e);
         }
     }
 }
