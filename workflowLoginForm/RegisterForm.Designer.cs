@@ -30,6 +30,7 @@ namespace workflowLoginForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             this.usernameLbl = new System.Windows.Forms.Label();
             this.passwordLbl = new System.Windows.Forms.Label();
             this.usernameTxt = new System.Windows.Forms.TextBox();
@@ -41,6 +42,11 @@ namespace workflowLoginForm
             this.confirmpasswordtxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.RegTitle = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // usernameLbl
@@ -72,7 +78,7 @@ namespace workflowLoginForm
             // usernameTxt
             // 
             this.usernameTxt.Location = new System.Drawing.Point(431, 142);
-            this.usernameTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernameTxt.Margin = new System.Windows.Forms.Padding(4);
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(132, 22);
             this.usernameTxt.TabIndex = 0;
@@ -80,7 +86,7 @@ namespace workflowLoginForm
             // passwordTxt
             // 
             this.passwordTxt.Location = new System.Drawing.Point(431, 190);
-            this.passwordTxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordTxt.Margin = new System.Windows.Forms.Padding(4);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.PasswordChar = '*';
             this.passwordTxt.Size = new System.Drawing.Size(132, 22);
@@ -93,7 +99,7 @@ namespace workflowLoginForm
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.Location = new System.Drawing.Point(627, 362);
-            this.registerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(4);
             this.registerBtn.Name = "registerBtn";
             this.registerBtn.Size = new System.Drawing.Size(133, 43);
             this.registerBtn.TabIndex = 5;
@@ -118,7 +124,7 @@ namespace workflowLoginForm
             // 
             this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBtn.Location = new System.Drawing.Point(16, 374);
-            this.clearBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clearBtn.Margin = new System.Windows.Forms.Padding(4);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(100, 31);
             this.clearBtn.TabIndex = 4;
@@ -145,7 +151,7 @@ namespace workflowLoginForm
             // confirmpasswordtxt
             // 
             this.confirmpasswordtxt.Location = new System.Drawing.Point(431, 241);
-            this.confirmpasswordtxt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.confirmpasswordtxt.Margin = new System.Windows.Forms.Padding(4);
             this.confirmpasswordtxt.Name = "confirmpasswordtxt";
             this.confirmpasswordtxt.PasswordChar = '*';
             this.confirmpasswordtxt.Size = new System.Drawing.Size(132, 22);
@@ -180,12 +186,49 @@ namespace workflowLoginForm
             this.RegTitle.TabIndex = 11;
             this.RegTitle.Text = "Register New User";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(779, 27);
+            this.toolStrip1.TabIndex = 66;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.goBackToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Text = "Menu";
+            // 
+            // goBackToolStripMenuItem
+            // 
+            this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.goBackToolStripMenuItem.Text = "Go Back";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(779, 414);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.RegTitle);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.confirmpasswordtxt);
@@ -197,9 +240,11 @@ namespace workflowLoginForm
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.passwordLbl);
             this.Controls.Add(this.usernameLbl);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
             this.Text = "Register New User";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +263,9 @@ namespace workflowLoginForm
         private System.Windows.Forms.TextBox confirmpasswordtxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label RegTitle;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
