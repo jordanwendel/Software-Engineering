@@ -60,8 +60,15 @@
             this.itemsView = new System.Windows.Forms.ListView();
             this.rawMatsView = new System.Windows.Forms.ListView();
             this.confirmChangesBtn = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewProductReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMaterialsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.stsStripDisplayInfo.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Admin
@@ -430,6 +437,53 @@
             this.confirmChangesBtn.UseVisualStyleBackColor = true;
             this.confirmChangesBtn.Click += new System.EventHandler(this.confirmChangesBtn_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1193, 28);
+            this.menuStrip1.TabIndex = 79;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewProductReportToolStripMenuItem,
+            this.viewMaterialsReportToolStripMenuItem,
+            this.goBackToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // viewProductReportToolStripMenuItem
+            // 
+            this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
+            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.viewProductReportToolStripMenuItem.Text = "View Product Report";
+            // 
+            // viewMaterialsReportToolStripMenuItem
+            // 
+            this.viewMaterialsReportToolStripMenuItem.Name = "viewMaterialsReportToolStripMenuItem";
+            this.viewMaterialsReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.viewMaterialsReportToolStripMenuItem.Text = "View Materials Report";
+            // 
+            // goBackToolStripMenuItem
+            // 
+            this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.goBackToolStripMenuItem.Text = "Go Back";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // ProductManagerForm
             // 
             this.AcceptButton = this.btnFilter;
@@ -475,6 +529,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).EndInit();
             this.stsStripDisplayInfo.ResumeLayout(false);
             this.stsStripDisplayInfo.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -514,6 +570,12 @@
         private System.Windows.Forms.ListView itemsView;
         private System.Windows.Forms.ListView rawMatsView;
         private System.Windows.Forms.Button confirmChangesBtn;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewProductReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewMaterialsReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

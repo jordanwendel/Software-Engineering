@@ -51,7 +51,14 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.txtFilterByItem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewProductReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMaterialsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Admin
@@ -334,6 +341,53 @@
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1189, 28);
+            this.menuStrip1.TabIndex = 78;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewProductReportToolStripMenuItem,
+            this.viewMaterialsReportToolStripMenuItem,
+            this.goBackToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // viewProductReportToolStripMenuItem
+            // 
+            this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
+            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.viewProductReportToolStripMenuItem.Text = "View Product Report";
+            // 
+            // viewMaterialsReportToolStripMenuItem
+            // 
+            this.viewMaterialsReportToolStripMenuItem.Name = "viewMaterialsReportToolStripMenuItem";
+            this.viewMaterialsReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.viewMaterialsReportToolStripMenuItem.Text = "View Materials Report";
+            // 
+            // goBackToolStripMenuItem
+            // 
+            this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.goBackToolStripMenuItem.Text = "Go Back";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // DeliveryManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -363,11 +417,13 @@
             this.Controls.Add(this.prodDataGridView);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DeliveryManagerForm";
             this.Text = "Delivery Manager Form";
             this.Load += new System.EventHandler(this.DeliveryManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -398,6 +454,12 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.TextBox txtFilterByItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewProductReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewMaterialsReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
