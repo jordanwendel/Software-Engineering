@@ -42,7 +42,12 @@ namespace workflowLoginForm
             this.label4 = new System.Windows.Forms.Label();
             this.saleslbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // averagelbl
@@ -202,12 +207,46 @@ namespace workflowLoginForm
             this.label6.Text = "Number of products in sales";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(936, 28);
+            this.menuStrip1.TabIndex = 88;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.goBackToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // goBackToolStripMenuItem
+            // 
+            this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.goBackToolStripMenuItem.Text = "Go Back";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // ProductReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(936, 540);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.saleslbl);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.qualitylbl);
@@ -224,7 +263,10 @@ namespace workflowLoginForm
             this.Name = "ProductReport";
             this.Text = "ProductReport";
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -243,5 +285,9 @@ namespace workflowLoginForm
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.Label saleslbl;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }

@@ -51,7 +51,14 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.txtFilterByItem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewProductReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMaterialsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // addItemBtn
@@ -336,6 +343,53 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1160, 28);
+            this.menuStrip1.TabIndex = 79;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuToolStripMenuItem
+            // 
+            this.menuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewProductReportToolStripMenuItem,
+            this.viewMaterialsReportToolStripMenuItem,
+            this.goBackToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Text = "Menu";
+            // 
+            // viewProductReportToolStripMenuItem
+            // 
+            this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
+            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.viewProductReportToolStripMenuItem.Text = "View Product Report";
+            // 
+            // viewMaterialsReportToolStripMenuItem
+            // 
+            this.viewMaterialsReportToolStripMenuItem.Name = "viewMaterialsReportToolStripMenuItem";
+            this.viewMaterialsReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.viewMaterialsReportToolStripMenuItem.Text = "View Materials Report";
+            // 
+            // goBackToolStripMenuItem
+            // 
+            this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.goBackToolStripMenuItem.Text = "Go Back";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
             // QualityAnalyzerForm
             // 
             this.AcceptButton = this.btnFilter;
@@ -343,6 +397,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1160, 757);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.quantityEquations);
             this.Controls.Add(this.cBoxQuality);
             this.Controls.Add(this.filterMenu);
@@ -371,6 +426,8 @@
             this.Text = "Quality Analyzer Form";
             this.Load += new System.EventHandler(this.QualityAnalyzerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,6 +458,12 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.TextBox txtFilterByItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewProductReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewMaterialsReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
