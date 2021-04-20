@@ -203,8 +203,6 @@ namespace workflowLoginForm
                     // Filtering by Quality
                     else if (filterMenu.Text.Equals("Quality"))
                     {
-                        if (cBoxQuality.Text == "Pending")
-                            qual = "";
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
 
                         dgTools.PopulateDataGrid(prodDataGridView);

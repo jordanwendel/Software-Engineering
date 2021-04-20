@@ -21,8 +21,8 @@ namespace workflowLoginForm
         private List<Product> newProducts;
         private List<RawMaterial> matsRemoved;
         private List<RawMaterial> matsToRemove;
-        private List<String> productsAdding;
-        private List<String> matsRemoving;
+        private List<String> lstProductsToAdd;
+        private List<String> lstMatsToRemove;
 
         // Variables
 
@@ -80,6 +80,17 @@ namespace workflowLoginForm
             txtFilterByItem.Enabled = true;
             txtNum.Enabled = true;
             quantityEquations.Enabled = true;
+
+            // Clearing all lists
+            newProducts.Clear();
+            matsRemoved.Clear();
+            matsToRemove.Clear();
+            lstMatsToRemove.Clear();
+            lstProductsToAdd.Clear();
+
+            // Clearing all list views
+            itemsView.Items.Clear();
+            rawMatsView.Items.Clear();
 
 
             // Viewing Products
@@ -340,7 +351,7 @@ namespace workflowLoginForm
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
-            productsAdding = new List<String>();
+            lstProductsToAdd = new List<String>();
             string ProductName = txtName.Text;
             int Quantity = int.Parse(txtQuantity.Text);
 
@@ -351,7 +362,7 @@ namespace workflowLoginForm
             foreach (Product prod in newProducts)
             {
                 string s = prod.quantity.ToString() + "x " + prod.productName;
-                productsAdding.Add(s);
+                lstProductsToAdd.Add(s);
                 itemsView.Items.Add(s);
             }
 
@@ -432,35 +443,35 @@ namespace workflowLoginForm
 
         private void removeItemBtn_Click(object sender, EventArgs e)
         {
-            matsRemoving = new List<String>();
+            lstMatsToRemove = new List<String>();
             matsToRemove = new List<RawMaterial>();
 
 
             if (dbTools.CheckMat(txtName.Text).Equals(true)) // Checking if the material exists in the database
             {
-                RawMaterial material = dbTools.GetRawMaterial(txtName.Text); // Creating a new raw material object from Database Tools class
-                int newQuantity = material.quantity - int.Parse(txtQuantity.Text); // Calculating the new quantity after subtracting the amount being taken out
+                RawMaterial tempMaterial = dbTools.GetRawMaterial(txtName.Text); // Creating a new raw material object from Database Tools class
+                int newQuantity = tempMaterial.quantity - int.Parse(txtQuantity.Text); // Calculating the new quantity after subtracting the amount being taken out
 
 
                 // NO DUPLICATE ENTRIES
                 // Quantity cannot be negative after subtracting
                 if (newQuantity > 0)
                 {
-                    material.quantity = int.Parse(txtQuantity.Text); // Setting the object quantity to what the user inputs for future use
-                    matsRemoved.Add(material); // Adding material to list
+                    tempMaterial.quantity = int.Parse(txtQuantity.Text); // Setting the object quantity to what the user inputs for future use
+                    matsRemoved.Add(tempMaterial); // Adding material to list
 
 
-                    newMaterial = new RawMaterial(material.rawMaterialName, newQuantity); // What we want the product to be after making changes
+                    newMaterial = new RawMaterial(tempMaterial.rawMaterialName, newQuantity); // What we want the product to be after making changes
                     matsToRemove.Add(newMaterial); // Adding that to a list to track values
 
+                    //string quantity = txtQuantity.Text;
 
                     rawMatsView.Items.Clear(); // Clearing list box
-                    string quantity = txtQuantity.Text;
 
                     foreach (RawMaterial mat in matsRemoved)
                     {
                         string s = mat.quantity.ToString() + "x " + mat.rawMaterialName;
-                        matsRemoving.Add(s);
+                        lstMatsToRemove.Add(s);
                         rawMatsView.Items.Add(s);
                     }
                     txtName.Clear();
@@ -495,12 +506,9 @@ namespace workflowLoginForm
             }
             else
             {
-                string prod = String.Join("\n", productsAdding);
-                string mat = String.Join("\n", matsRemoving);
+                string prod = String.Join("\n", lstProductsToAdd);
+                string mat = String.Join("\n", lstMatsToRemove);
 
-                addItemBtn.Visible = true;
-
-                removeItemBtn.Visible = false;
                 string confirm ="You are adding:\n" +
                                     prod + "\n\n" +
                                  "You are removing:\n" +
@@ -511,6 +519,10 @@ namespace workflowLoginForm
 
                 if (result.Equals(DialogResult.Yes))
                 {
+                    // Switching buttons
+                    addItemBtn.Visible = true;
+                    removeItemBtn.Visible = false;
+
                     try
                     {
                         // Clear items from list boxes
@@ -550,12 +562,12 @@ namespace workflowLoginForm
                     // Going back to product view
                     viewProdBtn_Click(sender, e);
 
-                    // Clearing all listsList
+                    // Clearing all lists
                     newProducts.Clear();
                     matsRemoved.Clear();
                     matsToRemove.Clear();
-                    matsRemoving.Clear();
-                    productsAdding.Clear();
+                    lstMatsToRemove.Clear();
+                    lstProductsToAdd.Clear();
                 }
             }
             
@@ -565,6 +577,30 @@ namespace workflowLoginForm
         private void txtFilterByItem_TextChanged(object sender, EventArgs e)
         {
             btnFilter_Click(sender, e);
+        }
+
+        private void prodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgTools.dbName.Equals("Products"))
+            {
+                // Update the text fields to display the selected product info
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = prodDataGridView.Rows[e.RowIndex];
+                    txtName.Text = row.Cells[0].Value.ToString();
+                    //txtQuantity.Text = row.Cells[1].Value.ToString();
+                }
+            }
+            else
+            {
+                // Update the text fields to display the selected product info
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = prodDataGridView.Rows[e.RowIndex];
+                    txtName.Text = row.Cells[0].Value.ToString();
+                    //txtQuantity.Text = row.Cells[1].Value.ToString();
+                }
+            }
         }
     }
 }

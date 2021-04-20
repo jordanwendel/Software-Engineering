@@ -120,11 +120,12 @@
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.prodDataGridView.Location = new System.Drawing.Point(305, 78);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(873, 555);
             this.prodDataGridView.TabIndex = 12;
+            this.prodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDataGridView_CellContentClick);
             // 
             // addItemLbl
             // 
@@ -140,7 +141,7 @@
             // txtQuantity
             // 
             this.txtQuantity.Location = new System.Drawing.Point(124, 110);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(172, 22);
             this.txtQuantity.TabIndex = 22;
@@ -195,7 +196,7 @@
             // viewProdBtn
             // 
             this.viewProdBtn.Location = new System.Drawing.Point(3, 334);
-            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewProdBtn.Name = "viewProdBtn";
             this.viewProdBtn.Size = new System.Drawing.Size(144, 48);
             this.viewProdBtn.TabIndex = 30;
@@ -206,7 +207,7 @@
             // viewMatBtn
             // 
             this.viewMatBtn.Location = new System.Drawing.Point(155, 334);
-            this.viewMatBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.viewMatBtn.Margin = new System.Windows.Forms.Padding(4);
             this.viewMatBtn.Name = "viewMatBtn";
             this.viewMatBtn.Size = new System.Drawing.Size(144, 48);
             this.viewMatBtn.TabIndex = 31;
@@ -313,7 +314,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(124, 79);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(172, 22);
             this.txtName.TabIndex = 48;
@@ -327,7 +328,7 @@
             "Quantity",
             "Location"});
             this.filterMenu.Location = new System.Drawing.Point(133, 434);
-            this.filterMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterMenu.Margin = new System.Windows.Forms.Padding(4);
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
             this.filterMenu.TabIndex = 49;
@@ -339,9 +340,10 @@
             this.cBoxQuality.FormattingEnabled = true;
             this.cBoxQuality.Items.AddRange(new object[] {
             "Satisfactory",
-            "Defective"});
+            "Defective",
+            "In Progress"});
             this.cBoxQuality.Location = new System.Drawing.Point(135, 496);
-            this.cBoxQuality.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBoxQuality.Margin = new System.Windows.Forms.Padding(4);
             this.cBoxQuality.Name = "cBoxQuality";
             this.cBoxQuality.Size = new System.Drawing.Size(163, 24);
             this.cBoxQuality.TabIndex = 50;
@@ -354,7 +356,7 @@
             "LESS THAN",
             "EQUAL TO"});
             this.quantityEquations.Location = new System.Drawing.Point(135, 524);
-            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4);
             this.quantityEquations.Name = "quantityEquations";
             this.quantityEquations.Size = new System.Drawing.Size(128, 24);
             this.quantityEquations.TabIndex = 51;
@@ -489,7 +491,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1193, 666);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.confirmChangesBtn);
             this.Controls.Add(this.rawMatsView);
             this.Controls.Add(this.itemsView);

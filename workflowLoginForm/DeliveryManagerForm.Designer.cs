@@ -65,7 +65,7 @@
             // 
             this.Admin.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.Color.White;
-            this.Admin.Location = new System.Drawing.Point(369, 34);
+            this.Admin.Location = new System.Drawing.Point(367, 11);
             this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(571, 62);
@@ -80,7 +80,7 @@
             this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(36)))), ((int)(((byte)(31)))));
             this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(947, 58);
+            this.Logout.Location = new System.Drawing.Point(1031, 34);
             this.Logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Logout.Name = "Logout";
             this.Logout.Size = new System.Drawing.Size(127, 36);
@@ -158,11 +158,11 @@
             this.prodDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.prodDataGridView.Location = new System.Drawing.Point(397, 112);
+            this.prodDataGridView.Location = new System.Drawing.Point(397, 82);
             this.prodDataGridView.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
-            this.prodDataGridView.Size = new System.Drawing.Size(784, 640);
+            this.prodDataGridView.Size = new System.Drawing.Size(784, 670);
             this.prodDataGridView.TabIndex = 34;
             this.prodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDataGridView_CellContentClick);
             // 
@@ -221,7 +221,7 @@
             this.cBoxQuality.Items.AddRange(new object[] {
             "Satisfactory",
             "Defective",
-            "Pending"});
+            "In Progress"});
             this.cBoxQuality.Location = new System.Drawing.Point(173, 599);
             this.cBoxQuality.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cBoxQuality.Name = "cBoxQuality";
@@ -417,9 +417,7 @@
             this.Controls.Add(this.prodDataGridView);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DeliveryManagerForm";
             this.Text = "Delivery Manager Form";
             this.Load += new System.EventHandler(this.DeliveryManagerForm_Load);
