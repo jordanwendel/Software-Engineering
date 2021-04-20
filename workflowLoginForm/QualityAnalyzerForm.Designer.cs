@@ -48,6 +48,9 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.txtFilterByItem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.quantityEquations = new System.Windows.Forms.TextBox();
+            this.cBoxQuality = new System.Windows.Forms.ComboBox();
+            this.filterMenu = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,7 +110,7 @@
             "Satisfactory",
             "Defective"});
             this.qualityMenu.Location = new System.Drawing.Point(131, 149);
-            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4);
             this.qualityMenu.Name = "qualityMenu";
             this.qualityMenu.Size = new System.Drawing.Size(157, 24);
             this.qualityMenu.TabIndex = 38;
@@ -132,10 +135,10 @@
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.prodDataGridView.Location = new System.Drawing.Point(301, 70);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
-            this.prodDataGridView.Size = new System.Drawing.Size(831, 615);
+            this.prodDataGridView.Size = new System.Drawing.Size(992, 791);
             this.prodDataGridView.TabIndex = 34;
             this.prodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDataGridView_CellContentClick);
             // 
@@ -168,7 +171,7 @@
             // ItemName
             // 
             this.ItemName.Location = new System.Drawing.Point(131, 118);
-            this.ItemName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ItemName.Margin = new System.Windows.Forms.Padding(2);
             this.ItemName.Name = "ItemName";
             this.ItemName.Size = new System.Drawing.Size(157, 22);
             this.ItemName.TabIndex = 47;
@@ -224,10 +227,10 @@
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(255, 551);
+            this.txtNum.Location = new System.Drawing.Point(233, 551);
             this.txtNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(27, 22);
+            this.txtNum.Size = new System.Drawing.Size(49, 22);
             this.txtNum.TabIndex = 58;
             // 
             // label3
@@ -284,13 +287,47 @@
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // quantityEquations
+            // 
+            this.quantityEquations.Location = new System.Drawing.Point(119, 549);
+            this.quantityEquations.Name = "quantityEquations";
+            this.quantityEquations.Size = new System.Drawing.Size(100, 22);
+            this.quantityEquations.TabIndex = 63;
+            // 
+            // cBoxQuality
+            // 
+            this.cBoxQuality.FormattingEnabled = true;
+            this.cBoxQuality.Items.AddRange(new object[] {
+            "Qualified",
+            "Defective"});
+            this.cBoxQuality.Location = new System.Drawing.Point(131, 520);
+            this.cBoxQuality.Name = "cBoxQuality";
+            this.cBoxQuality.Size = new System.Drawing.Size(121, 24);
+            this.cBoxQuality.TabIndex = 64;
+            // 
+            // filterMenu
+            // 
+            this.filterMenu.FormattingEnabled = true;
+            this.filterMenu.Items.AddRange(new object[] {
+            "Name",
+            "Quality",
+            "Quantity",
+            "Location"});
+            this.filterMenu.Location = new System.Drawing.Point(119, 458);
+            this.filterMenu.Name = "filterMenu";
+            this.filterMenu.Size = new System.Drawing.Size(163, 24);
+            this.filterMenu.TabIndex = 65;
+            // 
             // QualityAnalyzerForm
             // 
             this.AcceptButton = this.btnFilter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(810, 456);
+            this.ClientSize = new System.Drawing.Size(971, 632);
+            this.Controls.Add(this.filterMenu);
+            this.Controls.Add(this.cBoxQuality);
+            this.Controls.Add(this.quantityEquations);
             this.Controls.Add(this.cBoxLocation);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -343,6 +380,9 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.TextBox txtFilterByItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox quantityEquations;
+        private System.Windows.Forms.ComboBox cBoxQuality;
+        private System.Windows.Forms.ComboBox filterMenu;
     }
 }
 
