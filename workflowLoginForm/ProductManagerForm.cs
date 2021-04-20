@@ -36,11 +36,6 @@ namespace workflowLoginForm
             matsRemoved = new List<RawMaterial>();
         }
 
-        // Event handler to Logout button click
-        private void Logout_Click(object sender, EventArgs e)
-        { 
-            this.Close();
-        }
 
         // Event handler for Product Manager Form load
         private void ProductManagerForm_Load(object sender, EventArgs e)

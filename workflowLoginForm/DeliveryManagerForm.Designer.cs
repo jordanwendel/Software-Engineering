@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Admin = new System.Windows.Forms.Label();
-            this.Logout = new System.Windows.Forms.Button();
             this.filterLbl = new System.Windows.Forms.Label();
             this.locationLbl = new System.Windows.Forms.Label();
             this.nameLbl = new System.Windows.Forms.Label();
@@ -80,21 +79,6 @@
             this.Admin.Text = "Delivery Manager Page";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Admin.Click += new System.EventHandler(this.Admin_Click);
-            // 
-            // Logout
-            // 
-            this.Logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(36)))), ((int)(((byte)(31)))));
-            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(1031, 34);
-            this.Logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(127, 36);
-            this.Logout.TabIndex = 4;
-            this.Logout.Text = "LOG OUT";
-            this.Logout.UseVisualStyleBackColor = false;
-            this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // filterLbl
             // 
@@ -402,7 +386,7 @@
             this.toolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1189, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(1189, 30);
             this.menuStrip2.TabIndex = 80;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -471,7 +455,6 @@
             this.Controls.Add(this.locationMenu);
             this.Controls.Add(this.addItemLbl);
             this.Controls.Add(this.prodDataGridView);
-            this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeliveryManagerForm";
@@ -490,7 +473,6 @@
         #endregion
 
         private System.Windows.Forms.Label Admin;
-        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Label filterLbl;
         private System.Windows.Forms.Label locationLbl;
         private System.Windows.Forms.Label nameLbl;

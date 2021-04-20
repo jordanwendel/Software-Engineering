@@ -202,5 +202,10 @@ namespace workflowLoginForm
                 itembox.Text = row.Cells[0].Value.ToString();
             }
         }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
