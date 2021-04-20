@@ -207,5 +207,29 @@ namespace workflowLoginForm
         {
             this.Close();
         }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Clear the filtering text fields when refreshing data grid
+            filterMenu.Text = "Click to expand...";
+            txtFilterByItem.Clear();
+            txtNum.Clear();
+            quantityEquations.Text = null;
+
+            // Re-enabling all search fields
+            txtFilterByItem.Enabled = true;
+            txtNum.Enabled = true;
+            quantityEquations.Enabled = true;
+
+
+            // Viewing Raw Materials
+            if (dgTools.dbName.Equals("RawMaterials"))
+            {
+                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+
+                dgTools.RefreshDataGrid(stockDataGridView);
+
+            }
+        }
     }
 }
