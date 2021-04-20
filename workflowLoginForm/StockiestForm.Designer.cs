@@ -63,10 +63,10 @@
             // 
             this.Stockiest.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Stockiest.ForeColor = System.Drawing.Color.White;
-            this.Stockiest.Location = new System.Drawing.Point(864, 25);
-            this.Stockiest.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.Stockiest.Location = new System.Drawing.Point(364, 11);
+            this.Stockiest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Stockiest.Name = "Stockiest";
-            this.Stockiest.Size = new System.Drawing.Size(1356, 143);
+            this.Stockiest.Size = new System.Drawing.Size(571, 62);
             this.Stockiest.TabIndex = 2;
             this.Stockiest.Text = "Stockiest Page";
             this.Stockiest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,10 +76,10 @@
             this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
             this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(2392, 69);
-            this.Logout.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.Logout.Location = new System.Drawing.Point(1007, 30);
+            this.Logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(335, 83);
+            this.Logout.Size = new System.Drawing.Size(141, 36);
             this.Logout.TabIndex = 6;
             this.Logout.Text = "LOG OUT";
             this.Logout.UseVisualStyleBackColor = false;
@@ -90,10 +90,10 @@
             this.changeqnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(248)))), ((int)(((byte)(1)))));
             this.changeqnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeqnt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeqnt.Location = new System.Drawing.Point(235, 398);
-            this.changeqnt.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.changeqnt.Location = new System.Drawing.Point(99, 172);
+            this.changeqnt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.changeqnt.Name = "changeqnt";
-            this.changeqnt.Size = new System.Drawing.Size(254, 86);
+            this.changeqnt.Size = new System.Drawing.Size(107, 37);
             this.changeqnt.TabIndex = 2;
             this.changeqnt.Text = "Edit";
             this.changeqnt.UseVisualStyleBackColor = false;
@@ -104,10 +104,10 @@
             this.refreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.Location = new System.Drawing.Point(26, 1367);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.refreshBtn.Location = new System.Drawing.Point(11, 591);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4);
             this.refreshBtn.Name = "refreshBtn";
-            this.refreshBtn.Size = new System.Drawing.Size(306, 99);
+            this.refreshBtn.Size = new System.Drawing.Size(129, 43);
             this.refreshBtn.TabIndex = 7;
             this.refreshBtn.Text = "REFRESH";
             this.refreshBtn.UseVisualStyleBackColor = false;
@@ -121,21 +121,22 @@
             this.stockDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.stockDataGridView.Location = new System.Drawing.Point(720, 176);
-            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.stockDataGridView.Location = new System.Drawing.Point(303, 76);
+            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
-            this.stockDataGridView.Size = new System.Drawing.Size(2007, 1468);
+            this.stockDataGridView.Size = new System.Drawing.Size(845, 635);
             this.stockDataGridView.TabIndex = 5;
+            this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
             // 
             // addItemLbl
             // 
             this.addItemLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemLbl.ForeColor = System.Drawing.Color.White;
-            this.addItemLbl.Location = new System.Drawing.Point(36, 69);
-            this.addItemLbl.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.addItemLbl.Location = new System.Drawing.Point(15, 30);
+            this.addItemLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addItemLbl.Name = "addItemLbl";
-            this.addItemLbl.Size = new System.Drawing.Size(572, 102);
+            this.addItemLbl.Size = new System.Drawing.Size(241, 44);
             this.addItemLbl.TabIndex = 12;
             this.addItemLbl.Text = "Change Quantity";
             this.addItemLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,10 +145,10 @@
             // 
             this.itemLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.itemLbl.ForeColor = System.Drawing.Color.White;
-            this.itemLbl.Location = new System.Drawing.Point(76, 208);
-            this.itemLbl.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.itemLbl.Location = new System.Drawing.Point(32, 90);
+            this.itemLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.itemLbl.Name = "itemLbl";
-            this.itemLbl.Size = new System.Drawing.Size(145, 65);
+            this.itemLbl.Size = new System.Drawing.Size(61, 28);
             this.itemLbl.TabIndex = 13;
             this.itemLbl.Text = "Item:";
             this.itemLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -156,10 +157,10 @@
             // 
             this.quantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityLbl.ForeColor = System.Drawing.Color.White;
-            this.quantityLbl.Location = new System.Drawing.Point(-19, 282);
-            this.quantityLbl.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.quantityLbl.Location = new System.Drawing.Point(-8, 122);
+            this.quantityLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(240, 65);
+            this.quantityLbl.Size = new System.Drawing.Size(101, 28);
             this.quantityLbl.TabIndex = 14;
             this.quantityLbl.Text = "Quantity:";
             this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -169,10 +170,10 @@
             this.addNewMat_Btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.addNewMat_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewMat_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addNewMat_Btn.Location = new System.Drawing.Point(26, 553);
-            this.addNewMat_Btn.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.addNewMat_Btn.Location = new System.Drawing.Point(11, 239);
+            this.addNewMat_Btn.Margin = new System.Windows.Forms.Padding(4);
             this.addNewMat_Btn.Name = "addNewMat_Btn";
-            this.addNewMat_Btn.Size = new System.Drawing.Size(618, 86);
+            this.addNewMat_Btn.Size = new System.Drawing.Size(260, 37);
             this.addNewMat_Btn.TabIndex = 3;
             this.addNewMat_Btn.Text = "ADD NEW ITEM";
             this.addNewMat_Btn.UseVisualStyleBackColor = false;
@@ -182,28 +183,28 @@
             // 
             this.filterLbl.Font = new System.Drawing.Font("Impact", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterLbl.ForeColor = System.Drawing.Color.White;
-            this.filterLbl.Location = new System.Drawing.Point(102, 731);
-            this.filterLbl.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
+            this.filterLbl.Location = new System.Drawing.Point(43, 316);
+            this.filterLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.filterLbl.Name = "filterLbl";
-            this.filterLbl.Size = new System.Drawing.Size(454, 69);
+            this.filterLbl.Size = new System.Drawing.Size(191, 30);
             this.filterLbl.TabIndex = 29;
             this.filterLbl.Text = "Filter Items";
             this.filterLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // itembox
             // 
-            this.itembox.Location = new System.Drawing.Point(235, 222);
-            this.itembox.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.itembox.Location = new System.Drawing.Point(99, 96);
+            this.itembox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.itembox.Name = "itembox";
-            this.itembox.Size = new System.Drawing.Size(396, 44);
+            this.itembox.Size = new System.Drawing.Size(169, 22);
             this.itembox.TabIndex = 30;
             // 
             // qtnBox
             // 
-            this.qtnBox.Location = new System.Drawing.Point(235, 301);
-            this.qtnBox.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.qtnBox.Location = new System.Drawing.Point(99, 130);
+            this.qtnBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qtnBox.Name = "qtnBox";
-            this.qtnBox.Size = new System.Drawing.Size(396, 44);
+            this.qtnBox.Size = new System.Drawing.Size(169, 22);
             this.qtnBox.TabIndex = 31;
             // 
             // quantityEquations
@@ -213,10 +214,10 @@
             "GREATER THAN",
             "LESS THAN",
             "EQUAL TO"});
-            this.quantityEquations.Location = new System.Drawing.Point(316, 1175);
-            this.quantityEquations.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.quantityEquations.Location = new System.Drawing.Point(133, 508);
+            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4);
             this.quantityEquations.Name = "quantityEquations";
-            this.quantityEquations.Size = new System.Drawing.Size(298, 45);
+            this.quantityEquations.Size = new System.Drawing.Size(128, 24);
             this.quantityEquations.TabIndex = 64;
             // 
             // filterMenu
@@ -225,10 +226,10 @@
             this.filterMenu.Items.AddRange(new object[] {
             "Name",
             "Quantity"});
-            this.filterMenu.Location = new System.Drawing.Point(311, 1004);
-            this.filterMenu.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
+            this.filterMenu.Location = new System.Drawing.Point(131, 434);
+            this.filterMenu.Margin = new System.Windows.Forms.Padding(4);
             this.filterMenu.Name = "filterMenu";
-            this.filterMenu.Size = new System.Drawing.Size(382, 45);
+            this.filterMenu.Size = new System.Drawing.Size(163, 24);
             this.filterMenu.TabIndex = 62;
             this.filterMenu.Text = "Click to Expand...";
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
@@ -237,20 +238,19 @@
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(45, 1168);
-            this.label4.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label4.Location = new System.Drawing.Point(19, 505);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(249, 65);
+            this.label4.Size = new System.Drawing.Size(105, 28);
             this.label4.TabIndex = 59;
             this.label4.Text = "Quantity:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(639, 1179);
-            this.txtNum.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.txtNum.Location = new System.Drawing.Point(269, 510);
+            this.txtNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(59, 44);
+            this.txtNum.Size = new System.Drawing.Size(27, 22);
             this.txtNum.TabIndex = 58;
             // 
             // label2
@@ -258,8 +258,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(93, 1001);
-            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label2.Location = new System.Drawing.Point(39, 433);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 24);
             this.label2.TabIndex = 56;
@@ -268,10 +267,10 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(361, 1355);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.btnFilter.Location = new System.Drawing.Point(152, 586);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(342, 111);
+            this.btnFilter.Size = new System.Drawing.Size(144, 48);
             this.btnFilter.TabIndex = 55;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = true;
@@ -279,10 +278,10 @@
             // 
             // txtFilterByItem
             // 
-            this.txtFilterByItem.Location = new System.Drawing.Point(316, 1082);
-            this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.txtFilterByItem.Location = new System.Drawing.Point(133, 468);
+            this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFilterByItem.Name = "txtFilterByItem";
-            this.txtFilterByItem.Size = new System.Drawing.Size(382, 44);
+            this.txtFilterByItem.Size = new System.Drawing.Size(163, 22);
             this.txtFilterByItem.TabIndex = 54;
             this.txtFilterByItem.TextChanged += new System.EventHandler(this.txtFilterByItem_TextChanged);
             // 
@@ -290,10 +289,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 1073);
-            this.label1.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.label1.Location = new System.Drawing.Point(5, 464);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 65);
+            this.label1.Size = new System.Drawing.Size(125, 28);
             this.label1.TabIndex = 53;
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -305,8 +303,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1924, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1167, 27);
             this.toolStrip1.TabIndex = 65;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -342,20 +339,20 @@
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
             this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
+            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // StockiestForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1924, 1175);
+            this.ClientSize = new System.Drawing.Size(1167, 741);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.quantityEquations);
             this.Controls.Add(this.filterMenu);
@@ -377,7 +374,7 @@
             this.Controls.Add(this.changeqnt);
             this.Controls.Add(this.Logout);
             this.Controls.Add(this.Stockiest);
-            this.Margin = new System.Windows.Forms.Padding(7, 5, 7, 5);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StockiestForm";
             this.Text = "Stockiest Form";
             this.Load += new System.EventHandler(this.StockiestForm_Load);

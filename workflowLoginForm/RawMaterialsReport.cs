@@ -44,6 +44,12 @@ namespace workflowLoginForm
         {
             Application.Exit();
         }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 
 }

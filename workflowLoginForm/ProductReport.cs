@@ -45,6 +45,12 @@ namespace workflowLoginForm
             saleslbl.Text = SalesCount;
         }
 
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
