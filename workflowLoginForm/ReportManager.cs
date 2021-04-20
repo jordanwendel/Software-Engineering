@@ -80,5 +80,10 @@ namespace workflowLoginForm
 
             csvStatusLbl.Text = "Successfully wrote to CSV!";
         }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

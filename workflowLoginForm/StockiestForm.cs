@@ -185,5 +185,10 @@ namespace workflowLoginForm
         {
             btnFilter_Click(sender, e);
         }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

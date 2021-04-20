@@ -105,7 +105,7 @@
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBtn.Location = new System.Drawing.Point(11, 591);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(129, 43);
             this.refreshBtn.TabIndex = 7;
@@ -122,7 +122,7 @@
             this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.stockDataGridView.Location = new System.Drawing.Point(303, 76);
-            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
             this.stockDataGridView.Size = new System.Drawing.Size(845, 635);
@@ -170,7 +170,7 @@
             this.addNewMat_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewMat_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewMat_Btn.Location = new System.Drawing.Point(11, 239);
-            this.addNewMat_Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addNewMat_Btn.Margin = new System.Windows.Forms.Padding(4);
             this.addNewMat_Btn.Name = "addNewMat_Btn";
             this.addNewMat_Btn.Size = new System.Drawing.Size(260, 37);
             this.addNewMat_Btn.TabIndex = 3;
@@ -214,7 +214,7 @@
             "LESS THAN",
             "EQUAL TO"});
             this.quantityEquations.Location = new System.Drawing.Point(133, 508);
-            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4);
             this.quantityEquations.Name = "quantityEquations";
             this.quantityEquations.Size = new System.Drawing.Size(128, 24);
             this.quantityEquations.TabIndex = 64;
@@ -226,7 +226,7 @@
             "Name",
             "Quantity"});
             this.filterMenu.Location = new System.Drawing.Point(131, 434);
-            this.filterMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterMenu.Margin = new System.Windows.Forms.Padding(4);
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
             this.filterMenu.TabIndex = 62;
@@ -338,6 +338,7 @@
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
             this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
+            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 

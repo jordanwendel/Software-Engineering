@@ -39,6 +39,12 @@ namespace workflowLoginForm
             string Average = Avg.ToString();
             averagelbl.Text = Average;
         }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 
 }
