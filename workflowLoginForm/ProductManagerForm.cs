@@ -61,7 +61,7 @@ namespace workflowLoginForm
         // Event handler for Refresh Inventory button click
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            // Clear the filtering text fields when refreshing data grid
+            /* Clear the filtering text fields when refreshing data grid
             filterMenu.Text = "Click to expand...";
             txtFilterByItem.Clear();
             cBoxLocation.Text = null;
@@ -103,6 +103,8 @@ namespace workflowLoginForm
 
                 dgTools.RefreshDataGrid(prodDataGridView);
             }
+
+            */
 
             
         }
@@ -601,6 +603,58 @@ namespace workflowLoginForm
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             this.Close();
+
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Clear the filtering text fields when refreshing data grid
+            filterMenu.Text = "Click to expand...";
+            txtFilterByItem.Clear();
+            cBoxLocation.Text = null;
+            cBoxQuality.Text = null;
+            txtNum.Clear();
+            quantityEquations.Text = null;
+
+            // Re-enabling all search fields
+            cBoxQuality.Enabled = true;
+            cBoxLocation.Enabled = true;
+            txtFilterByItem.Enabled = true;
+            txtNum.Enabled = true;
+            quantityEquations.Enabled = true;
+
+            // Clearing all lists
+            newProducts.Clear();
+            matsRemoved.Clear();
+            matsToRemove.Clear();
+            lstMatsToRemove.Clear();
+            lstProductsToAdd.Clear();
+
+            // Clearing all list views
+            itemsView.Items.Clear();
+            rawMatsView.Items.Clear();
+
+
+            // Viewing Products
+            if (dgTools.dbName.Equals("Products"))
+            {
+                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+
+                dgTools.RefreshDataGrid(prodDataGridView);
+            }
+
+            // Viewing Raw Materials
+            else if (dgTools.dbName.Equals("RawMaterials"))
+            {
+                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+
+                dgTools.RefreshDataGrid(prodDataGridView);
+            }
 
         }
     }
