@@ -209,7 +209,7 @@
             this.cBoxQuality.Items.AddRange(new object[] {
             "Satisfactory",
             "Defective",
-            "Pending"});
+            "In Progress"});
             this.cBoxQuality.Location = new System.Drawing.Point(119, 521);
             this.cBoxQuality.Margin = new System.Windows.Forms.Padding(4);
             this.cBoxQuality.Name = "cBoxQuality";
