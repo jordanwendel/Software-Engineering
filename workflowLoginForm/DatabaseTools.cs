@@ -372,6 +372,35 @@ namespace workflowLoginForm
             return mat;
         }
 
-    }
+        // Function that searches a product in the database and returns its respective quantity
+        public Product GetProduct(string productName)
+        {
+            Product p = new Product(productName, "", 0, "");
+
+            try
+            {
+                Cn.Open();
+                cmd = new SqlCommand("SELECT Quantity FROM Products WHERE ProductName = " + "'" + productName + "'", Cn);
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    int quantity = (int)reader["Quantity"];
+                    p.quantity = quantity;
+                }
+                reader.Close();
+            }
+            catch (Exception err)
+            {
+                throw;
+            }
+            finally
+            {
+                Cn.Close();
+            }
+            return p;
+        }
 
     }
+
+}

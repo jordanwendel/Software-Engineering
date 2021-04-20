@@ -338,17 +338,11 @@ namespace workflowLoginForm
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void addItemBtn_Click(object sender, EventArgs e)
         {
             productsAdding = new List<String>();
             string ProductName = txtName.Text;
             int Quantity = int.Parse(txtQuantity.Text);
-            dbTools = new DatabaseTools();
 
             newProduct = new Product(ProductName, "", Quantity, "");
             newProducts.Add(newProduct);
@@ -361,17 +355,8 @@ namespace workflowLoginForm
                 itemsView.Items.Add(s);
             }
 
-           /* // Creating a new product object, adding it to the database, and auto refreshing the datagrid
-            if (dbTools.CheckProduct(ProductName).Equals(true))
-            {
-                dbTools.EditProductQuant(ProductName, Quantity);
-            }
-            else
-            {
-                //MessageBox.Show("Why is this running?");
-                Product newProduct = new Product(txtName.Text, "", int.Parse(txtQuantity.Text), "");
-                dbTools.AddProduct(newProduct);
-            }*/
+           // Creating a new product object, adding it to the database, and auto refreshing the datagrid
+            
             dgTools.RefreshDataGrid(prodDataGridView);
 
             // Clearing entered values
@@ -450,8 +435,6 @@ namespace workflowLoginForm
             matsRemoving = new List<String>();
             matsToRemove = new List<RawMaterial>();
 
-           
-            dbTools = new DatabaseTools();
 
             if (dbTools.CheckMat(txtName.Text).Equals(true)) // Checking if the material exists in the database
             {
@@ -463,7 +446,6 @@ namespace workflowLoginForm
                 // Quantity cannot be negative after subtracting
                 if (newQuantity > 0)
                 {
-
                     material.quantity = int.Parse(txtQuantity.Text); // Setting the object quantity to what the user inputs for future use
                     matsRemoved.Add(material); // Adding material to list
 
@@ -477,17 +459,12 @@ namespace workflowLoginForm
 
                     foreach (RawMaterial mat in matsRemoved)
                     {
-                        //mat.quantity = int.Parse(txtQuantity.Text);
                         string s = mat.quantity.ToString() + "x " + mat.rawMaterialName;
                         matsRemoving.Add(s);
                         rawMatsView.Items.Add(s);
                     }
                     txtName.Clear();
                     txtQuantity.Clear();
-
-                    //dbTools.EditQuant(material.rawMaterialName, newQuantity);
-                    //rawMatsView.Items.Add(material.rawMaterialName);
-                    //dgTools.RefreshDataGrid(prodDataGridView);
                 }
                 else
                 {
@@ -543,7 +520,18 @@ namespace workflowLoginForm
                         // Adding all new products to the database
                         foreach (Product p in newProducts)
                         {
-                            dbTools.AddProduct(p);
+                            if (dbTools.CheckProduct(p.productName).Equals(true)) // If product already exists, update the quantity on it
+                            {
+                                // Adding the new product quantity to the existing product
+                                Product tempProduct = dbTools.GetProduct(p.productName);
+                                int newQuant = tempProduct.quantity + p.quantity;
+                                dbTools.EditProductQuant(p.productName, newQuant);
+                            }
+                            else
+                            {
+                                // If product is not already in the database, add a new entry
+                                dbTools.AddProduct(p); 
+                            }
                         }
 
                         // Updating the raw materials database to the new values
@@ -561,6 +549,13 @@ namespace workflowLoginForm
 
                     // Going back to product view
                     viewProdBtn_Click(sender, e);
+
+                    // Clearing all listsList
+                    newProducts.Clear();
+                    matsRemoved.Clear();
+                    matsToRemove.Clear();
+                    matsRemoving.Clear();
+                    productsAdding.Clear();
                 }
             }
             
