@@ -127,6 +127,7 @@
             this.stockDataGridView.RowHeadersWidth = 51;
             this.stockDataGridView.Size = new System.Drawing.Size(845, 635);
             this.stockDataGridView.TabIndex = 5;
+            this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
             // 
             // addItemLbl
             // 

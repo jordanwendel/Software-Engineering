@@ -88,8 +88,11 @@ namespace workflowLoginForm
                     {
                         dbTools.EditQuant(MatName, Quant);
                         dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
-                         dgTools.RefreshDataGrid(stockDataGridView);
-                }
+                        dgTools.RefreshDataGrid(stockDataGridView);
+                        itembox.Clear();
+                        qtnBox.Clear();
+
+                    }
                     catch (Exception err)
                     {
                         MessageBox.Show(err.Message, "Warning!");
@@ -186,9 +189,13 @@ namespace workflowLoginForm
             btnFilter_Click(sender, e);
         }
 
-        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        private void stockDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.Close();
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = stockDataGridView.Rows[e.RowIndex];
+                itembox.Text = row.Cells[0].Value.ToString();
+            }
         }
     }
 }
