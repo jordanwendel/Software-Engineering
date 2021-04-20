@@ -44,5 +44,10 @@ namespace workflowLoginForm
             string SalesCount = salescount.ToString();
             saleslbl.Text = SalesCount;
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
