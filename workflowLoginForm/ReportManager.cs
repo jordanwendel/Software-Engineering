@@ -43,8 +43,13 @@ namespace workflowLoginForm
         {
             // Save file to chosen directory
             rawMatCsvSave = new SaveFileDialog();
+            rawMatCsvSave.FileName = "RawMaterialsReport.csv";
+            rawMatCsvSave.DefaultExt = ".csv";
+            rawMatCsvSave.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
+            rawMatCsvSave.InitialDirectory = @"C:\";
             rawMatCsvSave.ShowDialog();
             string filePath = rawMatCsvSave.FileName;
+            
 
             try
             {
@@ -62,8 +67,35 @@ namespace workflowLoginForm
         // Event handler for Generate Product CSV button click
         private void prodCsvBtn_Click(object sender, EventArgs e)
         {
-            // Save file to chosen directory
+            string fileName;
             productCsvSave = new SaveFileDialog();
+
+            // Switching file name based on which report is needed
+            switch (cBoxProductRep.SelectedItem)
+            {
+                case "In Progress":
+                    fileName = "InProgressProductsReport.csv";
+                    break;
+
+                case "Qualified":
+                    fileName = "QualifiedProductsReport.csv";
+                    break;
+
+                case "Defective":
+                    fileName = "DefectiveProductsReport.csv";
+                    break;
+
+                default:
+                    fileName = "AllProductsReport.csv";
+                    break;
+            }
+
+
+            // Save file to chosen directory
+            productCsvSave.DefaultExt = ".csv";
+            productCsvSave.FileName = fileName;
+            productCsvSave.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
+            productCsvSave.InitialDirectory = @"C:\";
             productCsvSave.ShowDialog();
             string filePath = productCsvSave.FileName;
 

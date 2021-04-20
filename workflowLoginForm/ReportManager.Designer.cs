@@ -110,9 +110,6 @@ namespace workflowLoginForm
             // rawMatCsvSave
             // 
             this.rawMatCsvSave.DefaultExt = "csv";
-            this.rawMatCsvSave.FileName = "rawMaterialsReport.csv";
-            this.rawMatCsvSave.Filter = "csv files (*.csv)|*.csv|All files (*.*)|*.*";
-            this.rawMatCsvSave.InitialDirectory = "C:\\";
             // 
             // cBoxProductRep
             // 
@@ -154,13 +151,13 @@ namespace workflowLoginForm
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // ReportManager
@@ -195,12 +192,12 @@ namespace workflowLoginForm
         private System.Windows.Forms.Button prodCsvBtn;
         private System.Windows.Forms.StatusStrip csvStatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel csvStatusLbl;
-        private System.Windows.Forms.SaveFileDialog rawMatCsvSave;
         private System.Windows.Forms.ComboBox cBoxProductRep;
         private System.Windows.Forms.SaveFileDialog productCsvSave;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.SaveFileDialog rawMatCsvSave;
     }
 }
