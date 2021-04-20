@@ -30,7 +30,6 @@ namespace workflowLoginForm
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.btnInsertInformation = new System.Windows.Forms.Button();
             this.txtQuality = new System.Windows.Forms.TextBox();
             this.txtProductName = new System.Windows.Forms.TextBox();
@@ -64,20 +63,6 @@ namespace workflowLoginForm
             this.label6.TabIndex = 24;
             this.label6.Text = "Product Database";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(79)))), ((int)(((byte)(74)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(15, 390);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 31);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "EXIT";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_2);
             // 
             // btnInsertInformation
             // 
@@ -187,10 +172,10 @@ namespace workflowLoginForm
             this.addProdStatusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.addProdStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblProductAddedStatus});
-            this.addProdStatusStrip.Location = new System.Drawing.Point(0, 428);
+            this.addProdStatusStrip.Location = new System.Drawing.Point(0, 426);
             this.addProdStatusStrip.Name = "addProdStatusStrip";
             this.addProdStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.addProdStatusStrip.Size = new System.Drawing.Size(800, 22);
+            this.addProdStatusStrip.Size = new System.Drawing.Size(800, 24);
             this.addProdStatusStrip.TabIndex = 26;
             this.addProdStatusStrip.Text = "statusStrip1";
             // 
@@ -225,6 +210,7 @@ namespace workflowLoginForm
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
             this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
+            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -242,7 +228,6 @@ namespace workflowLoginForm
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -269,7 +254,6 @@ namespace workflowLoginForm
         #endregion
 
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnInsertInformation;
         private System.Windows.Forms.TextBox txtQuality;
         private System.Windows.Forms.TextBox txtProductName;

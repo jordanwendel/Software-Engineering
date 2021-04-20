@@ -31,7 +31,6 @@ namespace workflowLoginForm
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RawMaterialsForm));
             this.lblRawMat = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.btnInsertInformation = new System.Windows.Forms.Button();
@@ -58,19 +57,6 @@ namespace workflowLoginForm
             this.lblRawMat.TabIndex = 24;
             this.lblRawMat.Text = "Raw Materials Form";
             this.lblRawMat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(80)))), ((int)(((byte)(75)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(15, 406);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(100, 31);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "EXIT ";
-            this.btnExit.UseVisualStyleBackColor = false;
             // 
             // label3
             // 
@@ -143,7 +129,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(800, 31);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -157,7 +143,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 28);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // goBackToolStripMenuItem
@@ -165,12 +151,14 @@ namespace workflowLoginForm
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
             this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
+            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // RawMaterialsForm
             // 
@@ -181,7 +169,6 @@ namespace workflowLoginForm
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRawMat);
-            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnInsertInformation);
@@ -200,7 +187,6 @@ namespace workflowLoginForm
         #endregion
 
         private System.Windows.Forms.Label lblRawMat;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Button btnInsertInformation;

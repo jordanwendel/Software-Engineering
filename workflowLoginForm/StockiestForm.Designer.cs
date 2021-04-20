@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StockiestForm));
             this.Stockiest = new System.Windows.Forms.Label();
-            this.Logout = new System.Windows.Forms.Button();
             this.changeqnt = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.stockDataGridView = new System.Windows.Forms.DataGridView();
@@ -71,20 +70,6 @@
             this.Stockiest.Text = "Stockiest Page";
             this.Stockiest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Logout
-            // 
-            this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(1007, 30);
-            this.Logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(141, 36);
-            this.Logout.TabIndex = 6;
-            this.Logout.Text = "LOG OUT";
-            this.Logout.UseVisualStyleBackColor = false;
-            this.Logout.Click += new System.EventHandler(this.Logout_Click);
-            // 
             // changeqnt
             // 
             this.changeqnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(248)))), ((int)(((byte)(1)))));
@@ -105,7 +90,7 @@
             this.refreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshBtn.Location = new System.Drawing.Point(11, 591);
-            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.refreshBtn.Margin = new System.Windows.Forms.Padding(4);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(129, 43);
             this.refreshBtn.TabIndex = 7;
@@ -122,7 +107,7 @@
             this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.stockDataGridView.Location = new System.Drawing.Point(303, 76);
-            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
             this.stockDataGridView.Size = new System.Drawing.Size(845, 635);
@@ -171,7 +156,7 @@
             this.addNewMat_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewMat_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewMat_Btn.Location = new System.Drawing.Point(11, 239);
-            this.addNewMat_Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addNewMat_Btn.Margin = new System.Windows.Forms.Padding(4);
             this.addNewMat_Btn.Name = "addNewMat_Btn";
             this.addNewMat_Btn.Size = new System.Drawing.Size(260, 37);
             this.addNewMat_Btn.TabIndex = 3;
@@ -215,7 +200,7 @@
             "LESS THAN",
             "EQUAL TO"});
             this.quantityEquations.Location = new System.Drawing.Point(133, 508);
-            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4);
             this.quantityEquations.Name = "quantityEquations";
             this.quantityEquations.Size = new System.Drawing.Size(128, 24);
             this.quantityEquations.TabIndex = 64;
@@ -227,7 +212,7 @@
             "Name",
             "Quantity"});
             this.filterMenu.Location = new System.Drawing.Point(131, 434);
-            this.filterMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterMenu.Margin = new System.Windows.Forms.Padding(4);
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
             this.filterMenu.TabIndex = 62;
@@ -303,7 +288,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1167, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1167, 31);
             this.toolStrip1.TabIndex = 65;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -319,7 +304,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 28);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // viewProductReportToolStripMenuItem
@@ -339,6 +324,7 @@
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
             this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
+            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -371,7 +357,6 @@
             this.Controls.Add(this.stockDataGridView);
             this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.changeqnt);
-            this.Controls.Add(this.Logout);
             this.Controls.Add(this.Stockiest);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StockiestForm";
@@ -388,7 +373,6 @@
         #endregion
 
         private System.Windows.Forms.Label Stockiest;
-        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Button changeqnt;
         private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.DataGridView stockDataGridView;

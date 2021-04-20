@@ -42,6 +42,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace workflowLoginForm
             this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.stockDataGridView.Location = new System.Drawing.Point(349, 69);
-            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
             this.stockDataGridView.Size = new System.Drawing.Size(708, 570);
@@ -152,7 +153,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1055, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(810, 27);
             this.toolStrip1.TabIndex = 75;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -161,6 +162,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.refreshToolStripMenuItem,
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
@@ -174,19 +176,27 @@ namespace workflowLoginForm
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
             this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
+            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // RawMaterialsReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1055, 632);
+            this.ClientSize = new System.Drawing.Size(810, 456);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.averagelbl);
             this.Controls.Add(this.label1);
@@ -219,5 +229,6 @@ namespace workflowLoginForm
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }

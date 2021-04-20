@@ -49,9 +49,10 @@ namespace workflowLoginForm
             // 
             // RawMatbtn
             // 
-            this.RawMatbtn.Location = new System.Drawing.Point(172, 44);
+            this.RawMatbtn.Location = new System.Drawing.Point(408, 102);
+            this.RawMatbtn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.RawMatbtn.Name = "RawMatbtn";
-            this.RawMatbtn.Size = new System.Drawing.Size(240, 90);
+            this.RawMatbtn.Size = new System.Drawing.Size(570, 208);
             this.RawMatbtn.TabIndex = 0;
             this.RawMatbtn.Text = "View Raw Materials Report";
             this.RawMatbtn.UseVisualStyleBackColor = true;
@@ -59,9 +60,10 @@ namespace workflowLoginForm
             // 
             // Productbtn
             // 
-            this.Productbtn.Location = new System.Drawing.Point(446, 44);
+            this.Productbtn.Location = new System.Drawing.Point(1059, 102);
+            this.Productbtn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Productbtn.Name = "Productbtn";
-            this.Productbtn.Size = new System.Drawing.Size(240, 90);
+            this.Productbtn.Size = new System.Drawing.Size(570, 208);
             this.Productbtn.TabIndex = 1;
             this.Productbtn.Text = "View Product Report";
             this.Productbtn.UseVisualStyleBackColor = true;
@@ -69,9 +71,10 @@ namespace workflowLoginForm
             // 
             // RawMatCSVbtn
             // 
-            this.RawMatCSVbtn.Location = new System.Drawing.Point(172, 213);
+            this.RawMatCSVbtn.Location = new System.Drawing.Point(408, 493);
+            this.RawMatCSVbtn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.RawMatCSVbtn.Name = "RawMatCSVbtn";
-            this.RawMatCSVbtn.Size = new System.Drawing.Size(240, 40);
+            this.RawMatCSVbtn.Size = new System.Drawing.Size(570, 92);
             this.RawMatCSVbtn.TabIndex = 2;
             this.RawMatCSVbtn.Text = "Generate Raw Material CSV";
             this.RawMatCSVbtn.UseVisualStyleBackColor = true;
@@ -79,9 +82,10 @@ namespace workflowLoginForm
             // 
             // prodCsvBtn
             // 
-            this.prodCsvBtn.Location = new System.Drawing.Point(446, 213);
+            this.prodCsvBtn.Location = new System.Drawing.Point(1059, 493);
+            this.prodCsvBtn.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.prodCsvBtn.Name = "prodCsvBtn";
-            this.prodCsvBtn.Size = new System.Drawing.Size(240, 40);
+            this.prodCsvBtn.Size = new System.Drawing.Size(570, 92);
             this.prodCsvBtn.TabIndex = 3;
             this.prodCsvBtn.Text = "Generate Product CSV";
             this.prodCsvBtn.UseVisualStyleBackColor = true;
@@ -94,9 +98,10 @@ namespace workflowLoginForm
             this.csvStatusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.csvStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.csvStatusLbl});
-            this.csvStatusStrip.Location = new System.Drawing.Point(0, 428);
+            this.csvStatusStrip.Location = new System.Drawing.Point(0, 1019);
             this.csvStatusStrip.Name = "csvStatusStrip";
-            this.csvStatusStrip.Size = new System.Drawing.Size(800, 22);
+            this.csvStatusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 33, 0);
+            this.csvStatusStrip.Size = new System.Drawing.Size(1900, 22);
             this.csvStatusStrip.TabIndex = 4;
             this.csvStatusStrip.Text = "statusStrip1";
             // 
@@ -119,9 +124,10 @@ namespace workflowLoginForm
             "Qualified",
             "Defective",
             "All Products"});
-            this.cBoxProductRep.Location = new System.Drawing.Point(446, 183);
+            this.cBoxProductRep.Location = new System.Drawing.Point(1059, 423);
+            this.cBoxProductRep.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.cBoxProductRep.Name = "cBoxProductRep";
-            this.cBoxProductRep.Size = new System.Drawing.Size(240, 24);
+            this.cBoxProductRep.Size = new System.Drawing.Size(564, 45);
             this.cBoxProductRep.TabIndex = 5;
             // 
             // toolStrip1
@@ -131,7 +137,8 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1900, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -153,19 +160,21 @@ namespace workflowLoginForm
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
             this.goBackToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
+            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // ReportManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1900, 1041);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.cBoxProductRep);
             this.Controls.Add(this.csvStatusStrip);
@@ -173,6 +182,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.RawMatCSVbtn);
             this.Controls.Add(this.Productbtn);
             this.Controls.Add(this.RawMatbtn);
+            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Name = "ReportManager";
             this.Text = "ReportManager";
             this.csvStatusStrip.ResumeLayout(false);

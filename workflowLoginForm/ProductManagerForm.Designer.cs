@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductManagerForm));
             this.Admin = new System.Windows.Forms.Label();
-            this.Logout = new System.Windows.Forms.Button();
             this.refreshBtn = new System.Windows.Forms.Button();
             this.prodDataGridView = new System.Windows.Forms.DataGridView();
             this.addItemLbl = new System.Windows.Forms.Label();
@@ -66,9 +66,16 @@
             this.viewMaterialsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.stsStripDisplayInfo.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Admin
@@ -81,20 +88,6 @@
             this.Admin.TabIndex = 2;
             this.Admin.Text = "Product Manager Page";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Logout
-            // 
-            this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(1048, 14);
-            this.Logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(131, 33);
-            this.Logout.TabIndex = 5;
-            this.Logout.Text = "LOG OUT";
-            this.Logout.UseVisualStyleBackColor = false;
-            this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // refreshBtn
             // 
@@ -484,6 +477,57 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1193, 31);
+            this.toolStrip1.TabIndex = 66;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4});
+            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 28);
+            this.toolStripDropDownButton1.Text = "Menu";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(238, 26);
+            this.toolStripMenuItem1.Text = "View Product Report";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(238, 26);
+            this.toolStripMenuItem2.Text = "View Materials Report";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(238, 26);
+            this.toolStripMenuItem3.Text = "Go Back";
+            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(238, 26);
+            this.toolStripMenuItem4.Text = "Exit";
+            // 
             // ProductManagerForm
             // 
             this.AcceptButton = this.btnFilter;
@@ -491,6 +535,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1193, 666);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.confirmChangesBtn);
             this.Controls.Add(this.rawMatsView);
             this.Controls.Add(this.itemsView);
@@ -520,7 +565,6 @@
             this.Controls.Add(this.addItemLbl);
             this.Controls.Add(this.prodDataGridView);
             this.Controls.Add(this.refreshBtn);
-            this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductManagerForm";
@@ -531,6 +575,8 @@
             this.stsStripDisplayInfo.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -539,7 +585,6 @@
         #endregion
 
         private System.Windows.Forms.Label Admin;
-        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Button refreshBtn;
         private System.Windows.Forms.DataGridView prodDataGridView;
         private System.Windows.Forms.Label addItemLbl;
@@ -576,6 +621,12 @@
         private System.Windows.Forms.ToolStripMenuItem viewMaterialsReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
     }
 }
 

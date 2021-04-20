@@ -39,9 +39,6 @@
             this.Admin = new System.Windows.Forms.Label();
             this.ItemName = new System.Windows.Forms.TextBox();
             this.Refresh = new System.Windows.Forms.Button();
-            this.quantityEquations = new System.Windows.Forms.ComboBox();
-            this.cBoxQuality = new System.Windows.Forms.ComboBox();
-            this.filterMenu = new System.Windows.Forms.ComboBox();
             this.cBoxLocation = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,14 +48,7 @@
             this.btnFilter = new System.Windows.Forms.Button();
             this.txtFilterByItem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewProductReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMaterialsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // addItemBtn
@@ -117,7 +107,7 @@
             "Satisfactory",
             "Defective"});
             this.qualityMenu.Location = new System.Drawing.Point(131, 149);
-            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.qualityMenu.Name = "qualityMenu";
             this.qualityMenu.Size = new System.Drawing.Size(157, 24);
             this.qualityMenu.TabIndex = 38;
@@ -142,7 +132,7 @@
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.prodDataGridView.Location = new System.Drawing.Point(301, 70);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(831, 615);
@@ -178,7 +168,7 @@
             // ItemName
             // 
             this.ItemName.Location = new System.Drawing.Point(131, 118);
-            this.ItemName.Margin = new System.Windows.Forms.Padding(2);
+            this.ItemName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ItemName.Name = "ItemName";
             this.ItemName.Size = new System.Drawing.Size(157, 22);
             this.ItemName.TabIndex = 47;
@@ -196,50 +186,6 @@
             this.Refresh.Text = "REFRESH";
             this.Refresh.UseVisualStyleBackColor = false;
             this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
-            // 
-            // quantityEquations
-            // 
-            this.quantityEquations.FormattingEnabled = true;
-            this.quantityEquations.Items.AddRange(new object[] {
-            "GREATER THAN",
-            "LESS THAN",
-            "EQUAL TO"});
-            this.quantityEquations.Location = new System.Drawing.Point(119, 549);
-            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4);
-            this.quantityEquations.Name = "quantityEquations";
-            this.quantityEquations.Size = new System.Drawing.Size(128, 24);
-            this.quantityEquations.TabIndex = 64;
-            this.quantityEquations.SelectedIndexChanged += new System.EventHandler(this.quantityEquations_SelectedIndexChanged);
-            // 
-            // cBoxQuality
-            // 
-            this.cBoxQuality.FormattingEnabled = true;
-            this.cBoxQuality.Items.AddRange(new object[] {
-            "Satisfactory",
-            "Defective",
-            "In Progress"});
-            this.cBoxQuality.Location = new System.Drawing.Point(119, 521);
-            this.cBoxQuality.Margin = new System.Windows.Forms.Padding(4);
-            this.cBoxQuality.Name = "cBoxQuality";
-            this.cBoxQuality.Size = new System.Drawing.Size(163, 24);
-            this.cBoxQuality.TabIndex = 63;
-            this.cBoxQuality.SelectedIndexChanged += new System.EventHandler(this.cBoxQuality_SelectedIndexChanged);
-            // 
-            // filterMenu
-            // 
-            this.filterMenu.FormattingEnabled = true;
-            this.filterMenu.Items.AddRange(new object[] {
-            "Name",
-            "Quality",
-            "Quantity",
-            "Location"});
-            this.filterMenu.Location = new System.Drawing.Point(117, 459);
-            this.filterMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.filterMenu.Name = "filterMenu";
-            this.filterMenu.Size = new System.Drawing.Size(163, 24);
-            this.filterMenu.TabIndex = 62;
-            this.filterMenu.Text = "Click to Expand...";
-            this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
             // 
             // cBoxLocation
             // 
@@ -264,7 +210,6 @@
             this.label5.TabIndex = 60;
             this.label5.Text = "Location:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -276,7 +221,6 @@
             this.label4.TabIndex = 59;
             this.label4.Text = "Quantity:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtNum
             // 
@@ -285,7 +229,6 @@
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(27, 22);
             this.txtNum.TabIndex = 58;
-            this.txtNum.TextChanged += new System.EventHandler(this.txtNum_TextChanged);
             // 
             // label3
             // 
@@ -297,7 +240,6 @@
             this.label3.TabIndex = 57;
             this.label3.Text = "Quality:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -310,7 +252,6 @@
             this.label2.TabIndex = 56;
             this.label2.Text = "Filter By:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnFilter
             // 
@@ -342,54 +283,6 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1160, 28);
-            this.menuStrip1.TabIndex = 79;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuToolStripMenuItem
-            // 
-            this.menuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewProductReportToolStripMenuItem,
-            this.viewMaterialsReportToolStripMenuItem,
-            this.goBackToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
-            this.menuToolStripMenuItem.Text = "Menu";
-            // 
-            // viewProductReportToolStripMenuItem
-            // 
-            this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
-            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.viewProductReportToolStripMenuItem.Text = "View Product Report";
-            // 
-            // viewMaterialsReportToolStripMenuItem
-            // 
-            this.viewMaterialsReportToolStripMenuItem.Name = "viewMaterialsReportToolStripMenuItem";
-            this.viewMaterialsReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.viewMaterialsReportToolStripMenuItem.Text = "View Materials Report";
-            // 
-            // goBackToolStripMenuItem
-            // 
-            this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.goBackToolStripMenuItem.Text = "Go Back";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
             // 
             // QualityAnalyzerForm
             // 
@@ -397,11 +290,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1160, 757);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.quantityEquations);
-            this.Controls.Add(this.cBoxQuality);
-            this.Controls.Add(this.filterMenu);
+            this.ClientSize = new System.Drawing.Size(810, 456);
             this.Controls.Add(this.cBoxLocation);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -427,8 +316,6 @@
             this.Text = "Quality Analyzer Form";
             this.Load += new System.EventHandler(this.QualityAnalyzerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,9 +334,6 @@
         private System.Windows.Forms.Label Admin;
         private System.Windows.Forms.TextBox ItemName;
         private System.Windows.Forms.Button Refresh;
-        private System.Windows.Forms.ComboBox quantityEquations;
-        private System.Windows.Forms.ComboBox cBoxQuality;
-        private System.Windows.Forms.ComboBox filterMenu;
         private System.Windows.Forms.ComboBox cBoxLocation;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -459,12 +343,6 @@
         private System.Windows.Forms.Button btnFilter;
         private System.Windows.Forms.TextBox txtFilterByItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewProductReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewMaterialsReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

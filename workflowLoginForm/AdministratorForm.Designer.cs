@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdministratorForm));
             this.Admin = new System.Windows.Forms.Label();
-            this.Logout = new System.Windows.Forms.Button();
             this.stockiestBtn = new System.Windows.Forms.Button();
             this.prodManagerBtn = new System.Windows.Forms.Button();
             this.delManagerBtn = new System.Windows.Forms.Button();
@@ -48,6 +47,7 @@
             this.viewMaterialReoprtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,20 +62,6 @@
             this.Admin.TabIndex = 1;
             this.Admin.Text = "Task Manager";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Logout
-            // 
-            this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(15, 401);
-            this.Logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(133, 37);
-            this.Logout.TabIndex = 5;
-            this.Logout.Text = "LOG OUT";
-            this.Logout.UseVisualStyleBackColor = false;
-            this.Logout.Click += new System.EventHandler(this.Logout_Click);
             // 
             // stockiestBtn
             // 
@@ -216,6 +202,7 @@
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProductReportToolStripMenuItem,
             this.viewMaterialReoprtToolStripMenuItem,
+            this.refreshToolStripMenuItem,
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
@@ -242,12 +229,19 @@
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
             this.goBackToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
+            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // AdministratorForm
             // 
@@ -267,7 +261,6 @@
             this.Controls.Add(this.delManagerBtn);
             this.Controls.Add(this.prodManagerBtn);
             this.Controls.Add(this.stockiestBtn);
-            this.Controls.Add(this.Logout);
             this.Controls.Add(this.Admin);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdministratorForm";
@@ -283,7 +276,6 @@
         #endregion
 
         private System.Windows.Forms.Label Admin;
-        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Button stockiestBtn;
         private System.Windows.Forms.Button prodManagerBtn;
         private System.Windows.Forms.Button delManagerBtn;
@@ -301,6 +293,7 @@
         private System.Windows.Forms.ToolStripMenuItem viewMaterialReoprtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
     }
 }
 

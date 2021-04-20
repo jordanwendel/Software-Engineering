@@ -273,5 +273,10 @@ namespace workflowLoginForm
         {
             btnFilter_Click(sender, e);
         }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -189,6 +189,11 @@ namespace workflowLoginForm
             btnFilter_Click(sender, e);
         }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void stockDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -196,6 +201,11 @@ namespace workflowLoginForm
                 DataGridViewRow row = stockDataGridView.Rows[e.RowIndex];
                 itembox.Text = row.Cells[0].Value.ToString();
             }
+        }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
