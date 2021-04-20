@@ -36,7 +36,11 @@ namespace workflowLoginForm
 
         private void prodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = prodDataGridView.Rows[e.RowIndex];
+                txtItemName.Text = row.Cells[0].Value.ToString();
+            }
         }
 
 
@@ -58,23 +62,27 @@ namespace workflowLoginForm
 
             dbTools.CheckProduct(ProductName);
 
-                if (dbTools.CheckProduct(ProductName).Equals(true))
+            if (dbTools.CheckProduct(ProductName).Equals(true))
+            {
+                try
                 {
-                    try
-                    {
-                        dbTools.EditLocation(ProductName, Location);
-                    }
-                    catch (Exception err)
-                    {
-                        MessageBox.Show(err.Message, "Warning!");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("This item can not be found.");
+                    dbTools.EditLocation(ProductName, Location);
+                    txtItemName.Clear();
+                    locationMenu.Text = String.Empty;
+                    btnRefresh_Click(sender, e);
 
                 }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Warning!");
+                }
             }
+            else
+            {
+                MessageBox.Show("This item can not be found.");
+
+            }
+        }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {

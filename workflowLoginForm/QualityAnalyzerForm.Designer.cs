@@ -140,6 +140,7 @@
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(831, 615);
             this.prodDataGridView.TabIndex = 34;
+            this.prodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDataGridView_CellContentClick);
             // 
             // Logout
             // 

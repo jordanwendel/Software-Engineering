@@ -84,6 +84,10 @@ namespace workflowLoginForm
             txtNum.Enabled = true;
             quantityEquations.Enabled = true;
 
+            // Clearing text fields
+            ItemName.Clear();
+            qualityMenu.Text = String.Empty;
+
 
             // Viewing Products
             if (dgTools.dbName.Equals("Products"))
@@ -116,6 +120,8 @@ namespace workflowLoginForm
                 try
                 {
                     dbTools.EditQuality(ProductName, Quality);
+                    Refresh_Click(sender, e);
+                    
                 }
                 catch (Exception err)
                 {
@@ -332,6 +338,15 @@ namespace workflowLoginForm
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void prodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = prodDataGridView.Rows[e.RowIndex];
+                ItemName.Text = row.Cells[0].Value.ToString();
+            }
         }
     }
 }
