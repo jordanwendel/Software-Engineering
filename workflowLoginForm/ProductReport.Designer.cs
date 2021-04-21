@@ -404,6 +404,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.Stockiest);
             this.Name = "ProductReport";
             this.Text = "ProductReport";
+            this.Load += new System.EventHandler(this.ProductReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
