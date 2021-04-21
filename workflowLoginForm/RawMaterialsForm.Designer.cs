@@ -51,9 +51,9 @@ namespace workflowLoginForm
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRawMat.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRawMat.ForeColor = System.Drawing.Color.White;
-            this.lblRawMat.Location = new System.Drawing.Point(108, 41);
+            this.lblRawMat.Location = new System.Drawing.Point(177, 9);
             this.lblRawMat.Name = "lblRawMat";
-            this.lblRawMat.Size = new System.Drawing.Size(579, 57);
+            this.lblRawMat.Size = new System.Drawing.Size(660, 102);
             this.lblRawMat.TabIndex = 24;
             this.lblRawMat.Text = "Raw Materials Form";
             this.lblRawMat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -62,7 +62,7 @@ namespace workflowLoginForm
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(203, 244);
+            this.label3.Location = new System.Drawing.Point(290, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(156, 22);
             this.label3.TabIndex = 20;
@@ -73,7 +73,7 @@ namespace workflowLoginForm
             // 
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(219, 186);
+            this.lblName.Location = new System.Drawing.Point(306, 202);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(140, 25);
             this.lblName.TabIndex = 19;
@@ -82,13 +82,13 @@ namespace workflowLoginForm
             // 
             // btnInsertInformation
             // 
-            this.btnInsertInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(73)))), ((int)(((byte)(214)))), ((int)(((byte)(98)))));
+            this.btnInsertInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.btnInsertInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertInformation.Location = new System.Drawing.Point(647, 394);
+            this.btnInsertInformation.Location = new System.Drawing.Point(398, 370);
             this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsertInformation.Name = "btnInsertInformation";
-            this.btnInsertInformation.Size = new System.Drawing.Size(133, 43);
+            this.btnInsertInformation.Size = new System.Drawing.Size(200, 50);
             this.btnInsertInformation.TabIndex = 3;
             this.btnInsertInformation.Text = "INSERT";
             this.btnInsertInformation.UseVisualStyleBackColor = false;
@@ -96,7 +96,7 @@ namespace workflowLoginForm
             // 
             // txtRawMatName
             // 
-            this.txtRawMatName.Location = new System.Drawing.Point(364, 188);
+            this.txtRawMatName.Location = new System.Drawing.Point(451, 204);
             this.txtRawMatName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRawMatName.Name = "txtRawMatName";
             this.txtRawMatName.Size = new System.Drawing.Size(212, 22);
@@ -104,7 +104,7 @@ namespace workflowLoginForm
             // 
             // txtRawMatQuanity
             // 
-            this.txtRawMatQuanity.Location = new System.Drawing.Point(364, 245);
+            this.txtRawMatQuanity.Location = new System.Drawing.Point(451, 261);
             this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRawMatQuanity.Name = "txtRawMatQuanity";
             this.txtRawMatQuanity.Size = new System.Drawing.Size(212, 22);
@@ -114,7 +114,7 @@ namespace workflowLoginForm
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(295, 154);
+            this.label1.Location = new System.Drawing.Point(382, 170);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(216, 16);
@@ -124,26 +124,31 @@ namespace workflowLoginForm
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(868, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 31);
+            this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.LightGray;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // goBackToolStripMenuItem
@@ -165,7 +170,7 @@ namespace workflowLoginForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblRawMat);
