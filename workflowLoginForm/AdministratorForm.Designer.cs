@@ -212,7 +212,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(871, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(63, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(105, 31);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -226,42 +226,43 @@
             this.refreshToolStripMenuItem,
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 28);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // viewProductReportToolStripMenuItem
             // 
             this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
-            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.viewProductReportToolStripMenuItem.Text = "View Product Report";
             // 
             // viewMaterialReoprtToolStripMenuItem
             // 
             this.viewMaterialReoprtToolStripMenuItem.Name = "viewMaterialReoprtToolStripMenuItem";
-            this.viewMaterialReoprtToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.viewMaterialReoprtToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.viewMaterialReoprtToolStripMenuItem.Text = "View Material Reoprt";
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
