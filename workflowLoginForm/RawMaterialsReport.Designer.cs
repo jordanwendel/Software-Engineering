@@ -40,9 +40,9 @@ namespace workflowLoginForm
             this.averagelbl = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -68,10 +68,10 @@ namespace workflowLoginForm
             this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.stockDataGridView.Location = new System.Drawing.Point(349, 69);
-            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
-            this.stockDataGridView.Size = new System.Drawing.Size(708, 570);
+            this.stockDataGridView.Size = new System.Drawing.Size(461, 386);
             this.stockDataGridView.TabIndex = 68;
             this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
             // 
@@ -171,25 +171,25 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // RawMaterialsReport
             // 
