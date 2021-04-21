@@ -84,5 +84,6 @@ namespace workflowLoginForm
             boxOccupation.Text = String.Empty;
             confirmpasswordtxt.Text = String.Empty;
         }
+
     }
 }

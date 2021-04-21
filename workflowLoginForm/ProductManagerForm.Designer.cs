@@ -160,10 +160,10 @@
             this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(140, 216);
+            this.addItemBtn.Location = new System.Drawing.Point(134, 220);
             this.addItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(128, 34);
+            this.addItemBtn.Size = new System.Drawing.Size(134, 34);
             this.addItemBtn.TabIndex = 29;
             this.addItemBtn.Text = "ADD ";
             this.addItemBtn.UseVisualStyleBackColor = false;
@@ -360,7 +360,7 @@
             this.removeItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeItemBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.removeItemBtn.Location = new System.Drawing.Point(140, 216);
+            this.removeItemBtn.Location = new System.Drawing.Point(134, 220);
             this.removeItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.removeItemBtn.Name = "removeItemBtn";
             this.removeItemBtn.Size = new System.Drawing.Size(134, 34);
