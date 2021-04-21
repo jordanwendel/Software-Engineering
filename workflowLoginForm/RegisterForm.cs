@@ -25,11 +25,12 @@ namespace workflowLoginForm
         // Event handler for Clear button click
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            // Clear text fields
+            /*/ Clear text fields
             passwordTxt.Text = String.Empty; 
             usernameTxt.Text = String.Empty; 
             boxOccupation.Text = String.Empty;
             confirmpasswordtxt.Text = String.Empty;
+            */
         }
 
         // Event handler for Register button click
@@ -73,6 +74,15 @@ namespace workflowLoginForm
         {
             this.Close();
 
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Clear text fields
+            passwordTxt.Text = String.Empty;
+            usernameTxt.Text = String.Empty;
+            boxOccupation.Text = String.Empty;
+            confirmpasswordtxt.Text = String.Empty;
         }
     }
 }

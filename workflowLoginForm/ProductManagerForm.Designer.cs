@@ -68,9 +68,9 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.stsStripDisplayInfo.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -160,7 +160,7 @@
             this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(195, 216);
+            this.addItemBtn.Location = new System.Drawing.Point(140, 216);
             this.addItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(128, 34);
@@ -360,7 +360,7 @@
             this.removeItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeItemBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.removeItemBtn.Location = new System.Drawing.Point(37, 216);
+            this.removeItemBtn.Location = new System.Drawing.Point(140, 216);
             this.removeItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.removeItemBtn.Name = "removeItemBtn";
             this.removeItemBtn.Size = new System.Drawing.Size(134, 34);
@@ -372,10 +372,10 @@
             // itemsView
             // 
             this.itemsView.HideSelection = false;
-            this.itemsView.Location = new System.Drawing.Point(37, 303);
+            this.itemsView.Location = new System.Drawing.Point(3, 293);
             this.itemsView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.itemsView.Name = "itemsView";
-            this.itemsView.Size = new System.Drawing.Size(121, 71);
+            this.itemsView.Size = new System.Drawing.Size(144, 81);
             this.itemsView.TabIndex = 55;
             this.itemsView.UseCompatibleStateImageBehavior = false;
             this.itemsView.View = System.Windows.Forms.View.SmallIcon;
@@ -383,17 +383,17 @@
             // rawMatsView
             // 
             this.rawMatsView.HideSelection = false;
-            this.rawMatsView.Location = new System.Drawing.Point(171, 303);
+            this.rawMatsView.Location = new System.Drawing.Point(154, 293);
             this.rawMatsView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rawMatsView.Name = "rawMatsView";
-            this.rawMatsView.Size = new System.Drawing.Size(116, 71);
+            this.rawMatsView.Size = new System.Drawing.Size(144, 81);
             this.rawMatsView.TabIndex = 56;
             this.rawMatsView.UseCompatibleStateImageBehavior = false;
             this.rawMatsView.View = System.Windows.Forms.View.SmallIcon;
             // 
             // confirmChangesBtn
             // 
-            this.confirmChangesBtn.Location = new System.Drawing.Point(303, 320);
+            this.confirmChangesBtn.Location = new System.Drawing.Point(303, 319);
             this.confirmChangesBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirmChangesBtn.Name = "confirmChangesBtn";
             this.confirmChangesBtn.Size = new System.Drawing.Size(87, 38);
@@ -457,9 +457,9 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(1082, 9);
+            this.toolStrip1.Location = new System.Drawing.Point(1121, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(102, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(63, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -492,6 +492,13 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(238, 26);
             this.toolStripMenuItem2.Text = "View Materials Report";
             // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
@@ -505,13 +512,6 @@
             this.toolStripMenuItem4.Size = new System.Drawing.Size(238, 26);
             this.toolStripMenuItem4.Text = "Exit";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.refreshToolStripMenuItem.Text = "Refresh";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // ProductManagerForm
             // 
