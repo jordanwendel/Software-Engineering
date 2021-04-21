@@ -316,6 +316,7 @@
             // 
             // toolStripDropDownButton1
             // 
+            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.LightGray;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProductReportToolStripMenuItem,
