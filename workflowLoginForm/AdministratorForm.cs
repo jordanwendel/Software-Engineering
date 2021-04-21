@@ -18,6 +18,7 @@ namespace workflowLoginForm
         private ReportManager ReportManager;
         private StockiestForm Stockpage;
         private QualityAnalyzerForm QualityAnalyzer;
+        private EditUserInfo EditUserInfo;
         private List<User> users;
 
         // Constructor
@@ -119,6 +120,14 @@ namespace workflowLoginForm
         {
             Application.Exit();
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EditUserInfo = new EditUserInfo();
+            this.Hide();
+            EditUserInfo.ShowDialog();
+            this.Show();
         }
     }
 }

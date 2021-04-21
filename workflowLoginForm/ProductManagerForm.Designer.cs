@@ -37,8 +37,6 @@
             this.quantityLbl = new System.Windows.Forms.Label();
             this.filterLbl = new System.Windows.Forms.Label();
             this.addItemBtn = new System.Windows.Forms.Button();
-            this.viewProdBtn = new System.Windows.Forms.Button();
-            this.viewMatBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFilterByItem = new System.Windows.Forms.TextBox();
             this.btnFilter = new System.Windows.Forms.Button();
@@ -71,6 +69,8 @@
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.switchToProductTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.switchToMaterialsTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.stsStripDisplayInfo.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             this.Admin.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.Color.White;
-            this.Admin.Location = new System.Drawing.Point(12, 23);
+            this.Admin.Location = new System.Drawing.Point(14, 9);
             this.Admin.Name = "Admin";
             this.Admin.Size = new System.Drawing.Size(431, 62);
             this.Admin.TabIndex = 2;
@@ -95,11 +95,11 @@
             this.prodDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.prodDataGridView.Location = new System.Drawing.Point(397, 96);
+            this.prodDataGridView.Location = new System.Drawing.Point(397, 75);
             this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
-            this.prodDataGridView.Size = new System.Drawing.Size(787, 538);
+            this.prodDataGridView.Size = new System.Drawing.Size(787, 559);
             this.prodDataGridView.TabIndex = 12;
             this.prodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDataGridView_CellContentClick);
             // 
@@ -168,28 +168,6 @@
             this.addItemBtn.Text = "ADD ";
             this.addItemBtn.UseVisualStyleBackColor = false;
             this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
-            // 
-            // viewProdBtn
-            // 
-            this.viewProdBtn.Location = new System.Drawing.Point(615, 52);
-            this.viewProdBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.viewProdBtn.Name = "viewProdBtn";
-            this.viewProdBtn.Size = new System.Drawing.Size(170, 36);
-            this.viewProdBtn.TabIndex = 30;
-            this.viewProdBtn.Text = "Product Table";
-            this.viewProdBtn.UseVisualStyleBackColor = true;
-            this.viewProdBtn.Click += new System.EventHandler(this.viewProdBtn_Click);
-            // 
-            // viewMatBtn
-            // 
-            this.viewMatBtn.Location = new System.Drawing.Point(854, 52);
-            this.viewMatBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.viewMatBtn.Name = "viewMatBtn";
-            this.viewMatBtn.Size = new System.Drawing.Size(173, 36);
-            this.viewMatBtn.TabIndex = 31;
-            this.viewMatBtn.Text = "Materials Table";
-            this.viewMatBtn.UseVisualStyleBackColor = true;
-            this.viewMatBtn.Click += new System.EventHandler(this.viewMatBtn_Click);
             // 
             // label1
             // 
@@ -471,6 +449,8 @@
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
+            this.switchToProductTableToolStripMenuItem,
+            this.switchToMaterialsTableToolStripMenuItem,
             this.refreshToolStripMenuItem,
             this.toolStripMenuItem3,
             this.toolStripMenuItem4});
@@ -483,35 +463,49 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(238, 26);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(257, 26);
             this.toolStripMenuItem1.Text = "View Product Report";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(238, 26);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(257, 26);
             this.toolStripMenuItem2.Text = "View Materials Report";
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(238, 26);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(257, 26);
             this.toolStripMenuItem3.Text = "Go Back";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(238, 26);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(257, 26);
             this.toolStripMenuItem4.Text = "Exit";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // switchToProductTableToolStripMenuItem
+            // 
+            this.switchToProductTableToolStripMenuItem.Name = "switchToProductTableToolStripMenuItem";
+            this.switchToProductTableToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.switchToProductTableToolStripMenuItem.Text = "Switch to Product Table";
+            this.switchToProductTableToolStripMenuItem.Click += new System.EventHandler(this.switchToProductTableToolStripMenuItem_Click);
+            // 
+            // switchToMaterialsTableToolStripMenuItem
+            // 
+            this.switchToMaterialsTableToolStripMenuItem.Name = "switchToMaterialsTableToolStripMenuItem";
+            this.switchToMaterialsTableToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.switchToMaterialsTableToolStripMenuItem.Text = "Switch to Materials Table";
+            this.switchToMaterialsTableToolStripMenuItem.Click += new System.EventHandler(this.switchToMaterialsTableToolStripMenuItem_Click);
             // 
             // ProductManagerForm
             // 
@@ -539,8 +533,6 @@
             this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.txtFilterByItem);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.viewMatBtn);
-            this.Controls.Add(this.viewProdBtn);
             this.Controls.Add(this.addItemBtn);
             this.Controls.Add(this.filterLbl);
             this.Controls.Add(this.quantityLbl);
@@ -575,8 +567,6 @@
         private System.Windows.Forms.Label quantityLbl;
         private System.Windows.Forms.Label filterLbl;
         private System.Windows.Forms.Button addItemBtn;
-        private System.Windows.Forms.Button viewProdBtn;
-        private System.Windows.Forms.Button viewMatBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtFilterByItem;
         private System.Windows.Forms.Button btnFilter;
@@ -609,6 +599,8 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem switchToProductTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem switchToMaterialsTableToolStripMenuItem;
     }
 }
 

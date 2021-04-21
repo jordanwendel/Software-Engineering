@@ -674,5 +674,53 @@ namespace workflowLoginForm
             }
 
         }
+
+        private void switchToProductTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
+
+            // Clear filtering fields
+            txtFilterByItem.Clear();
+            cBoxLocation.Text = null;
+            cBoxQuality.Text = null;
+            txtNum.Clear();
+            quantityEquations.ResetText();
+            stsStripLabel.Text = "";
+
+            // Populate data grid
+            dgTools.dbName = "Products";
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+            dgTools.PopulateDataGrid(prodDataGridView);
+
+            // Add the filtering options specifically for Products
+            filterMenu.Items.Clear();
+            filterMenu.Items.Add("Name");
+            filterMenu.Items.Add("Quality");
+            filterMenu.Items.Add("Quantity");
+            filterMenu.Items.Add("Location");
+        }
+
+        private void switchToMaterialsTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
+
+            // Clear filtering fields
+            txtFilterByItem.Clear();
+            cBoxLocation.Text = null;
+            cBoxQuality.Text = null;
+            txtNum.Clear();
+            quantityEquations.ResetText();
+            stsStripLabel.Text = "";
+
+            // Populate the data grid
+            dgTools.dbName = "RawMaterials";
+            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+            dgTools.PopulateDataGrid(prodDataGridView);
+
+            // Add the filtering options specifically for Raw Materials
+            filterMenu.Items.Clear();
+            filterMenu.Items.Add("Name");
+            filterMenu.Items.Add("Quantity");
+        }
     }
 }

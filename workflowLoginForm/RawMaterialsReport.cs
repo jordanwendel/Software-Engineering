@@ -21,14 +21,15 @@ namespace workflowLoginForm
             InitializeComponent();
             dgTools = new DataGridTools();
             dbReport = new DatabaseReport();
-
         }
 
-        private void stockDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void RawMaterialsReport_Load(object sender, EventArgs e)
         {
-
+            // Fill the data grid view on form with contents of given database using a data grid object
+            dgTools.dbName = "RawMaterials";
+            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+            dgTools.PopulateDataGrid(stockDataGridView);
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             int Count = dbReport.CountMaterials();

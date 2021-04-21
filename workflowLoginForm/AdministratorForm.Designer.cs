@@ -48,7 +48,7 @@
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.edituserbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
@@ -212,7 +212,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(871, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(105, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -231,7 +231,7 @@
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // viewProductReportToolStripMenuItem
@@ -266,20 +266,21 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // button1
+            // edituserbtn
             // 
-            this.button1.BackColor = System.Drawing.Color.LightGray;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(637, 354);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(222, 56);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "EDIT USER INFORMATION";
-            this.button1.UseVisualStyleBackColor = false;
+            this.edituserbtn.BackColor = System.Drawing.Color.LightGray;
+            this.edituserbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.edituserbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.edituserbtn.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edituserbtn.ForeColor = System.Drawing.Color.Black;
+            this.edituserbtn.Location = new System.Drawing.Point(637, 354);
+            this.edituserbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.edituserbtn.Name = "edituserbtn";
+            this.edituserbtn.Size = new System.Drawing.Size(222, 56);
+            this.edituserbtn.TabIndex = 18;
+            this.edituserbtn.Text = "EDIT USER INFORMATION";
+            this.edituserbtn.UseVisualStyleBackColor = false;
+            this.edituserbtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -313,7 +314,7 @@
             this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.edituserbtn);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.registerBtn);
             this.Controls.Add(this.qualityAnalyzerNames);
@@ -359,7 +360,7 @@
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button edituserbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

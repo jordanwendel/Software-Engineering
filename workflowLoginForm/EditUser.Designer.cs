@@ -127,7 +127,7 @@ namespace workflowLoginForm
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(763, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(70, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(68, 28);
             this.menuStrip1.TabIndex = 79;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -167,6 +167,7 @@ namespace workflowLoginForm
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -334,7 +335,7 @@ namespace workflowLoginForm
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(101, 34);
             this.addItemBtn.TabIndex = 104;
-            this.addItemBtn.Text = "ADD ";
+            this.addItemBtn.Text = "EDIT";
             this.addItemBtn.UseVisualStyleBackColor = false;
             // 
             // EditUserInfo

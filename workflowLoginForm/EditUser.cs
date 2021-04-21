@@ -12,11 +12,6 @@ namespace workflowLoginForm
 {
     public partial class EditUserInfo : Form
     {
-        private DeliveryManagerForm DeliveryManager;
-        private ProductManagerForm ProductManager;
-        private ReportManager ReportManager;
-        private StockiestForm Stockpage;
-        private QualityAnalyzerForm QualityAnalyzer;
         private List<User> users;
         public EditUserInfo()
         {
@@ -57,14 +52,10 @@ namespace workflowLoginForm
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -32,7 +32,6 @@ namespace workflowLoginForm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RawMaterialsReport));
             this.lblNumbers = new System.Windows.Forms.Label();
             this.stockDataGridView = new System.Windows.Forms.DataGridView();
-            this.Logout = new System.Windows.Forms.Button();
             this.Stockiest = new System.Windows.Forms.Label();
             this.countlbl = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -51,7 +50,7 @@ namespace workflowLoginForm
             // 
             this.lblNumbers.Font = new System.Drawing.Font("Impact", 14F);
             this.lblNumbers.ForeColor = System.Drawing.Color.White;
-            this.lblNumbers.Location = new System.Drawing.Point(29, 69);
+            this.lblNumbers.Location = new System.Drawing.Point(59, 183);
             this.lblNumbers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumbers.Name = "lblNumbers";
             this.lblNumbers.Size = new System.Drawing.Size(288, 44);
@@ -67,26 +66,12 @@ namespace workflowLoginForm
             this.stockDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.stockDataGridView.Location = new System.Drawing.Point(349, 69);
+            this.stockDataGridView.Location = new System.Drawing.Point(390, 88);
             this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
-            this.stockDataGridView.Size = new System.Drawing.Size(848, 598);
+            this.stockDataGridView.Size = new System.Drawing.Size(794, 567);
             this.stockDataGridView.TabIndex = 68;
-            this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
-            // 
-            // Logout
-            // 
-            this.Logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(57)))), ((int)(((byte)(52)))));
-            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.Location = new System.Drawing.Point(1002, 22);
-            this.Logout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(141, 36);
-            this.Logout.TabIndex = 69;
-            this.Logout.Text = "LOG OUT";
-            this.Logout.UseVisualStyleBackColor = false;
             // 
             // Stockiest
             // 
@@ -104,7 +89,7 @@ namespace workflowLoginForm
             // 
             this.countlbl.Font = new System.Drawing.Font("Impact", 10F);
             this.countlbl.ForeColor = System.Drawing.Color.White;
-            this.countlbl.Location = new System.Drawing.Point(52, 113);
+            this.countlbl.Location = new System.Drawing.Point(82, 227);
             this.countlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.countlbl.Name = "countlbl";
             this.countlbl.Size = new System.Drawing.Size(241, 44);
@@ -114,11 +99,11 @@ namespace workflowLoginForm
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(228, 43);
+            this.button1.Location = new System.Drawing.Point(144, 88);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(101, 36);
             this.button1.TabIndex = 72;
-            this.button1.Text = "button1";
+            this.button1.Text = "Generate";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -126,7 +111,7 @@ namespace workflowLoginForm
             // 
             this.label1.Font = new System.Drawing.Font("Impact", 14F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(15, 168);
+            this.label1.Location = new System.Drawing.Point(39, 310);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(326, 44);
@@ -138,7 +123,7 @@ namespace workflowLoginForm
             // 
             this.averagelbl.Font = new System.Drawing.Font("Impact", 10F);
             this.averagelbl.ForeColor = System.Drawing.Color.White;
-            this.averagelbl.Location = new System.Drawing.Point(52, 212);
+            this.averagelbl.Location = new System.Drawing.Point(76, 354);
             this.averagelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.averagelbl.Name = "averagelbl";
             this.averagelbl.Size = new System.Drawing.Size(241, 44);
@@ -148,12 +133,13 @@ namespace workflowLoginForm
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(1072, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1197, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(73, 31);
             this.toolStrip1.TabIndex = 75;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -168,7 +154,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 28);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // refreshToolStripMenuItem
@@ -204,7 +190,6 @@ namespace workflowLoginForm
             this.Controls.Add(this.countlbl);
             this.Controls.Add(this.lblNumbers);
             this.Controls.Add(this.stockDataGridView);
-            this.Controls.Add(this.Logout);
             this.Controls.Add(this.Stockiest);
             this.Name = "RawMaterialsReport";
             this.Text = "Raw Materials Report";
@@ -219,7 +204,6 @@ namespace workflowLoginForm
         #endregion
         private System.Windows.Forms.Label lblNumbers;
         private System.Windows.Forms.DataGridView stockDataGridView;
-        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Label Stockiest;
         public System.Windows.Forms.Label countlbl;
         private System.Windows.Forms.Button button1;

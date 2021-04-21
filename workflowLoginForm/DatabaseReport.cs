@@ -115,9 +115,52 @@ namespace workflowLoginForm
             {
                 cn.Close();
             }
-
         }
-
+        public int BadProducts()
+        {
+            try
+            {
+                cn.Open();
+                int badcount = 0;
+                cmd = new SqlCommand("SELECT Count (*) From Products WHERE Quality = 'Defective' ", cn);
+                badcount = (int)cmd.ExecuteScalar();
+                return badcount;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public int ProgressProducts()
+        {
+            try
+            {
+                cn.Open();
+                int progresscount = 0;
+                cmd = new SqlCommand("SELECT Count (*) From Products WHERE Quality = 'In Progress' ", cn);
+                progresscount = (int)cmd.ExecuteScalar();
+                return progresscount;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+        public int ManuProducts()
+        {
+            try
+            {
+                cn.Open();
+                int manucount = 0;
+                cmd = new SqlCommand("SELECT Count (*) From Products WHERE Location = 'Manufacturing' ", cn);
+                manucount = (int)cmd.ExecuteScalar();
+                return manucount;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
         public int SalesProducts()
         {
             try
@@ -132,7 +175,6 @@ namespace workflowLoginForm
             {
                 cn.Close();
             }
-
         }
 
     }
