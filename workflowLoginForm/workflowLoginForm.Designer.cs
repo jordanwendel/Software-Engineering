@@ -53,10 +53,10 @@ namespace workflowLoginForm
             this.title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.title.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.White;
-            this.title.Location = new System.Drawing.Point(4, 109);
+            this.title.Location = new System.Drawing.Point(4, 118);
             this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(518, 80);
+            this.title.Size = new System.Drawing.Size(516, 80);
             this.title.TabIndex = 0;
             this.title.Text = "BIKES \"R\" US";
             this.title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -72,7 +72,7 @@ namespace workflowLoginForm
             this.userNameLabel.Location = new System.Drawing.Point(82, 198);
             this.userNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userNameLabel.Name = "userNameLabel";
-            this.userNameLabel.Size = new System.Drawing.Size(150, 28);
+            this.userNameLabel.Size = new System.Drawing.Size(148, 26);
             this.userNameLabel.TabIndex = 1;
             this.userNameLabel.Text = "Username:";
             this.userNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -88,7 +88,7 @@ namespace workflowLoginForm
             this.passwordTxt.Location = new System.Drawing.Point(87, 239);
             this.passwordTxt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.passwordTxt.Name = "passwordTxt";
-            this.passwordTxt.Size = new System.Drawing.Size(145, 28);
+            this.passwordTxt.Size = new System.Drawing.Size(143, 26);
             this.passwordTxt.TabIndex = 2;
             this.passwordTxt.Text = "Password:";
             this.passwordTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,7 +100,7 @@ namespace workflowLoginForm
             this.txtUserName.Location = new System.Drawing.Point(240, 204);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(167, 22);
+            this.txtUserName.Size = new System.Drawing.Size(165, 22);
             this.txtUserName.TabIndex = 1;
             // 
             // txtPassword
@@ -111,7 +111,7 @@ namespace workflowLoginForm
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(167, 22);
+            this.txtPassword.Size = new System.Drawing.Size(165, 22);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -123,7 +123,7 @@ namespace workflowLoginForm
             this.loginBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginBtn.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(157, 295);
+            this.loginBtn.Location = new System.Drawing.Point(155, 295);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(222, 53);
@@ -172,7 +172,8 @@ namespace workflowLoginForm
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.bikeLogo);
             this.panel1.Controls.Add(this.loginBtn);
             this.panel1.Controls.Add(this.userNameLabel);
@@ -190,10 +191,11 @@ namespace workflowLoginForm
             this.bikeLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.bikeLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.bikeLogo.Image = global::workflowLoginForm.Properties.Resources.LogoBlack_1_50;
-            this.bikeLogo.Location = new System.Drawing.Point(212, 3);
+            this.bikeLogo.Location = new System.Drawing.Point(210, 13);
             this.bikeLogo.Name = "bikeLogo";
-            this.bikeLogo.Size = new System.Drawing.Size(113, 112);
+            this.bikeLogo.Size = new System.Drawing.Size(113, 110);
             this.bikeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bikeLogo.TabIndex = 4;
             this.bikeLogo.TabStop = false;
