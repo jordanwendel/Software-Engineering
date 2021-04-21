@@ -24,7 +24,6 @@ namespace workflowLoginForm
         private List<String> lstProductsToAdd;
         private List<String> lstMatsToRemove;
 
-        // Variables
 
         // Constructor
         public ProductManagerForm()
@@ -58,58 +57,9 @@ namespace workflowLoginForm
             removeItemBtn.Visible = false;
         }
 
-        // Event handler for Refresh Inventory button click
-        private void refreshBtn_Click(object sender, EventArgs e)
-        {
-            /* Clear the filtering text fields when refreshing data grid
-            filterMenu.Text = "Click to expand...";
-            txtFilterByItem.Clear();
-            cBoxLocation.Text = null;
-            cBoxQuality.Text = null;
-            txtNum.Clear();
-            quantityEquations.Text = null;
-
-            // Re-enabling all search fields
-            cBoxQuality.Enabled = true;
-            cBoxLocation.Enabled = true;
-            txtFilterByItem.Enabled = true;
-            txtNum.Enabled = true;
-            quantityEquations.Enabled = true;
-
-            // Clearing all lists
-            newProducts.Clear();
-            matsRemoved.Clear();
-            matsToRemove.Clear();
-            lstMatsToRemove.Clear();
-            lstProductsToAdd.Clear();
-
-            // Clearing all list views
-            itemsView.Items.Clear();
-            rawMatsView.Items.Clear();
 
 
-            // Viewing Products
-            if (dgTools.dbName.Equals("Products"))
-            {
-                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
-
-                dgTools.RefreshDataGrid(prodDataGridView);
-            }
-
-            // Viewing Raw Materials
-            else if (dgTools.dbName.Equals("RawMaterials"))
-            {
-                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
-
-                dgTools.RefreshDataGrid(prodDataGridView);
-            }
-
-            */
-
-            
-        }
-
-
+        // Event handler for View Products button click
         private void viewProdBtn_Click(object sender, EventArgs e)
         {
             filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
@@ -136,6 +86,7 @@ namespace workflowLoginForm
 
         }
 
+        // Event handler for View Materials button click
         private void viewMatBtn_Click(object sender, EventArgs e)
         {
             filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
@@ -160,6 +111,7 @@ namespace workflowLoginForm
         }
 
         // NEED TO ERROR CATCH WHEN INCORRECT STRING INPUT IS USED
+        // Event handler for Filter button click
         private void btnFilter_Click(object sender, EventArgs e)
         {
             string info = txtFilterByItem.Text;
@@ -178,7 +130,7 @@ namespace workflowLoginForm
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
-                        //get the size of each result
+                        // Get the size of each result to display the matched records
                         int dataGridSize = 0;
                         foreach (DataGridViewRow row in prodDataGridView.Rows)
                         {
@@ -195,7 +147,8 @@ namespace workflowLoginForm
                         dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
                         
                         dgTools.PopulateDataGrid(prodDataGridView);
-                        
+
+                        // Get the size of each result to display the matched records
                         int dataGridSize = 0;
                         foreach (DataGridViewRow row in prodDataGridView.Rows)
                         {
@@ -231,7 +184,6 @@ namespace workflowLoginForm
                         }
 
                         // Entered quanitity is negative
-                        
                         else
                         {
                             MessageBox.Show("Quantity must be greater than zero");
@@ -241,6 +193,7 @@ namespace workflowLoginForm
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
+                        // Get the size of each result to display the matched records
                         int dataGridSize = 0;
                         foreach (DataGridViewRow row in prodDataGridView.Rows)
                         {
@@ -258,6 +211,7 @@ namespace workflowLoginForm
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
+                        // Get the size of each result to display the matched records
                         int dataGridSize = 0;
                         foreach (DataGridViewRow row in prodDataGridView.Rows)
                         {
@@ -286,6 +240,7 @@ namespace workflowLoginForm
 
                         dgTools.PopulateDataGrid(prodDataGridView);
 
+                        // Get the size of each result to display the matched records
                         int dataGridSize = 0;
                         foreach (DataGridViewRow row in prodDataGridView.Rows)
                         {
@@ -317,12 +272,14 @@ namespace workflowLoginForm
                                 dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + N + "'";
                             }
 
+                            // Get the size of each result to display the matched records
                             int dataGridSize = 0;
                             foreach (DataGridViewRow row in prodDataGridView.Rows)
                             {
                                 dataGridSize++;
                             }
 
+                            // Showing filtering results
                             stsStripLabel.Text = "There is/are " + (dataGridSize - 1) + " result(s) that matched your filter";
                         }
 
@@ -346,19 +303,26 @@ namespace workflowLoginForm
 
         }
 
+        
+        // Event handler for Add button click
         private void addItemBtn_Click(object sender, EventArgs e)
         {
-            lstProductsToAdd = new List<String>();
+            lstProductsToAdd = new List<String>(); // For formatting items into a string to confirm changes on screen
+
+            // Getting the text fields on screen
             string ProductName = txtName.Text;
             int Quantity = int.Parse(txtQuantity.Text);
 
-            newProduct = new Product(ProductName, "", Quantity, "");
+            newProduct = new Product(ProductName, "", Quantity, ""); // Creating Product object with the text fields
             newProducts.Add(newProduct);
+
+            // Clear list view
             itemsView.Items.Clear();
 
+            // Format each product to display in list views
             foreach (Product prod in newProducts)
             {
-                string s = prod.quantity.ToString() + "x " + prod.productName;
+                string s = prod.quantity.ToString() + "x " + prod.productName; // Format to display -> (quantity)x (name)
                 lstProductsToAdd.Add(s);
                 itemsView.Items.Add(s);
             }
@@ -373,6 +337,8 @@ namespace workflowLoginForm
             quantityEquations.Text = null;
         }
 
+        
+        // Event handler for filter menu drop down
         private void filterMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (dgTools.dbName.Equals("Products"))
@@ -438,10 +404,12 @@ namespace workflowLoginForm
         }
 
 
+        // Event handler for Remove button click
         private void removeItemBtn_Click(object sender, EventArgs e)
         {
-            lstMatsToRemove = new List<String>();
-            matsToRemove = new List<RawMaterial>();
+            // Creating lists
+            lstMatsToRemove = new List<String>(); // For formatting items into a string to confirm changes on screen
+            matsToRemove = new List<RawMaterial>(); // For storing the materials the user wants to remove
 
 
             if (dbTools.CheckMat(txtName.Text).Equals(true)) // Checking if the material exists in the database
@@ -461,16 +429,18 @@ namespace workflowLoginForm
                     newMaterial = new RawMaterial(tempMaterial.rawMaterialName, newQuantity); // What we want the product to be after making changes
                     matsToRemove.Add(newMaterial); // Adding that to a list to track values
 
-                    //string quantity = txtQuantity.Text;
 
-                    rawMatsView.Items.Clear(); // Clearing list box
+                    rawMatsView.Items.Clear(); // Clearing list view
 
+                    // Format each material to display in list views
                     foreach (RawMaterial mat in matsRemoved)
                     {
-                        string s = mat.quantity.ToString() + "x " + mat.rawMaterialName;
+                        string s = mat.quantity.ToString() + "x " + mat.rawMaterialName; // Format to display -> (quantity)x (name) 
                         lstMatsToRemove.Add(s);
                         rawMatsView.Items.Add(s);
                     }
+
+                    // Clear text fields
                     txtName.Clear();
                     txtQuantity.Clear();
                 }
@@ -486,37 +456,45 @@ namespace workflowLoginForm
             }
         }
 
-
+        
+        // Event handler for Confirm button click
         private void confirmChangesBtn_Click(object sender, EventArgs e)
         {
+            // Pressing confirm after adding products
             if (dgTools.dbName.Equals("Products"))
             {
                 MessageBox.Show("Please Remove Necessary Raw Materials");
 
-                viewMatBtn_Click(sender, e);
+                viewMatBtn_Click(sender, e); // Switch to Raw Materials data grid view
 
                 addItemLbl.Text = "Remove Materials";
 
+                // Switching from Add button to Remove button
                 addItemBtn.Visible = false;
-
                 removeItemBtn.Visible = true;
             }
+
+            // Pressing confirm after removing materials
             else
             {
-                string prod = String.Join("\n", lstProductsToAdd);
+                // Creating a formatted string from the products and raw materials
+                string prod = String.Join("\n", lstProductsToAdd); // Joining each item in the list with a newline at the end
                 string mat = String.Join("\n", lstMatsToRemove);
 
+                // Listing the products and raw materials on the screen
                 string confirm ="You are adding:\n" +
-                                    prod + "\n\n" +
+                                 prod + "\n\n" +
                                  "You are removing:\n" +
-                                    mat + "\n\n" +
-                                    "Is this correct?";
+                                 mat + "\n\n" +
+                                 "Is this correct?";
 
+                // Yes or no to confirm
                 DialogResult result = MessageBox.Show(confirm, "Confirm Changes", MessageBoxButtons.YesNo); // Confirming changes
 
+                // If user selects yes, update the databases
                 if (result.Equals(DialogResult.Yes))
                 {
-                    // Switching buttons
+                    // Switching back to the Add button from the Remove button
                     addItemBtn.Visible = true;
                     removeItemBtn.Visible = false;
 
@@ -532,9 +510,11 @@ namespace workflowLoginForm
                             if (dbTools.CheckProduct(p.productName).Equals(true)) // If product already exists, update the quantity on it
                             {
                                 // Adding the new product quantity to the existing product
-                                Product tempProduct = dbTools.GetProduct(p.productName);
-                                int newQuant = tempProduct.quantity + p.quantity;
-                                dbTools.EditProductQuant(p.productName, newQuant);
+                                Product tempProduct = dbTools.GetProduct(p.productName); // Returns a product object with the current quantity before changes
+
+                                int newQuant = tempProduct.quantity + p.quantity; // Calculating new quantity after removing items
+
+                                dbTools.EditProductQuant(p.productName, newQuant); // Editing the product quantity in the database to reflect changes
                             }
                             else
                             {
@@ -591,6 +571,8 @@ namespace workflowLoginForm
             btnFilter_Click(sender, e);
         }
 
+
+        // Event handler for clicking on a row in the data grid
         private void prodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgTools.dbName.Equals("Products"))
@@ -598,9 +580,8 @@ namespace workflowLoginForm
                 // Update the text fields to display the selected product info
                 if (e.RowIndex >= 0)
                 {
-                    DataGridViewRow row = prodDataGridView.Rows[e.RowIndex];
-                    txtName.Text = row.Cells[0].Value.ToString();
-                    //txtQuantity.Text = row.Cells[1].Value.ToString();
+                    DataGridViewRow row = prodDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
+                    txtName.Text = row.Cells[0].Value.ToString(); // Selecting the product name from the row object
                 }
             }
             else
@@ -615,17 +596,20 @@ namespace workflowLoginForm
             }
         }
 
+        // Event handler for Go Back menu item click
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
             this.Close();
 
         }
 
+        // Event handler for Exit menu item click
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        // Event handler for Refresh menu item click
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Clear the filtering text fields when refreshing data grid
@@ -636,7 +620,7 @@ namespace workflowLoginForm
             txtNum.Clear();
             quantityEquations.Text = null;
 
-            // Re-enabling all search fields
+            // Re-enabling all filter fields
             cBoxQuality.Enabled = true;
             cBoxLocation.Enabled = true;
             txtFilterByItem.Enabled = true;
@@ -644,7 +628,6 @@ namespace workflowLoginForm
             quantityEquations.Enabled = true;
 
             // Clearing all lists
-
             if (newProducts != null)
             {
                 newProducts.Clear();
