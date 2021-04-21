@@ -560,11 +560,26 @@ namespace workflowLoginForm
                     viewProdBtn_Click(sender, e);
 
                     // Clearing all lists
-                    newProducts.Clear();
-                    matsRemoved.Clear();
-                    matsToRemove.Clear();
-                    lstMatsToRemove.Clear();
-                    lstProductsToAdd.Clear();
+                    if (newProducts != null)
+                    {
+                        newProducts.Clear();
+                    }
+                    if (matsToRemove != null)
+                    {
+                        matsToRemove.Clear();
+                    }
+                    if (matsRemoved != null)
+                    {
+                        matsRemoved.Clear();
+                    }
+                    if (lstMatsToRemove != null)
+                    {
+                        lstMatsToRemove.Clear();
+                    }
+                    if (lstProductsToAdd != null)
+                    {
+                        lstProductsToAdd.Clear();
+                    }
                 }
             }
             
@@ -629,11 +644,30 @@ namespace workflowLoginForm
             quantityEquations.Enabled = true;
 
             // Clearing all lists
-            newProducts.Clear();
-            matsRemoved.Clear();
-            matsToRemove.Clear();
-            lstMatsToRemove.Clear();
-            lstProductsToAdd.Clear();
+
+            if (newProducts != null)
+            {
+                newProducts.Clear();
+            }
+            if (matsToRemove != null)
+            {
+                matsToRemove.Clear();
+            }
+            if (matsRemoved != null)
+            {
+                matsRemoved.Clear();
+            }
+            if (lstMatsToRemove != null)
+            {
+                lstMatsToRemove.Clear();
+            }
+            if (lstProductsToAdd != null)
+            {
+                lstProductsToAdd.Clear();
+            }
+            
+            
+            
 
             // Clearing all list views
             itemsView.Items.Clear();
