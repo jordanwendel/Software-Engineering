@@ -66,11 +66,11 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.switchToProductTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.switchToMaterialsTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.switchToProductTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.switchToMaterialsTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.stsStripDisplayInfo.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -350,10 +350,10 @@
             // itemsView
             // 
             this.itemsView.HideSelection = false;
-            this.itemsView.Location = new System.Drawing.Point(3, 293);
+            this.itemsView.Location = new System.Drawing.Point(3, 258);
             this.itemsView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.itemsView.Name = "itemsView";
-            this.itemsView.Size = new System.Drawing.Size(144, 81);
+            this.itemsView.Size = new System.Drawing.Size(192, 116);
             this.itemsView.TabIndex = 55;
             this.itemsView.UseCompatibleStateImageBehavior = false;
             this.itemsView.View = System.Windows.Forms.View.SmallIcon;
@@ -361,17 +361,17 @@
             // rawMatsView
             // 
             this.rawMatsView.HideSelection = false;
-            this.rawMatsView.Location = new System.Drawing.Point(154, 293);
+            this.rawMatsView.Location = new System.Drawing.Point(201, 258);
             this.rawMatsView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rawMatsView.Name = "rawMatsView";
-            this.rawMatsView.Size = new System.Drawing.Size(144, 81);
+            this.rawMatsView.Size = new System.Drawing.Size(189, 116);
             this.rawMatsView.TabIndex = 56;
             this.rawMatsView.UseCompatibleStateImageBehavior = false;
             this.rawMatsView.View = System.Windows.Forms.View.SmallIcon;
             // 
             // confirmChangesBtn
             // 
-            this.confirmChangesBtn.Location = new System.Drawing.Point(303, 319);
+            this.confirmChangesBtn.Location = new System.Drawing.Point(303, 391);
             this.confirmChangesBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirmChangesBtn.Name = "confirmChangesBtn";
             this.confirmChangesBtn.Size = new System.Drawing.Size(87, 38);
@@ -472,6 +472,20 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(257, 26);
             this.toolStripMenuItem2.Text = "View Materials Report";
             // 
+            // switchToProductTableToolStripMenuItem
+            // 
+            this.switchToProductTableToolStripMenuItem.Name = "switchToProductTableToolStripMenuItem";
+            this.switchToProductTableToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.switchToProductTableToolStripMenuItem.Text = "Switch to Product Table";
+            this.switchToProductTableToolStripMenuItem.Click += new System.EventHandler(this.switchToProductTableToolStripMenuItem_Click);
+            // 
+            // switchToMaterialsTableToolStripMenuItem
+            // 
+            this.switchToMaterialsTableToolStripMenuItem.Name = "switchToMaterialsTableToolStripMenuItem";
+            this.switchToMaterialsTableToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.switchToMaterialsTableToolStripMenuItem.Text = "Switch to Materials Table";
+            this.switchToMaterialsTableToolStripMenuItem.Click += new System.EventHandler(this.switchToMaterialsTableToolStripMenuItem_Click);
+            // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
@@ -492,20 +506,6 @@
             this.toolStripMenuItem4.Size = new System.Drawing.Size(257, 26);
             this.toolStripMenuItem4.Text = "Exit";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
-            // switchToProductTableToolStripMenuItem
-            // 
-            this.switchToProductTableToolStripMenuItem.Name = "switchToProductTableToolStripMenuItem";
-            this.switchToProductTableToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
-            this.switchToProductTableToolStripMenuItem.Text = "Switch to Product Table";
-            this.switchToProductTableToolStripMenuItem.Click += new System.EventHandler(this.switchToProductTableToolStripMenuItem_Click);
-            // 
-            // switchToMaterialsTableToolStripMenuItem
-            // 
-            this.switchToMaterialsTableToolStripMenuItem.Name = "switchToMaterialsTableToolStripMenuItem";
-            this.switchToMaterialsTableToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
-            this.switchToMaterialsTableToolStripMenuItem.Text = "Switch to Materials Table";
-            this.switchToMaterialsTableToolStripMenuItem.Click += new System.EventHandler(this.switchToMaterialsTableToolStripMenuItem_Click);
             // 
             // ProductManagerForm
             // 

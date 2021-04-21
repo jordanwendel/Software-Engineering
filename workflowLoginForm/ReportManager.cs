@@ -41,6 +41,7 @@ namespace workflowLoginForm
         // Event handler for Generate Raw Material CSV button click
         private void RawMatCSVbtn_Click(object sender, EventArgs e)
         {
+
             // Save file to chosen directory
             rawMatCsvSave = new SaveFileDialog();
             rawMatCsvSave.FileName = "RawMaterialsReport.csv";
@@ -61,7 +62,11 @@ namespace workflowLoginForm
                 MessageBox.Show(err.Message, "Issue writing to CSV");
             }
 
-            csvStatusLbl.Text = "Successfully wrote to CSV!";
+            //if (rawMatCsvSave)
+            //{
+                csvStatusLbl.Text = "Successfully wrote to CSV!";
+            //}
+            
         }
 
         // Event handler for Generate Product CSV button click
