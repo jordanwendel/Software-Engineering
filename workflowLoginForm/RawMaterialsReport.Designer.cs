@@ -71,7 +71,7 @@ namespace workflowLoginForm
             this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
-            this.stockDataGridView.Size = new System.Drawing.Size(461, 386);
+            this.stockDataGridView.Size = new System.Drawing.Size(848, 598);
             this.stockDataGridView.TabIndex = 68;
             this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
             // 
@@ -153,7 +153,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(810, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1197, 27);
             this.toolStrip1.TabIndex = 75;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -196,7 +196,7 @@ namespace workflowLoginForm
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(810, 456);
+            this.ClientSize = new System.Drawing.Size(1197, 668);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.averagelbl);
             this.Controls.Add(this.label1);
