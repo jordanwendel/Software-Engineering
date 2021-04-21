@@ -247,6 +247,9 @@
     <None Include="Resources\Push &amp; Pedal Inc..png" />
     <None Include="Resources\Push__Pedal_Inc._20.png" />
     <Content Include="Push__Pedal_Inc._20.ico" />
+    <None Include="Resources\LogoBlack.png" />
+    <None Include="Resources\LogoBlack_20.png" />
+    <None Include="Resources\LogoBlack_1_50.png" />
     <Content Include="UserLoginData.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

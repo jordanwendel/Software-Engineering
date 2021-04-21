@@ -53,7 +53,7 @@ namespace workflowLoginForm
             this.title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.title.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.White;
-            this.title.Location = new System.Drawing.Point(4, 118);
+            this.title.Location = new System.Drawing.Point(4, 109);
             this.title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(518, 80);
@@ -123,10 +123,10 @@ namespace workflowLoginForm
             this.loginBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.loginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.loginBtn.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginBtn.Location = new System.Drawing.Point(195, 296);
+            this.loginBtn.Location = new System.Drawing.Point(157, 295);
             this.loginBtn.Margin = new System.Windows.Forms.Padding(4);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(161, 53);
+            this.loginBtn.Size = new System.Drawing.Size(222, 53);
             this.loginBtn.TabIndex = 3;
             this.loginBtn.Text = "LOGIN";
             this.loginBtn.UseVisualStyleBackColor = false;
@@ -142,7 +142,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(9, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(66, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -157,7 +157,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // logOutToolStripMenuItem
@@ -190,10 +190,10 @@ namespace workflowLoginForm
             this.bikeLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bikeLogo.Image = global::workflowLoginForm.Properties.Resources.Push__Pedal_Inc__20;
-            this.bikeLogo.Location = new System.Drawing.Point(223, 18);
+            this.bikeLogo.Image = global::workflowLoginForm.Properties.Resources.LogoBlack_1_50;
+            this.bikeLogo.Location = new System.Drawing.Point(212, 3);
             this.bikeLogo.Name = "bikeLogo";
-            this.bikeLogo.Size = new System.Drawing.Size(101, 100);
+            this.bikeLogo.Size = new System.Drawing.Size(113, 112);
             this.bikeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bikeLogo.TabIndex = 4;
             this.bikeLogo.TabStop = false;
