@@ -59,5 +59,25 @@ namespace workflowLoginForm.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Push___Pedal_Inc_ {
+            get {
+                object obj = ResourceManager.GetObject("Push & Pedal Inc.", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Push__Pedal_Inc__20 {
+            get {
+                object obj = ResourceManager.GetObject("Push__Pedal_Inc._20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

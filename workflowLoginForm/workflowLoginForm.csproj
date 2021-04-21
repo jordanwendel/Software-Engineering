@@ -47,6 +47,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Push__Pedal_Inc._20.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CsvHelper, Version=26.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
       <HintPath>..\packages\CsvHelper.26.1.0\lib\net47\CsvHelper.dll</HintPath>
@@ -241,6 +244,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Push &amp; Pedal Inc..png" />
+    <None Include="Resources\Push__Pedal_Inc._20.png" />
+    <Content Include="Push__Pedal_Inc._20.ico" />
     <Content Include="UserLoginData.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
