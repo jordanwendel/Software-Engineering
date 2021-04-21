@@ -72,6 +72,7 @@ namespace workflowLoginForm
             this.stockDataGridView.RowHeadersWidth = 51;
             this.stockDataGridView.Size = new System.Drawing.Size(794, 567);
             this.stockDataGridView.TabIndex = 68;
+            this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
             // 
             // Stockiest
             // 
@@ -139,7 +140,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(1072, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(73, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(73, 27);
             this.toolStrip1.TabIndex = 75;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -154,7 +155,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // refreshToolStripMenuItem
@@ -193,6 +194,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.Stockiest);
             this.Name = "RawMaterialsReport";
             this.Text = "Raw Materials Report";
+            this.Load += new System.EventHandler(this.RawMaterialsReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();

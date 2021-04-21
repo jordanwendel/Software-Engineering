@@ -51,6 +51,11 @@ namespace workflowLoginForm
             this.Close();
 
         }
+
+        private void stockDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }

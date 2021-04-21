@@ -78,6 +78,8 @@ namespace workflowLoginForm
 
         private void addNewMatBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
                 String MatName = itembox.Text;
                 int Quant = int.Parse(qtnBox.Text);
                 dbTools = new DatabaseTools();
@@ -104,6 +106,11 @@ namespace workflowLoginForm
 
                 }
             }
+            catch(Exception err)
+            {
+                MessageBox.Show("Please input a value and quantity", "Warning!");
+            }
+        }
 
         private void filterMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
