@@ -39,12 +39,26 @@ namespace workflowLoginForm
             dbTools = new DatabaseTools();
             userManager = new UserManager();
 
+
             if (passwordTxt.Text.Equals(confirmpasswordtxt.Text))
             {
                 try
                 {
-                    User newUser = new User(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text);
-                    userManager.RegisterUser(newUser); // Register the user in the database
+                    string message = "Are you sure you want to create a new user with job title " + boxOccupation.Text + "?";
+                    string title = "Warning!";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Yes)
+                    {
+                        User newUser = new User(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text);
+                        userManager.RegisterUser(newUser); // Register the user in the database
+                    }
+                    else
+                    {
+                        return;
+                    }   
+                   
                 }
                 catch (Exception err)
                 {

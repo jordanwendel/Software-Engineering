@@ -337,6 +337,7 @@ namespace workflowLoginForm
             this.addItemBtn.TabIndex = 104;
             this.addItemBtn.Text = "EDIT";
             this.addItemBtn.UseVisualStyleBackColor = false;
+            
             // 
             // EditUserInfo
             // 
