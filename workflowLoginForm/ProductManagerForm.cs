@@ -727,8 +727,11 @@ namespace workflowLoginForm
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            // Open dialog to view the reports
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.ShowDialog();
+
+            // Use default system process to open the report csv files (Excel)
             if (openFile.FileName.Any())
             {
                 System.Diagnostics.Process.Start(openFile.FileName);
