@@ -210,11 +210,6 @@ namespace workflowLoginForm
             btnFilter_Click(sender, e);
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void stockDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -234,6 +229,10 @@ namespace workflowLoginForm
             // Clear the filtering text fields when refreshing data grid
             filterMenu.Text = "Click to expand...";
             txtFilterByItem.Clear();
+            filterMenu.Text = String.Empty;
+            itembox.Text = String.Empty;
+            qtnBox.Text = String.Empty;
+            quantityEquations.Text = String.Empty;
             txtNum.Clear();
             quantityEquations.Text = null;
 
@@ -253,7 +252,8 @@ namespace workflowLoginForm
             }
         }
 
-        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.ShowDialog();
@@ -261,6 +261,11 @@ namespace workflowLoginForm
             {
                 System.Diagnostics.Process.Start(openFile.FileName);
             }
+        }
+
+        private void exitToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

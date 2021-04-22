@@ -19,12 +19,18 @@ namespace workflowLoginForm
         private DatabaseTools dbTools;
 
         // Constructor
-        public RawMaterialsForm()
+        public RawMaterialsForm(string title = "", string desc = "")
         {
             InitializeComponent();
             dbTools = new DatabaseTools();
-            Title = lblRawMat.Text;
-            Description = lblDesc.Text;
+            Title = title;
+
+            // If the title for the screen is passed into the parameters, it will change the text on the form before showing it
+            if (title != "" && desc != "")
+            {
+                lblRawMat.Text = title;
+                lblDesc.Text = desc;
+            }
         }
 
 

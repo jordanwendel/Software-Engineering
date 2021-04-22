@@ -49,9 +49,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.viewProductReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -291,9 +292,9 @@
             this.toolStripDropDownButton1.BackColor = System.Drawing.Color.LightGray;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viewProductReportToolStripMenuItem,
             this.refreshToolStripMenuItem,
             this.goBackToolStripMenuItem,
+            this.viewToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -301,32 +302,41 @@
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
-            // viewProductReportToolStripMenuItem
-            // 
-            this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
-            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
-            this.viewProductReportToolStripMenuItem.Text = "View Reports";
-            this.viewProductReportToolStripMenuItem.Click += new System.EventHandler(this.viewProductReportToolStripMenuItem_Click);
-            // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportsToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(143, 26);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // StockiestForm
             // 
@@ -379,7 +389,6 @@
         private System.Windows.Forms.TextBox itembox;
         private System.Windows.Forms.TextBox qtnBox;
         private System.Windows.Forms.ComboBox quantityEquations;
-        private System.Windows.Forms.ComboBox filterMenu;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNum;
         private System.Windows.Forms.Label label2;
@@ -388,10 +397,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem viewProductReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
+        public System.Windows.Forms.ComboBox filterMenu;
     }
 }
 
