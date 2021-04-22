@@ -729,7 +729,11 @@ namespace workflowLoginForm
         {
             OpenFileDialog openFile = new OpenFileDialog();
             openFile.ShowDialog();
-            System.Diagnostics.Process.Start(openFile.FileName);
+            if (openFile.FileName.Any())
+            {
+                System.Diagnostics.Process.Start(openFile.FileName);
+            }
+            
         }
 
     }
