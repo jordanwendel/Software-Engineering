@@ -29,6 +29,7 @@ namespace workflowLoginForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUserInfo));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProductReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -386,6 +387,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditUserInfo";
             this.Text = "Edit User Page";
             this.Load += new System.EventHandler(this.EditUser_Load);

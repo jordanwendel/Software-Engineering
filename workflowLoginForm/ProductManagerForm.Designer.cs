@@ -434,9 +434,9 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(1082, 9);
+            this.toolStrip1.Location = new System.Drawing.Point(1121, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(102, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(63, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -534,6 +534,7 @@
             this.Controls.Add(this.addItemLbl);
             this.Controls.Add(this.prodDataGridView);
             this.Controls.Add(this.Admin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductManagerForm";
             this.Text = "Product Manager Form";

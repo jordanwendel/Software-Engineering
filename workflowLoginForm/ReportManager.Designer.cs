@@ -41,13 +41,13 @@ namespace workflowLoginForm
             this.productCsvSave = new System.Windows.Forms.SaveFileDialog();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.viewReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblReportManager = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.viewReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.csvStatusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -151,7 +151,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(695, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(105, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -171,17 +171,24 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
+            // viewReportsToolStripMenuItem
+            // 
+            this.viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
+            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
+            this.viewReportsToolStripMenuItem.Text = "View Reports";
+            this.viewReportsToolStripMenuItem.Click += new System.EventHandler(this.viewReportsToolStripMenuItem_Click);
+            // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -229,13 +236,6 @@ namespace workflowLoginForm
             this.label3.TabIndex = 70;
             this.label3.Text = "Select Product Type:";
             // 
-            // viewReportsToolStripMenuItem
-            // 
-            this.viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
-            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.viewReportsToolStripMenuItem.Text = "View Reports";
-            this.viewReportsToolStripMenuItem.Click += new System.EventHandler(this.viewReportsToolStripMenuItem_Click);
-            // 
             // ReportManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -253,6 +253,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.RawMatCSVbtn);
             this.Controls.Add(this.Productbtn);
             this.Controls.Add(this.RawMatbtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ReportManager";
             this.Text = "ReportManager";
             this.csvStatusStrip.ResumeLayout(false);

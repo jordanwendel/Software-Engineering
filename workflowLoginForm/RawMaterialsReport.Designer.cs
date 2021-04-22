@@ -192,6 +192,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.lblNumbers);
             this.Controls.Add(this.stockDataGridView);
             this.Controls.Add(this.Stockiest);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RawMaterialsReport";
             this.Text = "Raw Materials Report";
             this.Load += new System.EventHandler(this.RawMaterialsReport_Load);

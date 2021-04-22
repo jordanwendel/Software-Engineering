@@ -29,6 +29,7 @@ namespace workflowLoginForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductReport));
             this.averagelbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -212,7 +213,7 @@ namespace workflowLoginForm
             this.menuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1024, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1024, 30);
             this.menuStrip1.TabIndex = 88;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -223,7 +224,7 @@ namespace workflowLoginForm
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 26);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // goBackToolStripMenuItem
@@ -402,8 +403,9 @@ namespace workflowLoginForm
             this.Controls.Add(this.lblNumbers);
             this.Controls.Add(this.stockDataGridView);
             this.Controls.Add(this.Stockiest);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProductReport";
-            this.Text = "ProductReport";
+            this.Text = "Product Report";
             this.Load += new System.EventHandler(this.ProductReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);

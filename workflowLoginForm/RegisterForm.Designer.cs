@@ -316,6 +316,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.passwordTxt);
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.usernameLbl);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
             this.Text = "Register New User";

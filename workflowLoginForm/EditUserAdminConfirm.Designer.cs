@@ -29,6 +29,7 @@ namespace workflowLoginForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUserAdminConfirm));
             this.lblConfirmPass = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.confirmBtn = new System.Windows.Forms.Button();
@@ -75,8 +76,9 @@ namespace workflowLoginForm
             this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.lblConfirmPass);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditUserAdminConfirm";
-            this.Text = "EditUserAdminConfirm";
+            this.Text = "Confirm Password";
             this.ResumeLayout(false);
             this.PerformLayout();
 

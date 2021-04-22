@@ -29,6 +29,7 @@ namespace workflowLoginForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
             this.label6 = new System.Windows.Forms.Label();
             this.btnInsertInformation = new System.Windows.Forms.Button();
             this.txtQuality = new System.Windows.Forms.TextBox();
@@ -211,14 +212,14 @@ namespace workflowLoginForm
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // ProductForm
@@ -240,6 +241,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.txtQuality);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductForm";

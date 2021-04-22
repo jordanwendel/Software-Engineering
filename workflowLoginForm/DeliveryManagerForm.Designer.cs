@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryManagerForm));
             this.Admin = new System.Windows.Forms.Label();
             this.filterLbl = new System.Windows.Forms.Label();
             this.locationLbl = new System.Windows.Forms.Label();
@@ -373,7 +374,7 @@
             this.toolStripMenuItem1});
             this.menuStrip2.Location = new System.Drawing.Point(971, 9);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(221, 28);
+            this.menuStrip2.Size = new System.Drawing.Size(71, 28);
             this.menuStrip2.TabIndex = 80;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -393,28 +394,28 @@
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(185, 26);
             this.toolStripMenuItem2.Text = "View Reports";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(185, 26);
             this.toolStripMenuItem4.Text = "Go Back";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(224, 26);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(185, 26);
             this.toolStripMenuItem5.Text = "Exit";
             // 
             // DeliveryManagerForm
@@ -445,6 +446,7 @@
             this.Controls.Add(this.addItemLbl);
             this.Controls.Add(this.prodDataGridView);
             this.Controls.Add(this.Admin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeliveryManagerForm";
             this.Text = "Delivery Manager Form";
