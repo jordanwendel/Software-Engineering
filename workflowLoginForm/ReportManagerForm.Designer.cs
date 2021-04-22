@@ -142,6 +142,7 @@ namespace workflowLoginForm
             this.cBoxProductRep.Name = "cBoxProductRep";
             this.cBoxProductRep.Size = new System.Drawing.Size(200, 24);
             this.cBoxProductRep.TabIndex = 5;
+            this.cBoxProductRep.SelectedIndexChanged += new System.EventHandler(this.cBoxProductRep_SelectedIndexChanged);
             // 
             // toolStrip1
             // 
@@ -171,6 +172,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
+            this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // viewReportsToolStripMenuItem
             // 

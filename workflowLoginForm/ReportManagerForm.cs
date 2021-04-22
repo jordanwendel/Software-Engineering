@@ -25,6 +25,7 @@ namespace workflowLoginForm
 
         private void RawMatbtn_Click(object sender, EventArgs e)
         {
+            csvStatusLbl.Text = String.Empty; // Clearing status field text
             RawMaterialsReport = new RawMaterialsReport();
             this.Hide();
             RawMaterialsReport.ShowDialog();
@@ -33,6 +34,7 @@ namespace workflowLoginForm
 
         private void Productbtn_Click(object sender, EventArgs e)
         {
+            csvStatusLbl.Text = String.Empty;
             ProductReport = new ProductReport();
             this.Hide();
             ProductReport.ShowDialog();
@@ -42,6 +44,7 @@ namespace workflowLoginForm
         // Event handler for Generate Raw Material CSV button click
         private void RawMatCSVbtn_Click(object sender, EventArgs e)
         {
+            csvStatusLbl.Text = String.Empty;
             SaveFileDialog saveFile = new SaveFileDialog();
             DateTime now = DateTime.Now;
             String date = string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", now);
@@ -68,16 +71,14 @@ namespace workflowLoginForm
                 MessageBox.Show(err.Message, "Issue writing to CSV");
             }
 
-            //if (rawMatCsvSave)
-            //{
-                csvStatusLbl.Text = "Successfully wrote to CSV!";
-            //}
+            csvStatusLbl.Text = "Successfully wrote to CSV!";
             
         }
 
         // Event handler for Generate Product CSV button click
         private void prodCsvBtn_Click(object sender, EventArgs e)
         {
+            csvStatusLbl.Text = String.Empty;
             string fileName;
             productCsvSave = new SaveFileDialog();
             DateTime now = DateTime.Now;
@@ -144,5 +145,16 @@ namespace workflowLoginForm
                 System.Diagnostics.Process.Start(openFile.FileName);
             }
         }
+
+        private void toolStripDropDownButton1_Click(object sender, EventArgs e)
+        {
+            csvStatusLbl.Text = String.Empty;
+        }
+
+        private void cBoxProductRep_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            csvStatusLbl.Text = String.Empty;
+        }
+
     }
 }
