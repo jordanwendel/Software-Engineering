@@ -30,9 +30,23 @@ namespace workflowLoginForm
         {
             try
             {
-                objRawMaterial = new RawMaterial(txtRawMatName.Text, int.Parse(txtRawMatQuanity.Text)); // Create a new raw material object
-                dbTools.AddRawMaterial(objRawMaterial); // Add the raw material to the database
-                MessageBox.Show("Item enterted Successfully");
+                string message = "Are you sure you want to create a new material called " + txtRawMatName.Text + " with quantity " + txtRawMatQuanity.Text + "?";
+                string title = "Warning!";
+
+                MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+
+                if (result == DialogResult.Yes)
+                {
+                    objRawMaterial = new RawMaterial(txtRawMatName.Text, int.Parse(txtRawMatQuanity.Text)); // Create a new raw material object
+                    dbTools.AddRawMaterial(objRawMaterial); // Add the raw material to the database
+                    MessageBox.Show("Item enterted Successfully");
+                }
+                else
+                {
+                    return;
+                }
+
 
                 // Clear text boxes
                 txtRawMatName.Clear();

@@ -12,11 +12,13 @@ namespace workflowLoginForm
 {
     public partial class EditUserInfo : Form
     {
-        private List<User> users;
+        private DataGridTools dgTools;
+        private DatabaseTools dbTools;
         public EditUserInfo()
         {
             InitializeComponent();
-            users = new List<User>();
+            dgTools = new DataGridTools();
+            dbTools = new DatabaseTools();
 
         }
 
@@ -29,26 +31,95 @@ namespace workflowLoginForm
         private void EditUser_Load(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager();
-
+            
             // Show Stockiests
-            users = userManager.CreateUserList("Stockiest");
-            stockiestNames.Items.AddRange(users.ToArray());
+            try
+            {
+                dgTools.dbName = "AuthorizedUsers";
+
+                dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Stockiest')";
+
+                dgTools.PopulateDataGrid(StockiestDataGridView);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
 
             // Show Product Managers
-            users = userManager.CreateUserList("Product Manager");
-            productManagerNames.Items.AddRange(users.ToArray());
+            try
+            {
+                dgTools.dbName = "AuthorizedUsers";
+
+                dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Product Manager')";
+
+                dgTools.PopulateDataGrid(ProductDataGridView);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
 
             // Show Delivery Managers
-            users = userManager.CreateUserList("Delivery Manager");
-            deliveryManagerNames.Items.AddRange(users.ToArray());
+            try
+            {
+                dgTools.dbName = "AuthorizedUsers";
+
+                dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Delivery Manager')";
+
+                dgTools.PopulateDataGrid(DeliveryDataGridView);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
 
             // Show Report Managers
-            users = userManager.CreateUserList("Report Manager");
-            reportManagerNames.Items.AddRange(users.ToArray());
+            try
+            {
+                dgTools.dbName = "AuthorizedUsers";
+
+                dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Report Manager')";
+
+                dgTools.PopulateDataGrid(ReportDataGridView);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
 
             // Show Quality Analyzers
-            users = userManager.CreateUserList("Quality Analyzer");
-            qualityAnalyzerNames.Items.AddRange(users.ToArray());
+            try
+            {
+                dgTools.dbName = "AuthorizedUsers";
+
+                dgTools.SqlCommand = "SELECT firstname,lastname FROM AuthorizedUsers WHERE userjob in ('Quality Analyzer')";
+
+                dgTools.PopulateDataGrid(QualityDataGridView);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            // Show Admins
+            try
+            {
+                dgTools.dbName = "AuthorizedUsers";
+
+                dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Administrator')";
+
+                dgTools.PopulateDataGrid(AdminDataGridView);
+
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
 
         }
 
@@ -57,5 +128,14 @@ namespace workflowLoginForm
 
         }
 
+        private void addItemBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
