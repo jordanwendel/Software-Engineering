@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace workflowLoginForm
 {
@@ -41,15 +42,20 @@ namespace workflowLoginForm
         // Event handler for Generate Raw Material CSV button click
         private void RawMatCSVbtn_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFile = new SaveFileDialog();
+            DateTime now = DateTime.Now;
+            String date = string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", now);
+            
+            
+            saveFile.FileName = "RawMaterialsReport_" + date;
+            saveFile.DefaultExt = ".csv";
+            saveFile.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
+            //saveFile.InitialDirectory = @"C:\";
+            saveFile.ShowDialog();
 
-            // Save file to chosen directory
-            rawMatCsvSave = new SaveFileDialog();
-            rawMatCsvSave.FileName = "RawMaterialsReport.csv";
-            rawMatCsvSave.DefaultExt = ".csv";
-            rawMatCsvSave.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
-            rawMatCsvSave.InitialDirectory = @"C:\";
-            rawMatCsvSave.ShowDialog();
-            string filePath = rawMatCsvSave.FileName;
+            
+
+            string filePath = saveFile.FileName;
             
 
             try
@@ -74,35 +80,36 @@ namespace workflowLoginForm
         {
             string fileName;
             productCsvSave = new SaveFileDialog();
+            DateTime now = DateTime.Now;
+            String date = string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", now);
 
             // Switching file name based on which report is needed
             switch (cBoxProductRep.SelectedItem)
             {
                 case "In Progress":
-                    fileName = "InProgressProductsReport.csv";
+                    fileName = "InProgressProductsReport_" + date;
                     break;
 
                 case "Qualified":
-                    fileName = "QualifiedProductsReport.csv";
+                    fileName = "QualifiedProductsReport_" + date;
                     break;
 
                 case "Defective":
-                    fileName = "DefectiveProductsReport.csv";
+                    fileName = "DefectiveProductsReport_" + date;
                     break;
 
                 default:
-                    fileName = "AllProductsReport.csv";
+                    fileName = "AllProductsReport_" + date;
                     break;
             }
 
+            SaveFileDialog saveFile = new SaveFileDialog();
+            saveFile.DefaultExt = ".csv";
+            saveFile.FileName = fileName;
+            saveFile.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
 
-            // Save file to chosen directory
-            productCsvSave.DefaultExt = ".csv";
-            productCsvSave.FileName = fileName;
-            productCsvSave.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
-            productCsvSave.InitialDirectory = @"C:\";
-            productCsvSave.ShowDialog();
-            string filePath = productCsvSave.FileName;
+            saveFile.ShowDialog();
+            string filePath = saveFile.FileName;
 
 
             // MAKE SURE C BOX HAS A SELECTION BEFORE BEING ABLE TO PRESS THE BUTTON
@@ -128,5 +135,11 @@ namespace workflowLoginForm
             this.Close();
         }
 
+        private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+            System.Diagnostics.Process.Start(openFile.FileName);
+        }
     }
 }

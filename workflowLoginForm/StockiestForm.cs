@@ -88,11 +88,25 @@ namespace workflowLoginForm
                 {
                     try
                     {
-                        dbTools.EditQuant(MatName, Quant);
-                        dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
-                        dgTools.RefreshDataGrid(stockDataGridView);
-                        itembox.Clear();
-                        qtnBox.Clear();
+                        string message = "Are you sure you want to change the quantity of " + MatName + " to " + Quant+ "?";
+                        string title = "Warning!";
+
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+                        DialogResult result = MessageBox.Show(message, title, buttons);
+                        if (result == DialogResult.Yes)
+                        {
+                            dbTools.EditQuant(MatName, Quant);
+                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+                            dgTools.RefreshDataGrid(stockDataGridView);
+                            itembox.Clear();
+                            qtnBox.Clear();
+                        }
+                        else
+                        {
+                            return;
+                        }
+
+
 
                     }
                     catch (Exception err)
@@ -237,6 +251,13 @@ namespace workflowLoginForm
                 dgTools.RefreshDataGrid(stockDataGridView);
 
             }
+        }
+
+        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+            System.Diagnostics.Process.Start(openFile.FileName);
         }
     }
 }

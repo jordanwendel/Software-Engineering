@@ -119,8 +119,21 @@ namespace workflowLoginForm
             {
                 try
                 {
-                    dbTools.EditQuality(ProductName, Quality);
-                    Refresh_Click(sender, e);
+                    string message = "Are you sure you want to change the quality of " + ProductName + " to " + Quality + "?";
+                    string title = "Warning!";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Yes)
+                    {
+                        dbTools.EditQuality(ProductName, Quality);
+                        Refresh_Click(sender, e);
+                    }
+                    else
+                    {
+                        return;
+                    }
+                       
                     
                 }
                 catch (Exception err)
@@ -372,6 +385,18 @@ namespace workflowLoginForm
                 dgTools.RefreshDataGrid(prodDataGridView);
             }
 
+        }
+
+        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+            System.Diagnostics.Process.Start(openFile.FileName);
+        }
+
+        private void goBackToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
