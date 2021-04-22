@@ -36,7 +36,7 @@ namespace workflowLoginForm
             this.btnInsertInformation = new System.Windows.Forms.Button();
             this.txtRawMatName = new System.Windows.Forms.TextBox();
             this.txtRawMatQuanity = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDesc = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,17 +110,17 @@ namespace workflowLoginForm
             this.txtRawMatQuanity.Size = new System.Drawing.Size(212, 22);
             this.txtRawMatQuanity.TabIndex = 1;
             // 
-            // label1
+            // lblDesc
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(394, 159);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 16);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Add a Raw Material";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.ForeColor = System.Drawing.Color.White;
+            this.lblDesc.Location = new System.Drawing.Point(394, 159);
+            this.lblDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(216, 16);
+            this.lblDesc.TabIndex = 25;
+            this.lblDesc.Text = "Add a Raw Material";
+            this.lblDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // toolStrip1
             // 
@@ -172,7 +172,7 @@ namespace workflowLoginForm
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(982, 553);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.lblRawMat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblName);
@@ -198,7 +198,7 @@ namespace workflowLoginForm
         private System.Windows.Forms.Button btnInsertInformation;
         private System.Windows.Forms.TextBox txtRawMatName;
         private System.Windows.Forms.TextBox txtRawMatQuanity;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;

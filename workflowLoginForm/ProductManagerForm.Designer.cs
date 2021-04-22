@@ -64,12 +64,15 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.switchToProductTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.switchToMaterialsTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.goBackMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.materialsTableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reOrderStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.stsStripDisplayInfo.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -439,9 +442,9 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(1121, 9);
+            this.toolStrip1.Location = new System.Drawing.Point(1082, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(63, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(102, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -451,59 +454,83 @@
             this.toolStripDropDownButton1.BackColor = System.Drawing.Color.LightGray;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.switchToProductTableToolStripMenuItem,
-            this.switchToMaterialsTableToolStripMenuItem,
             this.refreshToolStripMenuItem,
-            this.toolStripMenuItem3,
-            this.toolStripMenuItem4});
+            this.goBackMenuItem,
+            this.viewToolStripMenuItem,
+            this.orderToolStripMenuItem,
+            this.exitMenuItem});
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 28);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
             this.toolStripDropDownButton1.Text = "Menu";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(257, 26);
-            this.toolStripMenuItem1.Text = "View Reports";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
-            // switchToProductTableToolStripMenuItem
-            // 
-            this.switchToProductTableToolStripMenuItem.Name = "switchToProductTableToolStripMenuItem";
-            this.switchToProductTableToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
-            this.switchToProductTableToolStripMenuItem.Text = "Switch to Product Table";
-            this.switchToProductTableToolStripMenuItem.Click += new System.EventHandler(this.switchToProductTableToolStripMenuItem_Click);
-            // 
-            // switchToMaterialsTableToolStripMenuItem
-            // 
-            this.switchToMaterialsTableToolStripMenuItem.Name = "switchToMaterialsTableToolStripMenuItem";
-            this.switchToMaterialsTableToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
-            this.switchToMaterialsTableToolStripMenuItem.Text = "Switch to Materials Table";
-            this.switchToMaterialsTableToolStripMenuItem.Click += new System.EventHandler(this.switchToMaterialsTableToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(257, 26);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem3
+            // goBackMenuItem
             // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(257, 26);
-            this.toolStripMenuItem3.Text = "Go Back";
-            this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
+            this.goBackMenuItem.Name = "goBackMenuItem";
+            this.goBackMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.goBackMenuItem.Text = "Go Back";
+            this.goBackMenuItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // toolStripMenuItem4
+            // exitMenuItem
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(257, 26);
-            this.toolStripMenuItem4.Text = "Exit";
-            this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            this.exitMenuItem.Name = "exitMenuItem";
+            this.exitMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitMenuItem.Text = "Exit";
+            this.exitMenuItem.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
+            // 
+            // viewToolStripMenuItem
+            // 
+            this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.productTableToolStripMenuItem,
+            this.materialsTableToolStripMenuItem,
+            this.reportsToolStripMenuItem});
+            this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewToolStripMenuItem.Text = "View";
+            // 
+            // orderToolStripMenuItem
+            // 
+            this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reOrderStockToolStripMenuItem});
+            this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.orderToolStripMenuItem.Text = "Order";
+            // 
+            // productTableToolStripMenuItem
+            // 
+            this.productTableToolStripMenuItem.Name = "productTableToolStripMenuItem";
+            this.productTableToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.productTableToolStripMenuItem.Text = "Product Table";
+            this.productTableToolStripMenuItem.Click += new System.EventHandler(this.productTableToolStripMenuItem_Click);
+            // 
+            // materialsTableToolStripMenuItem
+            // 
+            this.materialsTableToolStripMenuItem.Name = "materialsTableToolStripMenuItem";
+            this.materialsTableToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.materialsTableToolStripMenuItem.Text = "Materials Table";
+            this.materialsTableToolStripMenuItem.Click += new System.EventHandler(this.materialsTableToolStripMenuItem_Click);
+            // 
+            // reOrderStockToolStripMenuItem
+            // 
+            this.reOrderStockToolStripMenuItem.Name = "reOrderStockToolStripMenuItem";
+            this.reOrderStockToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reOrderStockToolStripMenuItem.Text = "Re-Order Stock";
+            this.reOrderStockToolStripMenuItem.Click += new System.EventHandler(this.reOrderStockToolStripMenuItem_Click);
+            // 
+            // reportsToolStripMenuItem
+            // 
+            this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.reportsToolStripMenuItem.Text = "Reports";
+            this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
             // ProductManagerForm
             // 
@@ -593,12 +620,15 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem goBackMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem switchToProductTableToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem switchToMaterialsTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem materialsTableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reOrderStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
     }
 }
 

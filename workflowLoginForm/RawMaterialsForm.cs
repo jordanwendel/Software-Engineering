@@ -13,7 +13,8 @@ namespace workflowLoginForm
 {
     public partial class RawMaterialsForm : Form
     {
-
+        public string Title { get; set; }
+        public string Description { get; set; }
         private RawMaterial objRawMaterial;
         private DatabaseTools dbTools;
 
@@ -22,6 +23,8 @@ namespace workflowLoginForm
         {
             InitializeComponent();
             dbTools = new DatabaseTools();
+            Title = lblRawMat.Text;
+            Description = lblDesc.Text;
         }
 
 

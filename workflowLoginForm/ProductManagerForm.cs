@@ -16,6 +16,8 @@ namespace workflowLoginForm
     public partial class ProductManagerForm : Form
     {
         // Class level objects
+        private RawMaterialsForm ReOrderStockForm; // For re ordering stock
+
         private DataGridTools dgTools; // Uses DataGridView to create the data grids on screen
 
         private DatabaseTools dbTools; // Edits quantity of products and raw materials in the database
@@ -629,6 +631,7 @@ namespace workflowLoginForm
             // Clear the filtering text fields when refreshing data grid
             filterMenu.Text = "Click to expand...";
             txtFilterByItem.Clear();
+            txtName.Text = String.Empty;
             cBoxLocation.Text = null;
             cBoxQuality.Text = null;
             txtNum.Clear();
@@ -751,5 +754,74 @@ namespace workflowLoginForm
             
         }
 
+
+        private void productTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
+
+            // Clear filtering fields
+            txtFilterByItem.Clear();
+            cBoxLocation.Text = null;
+            cBoxQuality.Text = null;
+            txtNum.Clear();
+            quantityEquations.ResetText();
+            stsStripLabel.Text = "";
+
+            // Populate data grid
+            dgTools.dbName = "Products";
+            dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
+            dgTools.PopulateDataGrid(prodDataGridView);
+
+            // Add the filtering options specifically for Products
+            filterMenu.Items.Clear();
+            filterMenu.Items.Add("Name");
+            filterMenu.Items.Add("Quality");
+            filterMenu.Items.Add("Quantity");
+            filterMenu.Items.Add("Location");
+        }
+
+        private void materialsTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            filterMenu.Text = "Click to expand..."; // Resetting the filter menu text
+
+            // Clear filtering fields
+            txtFilterByItem.Clear();
+            cBoxLocation.Text = null;
+            cBoxQuality.Text = null;
+            txtNum.Clear();
+            quantityEquations.ResetText();
+            stsStripLabel.Text = "";
+
+            // Populate the data grid
+            dgTools.dbName = "RawMaterials";
+            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+            dgTools.PopulateDataGrid(prodDataGridView);
+
+            // Add the filtering options specifically for Raw Materials
+            filterMenu.Items.Clear();
+            filterMenu.Items.Add("Name");
+            filterMenu.Items.Add("Quantity");
+        }
+
+        private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Open dialog to view the reports
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+
+            // Use default system process to open the report csv files (Excel)
+            if (openFile.FileName.Any())
+            {
+                System.Diagnostics.Process.Start(openFile.FileName);
+            }
+        }
+
+        private void reOrderStockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReOrderStockForm = new RawMaterialsForm();
+            ReOrderStockForm.Title = "Order Stock";
+            ReOrderStockForm.ShowDialog();
+            this.Show();
+        }
     }
 }
