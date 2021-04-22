@@ -1,0 +1,145 @@
+productName,quality,quantity,location
+Brown bmx 2 bike,Defective,8,Sales
+Brown bmx 3 bike,Defective,3,Manufacturing
+Brown bmx 4 bike,Satisfactory,5,
+Brown bmx bike,Defective,1,Manufacturing
+"Brown cruiser 2 bike",Defective,6,Manufacturing
+Brown cruiser 7 bike,Defective,2,Sales
+Brown cruiser bike,Satisfactory,3,Sales
+"Brown mountain 5 bike
+",Satisfactory,2,Sales
+"Brown mountain 6 bike
+",In Progress,3,
+"Brown mountain bike
+",Satisfactory,5,Manufacturing
+Brown road 4 bike,Satisfactory,1,Sales
+Brown road 8 bike,In Progress,1,
+"Brown road bike",Defective,1,
+Brown track 5 bike,In Progress,1,
+"Brown track 8 bike
+",Satisfactory,3,Sales
+Hall bmx 2 bike,In Progress,1,
+"Hall bmx 3 bike
+",Defective,1,Manufacturing
+Hall cruiser 2 bike,Defective,3,Manufacturing
+Hall cruiser 8 bike,Satisfactory,5,Sales
+Hall mountain 5 bike,Satisfactory,1,
+Hall mountain 7 bike,Defective,2,Manufacturing
+Hall mountain bike,In Progress,3,
+Hall road 6 bike,Defective,4,Manufacturing
+Hall road bike,In Progress,4,
+"Hall track 8 bike",Satisfactory,3,
+"Hall track bike",Defective,3,Manufacturing
+Lee bmx 3 bike,Satisfactory,1,Sales
+Lee bmx 5 bike,Defective,1,Manufacturing
+Lee cruiser 3 bike,In Progress,1,
+"Lee cruiser 4 bike",Satisfactory,1,
+Lee cruiser 8 bike,Defective,1,Manufacturing
+Lee mountain 4 bike,In Progress,1,Manufacturing
+Lee mountain 5 bike,Satisfactory,1,Sales
+Lee mountain 9 bike,Satisfactory,3,Sales
+Lee mountain bike,Defective,3,Manufacturing
+Lee road 4 bike,Defective,3,Manufacturing
+Lee road bike,Satisfactory,3,
+Lee track 7 bike,Defective,3,Manufacturing
+Lee track bike,Defective,3,
+Mata cruiser 5 bike,Defective,3,Manufacturing
+"Mata cruiser bike",Satisfactory,3,Sales
+"Mata mountain 7 bike
+",Defective,3,Manufacturing
+Mata road 4 bike,Defective,3,Manufacturing
+Mata road 6 bike,Satisfactory,1,Sales
+Mata road bike,Satisfactory,2,Sales
+Mata track 5 bike,Defective,4,Manufacturing
+"Mata track 8 bike
+",Satisfactory,3,Sales
+Mata track bike,Defective,3,Manufacturing
+Norton bmx 4 bike,Satisfactory,2,Sales
+"Norton bmx bike",Defective,4,
+"Norton cruiser 4 bike
+",Satisfactory,3,Sales
+"Norton cruiser 5 bike
+",Defective,3,Manufacturing
+"Norton cruiser bike
+",Satisfactory,2,Sales
+"Norton mountain 7 bike
+",Defective,4,
+"Norton mountain bike
+",Satisfactory,3,Sales
+"Norton road 4 bike
+",Defective,3,
+"Norton road 8 bike
+",Satisfactory,2,Sales
+"Norton road bike
+",Defective,4,Manufacturing
+"Norton track 2 bike
+",Satisfactory,3,Sales
+"Norton track 6 bike
+",Defective,3,
+"Norton track bike
+",Satisfactory,2,
+"Schroeder bmx 3 bike
+",Defective,4,Manufacturing
+"Schroeder bmx 9 bike
+",Satisfactory,3,Sales
+"Schroeder bmx bike
+",Defective,3,
+"Schroeder cruiser bike
+",Satisfactory,2,Sales
+"Schroeder mountain 8 bike
+",Defective,3,
+"Schroeder mountain 9 bike
+",Satisfactory,2,Sales
+"Schroeder mountain bike
+",Defective,4,
+"Schroeder road bike
+",Satisfactory,3,Sales
+"Schroeder track 4 bike
+",Defective,3,
+"Schroeder track bike
+",Satisfactory,2,Sales
+Brown cruiser 2 bike,Satisfactory,1,
+Brown mountain 2 bike,Satisfactory,4,
+Brown road 5 bike,Satisfactory,1,
+Brown track 4 bike,Defective,1,
+Brown track bike,Satisfactory,1,
+Hall bmx bike,Defective,1,Manufacturing
+Hall cruiser bike,Satisfactory,1,
+Hall road 9 bike,Defective,2,
+Lee bmx bike,Satisfactory,1,Manufacturing
+Lee cruiser bike,Defective,1,
+Lee mountain 8 bike,Satisfactory,1,
+Lee road 2 bike,Defective,3,
+Lee track 8 bike,Satisfactory,3,
+Mata bmx bike,Defective,3,
+Mata mountain bike,Satisfactory,3,Sales
+Mata road 7 bike,Defective,1,
+Norton bmx bike,Satisfactory,4,
+Norton mountain 7 bike,Defective,4,Manufacturing
+Norton road 4 bike,Satisfactory,3,
+Norton track 6 bike,Defective,3,
+Norton track bike,Satisfactory,2,
+Schroeder bmx bike,Defective,3,
+Schroeder mountain 8 bike,Satisfactory,3,
+Schroeder mountain bike,Defective,4,
+Schroeder track 4 bike,Satisfactory,3,
+bell,In Progress,2,
+Yellow track 6 bike,Satisfactory,2,Sales
+Red cruiser 69 bike,Satisfactory,4,Sales
+Brown bmx 8 bike,Satisfactory,7,Sales
+Orange bmx 3 bike,In Progress,5,Warehouse
+test,Click to expand...,4,Click to expand...
+Red bmx bike,In Progress,4,
+testt,In Progress,3,
+test2,In Progress,3,
+bike,In Progress,2,
+Hall bmx 27 bike,In Progress,4,
+Brown bike,In Progress,3,
+Brown bmx 5 bike,In Progress,3,
+Brown bmx,In Progress,2,
+Red bike,In Progress,8,
+Blue bike,In Progress,5,
+Red city bike,In Progress,1,
+Orange bmx bike,In Progress,44,
+LDL Mountain Bike,,4,
+LL road bike,,2,

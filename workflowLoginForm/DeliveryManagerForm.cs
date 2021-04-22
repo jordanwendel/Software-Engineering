@@ -315,5 +315,12 @@ namespace workflowLoginForm
                 }
     
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+            System.Diagnostics.Process.Start(openFile.FileName);
+        }
     }
 }

@@ -373,5 +373,17 @@ namespace workflowLoginForm
             }
 
         }
+
+        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+            System.Diagnostics.Process.Start(openFile.FileName);
+        }
+
+        private void goBackToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -47,6 +47,7 @@ namespace workflowLoginForm
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.viewReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.csvStatusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -150,7 +151,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(695, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(105, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -160,6 +161,7 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.BackColor = System.Drawing.Color.LightGray;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewReportsToolStripMenuItem,
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -227,6 +229,13 @@ namespace workflowLoginForm
             this.label3.TabIndex = 70;
             this.label3.Text = "Select Product Type:";
             // 
+            // viewReportsToolStripMenuItem
+            // 
+            this.viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
+            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewReportsToolStripMenuItem.Text = "View Reports";
+            this.viewReportsToolStripMenuItem.Click += new System.EventHandler(this.viewReportsToolStripMenuItem_Click);
+            // 
             // ReportManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -274,5 +283,6 @@ namespace workflowLoginForm
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ToolStripMenuItem viewReportsToolStripMenuItem;
     }
 }
