@@ -51,6 +51,8 @@ namespace workflowLoginForm
             this.DeliveryDataGridView = new System.Windows.Forms.DataGridView();
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
             this.AdminDataGridView = new System.Windows.Forms.DataGridView();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StockiestDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportDataGridView)).BeginInit();
@@ -204,7 +206,7 @@ namespace workflowLoginForm
             "Quality Analyzer",
             "Report Manager",
             "Stockiest"});
-            this.boxOccupation.Location = new System.Drawing.Point(135, 106);
+            this.boxOccupation.Location = new System.Drawing.Point(147, 150);
             this.boxOccupation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.boxOccupation.Name = "boxOccupation";
             this.boxOccupation.Size = new System.Drawing.Size(132, 24);
@@ -215,20 +217,21 @@ namespace workflowLoginForm
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(13, 101);
+            this.label3.Location = new System.Drawing.Point(13, 145);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 28);
             this.label3.TabIndex = 103;
             this.label3.Text = "Job Type:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // addItemBtn
             // 
             this.addItemBtn.BackColor = System.Drawing.Color.LightGray;
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(106, 154);
+            this.addItemBtn.Location = new System.Drawing.Point(102, 193);
             this.addItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(101, 34);
@@ -247,10 +250,12 @@ namespace workflowLoginForm
             this.StockiestDataGridView.Location = new System.Drawing.Point(335, 85);
             this.StockiestDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.StockiestDataGridView.Name = "StockiestDataGridView";
+            this.StockiestDataGridView.ReadOnly = true;
             this.StockiestDataGridView.RowHeadersVisible = false;
             this.StockiestDataGridView.RowHeadersWidth = 51;
             this.StockiestDataGridView.Size = new System.Drawing.Size(200, 225);
             this.StockiestDataGridView.TabIndex = 105;
+            this.StockiestDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StockiestDataGridView_CellContentClick);
             // 
             // ReportDataGridView
             // 
@@ -266,6 +271,7 @@ namespace workflowLoginForm
             this.ReportDataGridView.RowHeadersWidth = 51;
             this.ReportDataGridView.Size = new System.Drawing.Size(200, 225);
             this.ReportDataGridView.TabIndex = 106;
+            this.ReportDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReportDataGridView_CellContentClick);
             // 
             // QualityDataGridView
             // 
@@ -281,6 +287,7 @@ namespace workflowLoginForm
             this.QualityDataGridView.RowHeadersWidth = 51;
             this.QualityDataGridView.Size = new System.Drawing.Size(200, 225);
             this.QualityDataGridView.TabIndex = 107;
+            this.QualityDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QualityDataGridView_CellContentClick);
             // 
             // DeliveryDataGridView
             // 
@@ -296,6 +303,7 @@ namespace workflowLoginForm
             this.DeliveryDataGridView.RowHeadersWidth = 51;
             this.DeliveryDataGridView.Size = new System.Drawing.Size(200, 198);
             this.DeliveryDataGridView.TabIndex = 108;
+            this.DeliveryDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryDataGridView_CellContentClick);
             // 
             // ProductDataGridView
             // 
@@ -311,6 +319,7 @@ namespace workflowLoginForm
             this.ProductDataGridView.RowHeadersWidth = 51;
             this.ProductDataGridView.Size = new System.Drawing.Size(200, 198);
             this.ProductDataGridView.TabIndex = 109;
+            this.ProductDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductDataGridView_CellContentClick);
             // 
             // AdminDataGridView
             // 
@@ -326,6 +335,28 @@ namespace workflowLoginForm
             this.AdminDataGridView.RowHeadersWidth = 51;
             this.AdminDataGridView.Size = new System.Drawing.Size(200, 197);
             this.AdminDataGridView.TabIndex = 110;
+            this.AdminDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminDataGridView_CellContentClick);
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(102, 88);
+            this.txtName.Name = "txtName";
+            this.txtName.ReadOnly = true;
+            this.txtName.Size = new System.Drawing.Size(177, 22);
+            this.txtName.TabIndex = 112;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Location = new System.Drawing.Point(-26, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(115, 28);
+            this.label2.TabIndex = 113;
+            this.label2.Text = "Name:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // EditUserInfo
             // 
@@ -333,6 +364,8 @@ namespace workflowLoginForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(962, 545);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.AdminDataGridView);
             this.Controls.Add(this.ProductDataGridView);
             this.Controls.Add(this.DeliveryDataGridView);
@@ -389,5 +422,7 @@ namespace workflowLoginForm
         private System.Windows.Forms.DataGridView DeliveryDataGridView;
         private System.Windows.Forms.DataGridView ProductDataGridView;
         private System.Windows.Forms.DataGridView AdminDataGridView;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label2;
     }
 }

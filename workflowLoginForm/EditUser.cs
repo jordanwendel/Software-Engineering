@@ -137,5 +137,64 @@ namespace workflowLoginForm
         {
 
         }
+
+        private void StockiestDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = StockiestDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
+                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReportDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = ReportDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
+                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+            }
+        }
+
+        private void QualityDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = QualityDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
+                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+            }
+        }
+
+        private void DeliveryDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = DeliveryDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
+                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+            }
+        }
+
+        private void ProductDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = ProductDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
+                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+            }
+        }
+
+        private void AdminDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = AdminDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
+                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+            }
+        }
     }
 }
