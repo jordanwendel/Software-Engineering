@@ -14,6 +14,7 @@ namespace workflowLoginForm
     {
         private DataGridTools dgTools;
         private DatabaseTools dbTools;
+        private EditUserAdminConfirm confirmForm;
         public EditUserInfo()
         {
             InitializeComponent();
@@ -130,7 +131,7 @@ namespace workflowLoginForm
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
-
+            confirmForm = new EditUserAdminConfirm();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
