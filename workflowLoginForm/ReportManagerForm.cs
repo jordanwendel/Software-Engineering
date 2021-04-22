@@ -11,13 +11,13 @@ using System.IO;
 
 namespace workflowLoginForm
 {
-    public partial class ReportManager : Form
+    public partial class ReportManagerForm : Form
     {
         private RawMaterialsReport RawMaterialsReport;
         private ProductReport ProductReport;
         private ReportGenerator ReportGen;
 
-        public ReportManager()
+        public ReportManagerForm()
         {
             InitializeComponent();
             ReportGen = new ReportGenerator();

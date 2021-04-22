@@ -118,6 +118,7 @@
             // 
             // locationMenu
             // 
+            this.locationMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.locationMenu.FormattingEnabled = true;
             this.locationMenu.Items.AddRange(new object[] {
             "Manufacturing",
@@ -127,7 +128,6 @@
             this.locationMenu.Name = "locationMenu";
             this.locationMenu.Size = new System.Drawing.Size(172, 24);
             this.locationMenu.TabIndex = 40;
-            this.locationMenu.Text = "Click to expand...";
             // 
             // addItemLbl
             // 
@@ -181,6 +181,7 @@
             // 
             // quantityEquations
             // 
+            this.quantityEquations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.quantityEquations.FormattingEnabled = true;
             this.quantityEquations.Items.AddRange(new object[] {
             "GREATER THAN",
@@ -194,6 +195,7 @@
             // 
             // cBoxQuality
             // 
+            this.cBoxQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxQuality.FormattingEnabled = true;
             this.cBoxQuality.Items.AddRange(new object[] {
             "Satisfactory",
@@ -207,6 +209,7 @@
             // 
             // filterMenu
             // 
+            this.filterMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterMenu.FormattingEnabled = true;
             this.filterMenu.Items.AddRange(new object[] {
             "Name",
@@ -218,11 +221,11 @@
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
             this.filterMenu.TabIndex = 75;
-            this.filterMenu.Text = "Click to Expand...";
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
             // 
             // cBoxLocation
             // 
+            this.cBoxLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxLocation.FormattingEnabled = true;
             this.cBoxLocation.Items.AddRange(new object[] {
             "Sales",
@@ -449,7 +452,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeliveryManagerForm";
-            this.Text = "Delivery Manager Form";
+            this.Text = "Delivery Manager";
             this.Load += new System.EventHandler(this.DeliveryManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);

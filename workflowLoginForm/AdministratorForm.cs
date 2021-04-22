@@ -15,7 +15,7 @@ namespace workflowLoginForm
         // Class level objects
         private DeliveryManagerForm DeliveryManager;
         private ProductManagerForm ProductManager;
-        private ReportManager ReportManager;
+        private ReportManagerForm ReportManager;
         private StockiestForm Stockpage;
         private QualityAnalyzerForm QualityAnalyzer;
         private EditUserInfo EditUserInfo;
@@ -67,7 +67,7 @@ namespace workflowLoginForm
         // Event handler for Report Manager button click
         private void repManagerBtn_Click(object sender, EventArgs e)
         {
-            ReportManager = new ReportManager();
+            ReportManager = new ReportManagerForm();
             this.Hide();
             ReportManager.ShowDialog();
             this.Show();
@@ -80,32 +80,6 @@ namespace workflowLoginForm
             this.Hide();
             QualityAnalyzer.ShowDialog();
             this.Show();
-        }
-
-        private void AdministratorForm_Load(object sender, EventArgs e)
-        {
-            UserManager userManager = new UserManager();
-
-            // Show Stockiests
-            users = userManager.CreateUserList("Stockiest");
-            stockiestNames.Items.AddRange(users.ToArray());
-
-            // Show Product Managers
-            users = userManager.CreateUserList("Product Manager");
-            productManagerNames.Items.AddRange(users.ToArray());
-
-            // Show Delivery Managers
-            users = userManager.CreateUserList("Delivery Manager");
-            deliveryManagerNames.Items.AddRange(users.ToArray());
-
-            // Show Report Managers
-            users = userManager.CreateUserList("Report Manager");
-            reportManagerNames.Items.AddRange(users.ToArray());
-
-            // Show Quality Analyzers
-            users = userManager.CreateUserList("Quality Analyzer");
-            qualityAnalyzerNames.Items.AddRange(users.ToArray());
-
         }
 
         private void registerBtn_Click(object sender, EventArgs e)

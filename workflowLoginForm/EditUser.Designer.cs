@@ -193,6 +193,7 @@ namespace workflowLoginForm
             // 
             // boxOccupation
             // 
+            this.boxOccupation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxOccupation.FormattingEnabled = true;
             this.boxOccupation.Items.AddRange(new object[] {
             "Administrator",
@@ -389,7 +390,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditUserInfo";
-            this.Text = "Edit User Page";
+            this.Text = "Edit User";
             this.Load += new System.EventHandler(this.EditUser_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -1,7 +1,7 @@
 ﻿
 namespace workflowLoginForm
 {
-    partial class ReportManager
+    partial class ReportManagerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace workflowLoginForm
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportManager));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportManagerForm));
             this.RawMatbtn = new System.Windows.Forms.Button();
             this.Productbtn = new System.Windows.Forms.Button();
             this.RawMatCSVbtn = new System.Windows.Forms.Button();
@@ -131,6 +131,7 @@ namespace workflowLoginForm
             // 
             // cBoxProductRep
             // 
+            this.cBoxProductRep.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxProductRep.FormattingEnabled = true;
             this.cBoxProductRep.Items.AddRange(new object[] {
             "In Progress",
@@ -236,7 +237,7 @@ namespace workflowLoginForm
             this.label3.TabIndex = 70;
             this.label3.Text = "Select Product Type:";
             // 
-            // ReportManager
+            // ReportManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,8 +255,8 @@ namespace workflowLoginForm
             this.Controls.Add(this.Productbtn);
             this.Controls.Add(this.RawMatbtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ReportManager";
-            this.Text = "ReportManager";
+            this.Name = "ReportManagerForm";
+            this.Text = "Report Manager";
             this.csvStatusStrip.ResumeLayout(false);
             this.csvStatusStrip.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

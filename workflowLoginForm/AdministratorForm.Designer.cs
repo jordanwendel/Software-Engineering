@@ -35,11 +35,6 @@
             this.delManagerBtn = new System.Windows.Forms.Button();
             this.repManagerBtn = new System.Windows.Forms.Button();
             this.qualAnalyzerBtn = new System.Windows.Forms.Button();
-            this.stockiestNames = new System.Windows.Forms.ListBox();
-            this.productManagerNames = new System.Windows.Forms.ListBox();
-            this.deliveryManagerNames = new System.Windows.Forms.ListBox();
-            this.reportManagerNames = new System.Windows.Forms.ListBox();
-            this.qualityAnalyzerNames = new System.Windows.Forms.ListBox();
             this.registerBtn = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
@@ -134,56 +129,6 @@
             this.qualAnalyzerBtn.Text = "QUALITY ANALYZER";
             this.qualAnalyzerBtn.UseVisualStyleBackColor = false;
             this.qualAnalyzerBtn.Click += new System.EventHandler(this.qualAnalyzerBtn_Click);
-            // 
-            // stockiestNames
-            // 
-            this.stockiestNames.FormattingEnabled = true;
-            this.stockiestNames.ItemHeight = 16;
-            this.stockiestNames.Location = new System.Drawing.Point(-6, -13);
-            this.stockiestNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.stockiestNames.Name = "stockiestNames";
-            this.stockiestNames.Size = new System.Drawing.Size(171, 116);
-            this.stockiestNames.TabIndex = 11;
-            // 
-            // productManagerNames
-            // 
-            this.productManagerNames.FormattingEnabled = true;
-            this.productManagerNames.ItemHeight = 16;
-            this.productManagerNames.Location = new System.Drawing.Point(-6, -13);
-            this.productManagerNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.productManagerNames.Name = "productManagerNames";
-            this.productManagerNames.Size = new System.Drawing.Size(171, 116);
-            this.productManagerNames.TabIndex = 12;
-            // 
-            // deliveryManagerNames
-            // 
-            this.deliveryManagerNames.FormattingEnabled = true;
-            this.deliveryManagerNames.ItemHeight = 16;
-            this.deliveryManagerNames.Location = new System.Drawing.Point(-6, -13);
-            this.deliveryManagerNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.deliveryManagerNames.Name = "deliveryManagerNames";
-            this.deliveryManagerNames.Size = new System.Drawing.Size(171, 116);
-            this.deliveryManagerNames.TabIndex = 13;
-            // 
-            // reportManagerNames
-            // 
-            this.reportManagerNames.FormattingEnabled = true;
-            this.reportManagerNames.ItemHeight = 16;
-            this.reportManagerNames.Location = new System.Drawing.Point(-6, -36);
-            this.reportManagerNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.reportManagerNames.Name = "reportManagerNames";
-            this.reportManagerNames.Size = new System.Drawing.Size(171, 116);
-            this.reportManagerNames.TabIndex = 14;
-            // 
-            // qualityAnalyzerNames
-            // 
-            this.qualityAnalyzerNames.FormattingEnabled = true;
-            this.qualityAnalyzerNames.ItemHeight = 16;
-            this.qualityAnalyzerNames.Location = new System.Drawing.Point(-6, -36);
-            this.qualityAnalyzerNames.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.qualityAnalyzerNames.Name = "qualityAnalyzerNames";
-            this.qualityAnalyzerNames.Size = new System.Drawing.Size(171, 116);
-            this.qualityAnalyzerNames.TabIndex = 15;
             // 
             // registerBtn
             // 
@@ -310,11 +255,6 @@
             this.Controls.Add(this.edituserbtn);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.registerBtn);
-            this.Controls.Add(this.qualityAnalyzerNames);
-            this.Controls.Add(this.reportManagerNames);
-            this.Controls.Add(this.deliveryManagerNames);
-            this.Controls.Add(this.productManagerNames);
-            this.Controls.Add(this.stockiestNames);
             this.Controls.Add(this.qualAnalyzerBtn);
             this.Controls.Add(this.repManagerBtn);
             this.Controls.Add(this.delManagerBtn);
@@ -324,8 +264,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdministratorForm";
-            this.Text = "Admin Form";
-            this.Load += new System.EventHandler(this.AdministratorForm_Load);
+            this.Text = "Administrator Control";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -341,11 +280,6 @@
         private System.Windows.Forms.Button delManagerBtn;
         private System.Windows.Forms.Button repManagerBtn;
         private System.Windows.Forms.Button qualAnalyzerBtn;
-        private System.Windows.Forms.ListBox stockiestNames;
-        private System.Windows.Forms.ListBox productManagerNames;
-        private System.Windows.Forms.ListBox deliveryManagerNames;
-        private System.Windows.Forms.ListBox reportManagerNames;
-        private System.Windows.Forms.ListBox qualityAnalyzerNames;
         private System.Windows.Forms.Button registerBtn;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;

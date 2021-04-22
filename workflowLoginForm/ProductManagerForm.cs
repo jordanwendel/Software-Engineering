@@ -16,21 +16,31 @@ namespace workflowLoginForm
     public partial class ProductManagerForm : Form
     {
         // Class level objects
-        private DataGridTools dgTools;
-        private DatabaseTools dbTools;
-        private Product newProduct;
-        private RawMaterial newMaterial;
-        private List<Product> newProducts;
-        private List<RawMaterial> matsRemoved;
-        private List<RawMaterial> matsToRemove;
-        private List<String> lstProductsToAdd;
-        private List<String> lstMatsToRemove;
+        private DataGridTools dgTools; // Uses DataGridView to create the data grids on screen
+
+        private DatabaseTools dbTools; // Edits quantity of products and raw materials in the database
+
+        private Product newProduct; // For storing in newProducts -> Product object that is being added to the database
+
+        private RawMaterial newMaterial; // For storing in A Raw Material object that 
+
+        private List<Product> newProducts; // List of Product objects that are being added to the database
+
+        private List<RawMaterial> matsRemoved; // Stores the Raw Material objects with their updated quantity after removing material(s)
+
+        private List<RawMaterial> matsToRemove; // Stores the Raw Material object with the amount that the user wants to remove
+
+        private List<String> lstProductsToAdd; // List of strings for displaying products to be added
+
+        private List<String> lstMatsToRemove; // List of strings for displaying raw materials to be removed
 
 
         // Constructor
         public ProductManagerForm()
         {
             InitializeComponent();
+
+            // Instantiating class level objects
             dgTools = new DataGridTools();
             dbTools = new DatabaseTools();
             newProducts = new List<Product>();
@@ -410,13 +420,14 @@ namespace workflowLoginForm
         private void removeItemBtn_Click(object sender, EventArgs e)
         {
             // Creating lists
-            lstMatsToRemove = new List<String>(); // For formatting items into a string to confirm changes on screen
-            matsToRemove = new List<RawMaterial>(); // For storing the materials the user wants to remove
+            lstMatsToRemove = new List<String>();
+            matsToRemove = new List<RawMaterial>(); 
 
 
             if (dbTools.CheckMat(txtName.Text).Equals(true)) // Checking if the material exists in the database
             {
-                RawMaterial tempMaterial = dbTools.GetRawMaterial(txtName.Text); // Creating a new raw material object from Database Tools class
+                RawMaterial tempMaterial = dbTools.GetRawMaterial(txtName.Text); // Getting the raw material object with the given name from the database
+
                 int newQuantity = tempMaterial.quantity - int.Parse(txtQuantity.Text); // Calculating the new quantity after subtracting the amount being taken out
 
 
@@ -424,12 +435,13 @@ namespace workflowLoginForm
                 // Quantity cannot be negative after subtracting
                 if (newQuantity > 0)
                 {
-                    tempMaterial.quantity = int.Parse(txtQuantity.Text); // Setting the object quantity to what the user inputs for future use
-                    matsRemoved.Add(tempMaterial); // Adding material to list
+                    tempMaterial.quantity = int.Parse(txtQuantity.Text); // Setting the object quantity to what the user inputs
+
+                    matsRemoved.Add(tempMaterial); // Adding material to a list of raw material objects with the user inputted quantity
 
 
                     newMaterial = new RawMaterial(tempMaterial.rawMaterialName, newQuantity); // What we want the product to be after making changes
-                    matsToRemove.Add(newMaterial); // Adding that to a list to track values
+                    matsToRemove.Add(newMaterial); // Adding that to a list to track its quantity 
 
 
                     rawMatsView.Items.Clear(); // Clearing list view

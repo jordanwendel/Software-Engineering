@@ -111,6 +111,7 @@
             // 
             // qualityMenu
             // 
+            this.qualityMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.qualityMenu.FormattingEnabled = true;
             this.qualityMenu.Items.AddRange(new object[] {
             "Satisfactory",
@@ -170,6 +171,7 @@
             // 
             // cBoxLocation
             // 
+            this.cBoxLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxLocation.FormattingEnabled = true;
             this.cBoxLocation.Items.AddRange(new object[] {
             "Sales",
@@ -278,6 +280,7 @@
             // 
             // cBoxQuality
             // 
+            this.cBoxQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxQuality.FormattingEnabled = true;
             this.cBoxQuality.Items.AddRange(new object[] {
             "Qualified",
@@ -289,6 +292,7 @@
             // 
             // filterMenu
             // 
+            this.filterMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterMenu.FormattingEnabled = true;
             this.filterMenu.Items.AddRange(new object[] {
             "Name",
@@ -389,7 +393,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QualityAnalyzerForm";
-            this.Text = "Quality Analyzer Form";
+            this.Text = "Quality Analyzer";
             this.Load += new System.EventHandler(this.QualityAnalyzerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).EndInit();
             this.toolStrip1.ResumeLayout(false);

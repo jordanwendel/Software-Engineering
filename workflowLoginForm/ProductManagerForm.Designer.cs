@@ -181,6 +181,7 @@
             // 
             // txtFilterByItem
             // 
+            this.txtFilterByItem.BackColor = System.Drawing.SystemColors.Control;
             this.txtFilterByItem.Location = new System.Drawing.Point(126, 501);
             this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFilterByItem.Name = "txtFilterByItem";
@@ -224,6 +225,7 @@
             // 
             // txtNum
             // 
+            this.txtNum.BackColor = System.Drawing.SystemColors.Control;
             this.txtNum.Location = new System.Drawing.Point(262, 559);
             this.txtNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNum.Name = "txtNum";
@@ -254,6 +256,7 @@
             // 
             // cBoxLocation
             // 
+            this.cBoxLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxLocation.FormattingEnabled = true;
             this.cBoxLocation.Items.AddRange(new object[] {
             "Sales",
@@ -274,6 +277,7 @@
             // 
             // filterMenu
             // 
+            this.filterMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterMenu.FormattingEnabled = true;
             this.filterMenu.Items.AddRange(new object[] {
             "Name",
@@ -285,11 +289,11 @@
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
             this.filterMenu.TabIndex = 49;
-            this.filterMenu.Text = "Click to Expand...";
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
             // 
             // cBoxQuality
             // 
+            this.cBoxQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxQuality.FormattingEnabled = true;
             this.cBoxQuality.Items.AddRange(new object[] {
             "Satisfactory",
@@ -303,6 +307,7 @@
             // 
             // quantityEquations
             // 
+            this.quantityEquations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.quantityEquations.FormattingEnabled = true;
             this.quantityEquations.Items.AddRange(new object[] {
             "GREATER THAN",
@@ -436,7 +441,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(1121, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(63, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(63, 31);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -455,7 +460,7 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 28);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // toolStripMenuItem1
@@ -537,7 +542,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductManagerForm";
-            this.Text = "Product Manager Form";
+            this.Text = "Product Manager";
             this.Load += new System.EventHandler(this.ProductManagerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).EndInit();
             this.stsStripDisplayInfo.ResumeLayout(false);

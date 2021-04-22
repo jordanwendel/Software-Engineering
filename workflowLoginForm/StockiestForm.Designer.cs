@@ -179,6 +179,7 @@
             // 
             // quantityEquations
             // 
+            this.quantityEquations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.quantityEquations.FormattingEnabled = true;
             this.quantityEquations.Items.AddRange(new object[] {
             "GREATER THAN",
@@ -192,6 +193,7 @@
             // 
             // filterMenu
             // 
+            this.filterMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterMenu.FormattingEnabled = true;
             this.filterMenu.Items.AddRange(new object[] {
             "Name",
@@ -201,7 +203,6 @@
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
             this.filterMenu.TabIndex = 62;
-            this.filterMenu.Text = "Click to Expand...";
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
             // 
             // label4
@@ -355,7 +356,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StockiestForm";
-            this.Text = "Stockiest Form";
+            this.Text = "Stockiest";
             this.Load += new System.EventHandler(this.StockiestForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.toolStrip1.ResumeLayout(false);

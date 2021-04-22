@@ -102,6 +102,7 @@ namespace workflowLoginForm
             // 
             // boxOccupation
             // 
+            this.boxOccupation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxOccupation.FormattingEnabled = true;
             this.boxOccupation.Items.AddRange(new object[] {
             "Administrator",
@@ -319,7 +320,7 @@ namespace workflowLoginForm
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RegisterForm";
-            this.Text = "Register New User";
+            this.Text = "Add New User";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

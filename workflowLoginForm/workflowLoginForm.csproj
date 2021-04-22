@@ -164,11 +164,11 @@
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportGenerator.cs" />
-    <Compile Include="ReportManager.cs">
+    <Compile Include="ReportManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReportManager.Designer.cs">
-      <DependentUpon>ReportManager.cs</DependentUpon>
+    <Compile Include="ReportManagerForm.Designer.cs">
+      <DependentUpon>ReportManagerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="StockiestForm.cs">
       <SubType>Form</SubType>
@@ -229,8 +229,8 @@
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReportManager.resx">
-      <DependentUpon>ReportManager.cs</DependentUpon>
+    <EmbeddedResource Include="ReportManagerForm.resx">
+      <DependentUpon>ReportManagerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StockiestForm.resx">
       <DependentUpon>StockiestForm.cs</DependentUpon>

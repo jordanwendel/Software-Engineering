@@ -182,7 +182,7 @@ namespace workflowLoginForm
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RawMaterialsForm";
-            this.Text = "Raw Materials Form";
+            this.Text = "Add Raw Material";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -245,7 +245,7 @@ namespace workflowLoginForm
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductForm";
-            this.Text = "Product Form";
+            this.Text = "Add New Product";
             this.Load += new System.EventHandler(this.ProductForm_Load);
             this.addProdStatusStrip.ResumeLayout(false);
             this.addProdStatusStrip.PerformLayout();

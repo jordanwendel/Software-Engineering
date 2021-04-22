@@ -205,7 +205,7 @@ namespace workflowLoginForm
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "workflowLoginForm";
-            this.Text = "Bikes \"R\" Us Program";
+            this.Text = "Log In";
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
