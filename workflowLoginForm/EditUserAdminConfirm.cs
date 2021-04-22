@@ -12,16 +12,17 @@ namespace workflowLoginForm
 {
     public partial class EditUserAdminConfirm : Form
     {
-        private string password;
+        private string password { get; set; }
 
-        public EditUserAdminConfirm()
+        public EditUserAdminConfirm(User user)
         {
             InitializeComponent();
+            this.password = user.Password;
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            /*string enteredPassword = txtPass.Text;
+            string enteredPassword = txtPass.Text;
             if (this.password.Equals(enteredPassword))
             {
                 this.Close();
@@ -29,7 +30,7 @@ namespace workflowLoginForm
             else
             {
                 MessageBox.Show("Invalid password. Please try again");
-            }*/
+            }
 
         }
     }

@@ -14,7 +14,7 @@ namespace workflowLoginForm
     public partial class workflowLoginForm : Form
     {
         // Class level objects
-        private User loggedInUser;
+        public User loggedInUser { get; set; }
         private DeliveryManagerForm DeliveryManager;
         private AdministratorForm Admin;
         private ProductManagerForm ProductManager;
@@ -49,7 +49,7 @@ namespace workflowLoginForm
                     if (loggedInUser.Job.Equals("Administrator")) // Admin page
                     {
                         this.Hide();
-                        Admin = new AdministratorForm();
+                        Admin = new AdministratorForm(loggedInUser);
                         Admin.ShowDialog();
                         txtUserName.Text = string.Empty;
                         txtPassword.Text = string.Empty;
