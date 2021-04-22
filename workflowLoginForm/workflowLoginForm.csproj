@@ -106,6 +106,12 @@
     <Compile Include="EditUser.Designer.cs">
       <DependentUpon>EditUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditUserAdminConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditUserAdminConfirm.Designer.cs">
+      <DependentUpon>EditUserAdminConfirm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditUser.resx">
       <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUserAdminConfirm.resx">
+      <DependentUpon>EditUserAdminConfirm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>

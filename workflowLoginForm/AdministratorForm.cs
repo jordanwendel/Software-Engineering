@@ -20,12 +20,15 @@ namespace workflowLoginForm
         private QualityAnalyzerForm QualityAnalyzer;
         private EditUserInfo EditUserInfo;
         private List<User> users;
+        private workflowLoginForm loginForm;
+        private User user;
 
         // Constructor
-        public AdministratorForm()
+        public AdministratorForm(User user)
         {
             InitializeComponent();
             users = new List<User>();
+            this.user = user;
         }
 
         // Event handler for Logout button click
@@ -124,7 +127,7 @@ namespace workflowLoginForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EditUserInfo = new EditUserInfo();
+            EditUserInfo = new EditUserInfo(this.user);
             this.Hide();
             EditUserInfo.ShowDialog();
             this.Show();

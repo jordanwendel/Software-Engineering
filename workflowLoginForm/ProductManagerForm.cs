@@ -505,7 +505,7 @@ namespace workflowLoginForm
                         // Clear items from list boxes
                         itemsView.Items.Clear();
                         rawMatsView.Items.Clear();
-
+                        
                         // Adding all new products to the database
                         foreach (Product p in newProducts)
                         {

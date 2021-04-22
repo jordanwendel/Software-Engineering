@@ -14,12 +14,15 @@ namespace workflowLoginForm
     {
         private DataGridTools dgTools;
         private DatabaseTools dbTools;
-        public EditUserInfo()
+        private EditUserAdminConfirm confirmForm;
+        private User user;
+
+        public EditUserInfo(User user)
         {
             InitializeComponent();
             dgTools = new DataGridTools();
             dbTools = new DatabaseTools();
-
+            this.user = user;
         }
 
         private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
@@ -170,6 +173,10 @@ namespace workflowLoginForm
             {
                 MessageBox.Show(err.Message, "Warning!");
             }
+        }
+            confirmForm = new EditUserAdminConfirm(this.user);
+            confirmForm.ShowDialog();
+            this.Show();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
