@@ -29,6 +29,14 @@ namespace workflowLoginForm
             dgTools.dbName = "RawMaterials";
             dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
             dgTools.PopulateDataGrid(stockDataGridView);
+
+            int Count = dbReport.CountMaterials();
+            string Counter = Count.ToString();
+            countlbl.Text = Counter;
+
+            int Avg = dbReport.AvgQuantMaterials();
+            string Average = Avg.ToString();
+            averagelbl.Text = Average;
         }
         private void button1_Click(object sender, EventArgs e)
         {

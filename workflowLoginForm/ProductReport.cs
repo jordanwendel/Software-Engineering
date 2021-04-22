@@ -78,6 +78,44 @@ namespace workflowLoginForm
             dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products Where Quality IN ('Satisfactory','Defective')";
 
             dgTools.PopulateDataGrid(stockDataGridView);
+
+            int Count = dbReport.CountProducts();
+            string Counter = Count.ToString();
+            countlbl.Text = Counter;
+
+            int Avg = dbReport.AvgQuantProducts();
+            string Average = Avg.ToString();
+            averagelbl.Text = Average;
+
+            int Quality = dbReport.GoodProducts();
+            string Qualitylabel = Quality.ToString();
+            satisfactorylbl.Text = Qualitylabel;
+
+            int BadQuality = dbReport.BadProducts();
+            string Badlabel = BadQuality.ToString();
+            defectivelbl.Text = Badlabel;
+
+            int ProgressQuality = dbReport.ProgressProducts();
+            string Progresslabel = ProgressQuality.ToString();
+            progresslbl.Text = Progresslabel;
+
+            decimal QualPercent = (Quality * 100 / Count);
+            // Decimal QualPercent2 = Decimal.Truncate(QualPercent);
+            string QualityPercent = QualPercent.ToString();
+            qualitylbl.Text = QualityPercent + "%";
+
+            int salescount = dbReport.SalesProducts();
+            string SalesCount = salescount.ToString();
+            saleslbl.Text = SalesCount;
+
+            int manucount = dbReport.ManuProducts();
+            string ManuCount = manucount.ToString();
+            manufacturinglbl.Text = ManuCount;
+
+            decimal salesPercent = (salescount * 100 / Count);
+            // Decimal QualPercent2 = Decimal.Truncate(QualPercent);
+            string SalesPercent = salesPercent.ToString();
+            percentsaleslbl.Text = SalesPercent + "%";
         }
     }
 }
