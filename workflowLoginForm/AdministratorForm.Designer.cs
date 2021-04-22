@@ -44,7 +44,6 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.viewProductReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMaterialReoprtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -212,7 +211,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(871, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(105, 27);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -222,7 +221,6 @@
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProductReportToolStripMenuItem,
-            this.viewMaterialReoprtToolStripMenuItem,
             this.refreshToolStripMenuItem,
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
@@ -237,32 +235,27 @@
             // viewProductReportToolStripMenuItem
             // 
             this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
-            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.viewProductReportToolStripMenuItem.Text = "View Product Report";
-            // 
-            // viewMaterialReoprtToolStripMenuItem
-            // 
-            this.viewMaterialReoprtToolStripMenuItem.Name = "viewMaterialReoprtToolStripMenuItem";
-            this.viewMaterialReoprtToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
-            this.viewMaterialReoprtToolStripMenuItem.Text = "View Material Reoprt";
+            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewProductReportToolStripMenuItem.Text = "View Reports";
+            this.viewProductReportToolStripMenuItem.Click += new System.EventHandler(this.viewProductReportToolStripMenuItem_Click);
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -356,7 +349,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem viewProductReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewMaterialReoprtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;

@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace workflowLoginForm
 {
@@ -722,5 +724,13 @@ namespace workflowLoginForm
             filterMenu.Items.Add("Name");
             filterMenu.Items.Add("Quantity");
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+            System.Diagnostics.Process.Start(openFile.FileName);
+        }
+
     }
 }

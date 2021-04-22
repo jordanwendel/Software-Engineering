@@ -129,5 +129,12 @@ namespace workflowLoginForm
             EditUserInfo.ShowDialog();
             this.Show();
         }
+
+        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+            System.Diagnostics.Process.Start(openFile.FileName);
+        }
     }
 }

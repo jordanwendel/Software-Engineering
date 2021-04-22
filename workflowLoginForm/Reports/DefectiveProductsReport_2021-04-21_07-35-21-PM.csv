@@ -1,0 +1,57 @@
+productName,quality,quantity,location
+Brown bmx 2 bike,Defective,8,Sales
+Brown bmx 3 bike,Defective,3,Manufacturing
+Brown bmx bike,Defective,1,Manufacturing
+"Brown cruiser 2 bike",Defective,6,Manufacturing
+Brown cruiser 7 bike,Defective,2,Sales
+"Brown road bike",Defective,1,
+"Hall bmx 3 bike
+",Defective,1,Manufacturing
+Hall cruiser 2 bike,Defective,3,Manufacturing
+Hall mountain 7 bike,Defective,2,Manufacturing
+Hall road 6 bike,Defective,4,Manufacturing
+"Hall track bike",Defective,3,Manufacturing
+Lee bmx 5 bike,Defective,1,Manufacturing
+Lee cruiser 8 bike,Defective,1,Manufacturing
+Lee mountain bike,Defective,3,Manufacturing
+Lee road 4 bike,Defective,3,Manufacturing
+Lee track 7 bike,Defective,3,Manufacturing
+Lee track bike,Defective,3,
+Mata cruiser 5 bike,Defective,3,Manufacturing
+"Mata mountain 7 bike
+",Defective,3,Manufacturing
+Mata road 4 bike,Defective,3,Manufacturing
+Mata track 5 bike,Defective,4,Manufacturing
+Mata track bike,Defective,3,Manufacturing
+"Norton bmx bike",Defective,4,
+"Norton cruiser 5 bike
+",Defective,3,Manufacturing
+"Norton mountain 7 bike
+",Defective,4,
+"Norton road 4 bike
+",Defective,3,
+"Norton road bike
+",Defective,4,Manufacturing
+"Norton track 6 bike
+",Defective,3,
+"Schroeder bmx 3 bike
+",Defective,4,Manufacturing
+"Schroeder bmx bike
+",Defective,3,
+"Schroeder mountain 8 bike
+",Defective,3,
+"Schroeder mountain bike
+",Defective,4,
+"Schroeder track 4 bike
+",Defective,3,
+Brown track 4 bike,Defective,1,
+Hall bmx bike,Defective,1,Manufacturing
+Hall road 9 bike,Defective,2,
+Lee cruiser bike,Defective,1,
+Lee road 2 bike,Defective,3,
+Mata bmx bike,Defective,3,
+Mata road 7 bike,Defective,1,
+Norton mountain 7 bike,Defective,4,Manufacturing
+Norton track 6 bike,Defective,3,
+Schroeder bmx bike,Defective,3,
+Schroeder mountain bike,Defective,4,
