@@ -162,7 +162,7 @@ namespace workflowLoginForm
                     dgTools.RefreshDataGrid(StockiestDataGridView);
                     txtFirstName.Clear();
                     txtLastName.Clear();
-                    boxOccupation.Items.Clear();
+                    boxOccupation.Text = String.Empty;
                 }
                 else
                 {
@@ -173,7 +173,7 @@ namespace workflowLoginForm
             {
                 MessageBox.Show(err.Message, "Warning!");
             }
-        }
+        
             confirmForm = new EditUserAdminConfirm(this.user);
             confirmForm.ShowDialog();
             this.Show();
