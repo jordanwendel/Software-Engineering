@@ -47,11 +47,11 @@ namespace workflowLoginForm
                     string message = "Are you sure you want to create a new user with job title " + boxOccupation.Text + "?";
                     string title = "Warning!";
 
-                    MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                     DialogResult result = MessageBox.Show(message, title, buttons);
                     if (result == DialogResult.Yes)
                     {
-                        User newUser = new User(usernameTxt.Text, passwordTxt.Text, boxOccupation.Text);
+                        User newUser = new User(firstnametxt.Text, lastnametxt.Text, emailtxt.Text, usernameTxt.Text, passwordTxt.Text, boxOccupation.Text);
                         userManager.RegisterUser(newUser); // Register the user in the database
                     }
                     else
@@ -69,6 +69,9 @@ namespace workflowLoginForm
                 usernameTxt.Clear();
                 passwordTxt.Clear();
                 confirmpasswordtxt.Clear();
+                firstnametxt.Clear();
+                lastnametxt.Clear();
+                emailtxt.Clear();
                 boxOccupation.Text = string.Empty;
 
                 this.Hide();
@@ -97,6 +100,9 @@ namespace workflowLoginForm
             usernameTxt.Text = String.Empty;
             boxOccupation.Text = String.Empty;
             confirmpasswordtxt.Text = String.Empty;
+            firstnametxt.Text = String.Empty;
+            lastnametxt.Text = String.Empty;
+            emailtxt.Text = String.Empty;
         }
 
     }

@@ -130,7 +130,46 @@ namespace workflowLoginForm
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
+            string firstname = txtFirstName.Text;
+            string lastname = txtLastName.Text;
+            string job = boxOccupation.Text;
+            dbTools = new DatabaseTools();
 
+            try
+            {
+                string message = "Are you sure you want to change the job of " + txtFirstName.Text + " " + txtLastName.Text + " to " + job + "?";
+                string title = "Warning!";
+
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    dbTools.EditUserJob(firstname, lastname, job);
+                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Administrator')"; // Viewing all data from RawMaterials database except the ID
+                    dgTools.RefreshDataGrid(AdminDataGridView);
+                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Quality Analyzer')";
+                    dgTools.RefreshDataGrid(QualityDataGridView);
+                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Report Manager')";
+                    dgTools.RefreshDataGrid(ReportDataGridView);
+                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Delivery Manager')";
+                    dgTools.RefreshDataGrid(DeliveryDataGridView);
+                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Product Manager')";
+                    dgTools.RefreshDataGrid(ProductDataGridView);
+                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Stockiest')";
+                    dgTools.RefreshDataGrid(StockiestDataGridView);
+                    txtFirstName.Clear();
+                    txtLastName.Clear();
+                    boxOccupation.Items.Clear();
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -143,7 +182,8 @@ namespace workflowLoginForm
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = StockiestDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
-                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+                txtFirstName.Text = row.Cells[0].Value.ToString();
+                txtLastName.Text = row.Cells[1].Value.ToString(); // Selecting the product name from the row object
             }
         }
 
@@ -157,7 +197,8 @@ namespace workflowLoginForm
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = ReportDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
-                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+                txtFirstName.Text = row.Cells[0].Value.ToString();
+                txtLastName.Text = row.Cells[1].Value.ToString();// Selecting the product name from the row object
             }
         }
 
@@ -166,7 +207,8 @@ namespace workflowLoginForm
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = QualityDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
-                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+                txtFirstName.Text = row.Cells[0].Value.ToString();
+                txtLastName.Text = row.Cells[1].Value.ToString(); // Selecting the product name from the row object
             }
         }
 
@@ -175,7 +217,8 @@ namespace workflowLoginForm
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = DeliveryDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
-                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+                txtFirstName.Text = row.Cells[0].Value.ToString();
+                txtLastName.Text = row.Cells[1].Value.ToString(); // Selecting the product name from the row object
             }
         }
 
@@ -184,7 +227,8 @@ namespace workflowLoginForm
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = ProductDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
-                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+                txtFirstName.Text = row.Cells[0].Value.ToString();
+                txtLastName.Text = row.Cells[1].Value.ToString(); // Selecting the product name from the row object
             }
         }
 
@@ -193,7 +237,18 @@ namespace workflowLoginForm
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = AdminDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
-                txtName.Text = row.Cells[0].Value.ToString() + " " + row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+                txtFirstName.Text = row.Cells[0].Value.ToString();
+                txtLastName.Text = row.Cells[1].Value.ToString(); // Selecting the product name from the row object
+            }
+        }
+
+        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.ShowDialog();
+            if (openFile.FileName.Any())
+            {
+                System.Diagnostics.Process.Start(openFile.FileName);
             }
         }
     }

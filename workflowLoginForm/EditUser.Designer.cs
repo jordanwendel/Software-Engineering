@@ -32,7 +32,6 @@ namespace workflowLoginForm
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProductReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMaterialsReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,8 +50,9 @@ namespace workflowLoginForm
             this.DeliveryDataGridView = new System.Windows.Forms.DataGridView();
             this.ProductDataGridView = new System.Windows.Forms.DataGridView();
             this.AdminDataGridView = new System.Windows.Forms.DataGridView();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txtLastName = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StockiestDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportDataGridView)).BeginInit();
@@ -80,7 +80,6 @@ namespace workflowLoginForm
             this.menuToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.menuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewProductReportToolStripMenuItem,
-            this.viewMaterialsReportToolStripMenuItem,
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
@@ -90,26 +89,21 @@ namespace workflowLoginForm
             // viewProductReportToolStripMenuItem
             // 
             this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
-            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.viewProductReportToolStripMenuItem.Text = "View Product Report";
-            // 
-            // viewMaterialsReportToolStripMenuItem
-            // 
-            this.viewMaterialsReportToolStripMenuItem.Name = "viewMaterialsReportToolStripMenuItem";
-            this.viewMaterialsReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.viewMaterialsReportToolStripMenuItem.Text = "View Materials Report";
+            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.viewProductReportToolStripMenuItem.Text = "View Reports";
+            this.viewProductReportToolStripMenuItem.Click += new System.EventHandler(this.viewProductReportToolStripMenuItem_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -337,13 +331,13 @@ namespace workflowLoginForm
             this.AdminDataGridView.TabIndex = 110;
             this.AdminDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminDataGridView_CellContentClick);
             // 
-            // txtName
+            // txtFirstName
             // 
-            this.txtName.Location = new System.Drawing.Point(102, 88);
-            this.txtName.Name = "txtName";
-            this.txtName.ReadOnly = true;
-            this.txtName.Size = new System.Drawing.Size(177, 22);
-            this.txtName.TabIndex = 112;
+            this.txtFirstName.Location = new System.Drawing.Point(102, 88);
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.ReadOnly = true;
+            this.txtFirstName.Size = new System.Drawing.Size(107, 22);
+            this.txtFirstName.TabIndex = 112;
             // 
             // label2
             // 
@@ -358,14 +352,23 @@ namespace workflowLoginForm
             this.label2.Text = "Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // txtLastName
+            // 
+            this.txtLastName.Location = new System.Drawing.Point(209, 88);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.ReadOnly = true;
+            this.txtLastName.Size = new System.Drawing.Size(101, 22);
+            this.txtLastName.TabIndex = 114;
+            // 
             // EditUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(962, 545);
+            this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.AdminDataGridView);
             this.Controls.Add(this.ProductDataGridView);
             this.Controls.Add(this.DeliveryDataGridView);
@@ -403,7 +406,6 @@ namespace workflowLoginForm
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewProductReportToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewMaterialsReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label label1;
@@ -422,7 +424,8 @@ namespace workflowLoginForm
         private System.Windows.Forms.DataGridView DeliveryDataGridView;
         private System.Windows.Forms.DataGridView ProductDataGridView;
         private System.Windows.Forms.DataGridView AdminDataGridView;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtLastName;
     }
 }

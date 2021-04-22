@@ -46,6 +46,12 @@ namespace workflowLoginForm
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.firstnametxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lastnametxt = new System.Windows.Forms.TextBox();
+            this.emailtxt = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +60,7 @@ namespace workflowLoginForm
             this.usernameLbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameLbl.ForeColor = System.Drawing.Color.White;
             this.usernameLbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.usernameLbl.Location = new System.Drawing.Point(354, 166);
+            this.usernameLbl.Location = new System.Drawing.Point(554, 130);
             this.usernameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.usernameLbl.Name = "usernameLbl";
             this.usernameLbl.Size = new System.Drawing.Size(184, 28);
@@ -64,7 +70,7 @@ namespace workflowLoginForm
             // 
             // usernameTxt
             // 
-            this.usernameTxt.Location = new System.Drawing.Point(546, 172);
+            this.usernameTxt.Location = new System.Drawing.Point(746, 136);
             this.usernameTxt.Margin = new System.Windows.Forms.Padding(4);
             this.usernameTxt.Name = "usernameTxt";
             this.usernameTxt.Size = new System.Drawing.Size(132, 22);
@@ -72,7 +78,7 @@ namespace workflowLoginForm
             // 
             // passwordTxt
             // 
-            this.passwordTxt.Location = new System.Drawing.Point(546, 220);
+            this.passwordTxt.Location = new System.Drawing.Point(746, 184);
             this.passwordTxt.Margin = new System.Windows.Forms.Padding(4);
             this.passwordTxt.Name = "passwordTxt";
             this.passwordTxt.PasswordChar = '*';
@@ -112,7 +118,7 @@ namespace workflowLoginForm
             // 
             // confirmpasswordtxt
             // 
-            this.confirmpasswordtxt.Location = new System.Drawing.Point(546, 271);
+            this.confirmpasswordtxt.Location = new System.Drawing.Point(746, 235);
             this.confirmpasswordtxt.Margin = new System.Windows.Forms.Padding(4);
             this.confirmpasswordtxt.Name = "confirmpasswordtxt";
             this.confirmpasswordtxt.PasswordChar = '*';
@@ -167,21 +173,21 @@ namespace workflowLoginForm
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -190,7 +196,7 @@ namespace workflowLoginForm
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(354, 214);
+            this.label2.Location = new System.Drawing.Point(554, 178);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 28);
@@ -203,7 +209,7 @@ namespace workflowLoginForm
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(338, 265);
+            this.label3.Location = new System.Drawing.Point(538, 229);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(200, 28);
@@ -224,12 +230,81 @@ namespace workflowLoginForm
             this.label4.Text = "Select Job Type:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(131, 229);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 28);
+            this.label1.TabIndex = 75;
+            this.label1.Text = "Enter Email:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(147, 178);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(184, 28);
+            this.label5.TabIndex = 74;
+            this.label5.Text = "Enter Last Name:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // firstnametxt
+            // 
+            this.firstnametxt.Location = new System.Drawing.Point(339, 136);
+            this.firstnametxt.Margin = new System.Windows.Forms.Padding(4);
+            this.firstnametxt.Name = "firstnametxt";
+            this.firstnametxt.Size = new System.Drawing.Size(132, 22);
+            this.firstnametxt.TabIndex = 70;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label6.Location = new System.Drawing.Point(105, 130);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(226, 28);
+            this.label6.TabIndex = 71;
+            this.label6.Text = "Enter First Name:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lastnametxt
+            // 
+            this.lastnametxt.Location = new System.Drawing.Point(339, 184);
+            this.lastnametxt.Margin = new System.Windows.Forms.Padding(4);
+            this.lastnametxt.Name = "lastnametxt";
+            this.lastnametxt.Size = new System.Drawing.Size(132, 22);
+            this.lastnametxt.TabIndex = 76;
+            // 
+            // emailtxt
+            // 
+            this.emailtxt.Location = new System.Drawing.Point(339, 235);
+            this.emailtxt.Margin = new System.Windows.Forms.Padding(4);
+            this.emailtxt.Name = "emailtxt";
+            this.emailtxt.Size = new System.Drawing.Size(132, 22);
+            this.emailtxt.TabIndex = 77;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(982, 553);
+            this.Controls.Add(this.emailtxt);
+            this.Controls.Add(this.lastnametxt);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.firstnametxt);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -268,5 +343,11 @@ namespace workflowLoginForm
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox firstnametxt;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox lastnametxt;
+        private System.Windows.Forms.TextBox emailtxt;
     }
 }

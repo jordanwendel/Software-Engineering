@@ -41,10 +41,13 @@ namespace workflowLoginForm
             {
                 // Create a SQL command that takes user input -- username, password, and job -- and inputs into the database
                 cn.Open();
-                cmd = new SqlCommand("Insert into AuthorizedUsers(username, userpassword, userjob) VALUES (@username, @password, @job);", cn);
+                cmd = new SqlCommand("Insert into AuthorizedUsers(firstname, lastname, emailAddress, username, userpassword, userjob) VALUES (@firstname, @lastname, @emailAddress, @username, @password, @job);", cn);
                 cmd.Parameters.AddWithValue("@username", user.Username);
                 cmd.Parameters.AddWithValue("@password", user.Password);
                 cmd.Parameters.AddWithValue("@job", user.Job);
+                cmd.Parameters.AddWithValue("@firstname", user.Firstname);
+                cmd.Parameters.AddWithValue("@lastname", user.Lastname);
+                cmd.Parameters.AddWithValue("@emailAddress", user.Email);
 
                 cmd.ExecuteNonQuery(); // Execute the sql command
                 MessageBox.Show("Sucessfully Registered!");

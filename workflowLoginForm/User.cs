@@ -13,6 +13,9 @@ namespace workflowLoginForm
         private UserManager userManager;
 
         // Variables
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
+        public string Email { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Job { get; set; }
@@ -33,8 +36,11 @@ namespace workflowLoginForm
         }
 
         // Constructor for registering a new user
-        public User (string username, string password, string job)
+        public User (string firstname, string lastname, string email, string username, string password, string job)
         {
+            this.Firstname = firstname;
+            this.Lastname = lastname;
+            this.Email = email;
             this.Username = username;
             this.Password = password;
             this.Job = job;

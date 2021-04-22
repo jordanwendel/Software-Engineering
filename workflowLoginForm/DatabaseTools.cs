@@ -342,7 +342,26 @@ namespace workflowLoginForm
                 Cn.Close();
             }
         }
-
+        public void EditUserJob(string FirstName,string LastName, string Job)
+        {
+            try
+            {
+                Cn.Open();
+                cmd = new SqlCommand("Update AuthorizedUsers Set userjob = @userjob Where FirstName = @firstName AND LastName = @lastName", Cn);
+                cmd.Parameters.AddWithValue("@firstName", FirstName);
+                cmd.Parameters.AddWithValue("@lastName", LastName);
+                cmd.Parameters.AddWithValue("@userJob", Job);
+                cmd.ExecuteNonQuery(); // Execute the sql command
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message, "Warning!");
+            }
+            finally
+            {
+                Cn.Close();
+            }
+        }
         public RawMaterial GetRawMaterial(string rawMaterialName)
         {
             RawMaterial mat = new RawMaterial(rawMaterialName, 0);
