@@ -59,6 +59,7 @@ namespace workflowLoginForm
                 dataGrid.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
                 dataGrid.RowsDefaultCellStyle.BackColor = Color.Wheat;
                 dataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGrid.RowHeadersVisible = false;
                 dataGrid.ReadOnly = true;
             }
             catch (Exception err)
