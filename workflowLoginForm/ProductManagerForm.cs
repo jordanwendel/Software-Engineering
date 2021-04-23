@@ -28,13 +28,13 @@ namespace workflowLoginForm
 
         private List<Product> newProducts; // List of Product objects that are being added to the database
 
-        private List<RawMaterial> matsRemoved; // Stores the Raw Material objects with their updated quantity after removing material(s)
+        private List<RawMaterial> matsQuantityToRemove; // Stores the Raw Material object with the amount that the user wants to remove 
 
-        private List<RawMaterial> matsToRemove; // Stores the Raw Material object with the amount that the user wants to remove
+        private List<RawMaterial> matsUpdatedQuantity; // Stores the Raw Material objects with their updated quantity after removing material(s)
 
-        private List<String> lstProductsToAdd; // List of strings for displaying products to be added
+        private List<String> strProductsBeingAdded; // List of strings for displaying products to be added
 
-        private List<String> lstMatsToRemove; // List of strings for displaying raw materials to be removed
+        private List<String> strMatsBeingRemoved; // List of strings for displaying raw materials to be removed
 
 
         // Constructor
@@ -46,7 +46,7 @@ namespace workflowLoginForm
             dgTools = new DataGridTools();
             dbTools = new DatabaseTools();
             newProducts = new List<Product>();
-            matsRemoved = new List<RawMaterial>();
+            matsQuantityToRemove = new List<RawMaterial>();
         }
 
 
@@ -321,7 +321,7 @@ namespace workflowLoginForm
         // Event handler for Add button click
         private void addItemBtn_Click(object sender, EventArgs e)
         {
-            lstProductsToAdd = new List<String>(); // For formatting items into a string to confirm changes on screen
+            strProductsBeingAdded = new List<String>(); // For formatting items into a string to confirm changes on screen
 
             // Getting the text fields on screen
             string ProductName = txtName.Text;
@@ -337,7 +337,7 @@ namespace workflowLoginForm
             foreach (Product prod in newProducts)
             {
                 string s = prod.quantity.ToString() + "x " + prod.productName; // Format to display -> (quantity)x (name)
-                lstProductsToAdd.Add(s);
+                strProductsBeingAdded.Add(s);
                 itemsView.Items.Add(s);
             }
 
@@ -422,8 +422,8 @@ namespace workflowLoginForm
         private void removeItemBtn_Click(object sender, EventArgs e)
         {
             // Creating lists
-            lstMatsToRemove = new List<String>();
-            matsToRemove = new List<RawMaterial>(); 
+            strMatsBeingRemoved = new List<String>();
+            matsUpdatedQuantity = new List<RawMaterial>(); 
 
 
             if (dbTools.CheckMat(txtName.Text).Equals(true)) // Checking if the material exists in the database
@@ -439,20 +439,21 @@ namespace workflowLoginForm
                 {
                     tempMaterial.quantity = int.Parse(txtQuantity.Text); // Setting the object quantity to what the user inputs
 
-                    matsRemoved.Add(tempMaterial); // Adding material to a list of raw material objects with the user inputted quantity
+                    matsQuantityToRemove.Add(tempMaterial); // Adding material to a list of raw material objects with the user inputted quantity
 
 
                     newMaterial = new RawMaterial(tempMaterial.rawMaterialName, newQuantity); // What we want the product to be after making changes
-                    matsToRemove.Add(newMaterial); // Adding that to a list to track its quantity 
+
+                    matsUpdatedQuantity.Add(newMaterial); // Adding that to a list to track its quantity 
 
 
                     rawMatsView.Items.Clear(); // Clearing list view
 
                     // Format each material to display in list views
-                    foreach (RawMaterial mat in matsRemoved)
+                    foreach (RawMaterial mat in matsQuantityToRemove)
                     {
                         string s = mat.quantity.ToString() + "x " + mat.rawMaterialName; // Format to display -> (quantity)x (name) 
-                        lstMatsToRemove.Add(s);
+                        strMatsBeingRemoved.Add(s);
                         rawMatsView.Items.Add(s);
                     }
 
@@ -494,8 +495,8 @@ namespace workflowLoginForm
             else
             {
                 // Creating a formatted string from the products and raw materials
-                string prod = String.Join("\n", lstProductsToAdd); // Joining each item in the list with a newline at the end
-                string mat = String.Join("\n", lstMatsToRemove);
+                string prod = String.Join("\n", strProductsBeingAdded); // Joining each item in the list with a newline at the end
+                string mat = String.Join("\n", strMatsBeingRemoved);
 
                 // Listing the products and raw materials on the screen
                 string confirm ="You are adding:\n" +
@@ -540,7 +541,7 @@ namespace workflowLoginForm
                         }
 
                         // Updating the raw materials database to the new values
-                        foreach (RawMaterial m in matsToRemove)
+                        foreach (RawMaterial m in matsUpdatedQuantity)
                         {
                             dbTools.EditQuant(m.rawMaterialName, m.quantity);
                         }
@@ -560,21 +561,21 @@ namespace workflowLoginForm
                     {
                         newProducts.Clear();
                     }
-                    if (matsToRemove != null)
+                    if (matsUpdatedQuantity != null)
                     {
-                        matsToRemove.Clear();
+                        matsUpdatedQuantity.Clear();
                     }
-                    if (matsRemoved != null)
+                    if (matsQuantityToRemove != null)
                     {
-                        matsRemoved.Clear();
+                        matsQuantityToRemove.Clear();
                     }
-                    if (lstMatsToRemove != null)
+                    if (strMatsBeingRemoved != null)
                     {
-                        lstMatsToRemove.Clear();
+                        strMatsBeingRemoved.Clear();
                     }
-                    if (lstProductsToAdd != null)
+                    if (strProductsBeingAdded != null)
                     {
-                        lstProductsToAdd.Clear();
+                        strProductsBeingAdded.Clear();
                     }
                 }
             }
@@ -649,21 +650,21 @@ namespace workflowLoginForm
             {
                 newProducts.Clear();
             }
-            if (matsToRemove != null)
+            if (matsUpdatedQuantity != null)
             {
-                matsToRemove.Clear();
+                matsUpdatedQuantity.Clear();
             }
-            if (matsRemoved != null)
+            if (matsQuantityToRemove != null)
             {
-                matsRemoved.Clear();
+                matsQuantityToRemove.Clear();
             }
-            if (lstMatsToRemove != null)
+            if (strMatsBeingRemoved != null)
             {
-                lstMatsToRemove.Clear();
+                strMatsBeingRemoved.Clear();
             }
-            if (lstProductsToAdd != null)
+            if (strProductsBeingAdded != null)
             {
-                lstProductsToAdd.Clear();
+                strProductsBeingAdded.Clear();
             }
 
 
