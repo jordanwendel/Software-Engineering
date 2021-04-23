@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace workflowLoginForm
 {
@@ -15,6 +16,7 @@ namespace workflowLoginForm
         // Class level objects
         private DatabaseTools dbTools;
         private DataGridTools dgTools;
+        private ReportGenerator ReportGen;
 
         // Variables
 
@@ -22,6 +24,7 @@ namespace workflowLoginForm
         {
             InitializeComponent();
             dgTools = new DataGridTools();
+            ReportGen = new ReportGenerator();
         }
 
         private void Admin_Click(object sender, EventArgs e)
@@ -389,11 +392,10 @@ namespace workflowLoginForm
 
         private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.ShowDialog();
-            if (openFile.FileName.Any())
+            string fileName = ReportGen.OpenReports();
+            if (fileName.Any())
             {
-                System.Diagnostics.Process.Start(openFile.FileName);
+                System.Diagnostics.Process.Start(fileName);
             }
         }
 

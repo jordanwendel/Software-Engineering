@@ -77,5 +77,76 @@ namespace workflowLoginForm
 
             }
         }
+
+        // Function that saves csv reports to subdirectory
+        public string SaveReport(string type, string prefix = "")
+        {
+            string fileName = "";
+            DateTime now = DateTime.Now;
+            String date = string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", now);
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName + @"\Reports";
+            SaveFileDialog saveFile = new SaveFileDialog();
+
+            if (type.Equals("RawMaterials"))
+            {
+                saveFile = new SaveFileDialog();
+
+                saveFile.InitialDirectory = projectDirectory;
+                saveFile.FileName = "RawMaterialsReport_" + date;
+                saveFile.DefaultExt = ".csv";
+                saveFile.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
+                saveFile.ShowDialog();
+
+                fileName = saveFile.FileName;
+            }
+
+            else if (type.Equals("Products"))
+            {
+                // Switching file name based on which report is needed
+                /*switch (prodFilter)
+                {
+                    case "In Progress":
+                        fileName = "InProgressProductsReport_" + date;
+                        break;
+
+                    case "Qualified":
+                        fileName = "QualifiedProductsReport_" + date;
+                        break;
+
+                    case "Defective":
+                        fileName = "DefectiveProductsReport_" + date;
+                        break;
+
+                    default:
+                        fileName = "AllProductsReport_" + date;
+                        break;
+                }*/
+                fileName = prefix + date;
+                saveFile = new SaveFileDialog();
+                saveFile.DefaultExt = ".csv";
+                saveFile.FileName = fileName;
+                saveFile.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
+                saveFile.ShowDialog();
+
+                fileName = saveFile.FileName;
+            }
+            return fileName;
+
+        }
+
+        // Function that opens subdirectory with all reports
+        public string OpenReports()
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+
+            // Setting the working directory to Reports folder
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName + @"\Reports";
+            openFile.InitialDirectory = projectDirectory;
+            openFile.ShowDialog();
+
+            return openFile.FileName;
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace workflowLoginForm
 {
@@ -20,7 +21,7 @@ namespace workflowLoginForm
         private QualityAnalyzerForm QualityAnalyzer;
         private EditUserInfo EditUserInfo;
         private List<User> users;
-        private workflowLoginForm loginForm;
+        private ReportGenerator ReportGen;
         private User user;
 
         // Constructor
@@ -29,6 +30,7 @@ namespace workflowLoginForm
             InitializeComponent();
             users = new List<User>();
             this.user = user;
+            ReportGen = new ReportGenerator();
         }
 
         // Event handler for Logout button click
@@ -107,13 +109,13 @@ namespace workflowLoginForm
             this.Show();
         }
 
-        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.ShowDialog();
-            if (openFile.FileName.Any())
+            string fileName = ReportGen.OpenReports();
+            if (fileName.Any())
             {
-                System.Diagnostics.Process.Start(openFile.FileName);
+                System.Diagnostics.Process.Start(fileName);
             }
         }
     }

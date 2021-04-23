@@ -744,11 +744,14 @@ namespace workflowLoginForm
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Open dialog to view the reports
             OpenFileDialog openFile = new OpenFileDialog();
-            openFile.ShowDialog();
 
-            // Use default system process to open the report csv files (Excel)
+            // Setting the working directory to Reports folder
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName + @"\Reports";
+            openFile.InitialDirectory = projectDirectory;
+
+            openFile.ShowDialog();
             if (openFile.FileName.Any())
             {
                 System.Diagnostics.Process.Start(openFile.FileName);

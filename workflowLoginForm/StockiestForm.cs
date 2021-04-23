@@ -16,6 +16,7 @@ namespace workflowLoginForm
         private DatabaseTools dbTools;
         private RawMaterialsForm stockpage;
         private DataGridTools dgTools;
+        private ReportGenerator ReportGen;
 
 
         // Constructor
@@ -23,6 +24,7 @@ namespace workflowLoginForm
         {
             InitializeComponent();
             dgTools = new DataGridTools();
+            ReportGen = new ReportGenerator();
         }
 
         // Event handler for Stockiest Form load
@@ -255,11 +257,10 @@ namespace workflowLoginForm
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.ShowDialog();
-            if (openFile.FileName.Any())
+            string fileName = ReportGen.OpenReports();
+            if (fileName.Any())
             {
-                System.Diagnostics.Process.Start(openFile.FileName);
+                System.Diagnostics.Process.Start(fileName);
             }
         }
 

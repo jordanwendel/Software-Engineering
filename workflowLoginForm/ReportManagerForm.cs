@@ -17,11 +17,15 @@ namespace workflowLoginForm
         private ProductReport ProductReport;
         private ReportGenerator ReportGen;
 
+        public string workingDirectory { get; set; }
+        public string projectDirectory { get; set; }
+
         public ReportManagerForm()
         {
             InitializeComponent();
             ReportGen = new ReportGenerator();
         }
+
 
         private void RawMatbtn_Click(object sender, EventArgs e)
         {
@@ -45,26 +49,10 @@ namespace workflowLoginForm
         private void RawMatCSVbtn_Click(object sender, EventArgs e)
         {
             csvStatusLbl.Text = String.Empty;
-            SaveFileDialog saveFile = new SaveFileDialog();
-            DateTime now = DateTime.Now;
-            String date = string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", now);
-            
-            
-            saveFile.FileName = "RawMaterialsReport_" + date;
-            saveFile.DefaultExt = ".csv";
-            saveFile.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
-            //saveFile.InitialDirectory = @"C:\";
-            saveFile.ShowDialog();
-
-            
-
-            string filePath = saveFile.FileName;
-            
 
             try
             {
-                //string filePath = rawMatCsvSave.FileName;//@"C:\Users\jwend\source\repos\WORK-FLOW\workflowLoginForm\bin\test2.csv";
-                ReportGen.GenerateRawMaterialsReport(filePath);
+                ReportGen.GenerateRawMaterialsReport(ReportGen.SaveReport("RawMaterials")); // Returns file name to save 
             }
             catch (Exception err)
             {
@@ -75,48 +63,39 @@ namespace workflowLoginForm
             
         }
 
+
         // Event handler for Generate Product CSV button click
         private void prodCsvBtn_Click(object sender, EventArgs e)
         {
             csvStatusLbl.Text = String.Empty;
-            string fileName;
-            productCsvSave = new SaveFileDialog();
-            DateTime now = DateTime.Now;
-            String date = string.Format("{0:yyyy-MM-dd_hh-mm-ss-tt}", now);
-
-            // Switching file name based on which report is needed
-            switch (cBoxProductRep.SelectedItem)
+            
+            // Getting the prefix for the file name
+            string prefix;
+            switch (cBoxProductRep.SelectedItem) // Prefix changes based on what product report the user would like to view
             {
                 case "In Progress":
-                    fileName = "InProgressProductsReport_" + date;
+                    prefix = "InProgressProductsReport_";
                     break;
 
                 case "Qualified":
-                    fileName = "QualifiedProductsReport_" + date;
+                    prefix = "QualifiedProductsReport_";
                     break;
 
                 case "Defective":
-                    fileName = "DefectiveProductsReport_" + date;
+                    prefix = "DefectiveProductsReport_";
                     break;
 
                 default:
-                    fileName = "AllProductsReport_" + date;
+                    prefix = "AllProductsReport_";
                     break;
             }
 
-            SaveFileDialog saveFile = new SaveFileDialog();
-            saveFile.DefaultExt = ".csv";
-            saveFile.FileName = fileName;
-            saveFile.Filter = "csv files(*.csv) | *.csv | All files(*.*) | *.*";
+           
+            string fileName = ReportGen.SaveReport("Products", prefix);
 
-            saveFile.ShowDialog();
-            string filePath = saveFile.FileName;
-
-
-            // MAKE SURE C BOX HAS A SELECTION BEFORE BEING ABLE TO PRESS THE BUTTON
             try
             {
-                ReportGen.GenerateProductReport(filePath, cBoxProductRep.Text);
+                ReportGen.GenerateProductReport(fileName, cBoxProductRep.Text);
             }
             catch (Exception err)
             {
@@ -138,11 +117,10 @@ namespace workflowLoginForm
 
         private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.ShowDialog();
-            if (openFile.FileName.Any())
+            string fileName = ReportGen.OpenReports();
+            if (fileName.Any())
             {
-                System.Diagnostics.Process.Start(openFile.FileName);
+                System.Diagnostics.Process.Start(fileName);
             }
         }
 
