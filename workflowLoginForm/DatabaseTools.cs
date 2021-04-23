@@ -342,7 +342,7 @@ namespace workflowLoginForm
                 Cn.Close();
             }
         }
-        public void EditUserJob(string FirstName,string LastName, string Job)
+        public void EditUserJob(string FirstName, string LastName, string Job)
         {
             try
             {

@@ -12,26 +12,49 @@ namespace workflowLoginForm
 {
     public partial class EditUserAdminConfirm : Form
     {
+        private DatabaseTools dbTools;
+        private EditUserInfo edit;
+        private User user;
+
+
         private string password { get; set; }
 
         public EditUserAdminConfirm(User user)
         {
             InitializeComponent();
             this.password = user.Password;
+            dbTools = new DatabaseTools();
+            this.user = user;
+        }
+
+        public bool isAdmin()
+        {
+            bool isValid = false;
+            string enteredPassword = "";
+
+            enteredPassword = txtPass.Text;
+            txtPass.Clear();
+
+            if (this.password.Equals(enteredPassword))
+            {
+                isValid = true;
+            }
+
+            return isValid;
         }
 
         private void confirmBtn_Click(object sender, EventArgs e)
         {
-            string enteredPassword = txtPass.Text;
-            if (this.password.Equals(enteredPassword))
+            if (isAdmin())
             {
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Invalid password. Please try again");
+                MessageBox.Show("Incorrect password. Please try again.");
             }
 
+            txtPass.Text = String.Empty;
         }
     }
 }

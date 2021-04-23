@@ -115,14 +115,6 @@ namespace workflowLoginForm
             this.Close();
         }
 
-        private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            string fileName = ReportGen.OpenReports();
-            if (fileName.Any())
-            {
-                System.Diagnostics.Process.Start(fileName);
-            }
-        }
 
         private void toolStripDropDownButton1_Click(object sender, EventArgs e)
         {
@@ -134,5 +126,13 @@ namespace workflowLoginForm
             csvStatusLbl.Text = String.Empty;
         }
 
+        private void viewReportsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            string fileName = ReportGen.OpenReports();
+            if (fileName.Any())
+            {
+                System.Diagnostics.Process.Start(fileName);
+            }
+        }
     }
 }

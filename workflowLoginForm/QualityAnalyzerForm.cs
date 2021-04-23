@@ -355,6 +355,7 @@ namespace workflowLoginForm
             // Clear the filtering text fields when refreshing data grid
             filterMenu.Text = "Click to expand...";
             txtFilterByItem.Clear();
+            qualityMenu.Text = null;
             cBoxLocation.Text = null;
             cBoxQuality.Text = null;
             txtNum.Clear();
@@ -390,18 +391,20 @@ namespace workflowLoginForm
 
         }
 
-        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+ 
+
+        private void goBackToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             string fileName = ReportGen.OpenReports();
             if (fileName.Any())
             {
                 System.Diagnostics.Process.Start(fileName);
             }
-        }
-
-        private void goBackToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

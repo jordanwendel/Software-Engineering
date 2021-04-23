@@ -15,7 +15,13 @@ namespace workflowLoginForm
         private DataGridTools dgTools;
         private DatabaseTools dbTools;
         private EditUserAdminConfirm confirmForm;
-        private User user;
+        public User user { get; set; }
+        private ReportGenerator ReportGen;
+
+        public string firstname { get; set; }
+        public string lastname { get; set; }
+        public string job { get; set; }
+
 
         public EditUserInfo(User user)
         {
@@ -23,6 +29,7 @@ namespace workflowLoginForm
             dgTools = new DataGridTools();
             dbTools = new DatabaseTools();
             this.user = user;
+            ReportGen = new ReportGenerator();
         }
 
         private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,14 +135,15 @@ namespace workflowLoginForm
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void addItemBtn_Click(object sender, EventArgs e)
         {
-            string firstname = txtFirstName.Text;
-            string lastname = txtLastName.Text;
-            string job = boxOccupation.Text;
+            firstname = txtFirstName.Text;
+            lastname = txtLastName.Text;
+            job = boxOccupation.Text;
+
             dbTools = new DatabaseTools();
 
             try
@@ -147,22 +155,14 @@ namespace workflowLoginForm
                 DialogResult result = MessageBox.Show(message, title, buttons);
                 if (result == DialogResult.Yes)
                 {
+                    confirmForm = new EditUserAdminConfirm(this.user);
+                    
                     dbTools.EditUserJob(firstname, lastname, job);
-                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Administrator')"; // Viewing all data from RawMaterials database except the ID
-                    dgTools.RefreshDataGrid(AdminDataGridView);
-                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Quality Analyzer')";
-                    dgTools.RefreshDataGrid(QualityDataGridView);
-                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Report Manager')";
-                    dgTools.RefreshDataGrid(ReportDataGridView);
-                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Delivery Manager')";
-                    dgTools.RefreshDataGrid(DeliveryDataGridView);
-                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Product Manager')";
-                    dgTools.RefreshDataGrid(ProductDataGridView);
-                    dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Stockiest')";
-                    dgTools.RefreshDataGrid(StockiestDataGridView);
-                    txtFirstName.Clear();
-                    txtLastName.Clear();
-                    boxOccupation.Text = String.Empty;
+                    
+                    confirmForm.ShowDialog();
+                    this.Show();
+                    
+                    refreshToolStripMenuItem_Click(sender, e);
                 }
                 else
                 {
@@ -173,10 +173,6 @@ namespace workflowLoginForm
             {
                 MessageBox.Show(err.Message, "Warning!");
             }
-        
-            confirmForm = new EditUserAdminConfirm(this.user);
-            confirmForm.ShowDialog();
-            this.Show();
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -249,14 +245,32 @@ namespace workflowLoginForm
             }
         }
 
-        private void viewProductReportToolStripMenuItem_Click(object sender, EventArgs e)
+        private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            openFile.ShowDialog();
-            if (openFile.FileName.Any())
+            string fileName = ReportGen.OpenReports();
+            if (fileName.Any())
             {
-                System.Diagnostics.Process.Start(openFile.FileName);
+                System.Diagnostics.Process.Start(fileName);
             }
+        }
+
+        private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Administrator')"; // Viewing all data from RawMaterials database except the ID
+            dgTools.RefreshDataGrid(AdminDataGridView);
+            dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Quality Analyzer')";
+            dgTools.RefreshDataGrid(QualityDataGridView);
+            dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Report Manager')";
+            dgTools.RefreshDataGrid(ReportDataGridView);
+            dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Delivery Manager')";
+            dgTools.RefreshDataGrid(DeliveryDataGridView);
+            dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Product Manager')";
+            dgTools.RefreshDataGrid(ProductDataGridView);
+            dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Stockiest')";
+            dgTools.RefreshDataGrid(StockiestDataGridView);
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            boxOccupation.Text = String.Empty;
         }
     }
 }

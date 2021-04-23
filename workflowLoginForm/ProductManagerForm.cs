@@ -630,7 +630,7 @@ namespace workflowLoginForm
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Clear the filtering text fields when refreshing data grid
-            filterMenu.Text = "Click to expand...";
+            filterMenu.Text = String.Empty;
             txtFilterByItem.Clear();
             txtName.Text = String.Empty;
             cBoxLocation.Text = null;
@@ -686,6 +686,10 @@ namespace workflowLoginForm
             // Viewing Raw Materials
             else if (dgTools.dbName.Equals("RawMaterials"))
             {
+                removeItemBtn.Visible = false;
+                addItemBtn.Visible = true;
+                addItemLbl.Text = "Add Product";
+
                 dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
 
                 dgTools.RefreshDataGrid(prodDataGridView);
