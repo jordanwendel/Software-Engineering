@@ -173,6 +173,7 @@
             // 
             // txtItemName
             // 
+            this.txtItemName.BackColor = System.Drawing.SystemColors.Control;
             this.txtItemName.Location = new System.Drawing.Point(104, 161);
             this.txtItemName.Margin = new System.Windows.Forms.Padding(2);
             this.txtItemName.Name = "txtItemName";
@@ -304,6 +305,7 @@
             // 
             // txtFilterByItem
             // 
+            this.txtFilterByItem.BackColor = System.Drawing.SystemColors.Control;
             this.txtFilterByItem.Location = new System.Drawing.Point(111, 358);
             this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFilterByItem.Name = "txtFilterByItem";
@@ -380,7 +382,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(728, 7);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip2.Size = new System.Drawing.Size(177, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(57, 24);
             this.menuStrip2.TabIndex = 80;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -400,14 +402,14 @@
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(120, 22);
             this.toolStripMenuItem4.Text = "Go Back";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -416,7 +418,7 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem
@@ -429,7 +431,7 @@
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(120, 22);
             this.toolStripMenuItem5.Text = "Exit";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 

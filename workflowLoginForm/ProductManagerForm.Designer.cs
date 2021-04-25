@@ -119,6 +119,7 @@
             // 
             // txtQuantity
             // 
+            this.txtQuantity.BackColor = System.Drawing.SystemColors.Control;
             this.txtQuantity.Location = new System.Drawing.Point(94, 143);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(130, 20);
@@ -166,7 +167,7 @@
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemBtn.Location = new System.Drawing.Point(100, 179);
-            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(100, 28);
             this.addItemBtn.TabIndex = 29;
@@ -280,6 +281,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.SystemColors.Control;
             this.txtName.Location = new System.Drawing.Point(94, 118);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(130, 20);
@@ -350,7 +352,7 @@
             this.removeItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeItemBtn.ForeColor = System.Drawing.SystemColors.Control;
             this.removeItemBtn.Location = new System.Drawing.Point(100, 179);
-            this.removeItemBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.removeItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.removeItemBtn.Name = "removeItemBtn";
             this.removeItemBtn.Size = new System.Drawing.Size(100, 28);
             this.removeItemBtn.TabIndex = 54;
@@ -362,7 +364,7 @@
             // 
             this.itemsView.HideSelection = false;
             this.itemsView.Location = new System.Drawing.Point(2, 210);
-            this.itemsView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.itemsView.Margin = new System.Windows.Forms.Padding(2);
             this.itemsView.Name = "itemsView";
             this.itemsView.Size = new System.Drawing.Size(145, 95);
             this.itemsView.TabIndex = 55;
@@ -373,7 +375,7 @@
             // 
             this.rawMatsView.HideSelection = false;
             this.rawMatsView.Location = new System.Drawing.Point(151, 210);
-            this.rawMatsView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rawMatsView.Margin = new System.Windows.Forms.Padding(2);
             this.rawMatsView.Name = "rawMatsView";
             this.rawMatsView.Size = new System.Drawing.Size(143, 95);
             this.rawMatsView.TabIndex = 56;
@@ -383,7 +385,7 @@
             // confirmChangesBtn
             // 
             this.confirmChangesBtn.Location = new System.Drawing.Point(227, 318);
-            this.confirmChangesBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.confirmChangesBtn.Margin = new System.Windows.Forms.Padding(2);
             this.confirmChangesBtn.Name = "confirmChangesBtn";
             this.confirmChangesBtn.Size = new System.Drawing.Size(65, 31);
             this.confirmChangesBtn.TabIndex = 57;
@@ -446,9 +448,9 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(803, 7);
+            this.toolStrip1.Location = new System.Drawing.Point(834, 7);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(85, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(54, 25);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -472,14 +474,14 @@
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // goBackMenuItem
             // 
             this.goBackMenuItem.Name = "goBackMenuItem";
-            this.goBackMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackMenuItem.Size = new System.Drawing.Size(117, 22);
             this.goBackMenuItem.Text = "Go Back";
             this.goBackMenuItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -490,27 +492,27 @@
             this.materialsTableToolStripMenuItem,
             this.reportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // productTableToolStripMenuItem
             // 
             this.productTableToolStripMenuItem.Name = "productTableToolStripMenuItem";
-            this.productTableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productTableToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productTableToolStripMenuItem.Text = "Product Table";
             this.productTableToolStripMenuItem.Click += new System.EventHandler(this.productTableToolStripMenuItem_Click);
             // 
             // materialsTableToolStripMenuItem
             // 
             this.materialsTableToolStripMenuItem.Name = "materialsTableToolStripMenuItem";
-            this.materialsTableToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.materialsTableToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.materialsTableToolStripMenuItem.Text = "Materials Table";
             this.materialsTableToolStripMenuItem.Click += new System.EventHandler(this.materialsTableToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.reportsToolStripMenuItem.Text = "View Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
@@ -519,7 +521,7 @@
             this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reOrderStockToolStripMenuItem});
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.orderToolStripMenuItem.Text = "Order";
             // 
             // reOrderStockToolStripMenuItem
@@ -532,7 +534,7 @@
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitMenuItem.Size = new System.Drawing.Size(117, 22);
             this.exitMenuItem.Text = "Exit";
             this.exitMenuItem.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
@@ -571,7 +573,7 @@
             this.Controls.Add(this.prodDataGridView);
             this.Controls.Add(this.Admin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductManagerForm";
             this.Text = "Product Manager";
             this.Load += new System.EventHandler(this.ProductManagerForm_Load);

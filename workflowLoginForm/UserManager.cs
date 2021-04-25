@@ -84,11 +84,10 @@ namespace workflowLoginForm
                 {
                     isAuthorized = true;
                 }
-
             }
-            catch (Exception err) // Handles exception
+            catch (Exception) // Throw exception
             {
-                MessageBox.Show(err.Message, "Warning!");
+                throw;
             }
             finally
             {
@@ -114,9 +113,9 @@ namespace workflowLoginForm
 
                 return reader.GetString(0);
             }
-            catch (Exception err)
+            catch (Exception)
             {
-                MessageBox.Show(err.Message, "Warning!");
+                //MessageBox.Show(err.Message, "Warning!");
                 return null;
             }
             finally
@@ -163,5 +162,6 @@ namespace workflowLoginForm
 
             return users;
         }
+
     }
 }

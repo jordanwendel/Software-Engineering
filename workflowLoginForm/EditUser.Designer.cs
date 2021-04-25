@@ -32,6 +32,7 @@ namespace workflowLoginForm
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditUserInfo));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,9 +56,10 @@ namespace workflowLoginForm
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.editUserStatusLbl = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.editUserStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StockiestDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportDataGridView)).BeginInit();
@@ -94,10 +96,17 @@ namespace workflowLoginForm
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
+            // refreshToolStripMenuItem
+            // 
+            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.refreshToolStripMenuItem.Text = "Refresh";
+            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
+            // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
@@ -106,7 +115,7 @@ namespace workflowLoginForm
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem
@@ -119,7 +128,7 @@ namespace workflowLoginForm
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -366,17 +375,14 @@ namespace workflowLoginForm
             this.txtLastName.Size = new System.Drawing.Size(77, 20);
             this.txtLastName.TabIndex = 114;
             // 
-            // refreshToolStripMenuItem
-            // 
-            this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.refreshToolStripMenuItem.Text = "Refresh";
-            this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
-            // 
             // statusStrip1
             // 
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.statusStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editUserStatusLbl});
+            this.editUserStatusLbl,
+            this.toolStripStatusLabel1,
+            this.editUserStatus});
             this.statusStrip1.Location = new System.Drawing.Point(0, 452);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(751, 22);
@@ -387,6 +393,18 @@ namespace workflowLoginForm
             // 
             this.editUserStatusLbl.Name = "editUserStatusLbl";
             this.editUserStatusLbl.Size = new System.Drawing.Size(0, 17);
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // editUserStatus
+            // 
+            this.editUserStatus.ActiveLinkColor = System.Drawing.Color.White;
+            this.editUserStatus.ForeColor = System.Drawing.Color.White;
+            this.editUserStatus.Name = "editUserStatus";
+            this.editUserStatus.Size = new System.Drawing.Size(0, 17);
             // 
             // EditUserInfo
             // 
@@ -464,5 +482,7 @@ namespace workflowLoginForm
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel editUserStatusLbl;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel editUserStatus;
     }
 }

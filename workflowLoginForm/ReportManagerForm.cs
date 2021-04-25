@@ -52,7 +52,7 @@ namespace workflowLoginForm
 
             try
             {
-                ReportGen.GenerateRawMaterialsReport(ReportGen.SaveReport("RawMaterials")); // Returns file name to save 
+                ReportGen.GenerateRawMaterialsReport(ReportGen.SaveReport("RawMaterials")); // Returns file name to save
             }
             catch (Exception err)
             {

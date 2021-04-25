@@ -43,8 +43,6 @@ namespace workflowLoginForm
                 userManager = new UserManager();
                 if (userManager.ValidatePassword(enteredUsername, enteredPassword).Equals(true)) // Validating if the user's password matches in the database
                 {
-                    //MessageBox.Show("Welcome to the Work Flow", "Successful Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                     // May be better with an enum
                     if (loggedInUser.Job.Equals("Administrator")) // Admin page
                     {
@@ -102,18 +100,18 @@ namespace workflowLoginForm
                     }
                 }
                 else
-                {   // Incorrect password
-                    MessageBox.Show("Invalid username or password", "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                {
+                    //MessageBox.Show("IDK");
                     txtUserName.Focus();
                     txtUserName.SelectAll();
                 }
             }
-            catch (Exception err)
+            catch (Exception)
             {
-                MessageBox.Show(err.Message, "Something Broke"); // Show error message
+                MessageBox.Show("Invalid username or password", "Warning!"); // Show error message
+                txtUserName.Clear();
+                txtPassword.Clear();
             }
-            
-
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)

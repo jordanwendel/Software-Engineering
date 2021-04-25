@@ -13,7 +13,6 @@ namespace workflowLoginForm
     public partial class EditUserAdminConfirm : Form
     {
         private DatabaseTools dbTools;
-        private EditUserInfo edit;
         private User user;
 
 

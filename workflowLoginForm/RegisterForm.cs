@@ -22,16 +22,6 @@ namespace workflowLoginForm
             InitializeComponent();
         }
 
-        // Event handler for Clear button click
-        private void clearBtn_Click(object sender, EventArgs e)
-        {
-            /*/ Clear text fields
-            passwordTxt.Text = String.Empty; 
-            usernameTxt.Text = String.Empty; 
-            boxOccupation.Text = String.Empty;
-            confirmpasswordtxt.Text = String.Empty;
-            */
-        }
 
         // Event handler for Register button click
         private void registerBtn_Click(object sender, EventArgs e)
@@ -48,7 +38,9 @@ namespace workflowLoginForm
                     string title = "Warning!";
 
                     MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    
                     DialogResult result = MessageBox.Show(message, title, buttons);
+
                     if (result == DialogResult.Yes)
                     {
                         User newUser = new User(firstnametxt.Text, lastnametxt.Text, emailtxt.Text, usernameTxt.Text, passwordTxt.Text, boxOccupation.Text);

@@ -54,9 +54,9 @@
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewReportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.prodDataGridView)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -167,6 +167,7 @@
             // 
             // ItemName
             // 
+            this.ItemName.BackColor = System.Drawing.SystemColors.Control;
             this.ItemName.Location = new System.Drawing.Point(109, 171);
             this.ItemName.Margin = new System.Windows.Forms.Padding(2);
             this.ItemName.Name = "ItemName";
@@ -213,6 +214,7 @@
             // 
             // txtNum
             // 
+            this.txtNum.BackColor = System.Drawing.SystemColors.Control;
             this.txtNum.Location = new System.Drawing.Point(190, 427);
             this.txtNum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNum.Name = "txtNum";
@@ -261,6 +263,7 @@
             // 
             // txtFilterByItem
             // 
+            this.txtFilterByItem.BackColor = System.Drawing.SystemColors.Control;
             this.txtFilterByItem.Location = new System.Drawing.Point(104, 379);
             this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFilterByItem.Name = "txtFilterByItem";
@@ -282,6 +285,7 @@
             // 
             // quantityEquations
             // 
+            this.quantityEquations.BackColor = System.Drawing.SystemColors.Control;
             this.quantityEquations.Location = new System.Drawing.Point(104, 425);
             this.quantityEquations.Margin = new System.Windows.Forms.Padding(2);
             this.quantityEquations.Name = "quantityEquations";
@@ -325,7 +329,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(812, 7);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(86, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(55, 25);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -348,38 +352,38 @@
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click_1);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem
             // 
             this.viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
-            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.viewReportsToolStripMenuItem.Text = "View Reports";
             this.viewReportsToolStripMenuItem.Click += new System.EventHandler(this.viewReportsToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
             // QualityAnalyzerForm
             // 

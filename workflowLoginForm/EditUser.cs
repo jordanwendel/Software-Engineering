@@ -41,7 +41,7 @@ namespace workflowLoginForm
         private void EditUser_Load(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager();
-            
+
             // Show Stockiests
             try
             {
@@ -153,16 +153,26 @@ namespace workflowLoginForm
 
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                 DialogResult result = MessageBox.Show(message, title, buttons);
+
                 if (result == DialogResult.Yes)
                 {
-                    confirmForm = new EditUserAdminConfirm(this.user);
+                    try
+                    {
+                        confirmForm = new EditUserAdminConfirm(this.user);
+
+                        dbTools.EditUserJob(firstname, lastname, job);
+
+                        confirmForm.ShowDialog();
+                        this.Show();
+
+                        refreshToolStripMenuItem_Click(sender, e);
+                        editUserStatus.Text = "Successfully edited user!";
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message, "Issue editing user. Please try again.");
+                    }
                     
-                    dbTools.EditUserJob(firstname, lastname, job);
-                    
-                    confirmForm.ShowDialog();
-                    this.Show();
-                    
-                    refreshToolStripMenuItem_Click(sender, e);
                 }
                 else
                 {
@@ -182,6 +192,7 @@ namespace workflowLoginForm
 
         private void StockiestDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            editUserStatus.Text = String.Empty;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = StockiestDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
@@ -197,6 +208,7 @@ namespace workflowLoginForm
 
         private void ReportDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            editUserStatus.Text = String.Empty;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = ReportDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
@@ -207,6 +219,7 @@ namespace workflowLoginForm
 
         private void QualityDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            editUserStatus.Text = String.Empty;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = QualityDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
@@ -217,6 +230,7 @@ namespace workflowLoginForm
 
         private void DeliveryDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            editUserStatus.Text = String.Empty;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = DeliveryDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
@@ -227,6 +241,7 @@ namespace workflowLoginForm
 
         private void ProductDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            editUserStatus.Text = String.Empty;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = ProductDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
@@ -237,6 +252,7 @@ namespace workflowLoginForm
 
         private void AdminDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            editUserStatus.Text = String.Empty;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = AdminDataGridView.Rows[e.RowIndex]; // Creating a row object from the currently selected row
@@ -247,6 +263,7 @@ namespace workflowLoginForm
 
         private void viewReportsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            editUserStatus.Text = String.Empty;
             string fileName = ReportGen.OpenReports();
             if (fileName.Any())
             {
@@ -256,6 +273,7 @@ namespace workflowLoginForm
 
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            statusStrip1.Text = String.Empty;
             dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Administrator')"; // Viewing all data from RawMaterials database except the ID
             dgTools.RefreshDataGrid(AdminDataGridView);
             dgTools.SqlCommand = "SELECT firstname, lastname FROM AuthorizedUsers WHERE userjob in ('Quality Analyzer')";
