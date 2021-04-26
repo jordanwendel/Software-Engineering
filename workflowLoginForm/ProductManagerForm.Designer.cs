@@ -92,8 +92,11 @@
             // 
             // prodDataGridView
             // 
-            this.prodDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.prodDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.prodDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.prodDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.prodDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -149,6 +152,7 @@
             // 
             // filterLbl
             // 
+            this.filterLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.filterLbl.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterLbl.ForeColor = System.Drawing.Color.White;
             this.filterLbl.Location = new System.Drawing.Point(84, 409);
@@ -174,6 +178,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(-1, 497);
@@ -185,6 +190,7 @@
             // 
             // txtFilterByItem
             // 
+            this.txtFilterByItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtFilterByItem.BackColor = System.Drawing.SystemColors.Control;
             this.txtFilterByItem.Location = new System.Drawing.Point(125, 501);
             this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -195,6 +201,7 @@
             // 
             // btnFilter
             // 
+            this.btnFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnFilter.Location = new System.Drawing.Point(303, 510);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFilter.Name = "btnFilter";
@@ -206,6 +213,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -218,6 +226,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(16, 529);
@@ -229,6 +238,7 @@
             // 
             // txtNum
             // 
+            this.txtNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNum.BackColor = System.Drawing.SystemColors.Control;
             this.txtNum.Location = new System.Drawing.Point(261, 559);
             this.txtNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -238,6 +248,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(19, 558);
@@ -249,6 +260,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(19, 586);
@@ -260,6 +272,7 @@
             // 
             // cBoxLocation
             // 
+            this.cBoxLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cBoxLocation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxLocation.FormattingEnabled = true;
             this.cBoxLocation.Items.AddRange(new object[] {
@@ -282,6 +295,7 @@
             // 
             // filterMenu
             // 
+            this.filterMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.filterMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.filterMenu.FormattingEnabled = true;
             this.filterMenu.Items.AddRange(new object[] {
@@ -298,6 +312,7 @@
             // 
             // cBoxQuality
             // 
+            this.cBoxQuality.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cBoxQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cBoxQuality.FormattingEnabled = true;
             this.cBoxQuality.Items.AddRange(new object[] {
@@ -312,6 +327,7 @@
             // 
             // quantityEquations
             // 
+            this.quantityEquations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.quantityEquations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.quantityEquations.FormattingEnabled = true;
             this.quantityEquations.Items.AddRange(new object[] {
@@ -358,6 +374,8 @@
             // 
             // itemsView
             // 
+            this.itemsView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.itemsView.HideSelection = false;
             this.itemsView.Location = new System.Drawing.Point(3, 258);
             this.itemsView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -369,6 +387,8 @@
             // 
             // rawMatsView
             // 
+            this.rawMatsView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.rawMatsView.HideSelection = false;
             this.rawMatsView.Location = new System.Drawing.Point(201, 258);
             this.rawMatsView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -380,6 +400,7 @@
             // 
             // confirmChangesBtn
             // 
+            this.confirmChangesBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.confirmChangesBtn.Location = new System.Drawing.Point(303, 391);
             this.confirmChangesBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirmChangesBtn.Name = "confirmChangesBtn";
