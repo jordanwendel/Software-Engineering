@@ -68,7 +68,7 @@
             this.Stockiest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Stockiest.Name = "Stockiest";
             this.Stockiest.Size = new System.Drawing.Size(571, 62);
-            this.Stockiest.TabIndex = 2;
+            this.Stockiest.TabIndex = 7;
             this.Stockiest.Text = "Stockiest Page";
             this.Stockiest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -95,11 +95,11 @@
             this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.stockDataGridView.Location = new System.Drawing.Point(309, 55);
-            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
             this.stockDataGridView.Size = new System.Drawing.Size(875, 601);
-            this.stockDataGridView.TabIndex = 5;
+            this.stockDataGridView.TabIndex = 12;
             this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
             // 
             // addItemLbl
@@ -144,10 +144,10 @@
             this.addNewMat_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNewMat_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewMat_Btn.Location = new System.Drawing.Point(29, 350);
-            this.addNewMat_Btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addNewMat_Btn.Margin = new System.Windows.Forms.Padding(4);
             this.addNewMat_Btn.Name = "addNewMat_Btn";
             this.addNewMat_Btn.Size = new System.Drawing.Size(260, 37);
-            this.addNewMat_Btn.TabIndex = 3;
+            this.addNewMat_Btn.TabIndex = 4;
             this.addNewMat_Btn.Text = "ADD NEW ITEM";
             this.addNewMat_Btn.UseVisualStyleBackColor = false;
             this.addNewMat_Btn.Click += new System.EventHandler(this.addNewMat_Btn_Click);
@@ -171,7 +171,7 @@
             this.itembox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.itembox.Name = "itembox";
             this.itembox.Size = new System.Drawing.Size(169, 22);
-            this.itembox.TabIndex = 30;
+            this.itembox.TabIndex = 0;
             // 
             // qtnBox
             // 
@@ -180,7 +180,7 @@
             this.qtnBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qtnBox.Name = "qtnBox";
             this.qtnBox.Size = new System.Drawing.Size(169, 22);
-            this.qtnBox.TabIndex = 31;
+            this.qtnBox.TabIndex = 1;
             // 
             // quantityEquations
             // 
@@ -191,10 +191,10 @@
             "LESS THAN",
             "EQUAL TO"});
             this.quantityEquations.Location = new System.Drawing.Point(128, 551);
-            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4);
             this.quantityEquations.Name = "quantityEquations";
             this.quantityEquations.Size = new System.Drawing.Size(128, 24);
-            this.quantityEquations.TabIndex = 64;
+            this.quantityEquations.TabIndex = 7;
             // 
             // filterMenu
             // 
@@ -204,10 +204,10 @@
             "Name",
             "Quantity"});
             this.filterMenu.Location = new System.Drawing.Point(125, 478);
-            this.filterMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterMenu.Margin = new System.Windows.Forms.Padding(4);
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
-            this.filterMenu.TabIndex = 62;
+            this.filterMenu.TabIndex = 5;
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
             // 
             // label4
@@ -228,7 +228,7 @@
             this.txtNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(27, 22);
-            this.txtNum.TabIndex = 58;
+            this.txtNum.TabIndex = 8;
             // 
             // label2
             // 
@@ -252,7 +252,7 @@
             this.btnFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(107, 37);
-            this.btnFilter.TabIndex = 55;
+            this.btnFilter.TabIndex = 9;
             this.btnFilter.Text = "FILTER";
             this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -264,7 +264,7 @@
             this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFilterByItem.Name = "txtFilterByItem";
             this.txtFilterByItem.Size = new System.Drawing.Size(163, 22);
-            this.txtFilterByItem.TabIndex = 54;
+            this.txtFilterByItem.TabIndex = 6;
             this.txtFilterByItem.TextChanged += new System.EventHandler(this.txtFilterByItem_TextChanged);
             // 
             // label1
@@ -354,7 +354,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(107, 37);
-            this.btnClear.TabIndex = 66;
+            this.btnClear.TabIndex = 10;
             this.btnClear.Text = "CLEAR";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -369,7 +369,7 @@
             this.btnClear2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear2.Name = "btnClear2";
             this.btnClear2.Size = new System.Drawing.Size(107, 37);
-            this.btnClear2.TabIndex = 67;
+            this.btnClear2.TabIndex = 3;
             this.btnClear2.Text = "CLEAR";
             this.btnClear2.UseVisualStyleBackColor = false;
             this.btnClear2.Click += new System.EventHandler(this.btnClear2_Click);

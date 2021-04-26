@@ -72,7 +72,7 @@
             this.addItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.addItemBtn.Name = "addItemBtn";
             this.addItemBtn.Size = new System.Drawing.Size(120, 39);
-            this.addItemBtn.TabIndex = 46;
+            this.addItemBtn.TabIndex = 2;
             this.addItemBtn.Text = "EDIT";
             this.addItemBtn.UseVisualStyleBackColor = false;
             this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
@@ -120,10 +120,10 @@
             "Satisfactory",
             "Defective"});
             this.qualityMenu.Location = new System.Drawing.Point(145, 242);
-            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.qualityMenu.Margin = new System.Windows.Forms.Padding(4);
             this.qualityMenu.Name = "qualityMenu";
             this.qualityMenu.Size = new System.Drawing.Size(157, 24);
-            this.qualityMenu.TabIndex = 38;
+            this.qualityMenu.TabIndex = 1;
             // 
             // addItemLbl
             // 
@@ -145,7 +145,7 @@
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.prodDataGridView.Location = new System.Drawing.Point(327, 91);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(857, 564);
@@ -171,7 +171,7 @@
             this.ItemName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ItemName.Name = "ItemName";
             this.ItemName.Size = new System.Drawing.Size(157, 22);
-            this.ItemName.TabIndex = 47;
+            this.ItemName.TabIndex = 0;
             // 
             // cBoxLocation
             // 
@@ -184,7 +184,7 @@
             this.cBoxLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cBoxLocation.Name = "cBoxLocation";
             this.cBoxLocation.Size = new System.Drawing.Size(163, 24);
-            this.cBoxLocation.TabIndex = 61;
+            this.cBoxLocation.TabIndex = 9;
             this.cBoxLocation.SelectedIndexChanged += new System.EventHandler(this.cBoxLocation_SelectedIndexChanged);
             // 
             // label5
@@ -216,7 +216,7 @@
             this.txtNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(49, 22);
-            this.txtNum.TabIndex = 58;
+            this.txtNum.TabIndex = 8;
             // 
             // label3
             // 
@@ -251,7 +251,7 @@
             this.btnFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(120, 39);
-            this.btnFilter.TabIndex = 55;
+            this.btnFilter.TabIndex = 10;
             this.btnFilter.Text = "FILTER";
             this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
@@ -263,7 +263,7 @@
             this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFilterByItem.Name = "txtFilterByItem";
             this.txtFilterByItem.Size = new System.Drawing.Size(163, 22);
-            this.txtFilterByItem.TabIndex = 54;
+            this.txtFilterByItem.TabIndex = 5;
             this.txtFilterByItem.TextChanged += new System.EventHandler(this.txtFilterByItem_TextChanged);
             // 
             // label1
@@ -284,7 +284,7 @@
             this.quantityEquations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.quantityEquations.Name = "quantityEquations";
             this.quantityEquations.Size = new System.Drawing.Size(100, 22);
-            this.quantityEquations.TabIndex = 63;
+            this.quantityEquations.TabIndex = 7;
             // 
             // cBoxQuality
             // 
@@ -297,7 +297,7 @@
             this.cBoxQuality.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBoxQuality.Name = "cBoxQuality";
             this.cBoxQuality.Size = new System.Drawing.Size(163, 24);
-            this.cBoxQuality.TabIndex = 64;
+            this.cBoxQuality.TabIndex = 6;
             // 
             // filterMenu
             // 
@@ -312,7 +312,7 @@
             this.filterMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(163, 24);
-            this.filterMenu.TabIndex = 65;
+            this.filterMenu.TabIndex = 4;
             // 
             // toolStrip1
             // 
@@ -388,7 +388,7 @@
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 39);
-            this.btnClear.TabIndex = 67;
+            this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -403,7 +403,7 @@
             this.btnClear2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClear2.Name = "btnClear2";
             this.btnClear2.Size = new System.Drawing.Size(120, 39);
-            this.btnClear2.TabIndex = 68;
+            this.btnClear2.TabIndex = 11;
             this.btnClear2.Text = "CLEAR";
             this.btnClear2.UseVisualStyleBackColor = false;
             this.btnClear2.Click += new System.EventHandler(this.btnClear2_Click);

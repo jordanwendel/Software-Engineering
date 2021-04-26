@@ -42,9 +42,9 @@ namespace workflowLoginForm
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.goBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewReportsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblReportManager = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,10 +59,10 @@ namespace workflowLoginForm
             this.RawMatbtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.RawMatbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RawMatbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RawMatbtn.Location = new System.Drawing.Point(88, 154);
-            this.RawMatbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.RawMatbtn.Location = new System.Drawing.Point(117, 190);
+            this.RawMatbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RawMatbtn.Name = "RawMatbtn";
-            this.RawMatbtn.Size = new System.Drawing.Size(112, 41);
+            this.RawMatbtn.Size = new System.Drawing.Size(149, 50);
             this.RawMatbtn.TabIndex = 0;
             this.RawMatbtn.Text = "VIEW REPORT";
             this.RawMatbtn.UseVisualStyleBackColor = false;
@@ -75,11 +75,11 @@ namespace workflowLoginForm
             this.Productbtn.FlatAppearance.BorderSize = 2;
             this.Productbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Productbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Productbtn.Location = new System.Drawing.Point(395, 154);
-            this.Productbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.Productbtn.Location = new System.Drawing.Point(527, 190);
+            this.Productbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Productbtn.Name = "Productbtn";
-            this.Productbtn.Size = new System.Drawing.Size(112, 41);
-            this.Productbtn.TabIndex = 1;
+            this.Productbtn.Size = new System.Drawing.Size(149, 50);
+            this.Productbtn.TabIndex = 2;
             this.Productbtn.Text = "VIEW REPORT";
             this.Productbtn.UseVisualStyleBackColor = false;
             this.Productbtn.Click += new System.EventHandler(this.Productbtn_Click);
@@ -88,11 +88,11 @@ namespace workflowLoginForm
             // 
             this.RawMatCSVbtn.BackColor = System.Drawing.Color.LightGray;
             this.RawMatCSVbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RawMatCSVbtn.Location = new System.Drawing.Point(66, 303);
-            this.RawMatCSVbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.RawMatCSVbtn.Location = new System.Drawing.Point(88, 373);
+            this.RawMatCSVbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RawMatCSVbtn.Name = "RawMatCSVbtn";
-            this.RawMatCSVbtn.Size = new System.Drawing.Size(150, 32);
-            this.RawMatCSVbtn.TabIndex = 2;
+            this.RawMatCSVbtn.Size = new System.Drawing.Size(200, 39);
+            this.RawMatCSVbtn.TabIndex = 1;
             this.RawMatCSVbtn.Text = "GENERATE REPORT CSV";
             this.RawMatCSVbtn.UseVisualStyleBackColor = false;
             this.RawMatCSVbtn.Click += new System.EventHandler(this.RawMatCSVbtn_Click);
@@ -101,11 +101,11 @@ namespace workflowLoginForm
             // 
             this.prodCsvBtn.BackColor = System.Drawing.Color.LightGray;
             this.prodCsvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prodCsvBtn.Location = new System.Drawing.Point(374, 303);
-            this.prodCsvBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.prodCsvBtn.Location = new System.Drawing.Point(499, 373);
+            this.prodCsvBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prodCsvBtn.Name = "prodCsvBtn";
-            this.prodCsvBtn.Size = new System.Drawing.Size(150, 32);
-            this.prodCsvBtn.TabIndex = 3;
+            this.prodCsvBtn.Size = new System.Drawing.Size(200, 39);
+            this.prodCsvBtn.TabIndex = 4;
             this.prodCsvBtn.Text = "GENERATE REPORT CSV";
             this.prodCsvBtn.UseVisualStyleBackColor = false;
             this.prodCsvBtn.Click += new System.EventHandler(this.prodCsvBtn_Click);
@@ -117,10 +117,10 @@ namespace workflowLoginForm
             this.csvStatusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.csvStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.csvStatusLbl});
-            this.csvStatusStrip.Location = new System.Drawing.Point(0, 344);
+            this.csvStatusStrip.Location = new System.Drawing.Point(0, 428);
             this.csvStatusStrip.Name = "csvStatusStrip";
-            this.csvStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.csvStatusStrip.Size = new System.Drawing.Size(600, 22);
+            this.csvStatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
+            this.csvStatusStrip.Size = new System.Drawing.Size(800, 22);
             this.csvStatusStrip.TabIndex = 4;
             this.csvStatusStrip.Text = "statusStrip1";
             // 
@@ -129,7 +129,7 @@ namespace workflowLoginForm
             this.csvStatusLbl.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.csvStatusLbl.ForeColor = System.Drawing.SystemColors.Control;
             this.csvStatusLbl.Name = "csvStatusLbl";
-            this.csvStatusLbl.Size = new System.Drawing.Size(0, 17);
+            this.csvStatusLbl.Size = new System.Drawing.Size(0, 16);
             // 
             // rawMatCsvSave
             // 
@@ -144,11 +144,11 @@ namespace workflowLoginForm
             "Qualified",
             "Defective",
             "All Products"});
-            this.cBoxProductRep.Location = new System.Drawing.Point(374, 259);
-            this.cBoxProductRep.Margin = new System.Windows.Forms.Padding(2);
+            this.cBoxProductRep.Location = new System.Drawing.Point(499, 319);
+            this.cBoxProductRep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cBoxProductRep.Name = "cBoxProductRep";
-            this.cBoxProductRep.Size = new System.Drawing.Size(151, 21);
-            this.cBoxProductRep.TabIndex = 5;
+            this.cBoxProductRep.Size = new System.Drawing.Size(200, 24);
+            this.cBoxProductRep.TabIndex = 3;
             this.cBoxProductRep.SelectedIndexChanged += new System.EventHandler(this.cBoxProductRep_SelectedIndexChanged);
             // 
             // toolStrip1
@@ -158,9 +158,9 @@ namespace workflowLoginForm
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(521, 7);
+            this.toolStrip1.Location = new System.Drawing.Point(695, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(86, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -177,48 +177,47 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(52, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             this.toolStripDropDownButton1.Click += new System.EventHandler(this.toolStripDropDownButton1_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // viewToolStripMenuItem
             // 
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem1});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem1
             // 
             this.viewReportsToolStripMenuItem1.Name = "viewReportsToolStripMenuItem1";
-            this.viewReportsToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.viewReportsToolStripMenuItem1.Size = new System.Drawing.Size(185, 26);
             this.viewReportsToolStripMenuItem1.Text = "View Reports";
             this.viewReportsToolStripMenuItem1.Click += new System.EventHandler(this.viewReportsToolStripMenuItem1_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // lblReportManager
             // 
             this.lblReportManager.AutoSize = true;
             this.lblReportManager.Font = new System.Drawing.Font("Impact", 26.25F);
             this.lblReportManager.ForeColor = System.Drawing.Color.White;
-            this.lblReportManager.Location = new System.Drawing.Point(158, 27);
-            this.lblReportManager.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblReportManager.Location = new System.Drawing.Point(211, 33);
             this.lblReportManager.Name = "lblReportManager";
-            this.lblReportManager.Size = new System.Drawing.Size(335, 43);
+            this.lblReportManager.Size = new System.Drawing.Size(417, 54);
             this.lblReportManager.TabIndex = 67;
             this.lblReportManager.Text = "Report Manager Page ";
             // 
@@ -227,10 +226,9 @@ namespace workflowLoginForm
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(85, 109);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(113, 134);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 23);
+            this.label1.Size = new System.Drawing.Size(163, 29);
             this.label1.TabIndex = 68;
             this.label1.Text = "Material Report";
             // 
@@ -239,10 +237,9 @@ namespace workflowLoginForm
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(392, 109);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(523, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 23);
+            this.label2.Size = new System.Drawing.Size(159, 29);
             this.label2.TabIndex = 69;
             this.label2.Text = "Product Report";
             // 
@@ -251,19 +248,18 @@ namespace workflowLoginForm
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(379, 236);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(505, 290);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 20);
+            this.label3.Size = new System.Drawing.Size(176, 25);
             this.label3.TabIndex = 70;
             this.label3.Text = "Select Product Type:";
             // 
             // ReportManagerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -276,7 +272,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.Productbtn);
             this.Controls.Add(this.RawMatbtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ReportManagerForm";
             this.Text = "Report Manager";
             this.csvStatusStrip.ResumeLayout(false);
