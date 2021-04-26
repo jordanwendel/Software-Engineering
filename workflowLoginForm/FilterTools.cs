@@ -39,9 +39,14 @@ namespace workflowLoginForm
             return label;
         }
 
+        public void DelManagerFilterDatagrid()
+        {
+
+        }
+
 
      
-        public void FilterDatagrid(string nameFilter, string qualityFilter, string locationFilter, string quantityFilter, string inequality, DataGridView dataGrid, ToolStripStatusLabel status, string filterMenu)
+        public void ProductManagerFilterDatagrid(string nameFilter, string qualityFilter, string locationFilter, string quantityFilter, string inequality, DataGridView dataGrid, ToolStripStatusLabel status, string filterMenu)
         {
             dgTools.dbName = this.dbName;
             dgTools.SqlCommand = this.SqlCommand;

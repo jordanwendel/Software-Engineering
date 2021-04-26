@@ -37,76 +37,78 @@ namespace workflowLoginForm
             string enteredUsername = txtUserName.Text;
 
             loggedInUser = new User(enteredUsername, enteredPassword); // Logging in the current user
-
+            
+            // Logging in the current user
             try
             {
                 userManager = new UserManager();
                 if (userManager.ValidatePassword(enteredUsername, enteredPassword).Equals(true)) // Validating if the user's password matches in the database
                 {
-                    // May be better with an enum
-                    if (loggedInUser.Job.Equals("Administrator")) // Admin page
+                    switch (loggedInUser.Job)
                     {
-                        this.Hide();
-                        Admin = new AdministratorForm(loggedInUser);
-                        Admin.ShowDialog();
-                        txtUserName.Text = string.Empty;
-                        txtPassword.Text = string.Empty;
-                        this.Show();
-                    }
-                    else if (loggedInUser.Job.Equals("Delivery Manager")) // Delivery manager page
-                    {
-                        this.Hide();
-                        DeliveryManager = new DeliveryManagerForm();
-                        DeliveryManager.ShowDialog();
-                        txtUserName.Text = string.Empty;
-                        txtPassword.Text = string.Empty;
-                        this.Show();
-                    }
-                    else if (loggedInUser.Job.Equals("Product Manager")) // Product manager page
-                    {
-                        this.Hide();
-                        ProductManager = new ProductManagerForm();
-                        ProductManager.ShowDialog();
-                        txtUserName.Text = string.Empty;
-                        txtPassword.Text = string.Empty;
-                        this.Show();
-                    }
-                    else if (loggedInUser.Job.Equals("Quality Analyzer")) // Quality analyzer page
-                    {
-                        this.Hide();
-                        QualityAnalyzer = new QualityAnalyzerForm();
-                        QualityAnalyzer.ShowDialog();
-                        txtUserName.Text = string.Empty;
-                        txtPassword.Text = string.Empty;
-                        this.Show();
-                    }
-                    else if (loggedInUser.Job.Equals("Report Manager")) // Report manager page
-                    {
-                        this.Hide();
-                        ReportManager = new ReportManagerForm();
-                        ReportManager.ShowDialog();
-                        txtUserName.Text = string.Empty;
-                        txtPassword.Text = string.Empty;
-                        this.Show();
-                    }
-                    else if (loggedInUser.Job.Equals("Stockiest")) // Stockiest page
-                    {
-                        this.Hide();
-                        Stockpage = new StockiestForm();
-                        Stockpage.ShowDialog();
-                        txtUserName.Text = string.Empty;
-                        txtPassword.Text = string.Empty;
-                        this.Show();
+                        case "Administrator": // Admin log in
+                            this.Hide();
+                            Admin = new AdministratorForm(loggedInUser);
+                            Admin.ShowDialog();
+                            txtUserName.Text = string.Empty;
+                            txtPassword.Text = string.Empty;
+                            this.Show();
+                            break;
+
+                        case "Delivery Manager": // Delivery manager log in
+                            this.Hide();
+                            DeliveryManager = new DeliveryManagerForm();
+                            DeliveryManager.ShowDialog();
+                            txtUserName.Text = string.Empty;
+                            txtPassword.Text = string.Empty;
+                            this.Show();
+                            break;
+
+                        case "Product Manager": // Product manager log in
+                            this.Hide();
+                            ProductManager = new ProductManagerForm();
+                            ProductManager.ShowDialog();
+                            txtUserName.Text = string.Empty;
+                            txtPassword.Text = string.Empty;
+                            this.Show();
+                            break;
+
+                        case "Quality Analyzer": // Quality analyzer log in
+                            this.Hide();
+                            QualityAnalyzer = new QualityAnalyzerForm();
+                            QualityAnalyzer.ShowDialog();
+                            txtUserName.Text = string.Empty;
+                            txtPassword.Text = string.Empty;
+                            this.Show();
+                            break;
+
+                        case "Report Manager": // Report manager log in
+                            this.Hide();
+                            ReportManager = new ReportManagerForm();
+                            ReportManager.ShowDialog();
+                            txtUserName.Text = string.Empty;
+                            txtPassword.Text = string.Empty;
+                            this.Show();
+                            break;
+
+                        case "Stockiest": // Stockiest log in
+                            this.Hide();
+                            Stockpage = new StockiestForm();
+                            Stockpage.ShowDialog();
+                            txtUserName.Text = string.Empty;
+                            txtPassword.Text = string.Empty;
+                            this.Show();
+                            break;
                     }
                 }
-                else
+                else // Password is not correct
                 {
-                    //MessageBox.Show("IDK");
+                    MessageBox.Show("Invalid username or password", "Warning!");
                     txtUserName.Focus();
                     txtUserName.SelectAll();
                 }
             }
-            catch (Exception)
+            catch (Exception) // Username is not correct
             {
                 MessageBox.Show("Invalid username or password", "Warning!"); // Show error message
                 txtUserName.Clear();

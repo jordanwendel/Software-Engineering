@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 
 
 namespace workflowLoginForm
@@ -54,6 +48,118 @@ namespace workflowLoginForm
             filterTools = new FilterTools();
         }
 
+        private void ConfirmChanges(Object sender, EventArgs e)
+        {
+            if (addedItems.Equals(true))
+            {
+                // Pressing confirm after adding products
+                if (dgTools.dbName.Equals("Products"))
+                {
+                    MessageBox.Show("Please Remove Necessary Raw Materials");
+
+                    viewMatBtn_Click(sender, e); // Switch to Raw Materials data grid view
+
+                    addItemLbl.Text = "Remove Materials";
+
+                    // Switching from Add button to Remove button
+                    addItemBtn.Visible = false;
+                    removeItemBtn.Visible = true;
+                }
+
+                // Pressing confirm after removing materials
+                else
+                {
+                    // Creating a formatted string from the products and raw materials
+                    string prod = String.Join("\n", strProductsBeingAdded); // Joining each item in the list with a newline at the end
+                    string mat = String.Join("\n", strMatsBeingRemoved);
+
+                    // Listing the products and raw materials on the screen
+                    string confirm = "You are adding:\n" +
+                                        prod + "\n\n" +
+                                        "You are removing:\n" +
+                                        mat + "\n\n" +
+                                        "Is this correct?";
+
+                    // Yes or no to confirm
+                    DialogResult result = MessageBox.Show(confirm, "Confirm Changes", MessageBoxButtons.YesNo); // Confirming changes
+
+                    // If user selects yes, update the databases
+                    if (result.Equals(DialogResult.Yes))
+                    {
+                        // Switching back to the Add button from the Remove button
+                        addItemBtn.Visible = true;
+                        removeItemBtn.Visible = false;
+
+                        try
+                        {
+                            // Clear items from list boxes
+                            itemsView.Items.Clear();
+                            rawMatsView.Items.Clear();
+
+                            // Adding all new products to the database
+                            foreach (Product p in newProducts)
+                            {
+                                if (dbTools.CheckProduct(p.productName).Equals(true)) // If product already exists, update the quantity on it
+                                {
+                                    // Adding the new product quantity to the existing product
+                                    Product tempProduct = dbTools.GetProduct(p.productName); // Returns a product object with the current quantity before changes
+
+                                    int newQuant = tempProduct.quantity + p.quantity; // Calculating new quantity after removing items
+
+                                    dbTools.EditProductQuant(p.productName, newQuant); // Editing the product quantity in the database to reflect changes
+                                }
+                                else
+                                {
+                                    // If product is not already in the database, add a new entry
+                                    dbTools.AddProduct(p);
+                                }
+                            }
+
+                            // Updating the raw materials database to the new values
+                            foreach (RawMaterial m in matsUpdatedQuantity)
+                            {
+                                dbTools.EditQuant(m.rawMaterialName, m.quantity);
+                            }
+                            toolStripStatusLabel1.Text = "Successfully created new product(s) with raw material(s)!";
+
+                        }
+                        catch (Exception err)
+                        {
+                            MessageBox.Show(err.Message, "A database issue occurred. Please try again");
+                        }
+
+                        // Going back to product view
+                        viewProdBtn_Click(sender, e);
+
+                        // Clearing all lists
+                        if (newProducts != null)
+                        {
+                            newProducts.Clear();
+                        }
+                        if (matsUpdatedQuantity != null)
+                        {
+                            matsUpdatedQuantity.Clear();
+                        }
+                        if (matsQuantityToRemove != null)
+                        {
+                            matsQuantityToRemove.Clear();
+                        }
+                        if (strMatsBeingRemoved != null)
+                        {
+                            strMatsBeingRemoved.Clear();
+                        }
+                        if (strProductsBeingAdded != null)
+                        {
+                            strProductsBeingAdded.Clear();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Must add products before continuing.", "Warning!");
+            }
+        }
         private void FilterSwitch(string dbName)
         {
             if (dbName.Equals("Products"))
@@ -221,7 +327,7 @@ namespace workflowLoginForm
             string l = cBoxLocation.Text;
             string eq = quantityEquations.Text;
             string menu = filterMenu.Text;
-            filterTools.FilterDatagrid(name, ql, l, num, eq, prodDataGridView, stsStripLabel, menu);
+            filterTools.ProductManagerFilterDatagrid(name, ql, l, num, eq, prodDataGridView, stsStripLabel, menu);
         }
 
         
@@ -336,116 +442,7 @@ namespace workflowLoginForm
         // Event handler for Confirm button click
         private void confirmChangesBtn_Click(object sender, EventArgs e)
         {
-            if (addedItems.Equals(true))
-            {
-                // Pressing confirm after adding products
-                if (dgTools.dbName.Equals("Products"))
-                {
-                    MessageBox.Show("Please Remove Necessary Raw Materials");
-
-                    viewMatBtn_Click(sender, e); // Switch to Raw Materials data grid view
-
-                    addItemLbl.Text = "Remove Materials";
-
-                    // Switching from Add button to Remove button
-                    addItemBtn.Visible = false;
-                    removeItemBtn.Visible = true;
-                }
-
-                // Pressing confirm after removing materials
-                else
-                {
-                    // Creating a formatted string from the products and raw materials
-                    string prod = String.Join("\n", strProductsBeingAdded); // Joining each item in the list with a newline at the end
-                    string mat = String.Join("\n", strMatsBeingRemoved);
-
-                    // Listing the products and raw materials on the screen
-                    string confirm = "You are adding:\n" +
-                                        prod + "\n\n" +
-                                        "You are removing:\n" +
-                                        mat + "\n\n" +
-                                        "Is this correct?";
-
-                    // Yes or no to confirm
-                    DialogResult result = MessageBox.Show(confirm, "Confirm Changes", MessageBoxButtons.YesNo); // Confirming changes
-
-                    // If user selects yes, update the databases
-                    if (result.Equals(DialogResult.Yes))
-                    {
-                        // Switching back to the Add button from the Remove button
-                        addItemBtn.Visible = true;
-                        removeItemBtn.Visible = false;
-
-                        try
-                        {
-                            // Clear items from list boxes
-                            itemsView.Items.Clear();
-                            rawMatsView.Items.Clear();
-
-                            // Adding all new products to the database
-                            foreach (Product p in newProducts)
-                            {
-                                if (dbTools.CheckProduct(p.productName).Equals(true)) // If product already exists, update the quantity on it
-                                {
-                                    // Adding the new product quantity to the existing product
-                                    Product tempProduct = dbTools.GetProduct(p.productName); // Returns a product object with the current quantity before changes
-
-                                    int newQuant = tempProduct.quantity + p.quantity; // Calculating new quantity after removing items
-
-                                    dbTools.EditProductQuant(p.productName, newQuant); // Editing the product quantity in the database to reflect changes
-                                }
-                                else
-                                {
-                                    // If product is not already in the database, add a new entry
-                                    dbTools.AddProduct(p);
-                                }
-                            }
-
-                            // Updating the raw materials database to the new values
-                            foreach (RawMaterial m in matsUpdatedQuantity)
-                            {
-                                dbTools.EditQuant(m.rawMaterialName, m.quantity);
-                            }
-
-                            stsStripDisplayInfo.Text = "Successfully created new product(s) with raw material(s)!";
-                        }
-                        catch (Exception err)
-                        {
-                            MessageBox.Show(err.Message, "A database issue occurred. Please try again");
-                        }
-
-                        // Going back to product view
-                        viewProdBtn_Click(sender, e);
-
-                        // Clearing all lists
-                        if (newProducts != null)
-                        {
-                            newProducts.Clear();
-                        }
-                        if (matsUpdatedQuantity != null)
-                        {
-                            matsUpdatedQuantity.Clear();
-                        }
-                        if (matsQuantityToRemove != null)
-                        {
-                            matsQuantityToRemove.Clear();
-                        }
-                        if (strMatsBeingRemoved != null)
-                        {
-                            strMatsBeingRemoved.Clear();
-                        }
-                        if (strProductsBeingAdded != null)
-                        {
-                            strProductsBeingAdded.Clear();
-                        }
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("Must add products before continuing.", "Warning!");
-            }
-            
+            ConfirmChanges(sender, e);
         }
 
         // Automatically filtering by name as user types in the field
