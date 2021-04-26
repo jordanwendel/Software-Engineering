@@ -33,6 +33,7 @@ namespace workflowLoginForm
             this.lblConfirmPass = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.confirmBtn = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblConfirmPass
@@ -58,13 +59,23 @@ namespace workflowLoginForm
             // 
             // confirmBtn
             // 
-            this.confirmBtn.Location = new System.Drawing.Point(136, 186);
+            this.confirmBtn.Location = new System.Drawing.Point(73, 185);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Size = new System.Drawing.Size(107, 30);
             this.confirmBtn.TabIndex = 5;
             this.confirmBtn.Text = "CONFIRM";
             this.confirmBtn.UseVisualStyleBackColor = true;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(214, 185);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(107, 30);
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "CANCEL";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // EditUserAdminConfirm
             // 
@@ -73,6 +84,7 @@ namespace workflowLoginForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(378, 244);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.lblConfirmPass);
@@ -89,5 +101,6 @@ namespace workflowLoginForm
         private System.Windows.Forms.Label lblConfirmPass;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Button confirmBtn;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

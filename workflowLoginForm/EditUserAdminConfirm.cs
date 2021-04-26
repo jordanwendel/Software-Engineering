@@ -12,8 +12,10 @@ namespace workflowLoginForm
 {
     public partial class EditUserAdminConfirm : Form
     {
+        
         private DatabaseTools dbTools;
         private User user;
+        public Boolean check;
 
 
         private string password { get; set; }
@@ -24,6 +26,7 @@ namespace workflowLoginForm
             this.password = user.Password;
             dbTools = new DatabaseTools();
             this.user = user;
+            check = false;
         }
 
         public bool isAdmin()
@@ -46,6 +49,8 @@ namespace workflowLoginForm
         {
             if (isAdmin())
             {
+                check = true;
+                
                 this.Close();
             }
             else
@@ -55,5 +60,11 @@ namespace workflowLoginForm
 
             txtPass.Text = String.Empty;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

@@ -13,6 +13,7 @@ namespace workflowLoginForm
     public class DatabaseTools
     {
         // Class level objects
+        
         public SqlConnection Cn { get; set; }
         public SqlDataReader reader;
         public SqlCommand cmd;

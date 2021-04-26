@@ -160,9 +160,12 @@ namespace workflowLoginForm
                     {
                         confirmForm = new EditUserAdminConfirm(this.user);
 
-                        dbTools.EditUserJob(firstname, lastname, job);
 
                         confirmForm.ShowDialog();
+                        if (confirmForm.check == true)
+                        {
+                            dbTools.EditUserJob(firstname, lastname, job);
+                        }
                         this.Show();
 
                         refreshToolStripMenuItem_Click(sender, e);
