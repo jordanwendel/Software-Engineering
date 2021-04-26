@@ -406,5 +406,21 @@ namespace workflowLoginForm
                 System.Diagnostics.Process.Start(fileName);
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ItemName.Clear();
+            qualityMenu.SelectedIndex = -1;
+        }
+
+        private void btnClear2_Click(object sender, EventArgs e)
+        {
+            txtFilterByItem.Clear();
+            cBoxLocation.SelectedIndex = -1;
+            cBoxQuality.SelectedIndex = -1;
+            quantityEquations.Clear();
+            txtNum.Clear();
+            filterMenu.SelectedIndex = -1;
+        }
     }
 }

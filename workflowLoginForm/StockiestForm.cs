@@ -268,5 +268,19 @@ namespace workflowLoginForm
         {
             Application.Exit();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            //filterMenu.SelectedIndex = -1;
+            txtFilterByItem.Clear();
+            quantityEquations.SelectedIndex = -1;
+            txtNum.Clear();
+        }
+
+        private void btnClear2_Click(object sender, EventArgs e)
+        {
+            itembox.Clear();
+            qtnBox.Clear();
+        }
     }
 }

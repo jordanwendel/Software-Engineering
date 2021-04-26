@@ -334,5 +334,21 @@ namespace workflowLoginForm
         {
             Application.Exit();
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            //filterMenu.SelectedIndex = -1;
+            txtFilterByItem.Clear();
+            cBoxLocation.SelectedIndex = -1;
+            quantityEquations.SelectedIndex = -1;
+            txtNum.Clear();
+            cBoxQuality.SelectedIndex = -1;
+        }
+
+        private void btnClear2_Click(object sender, EventArgs e)
+        {
+            txtItemName.Clear();
+            locationMenu.SelectedIndex = -1;
+        }
     }
 }
