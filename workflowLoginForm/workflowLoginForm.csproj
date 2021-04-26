@@ -112,6 +112,7 @@
     <Compile Include="EditUserAdminConfirm.Designer.cs">
       <DependentUpon>EditUserAdminConfirm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FilterTools.cs" />
     <Compile Include="ProductReport.cs">
       <SubType>Form</SubType>
     </Compile>
