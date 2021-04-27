@@ -370,7 +370,7 @@ namespace workflowLoginForm
             }
             catch (Exception)
             {
-                MessageBox.Show("Cannot add empty product\nPlease try again.", "Warning!"); // User tries to add a product before typing anything in
+                MessageBox.Show("Cannot add empty product.\nPlease try again.", "Warning!"); // User tries to add a product before typing anything in
                 addedItems = false;
             }
         }
@@ -584,6 +584,13 @@ namespace workflowLoginForm
             filterMenu.Items.Add("Quality");
             filterMenu.Items.Add("Quantity");
             filterMenu.Items.Add("Location");
+
+            // Switching from Add button to Remove button
+            addItemBtn.Visible = true;
+            removeItemBtn.Visible = false;
+
+            // Switching text for adding products
+            addItemLbl.Text = "Add Product";
         }
 
         private void materialsTableToolStripMenuItem_Click(object sender, EventArgs e)
@@ -607,6 +614,13 @@ namespace workflowLoginForm
             filterMenu.Items.Clear();
             filterMenu.Items.Add("Name");
             filterMenu.Items.Add("Quantity");
+
+            // Switching from Add button to Remove button
+            addItemBtn.Visible = false;
+            removeItemBtn.Visible = true;
+
+            // Switching text to removing materials
+            addItemLbl.Text = "Remove Materials";
         }
 
         private void reportsToolStripMenuItem_Click(object sender, EventArgs e)
