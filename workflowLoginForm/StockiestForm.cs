@@ -39,36 +39,6 @@ namespace workflowLoginForm
 
         }
 
-        // Event handler for Logout button click
-        private void Logout_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        // Event handler for Refresh Inventory button click
-        private void refreshBtn_Click(object sender, EventArgs e)
-        {
-            // Clear the filtering text fields when refreshing data grid
-            filterMenu.Text = "Click to expand...";
-            txtFilterByItem.Clear();
-            txtNum.Clear();
-            quantityEquations.Text = null;
-
-            // Re-enabling all search fields
-            txtFilterByItem.Enabled = true;
-            txtNum.Enabled = true;
-            quantityEquations.Enabled = true;
-
-
-            // Viewing Raw Materials
-            if (dgTools.dbName.Equals("RawMaterials"))
-            { dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
-
-                dgTools.RefreshDataGrid(stockDataGridView);
-               
-            }
-
-        }
 
         // Event handler for Add New button click
         private void addNewMat_Btn_Click(object sender, EventArgs e)
@@ -78,55 +48,6 @@ namespace workflowLoginForm
             this.Show();
         }
 
-        private void addNewMatBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                String MatName = itembox.Text;
-                int Quant = int.Parse(qtnBox.Text);
-                dbTools = new DatabaseTools();
-
-                if (dbTools.CheckMat(MatName).Equals(true))
-                {
-                    try
-                    {
-                        string message = "Are you sure you want to change the quantity of " + MatName + " to " + Quant+ "?";
-                        string title = "Warning!";
-
-                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                        DialogResult result = MessageBox.Show(message, title, buttons);
-                        if (result == DialogResult.Yes)
-                        {
-                            dbTools.EditQuant(MatName, Quant);
-                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
-                            dgTools.RefreshDataGrid(stockDataGridView);
-                            itembox.Clear();
-                            qtnBox.Clear();
-                        }
-                        else
-                        {
-                            return;
-                        }
-
-
-
-                    }
-                    catch (Exception err)
-                    {
-                        MessageBox.Show(err.Message, "Warning!");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("This item can not be found.");
-
-                }
-            }
-            catch(Exception err)
-            {
-                MessageBox.Show("Please input a value and quantity", "Warning!");
-            }
-        }
 
         private void filterMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -151,65 +72,13 @@ namespace workflowLoginForm
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            string info = txtFilterByItem.Text;
-
-            // Filtering Raw Materials database
-            if (dgTools.dbName.Equals("RawMaterials"))
-            {
-                try
-                {
-                    // Filtering by Name
-                    if (filterMenu.Text.Equals("Name"))
-                    {
-                        dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE RawMaterialName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
-
-                        dgTools.PopulateDataGrid(stockDataGridView);
-                    }
-
-                    // Filtering by Quantity
-                    else if (filterMenu.Text.Equals("Quantity"))
-                    {
-                        int N = int.Parse(txtNum.Text);
-
-                        // Valid quanitity input greater than zero
-                        if (N > 0)
-                        {
-                            // Inequality comparisons for quantity
-                            if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
-                            {
-                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity > " + "'" + N + "'";
-                            }
-                            else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
-                            {
-                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity < " + "'" + N + "'";
-                            }
-                            else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
-                            {
-                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + N + "'";
-                            }
-                        }
-
-                        // Entered quanitity is less than or equal to zero
-                        else
-                        {
-                            MessageBox.Show("Quantity must be greater than zero");
-                        }
-
-                        dgTools.PopulateDataGrid(stockDataGridView);
-                    }
-                }
-                catch (FormatException)
-                {
-                    //MessageBox.Show(err.Message, "Please input the correct information");
-                    throw;
-                }
-            }
+            
         }
 
         // Automatically filtering by name as user types in the field
         private void txtFilterByItem_TextChanged(object sender, EventArgs e)
         {
-            btnFilter_Click(sender, e);
+            btnFilter_Click_1(sender, e);
         }
 
         private void stockDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -269,7 +138,64 @@ namespace workflowLoginForm
             Application.Exit();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+
+        private void changeqnt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                String MatName = itembox.Text;
+                int Quant = int.Parse(qtnBox.Text);
+                dbTools = new DatabaseTools();
+
+                if (dbTools.CheckMat(MatName).Equals(true))
+                {
+                    try
+                    {
+                        string message = "Are you sure you want to change the quantity of " + MatName + " to " + Quant + "?";
+                        string title = "Warning!";
+
+                        MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                        DialogResult result = MessageBox.Show(message, title, buttons);
+                        if (result == DialogResult.Yes)
+                        {
+                            dbTools.EditQuant(MatName, Quant);
+                            dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials"; // Viewing all data from RawMaterials database except the ID
+                            dgTools.RefreshDataGrid(stockDataGridView);
+                            itembox.Clear();
+                            qtnBox.Clear();
+                        }
+                        else
+                        {
+                            return;
+                        }
+
+
+
+                    }
+                    catch (Exception err)
+                    {
+                        MessageBox.Show(err.Message, "Warning!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This item can not be found.");
+
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Please input a value and quantity", "Warning!");
+            }
+        }
+
+        private void btnClear2_Click_1(object sender, EventArgs e)
+        {
+            itembox.Clear();
+            qtnBox.Clear();
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
         {
             //filterMenu.SelectedIndex = -1;
             txtFilterByItem.Clear();
@@ -277,10 +203,61 @@ namespace workflowLoginForm
             txtNum.Clear();
         }
 
-        private void btnClear2_Click(object sender, EventArgs e)
+        private void btnFilter_Click_1(object sender, EventArgs e)
         {
-            itembox.Clear();
-            qtnBox.Clear();
+            string info = txtFilterByItem.Text;
+
+            // Filtering Raw Materials database
+            if (dgTools.dbName.Equals("RawMaterials"))
+            {
+                try
+                {
+                    // Filtering by Name
+                    if (filterMenu.Text.Equals("Name"))
+                    {
+                        dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE RawMaterialName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
+
+                        dgTools.PopulateDataGrid(stockDataGridView);
+                    }
+
+                    // Filtering by Quantity
+                    else if (filterMenu.Text.Equals("Quantity"))
+                    {
+                        int N = int.Parse(txtNum.Text);
+
+                        // Valid quanitity input greater than zero
+                        if (N > 0)
+                        {
+                            // Inequality comparisons for quantity
+                            if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
+                            {
+                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity > " + "'" + N + "'";
+                            }
+                            else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
+                            {
+                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity < " + "'" + N + "'";
+                            }
+                            else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
+                            {
+                                dgTools.SqlCommand = "SELECT RawMaterialName, Quantity FROM RawMaterials WHERE Quantity = " + "'" + N + "'";
+                            }
+                        }
+
+                        // Entered quanitity is less than or equal to zero
+                        else
+                        {
+                            MessageBox.Show("Quantity must be greater than zero");
+                        }
+
+                        dgTools.PopulateDataGrid(stockDataGridView);
+                    }
+                }
+                catch (FormatException)
+                {
+                    //MessageBox.Show(err.Message, "Please input the correct information");
+                    throw;
+                }
+            }
         }
     }
 }

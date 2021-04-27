@@ -27,11 +27,6 @@ namespace workflowLoginForm
             ReportGen = new ReportGenerator();
         }
 
-        private void Admin_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Logout_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -50,10 +45,6 @@ namespace workflowLoginForm
 
         }
 
-        private void Logout_Click_1(object sender, EventArgs e)
-        {
-           // this.Close();
-        }
 
         private void QualityAnalyzerForm_Load(object sender, EventArgs e)
         {
@@ -62,11 +53,6 @@ namespace workflowLoginForm
             dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products";
             
             dgTools.PopulateDataGrid(prodDataGridView);
-
-        }
-
-        private void addProduct_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -110,47 +96,6 @@ namespace workflowLoginForm
 
         }
 
-        private void addItemBtn_Click(object sender, EventArgs e)
-        {
-            String ProductName = ItemName.Text;
-            String Quality = qualityMenu.Text;
-            dbTools = new DatabaseTools();
-
-            dbTools.CheckProduct(ProductName);
-
-            if (dbTools.CheckProduct(ProductName).Equals(true))
-            {
-                try
-                {
-                    string message = "Are you sure you want to change the quality of " + ProductName + " to " + Quality + "?";
-                    string title = "Warning!";
-
-                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                    DialogResult result = MessageBox.Show(message, title, buttons);
-                    if (result == DialogResult.Yes)
-                    {
-                        dbTools.EditQuality(ProductName, Quality);
-                        Refresh_Click(sender, e);
-                    }
-                    else
-                    {
-                        return;
-                    }
-                       
-                    
-                }
-                catch (Exception err)
-                {
-                    MessageBox.Show(err.Message, "Warning!");
-                }
-            }
-            else
-            {
-                MessageBox.Show("This item can not be found.");
-
-            }
-        }
-
         private void qualityLbl_Click(object sender, EventArgs e)
         {
 
@@ -161,75 +106,11 @@ namespace workflowLoginForm
 
         }
 
-        private void filterMenu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (dgTools.dbName.Equals("Products"))
-            {
-                if (filterMenu.SelectedItem.Equals("Name"))
-                {
-                    // Disabling other options when searching for a name
-                    cBoxQuality.Enabled = false;
-                    txtNum.Enabled = false;
-                    cBoxLocation.Enabled = false;
-                    quantityEquations.Enabled = false;
-                    txtFilterByItem.Enabled = true;
-                }
-                else if (filterMenu.SelectedItem.Equals("Quality"))
-                {
-                    // Disabling other options when searching for quality
-                    txtNum.Enabled = false;
-                    cBoxLocation.Enabled = false;
-                    txtFilterByItem.Enabled = false;
-                    quantityEquations.Enabled = false;
-                    cBoxQuality.Enabled = true;
-                }
-                else if (filterMenu.SelectedItem.Equals("Quantity"))
-                {
-                    // Disabling other options when searching for quantity
-                    cBoxQuality.Enabled = false;
-                    cBoxLocation.Enabled = false;
-                    txtFilterByItem.Enabled = false;
-                    txtNum.Enabled = true;
-                    quantityEquations.Enabled = true;
-                }
-                else if (filterMenu.SelectedItem.Equals("Location"))
-                {
-                    // Disabling other options when searching for location
-                    txtFilterByItem.Enabled = false;
-                    cBoxQuality.Enabled = false;
-                    txtNum.Enabled = false;
-                    quantityEquations.Enabled = false;
-                    cBoxLocation.Enabled = true;
-                }
-            }
-            else if (dgTools.dbName.Equals("RawMaterials"))
-            {
-                if (filterMenu.SelectedItem.Equals("Name"))
-                {
-                    // Disabling other options when searching for a name
-                    cBoxQuality.Enabled = false;
-                    txtNum.Enabled = false;
-                    cBoxLocation.Enabled = false;
-                    quantityEquations.Enabled = false;
-                    txtFilterByItem.Enabled = true;
-                }
-                else if (filterMenu.SelectedItem.Equals("Quantity"))
-                {
-                    // Disabling other options when searching for quantity
-                    cBoxLocation.Enabled = false;
-                    cBoxQuality.Enabled = false;
-                    txtFilterByItem.Enabled = false;
-                    quantityEquations.Enabled = true;
-                    txtNum.Enabled = true;
-                }
-            }
-        
-        }
 
         // Automatically filtering by name as user types in the field
         private void txtFilterByItem_TextChanged(object sender, EventArgs e)
         {
-            btnFilter_Click(sender, e);
+            btnFilter_Click_1(sender, e);
         }
 
         private void cBoxQuality_SelectedIndexChanged(object sender, EventArgs e)
@@ -336,18 +217,12 @@ namespace workflowLoginForm
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            ItemName.Clear();
-            qualityMenu.SelectedIndex = -1;
+            
         }
 
         private void btnClear2_Click(object sender, EventArgs e)
         {
-            txtFilterByItem.Clear();
-            cBoxLocation.SelectedIndex = -1;
-            cBoxQuality.SelectedIndex = -1;
-            quantityEquations.Text = null;
-            txtNum.Clear();
-            filterMenu.SelectedIndex = -1;
+            
         }
 
         private void btnFilter_Click_1(object sender, EventArgs e)
@@ -424,6 +299,126 @@ namespace workflowLoginForm
                 {
                     MessageBox.Show("Please input the correct information");
                     throw;
+                }
+            }
+        }
+
+        private void btnClear2_Click_1(object sender, EventArgs e)
+        {
+            txtFilterByItem.Clear();
+            cBoxLocation.SelectedIndex = -1;
+            cBoxQuality.SelectedIndex = -1;
+            quantityEquations.Text = null;
+            txtNum.Clear();
+            filterMenu.SelectedIndex = -1;
+        }
+
+        private void btnClear_Click_1(object sender, EventArgs e)
+        {
+            ItemName.Clear();
+            qualityMenu.SelectedIndex = -1;
+        }
+
+        private void addItemBtn_Click_1(object sender, EventArgs e)
+        {
+            String ProductName = ItemName.Text;
+            String Quality = qualityMenu.Text;
+            dbTools = new DatabaseTools();
+
+            dbTools.CheckProduct(ProductName);
+
+            if (dbTools.CheckProduct(ProductName).Equals(true))
+            {
+                try
+                {
+                    string message = "Are you sure you want to change the quality of " + ProductName + " to " + Quality + "?";
+                    string title = "Warning!";
+
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
+                    if (result == DialogResult.Yes)
+                    {
+                        dbTools.EditQuality(ProductName, Quality);
+                        Refresh_Click(sender, e);
+                    }
+                    else
+                    {
+                        return;
+                    }
+
+
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show(err.Message, "Warning!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("This item can not be found.");
+            }
+        }
+
+        private void filterMenu_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (dgTools.dbName.Equals("Products"))
+            {
+                if (filterMenu.SelectedItem.Equals("Name"))
+                {
+                    // Disabling other options when searching for a name
+                    cBoxQuality.Enabled = false;
+                    txtNum.Enabled = false;
+                    cBoxLocation.Enabled = false;
+                    quantityEquations.Enabled = false;
+                    txtFilterByItem.Enabled = true;
+                }
+                else if (filterMenu.SelectedItem.Equals("Quality"))
+                {
+                    // Disabling other options when searching for quality
+                    txtNum.Enabled = false;
+                    cBoxLocation.Enabled = false;
+                    txtFilterByItem.Enabled = false;
+                    quantityEquations.Enabled = false;
+                    cBoxQuality.Enabled = true;
+                }
+                else if (filterMenu.SelectedItem.Equals("Quantity"))
+                {
+                    // Disabling other options when searching for quantity
+                    cBoxQuality.Enabled = false;
+                    cBoxLocation.Enabled = false;
+                    txtFilterByItem.Enabled = false;
+                    txtNum.Enabled = true;
+                    quantityEquations.Enabled = true;
+                }
+                else if (filterMenu.SelectedItem.Equals("Location"))
+                {
+                    // Disabling other options when searching for location
+                    txtFilterByItem.Enabled = false;
+                    cBoxQuality.Enabled = false;
+                    txtNum.Enabled = false;
+                    quantityEquations.Enabled = false;
+                    cBoxLocation.Enabled = true;
+                }
+            }
+            else if (dgTools.dbName.Equals("RawMaterials"))
+            {
+                if (filterMenu.SelectedItem.Equals("Name"))
+                {
+                    // Disabling other options when searching for a name
+                    cBoxQuality.Enabled = false;
+                    txtNum.Enabled = false;
+                    cBoxLocation.Enabled = false;
+                    quantityEquations.Enabled = false;
+                    txtFilterByItem.Enabled = true;
+                }
+                else if (filterMenu.SelectedItem.Equals("Quantity"))
+                {
+                    // Disabling other options when searching for quantity
+                    cBoxLocation.Enabled = false;
+                    cBoxQuality.Enabled = false;
+                    txtFilterByItem.Enabled = false;
+                    quantityEquations.Enabled = true;
+                    txtNum.Enabled = true;
                 }
             }
         }

@@ -56,8 +56,18 @@ namespace workflowLoginForm
             this.label12 = new System.Windows.Forms.Label();
             this.manufacturinglbl = new System.Windows.Forms.Label();
             this.percentsaleslbl = new System.Windows.Forms.Label();
+            this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.toolStripContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // averagelbl
@@ -164,7 +174,7 @@ namespace workflowLoginForm
             // 
             // saleslbl
             // 
-            this.saleslbl.Font = new System.Drawing.Font("Lucida Bright", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saleslbl.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saleslbl.ForeColor = System.Drawing.Color.White;
             this.saleslbl.Location = new System.Drawing.Point(31, 459);
             this.saleslbl.Name = "saleslbl";
@@ -186,13 +196,15 @@ namespace workflowLoginForm
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(810, 11);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(874, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(56, 24);
             this.menuStrip1.TabIndex = 88;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -209,14 +221,14 @@ namespace workflowLoginForm
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -341,43 +353,154 @@ namespace workflowLoginForm
             this.percentsaleslbl.Text = "Unknown";
             this.percentsaleslbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // toolStripContainer1
+            // 
+            // 
+            // toolStripContainer1.ContentPanel
+            // 
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(50, 27);
+            this.toolStripContainer1.Location = new System.Drawing.Point(108, 8);
+            this.toolStripContainer1.Name = "toolStripContainer1";
+            this.toolStripContainer1.Size = new System.Drawing.Size(50, 27);
+            this.toolStripContainer1.TabIndex = 100;
+            this.toolStripContainer1.Text = "toolStripContainer1";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(140, 119);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 22);
+            this.label7.TabIndex = 78;
+            this.label7.Text = "Unknown";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(140, 203);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(64, 24);
+            this.label9.TabIndex = 81;
+            this.label9.Text = "Unknown";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(3, 327);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(68, 21);
+            this.label13.TabIndex = 83;
+            this.label13.Text = "Unknown";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(239, 331);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(72, 18);
+            this.label14.TabIndex = 85;
+            this.label14.Text = "Unknown";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(83, 329);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 19);
+            this.label15.TabIndex = 91;
+            this.label15.Text = "Unknown";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(157, 331);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(76, 17);
+            this.label16.TabIndex = 93;
+            this.label16.Text = "Unknown";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(112, 459);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(79, 25);
+            this.label17.TabIndex = 98;
+            this.label17.Text = "Unknown";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(214, 459);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 25);
+            this.label18.TabIndex = 99;
+            this.label18.Text = "Unknown";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ProductReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(874, 614);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.toolStripContainer1);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.percentsaleslbl);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.manufacturinglbl);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.progresslbl);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.defectivelbl);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.saleslbl);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.qualitylbl);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.satisfactorylbl);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.averagelbl);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.countlbl);
             this.Controls.Add(this.lblNumbers);
             this.Controls.Add(this.stockDataGridView);
             this.Controls.Add(this.Stockiest);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductReport";
             this.Text = "Product Report";
             this.Load += new System.EventHandler(this.ProductReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.stockDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStripContainer1.ResumeLayout(false);
+            this.toolStripContainer1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,5 +534,14 @@ namespace workflowLoginForm
         public System.Windows.Forms.Label label12;
         public System.Windows.Forms.Label manufacturinglbl;
         public System.Windows.Forms.Label percentsaleslbl;
+        private System.Windows.Forms.ToolStripContainer toolStripContainer1;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label14;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.Label label18;
     }
 }

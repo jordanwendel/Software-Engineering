@@ -59,7 +59,7 @@ namespace workflowLoginForm
             this.RawMatCSVbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RawMatCSVbtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RawMatCSVbtn.Location = new System.Drawing.Point(32, 301);
-            this.RawMatCSVbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RawMatCSVbtn.Margin = new System.Windows.Forms.Padding(2);
             this.RawMatCSVbtn.Name = "RawMatCSVbtn";
             this.RawMatCSVbtn.Size = new System.Drawing.Size(228, 41);
             this.RawMatCSVbtn.TabIndex = 1;
@@ -73,7 +73,7 @@ namespace workflowLoginForm
             this.prodCsvBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prodCsvBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prodCsvBtn.Location = new System.Drawing.Point(340, 301);
-            this.prodCsvBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.prodCsvBtn.Margin = new System.Windows.Forms.Padding(2);
             this.prodCsvBtn.Name = "prodCsvBtn";
             this.prodCsvBtn.Size = new System.Drawing.Size(228, 41);
             this.prodCsvBtn.TabIndex = 4;
@@ -116,7 +116,7 @@ namespace workflowLoginForm
             "Defective",
             "All Products"});
             this.cBoxProductRep.Location = new System.Drawing.Point(374, 258);
-            this.cBoxProductRep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cBoxProductRep.Margin = new System.Windows.Forms.Padding(2);
             this.cBoxProductRep.Name = "cBoxProductRep";
             this.cBoxProductRep.Size = new System.Drawing.Size(166, 21);
             this.cBoxProductRep.TabIndex = 3;
@@ -241,6 +241,7 @@ namespace workflowLoginForm
             this.RawMatBtn.TabIndex = 71;
             this.RawMatBtn.Text = "View";
             this.RawMatBtn.UseVisualStyleBackColor = false;
+            this.RawMatBtn.Click += new System.EventHandler(this.RawMatBtn_Click_1);
             // 
             // Productbtn
             // 
@@ -254,6 +255,7 @@ namespace workflowLoginForm
             this.Productbtn.TabIndex = 72;
             this.Productbtn.Text = "View";
             this.Productbtn.UseVisualStyleBackColor = false;
+            this.Productbtn.Click += new System.EventHandler(this.Productbtn_Click_1);
             // 
             // ReportManagerForm
             // 
@@ -273,7 +275,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.prodCsvBtn);
             this.Controls.Add(this.RawMatCSVbtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ReportManagerForm";
             this.Text = "Report Manager";
             this.csvStatusStrip.ResumeLayout(false);

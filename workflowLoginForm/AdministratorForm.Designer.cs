@@ -79,7 +79,7 @@
             this.stockiestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stockiestBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stockiestBtn.Location = new System.Drawing.Point(34, 170);
-            this.stockiestBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stockiestBtn.Margin = new System.Windows.Forms.Padding(2);
             this.stockiestBtn.Name = "stockiestBtn";
             this.stockiestBtn.Size = new System.Drawing.Size(153, 44);
             this.stockiestBtn.TabIndex = 0;
@@ -93,7 +93,7 @@
             this.prodManagerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prodManagerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prodManagerBtn.Location = new System.Drawing.Point(306, 170);
-            this.prodManagerBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.prodManagerBtn.Margin = new System.Windows.Forms.Padding(2);
             this.prodManagerBtn.Name = "prodManagerBtn";
             this.prodManagerBtn.Size = new System.Drawing.Size(153, 44);
             this.prodManagerBtn.TabIndex = 1;
@@ -107,7 +107,7 @@
             this.delManagerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delManagerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delManagerBtn.Location = new System.Drawing.Point(306, 336);
-            this.delManagerBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.delManagerBtn.Margin = new System.Windows.Forms.Padding(2);
             this.delManagerBtn.Name = "delManagerBtn";
             this.delManagerBtn.Size = new System.Drawing.Size(153, 44);
             this.delManagerBtn.TabIndex = 3;
@@ -121,7 +121,7 @@
             this.repManagerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.repManagerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.repManagerBtn.Location = new System.Drawing.Point(168, 490);
-            this.repManagerBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.repManagerBtn.Margin = new System.Windows.Forms.Padding(2);
             this.repManagerBtn.Name = "repManagerBtn";
             this.repManagerBtn.Size = new System.Drawing.Size(153, 46);
             this.repManagerBtn.TabIndex = 4;
@@ -135,7 +135,7 @@
             this.qualAnalyzerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qualAnalyzerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.qualAnalyzerBtn.Location = new System.Drawing.Point(34, 336);
-            this.qualAnalyzerBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.qualAnalyzerBtn.Margin = new System.Windows.Forms.Padding(2);
             this.qualAnalyzerBtn.Name = "qualAnalyzerBtn";
             this.qualAnalyzerBtn.Size = new System.Drawing.Size(153, 46);
             this.qualAnalyzerBtn.TabIndex = 2;
@@ -193,13 +193,13 @@
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
@@ -208,7 +208,7 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem
@@ -221,7 +221,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -242,13 +242,13 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Lucida Bright", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Bright", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(577, 98);
+            this.label2.Location = new System.Drawing.Point(577, 82);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(256, 50);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Admin Functions";
+            this.label2.Text = "Users";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -345,7 +345,7 @@
             this.Controls.Add(this.stockiestBtn);
             this.Controls.Add(this.Admin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdministratorForm";
             this.Text = "5";
             this.toolStrip1.ResumeLayout(false);

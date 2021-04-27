@@ -121,7 +121,7 @@ namespace workflowLoginForm
                             {
                                 dbTools.EditQuant(m.rawMaterialName, m.quantity);
                             }
-                            toolStripStatusLabel1.Text = "Successfully created new product(s) with raw material(s)!";
+                            //toolStripStatusLabel1.Text = "Successfully created new product(s) with raw material(s)!";
 
                         }
                         catch (Exception err)
@@ -316,7 +316,6 @@ namespace workflowLoginForm
             filterMenu.Items.Add("Quantity");
         }
 
-        // NEED TO ERROR CATCH WHEN INCORRECT STRING INPUT IS USED
         // Event handler for Filter button click
         private void btnFilter_Click(object sender, EventArgs e)
         {

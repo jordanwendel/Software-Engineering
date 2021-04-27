@@ -27,24 +27,6 @@ namespace workflowLoginForm
         }
 
 
-        private void RawMatbtn_Click(object sender, EventArgs e)
-        {
-            csvStatusLbl.Text = String.Empty; // Clearing status field text
-            RawMaterialsReport = new RawMaterialsReport();
-            this.Hide();
-            RawMaterialsReport.ShowDialog();
-            this.Show();
-        }
-
-        private void Productbtn_Click(object sender, EventArgs e)
-        {
-            csvStatusLbl.Text = String.Empty;
-            ProductReport = new ProductReport();
-            this.Hide();
-            ProductReport.ShowDialog();
-            this.Show();
-        }
-
         // Event handler for Generate Raw Material CSV button click
         private void RawMatCSVbtn_Click(object sender, EventArgs e)
         {
@@ -60,7 +42,7 @@ namespace workflowLoginForm
             }
 
             csvStatusLbl.Text = "Successfully wrote to CSV!";
-            
+
         }
 
 
@@ -68,7 +50,7 @@ namespace workflowLoginForm
         private void prodCsvBtn_Click(object sender, EventArgs e)
         {
             csvStatusLbl.Text = String.Empty;
-            
+
             // Getting the prefix for the file name
             string prefix;
             switch (cBoxProductRep.SelectedItem) // Prefix changes based on what product report the user would like to view
@@ -90,7 +72,7 @@ namespace workflowLoginForm
                     break;
             }
 
-           
+
             string fileName = ReportGen.SaveReport("Products", prefix);
 
             try
@@ -105,9 +87,10 @@ namespace workflowLoginForm
             csvStatusLbl.Text = "Successfully wrote to CSV!";
         }
 
+
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
         }
 
         private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
@@ -133,6 +116,24 @@ namespace workflowLoginForm
             {
                 System.Diagnostics.Process.Start(fileName);
             }
+        }
+
+        private void Productbtn_Click_1(object sender, EventArgs e)
+        {
+            csvStatusLbl.Text = String.Empty;
+            ProductReport = new ProductReport();
+            this.Hide();
+            ProductReport.ShowDialog();
+            this.Show();
+        }
+
+        private void RawMatBtn_Click_1(object sender, EventArgs e)
+        {
+            csvStatusLbl.Text = String.Empty; // Clearing status field text
+            RawMaterialsReport = new RawMaterialsReport();
+            this.Hide();
+            RawMaterialsReport.ShowDialog();
+            this.Show();
         }
     }
 }

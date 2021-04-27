@@ -290,6 +290,7 @@
             this.filterMenu.Name = "filterMenu";
             this.filterMenu.Size = new System.Drawing.Size(143, 21);
             this.filterMenu.TabIndex = 4;
+            this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged_1);
             // 
             // toolStrip1
             // 
@@ -298,7 +299,7 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(947, 7);
+            this.toolStrip1.Location = new System.Drawing.Point(985, 9);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(55, 25);
             this.toolStrip1.TabIndex = 66;
@@ -306,7 +307,7 @@
             // 
             // toolStripDropDownButton1
             // 
-            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.refreshToolStripMenuItem,
@@ -323,14 +324,14 @@
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click_1);
             // 
@@ -339,7 +340,7 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem
@@ -352,7 +353,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
@@ -368,6 +369,7 @@
             this.addItemBtn.TabIndex = 67;
             this.addItemBtn.Text = "Edit";
             this.addItemBtn.UseVisualStyleBackColor = false;
+            this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click_1);
             // 
             // btnClear
             // 
@@ -381,6 +383,7 @@
             this.btnClear.TabIndex = 68;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
             // 
             // btnFilter
             // 
@@ -408,11 +411,13 @@
             this.btnClear2.TabIndex = 70;
             this.btnClear2.Text = "Clear";
             this.btnClear2.UseVisualStyleBackColor = false;
+            this.btnClear2.Click += new System.EventHandler(this.btnClear2_Click_1);
             // 
             // quantityEquations
             // 
             this.quantityEquations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.quantityEquations.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.quantityEquations.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityEquations.FormattingEnabled = true;
             this.quantityEquations.Items.AddRange(new object[] {
             "GREATER THAN",

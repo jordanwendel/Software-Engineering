@@ -321,19 +321,21 @@
             this.btnClear2.TabIndex = 69;
             this.btnClear2.Text = "Clear";
             this.btnClear2.UseVisualStyleBackColor = false;
+            this.btnClear2.Click += new System.EventHandler(this.btnClear2_Click_1);
             // 
             // changeqnt
             // 
             this.changeqnt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.changeqnt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.changeqnt.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changeqnt.Location = new System.Drawing.Point(9, 209);
+            this.changeqnt.Location = new System.Drawing.Point(11, 209);
             this.changeqnt.Margin = new System.Windows.Forms.Padding(2);
             this.changeqnt.Name = "changeqnt";
             this.changeqnt.Size = new System.Drawing.Size(103, 39);
             this.changeqnt.TabIndex = 70;
             this.changeqnt.Text = "Edit";
             this.changeqnt.UseVisualStyleBackColor = false;
+            this.changeqnt.Click += new System.EventHandler(this.changeqnt_Click);
             // 
             // btnFilter
             // 
@@ -347,6 +349,7 @@
             this.btnFilter.TabIndex = 71;
             this.btnFilter.Text = "Filter";
             this.btnFilter.UseVisualStyleBackColor = false;
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click_1);
             // 
             // btnClear
             // 
@@ -360,6 +363,7 @@
             this.btnClear.TabIndex = 72;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
             // 
             // StockiestForm
             // 
