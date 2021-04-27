@@ -111,7 +111,7 @@
             "Defective"});
             this.qualityMenu.Location = new System.Drawing.Point(111, 166);
             this.qualityMenu.Name = "qualityMenu";
-            this.qualityMenu.Size = new System.Drawing.Size(138, 21);
+            this.qualityMenu.Size = new System.Drawing.Size(138, 25);
             this.qualityMenu.TabIndex = 1;
             // 
             // addItemLbl
@@ -161,7 +161,7 @@
             this.ItemName.Location = new System.Drawing.Point(111, 138);
             this.ItemName.Margin = new System.Windows.Forms.Padding(2);
             this.ItemName.Name = "ItemName";
-            this.ItemName.Size = new System.Drawing.Size(138, 20);
+            this.ItemName.Size = new System.Drawing.Size(138, 23);
             this.ItemName.TabIndex = 0;
             // 
             // cBoxLocation
@@ -175,7 +175,7 @@
             this.cBoxLocation.Location = new System.Drawing.Point(121, 448);
             this.cBoxLocation.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cBoxLocation.Name = "cBoxLocation";
-            this.cBoxLocation.Size = new System.Drawing.Size(143, 21);
+            this.cBoxLocation.Size = new System.Drawing.Size(143, 25);
             this.cBoxLocation.TabIndex = 9;
             this.cBoxLocation.SelectedIndexChanged += new System.EventHandler(this.cBoxLocation_SelectedIndexChanged);
             // 
@@ -210,7 +210,7 @@
             this.txtNum.Location = new System.Drawing.Point(241, 425);
             this.txtNum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(23, 20);
+            this.txtNum.Size = new System.Drawing.Size(23, 23);
             this.txtNum.TabIndex = 8;
             // 
             // label3
@@ -233,7 +233,7 @@
             this.label2.Location = new System.Drawing.Point(36, 351);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 18);
+            this.label2.Size = new System.Drawing.Size(98, 23);
             this.label2.TabIndex = 56;
             this.label2.Text = "Filter By:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -245,7 +245,7 @@
             this.txtFilterByItem.Location = new System.Drawing.Point(121, 379);
             this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFilterByItem.Name = "txtFilterByItem";
-            this.txtFilterByItem.Size = new System.Drawing.Size(143, 20);
+            this.txtFilterByItem.Size = new System.Drawing.Size(143, 23);
             this.txtFilterByItem.TabIndex = 5;
             this.txtFilterByItem.TextChanged += new System.EventHandler(this.txtFilterByItem_TextChanged);
             // 
@@ -267,12 +267,13 @@
             this.cBoxQuality.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cBoxQuality.FormattingEnabled = true;
             this.cBoxQuality.Items.AddRange(new object[] {
-            "Qualified",
-            "Defective"});
+            "Satisfactory",
+            "Defective",
+            "In Progress"});
             this.cBoxQuality.Location = new System.Drawing.Point(121, 401);
             this.cBoxQuality.Margin = new System.Windows.Forms.Padding(2);
             this.cBoxQuality.Name = "cBoxQuality";
-            this.cBoxQuality.Size = new System.Drawing.Size(143, 21);
+            this.cBoxQuality.Size = new System.Drawing.Size(143, 25);
             this.cBoxQuality.TabIndex = 6;
             // 
             // filterMenu
@@ -288,7 +289,7 @@
             this.filterMenu.Location = new System.Drawing.Point(121, 351);
             this.filterMenu.Margin = new System.Windows.Forms.Padding(2);
             this.filterMenu.Name = "filterMenu";
-            this.filterMenu.Size = new System.Drawing.Size(143, 21);
+            this.filterMenu.Size = new System.Drawing.Size(143, 25);
             this.filterMenu.TabIndex = 4;
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged_1);
             // 
@@ -301,7 +302,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(985, 9);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(55, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -318,20 +319,20 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(52, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click_1);
             // 
@@ -340,20 +341,20 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem
             // 
             this.viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
-            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.viewReportsToolStripMenuItem.Text = "View Reports";
             this.viewReportsToolStripMenuItem.Click += new System.EventHandler(this.viewReportsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(149, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click_1);
             // 
@@ -425,12 +426,12 @@
             "EQUAL TO"});
             this.quantityEquations.Location = new System.Drawing.Point(121, 425);
             this.quantityEquations.Name = "quantityEquations";
-            this.quantityEquations.Size = new System.Drawing.Size(115, 21);
+            this.quantityEquations.Size = new System.Drawing.Size(115, 25);
             this.quantityEquations.TabIndex = 71;
             // 
             // QualityAnalyzerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1048, 543);

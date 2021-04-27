@@ -49,9 +49,10 @@ namespace workflowLoginForm
             // 
             this.lblNumbers.Font = new System.Drawing.Font("Lucida Bright", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumbers.ForeColor = System.Drawing.Color.White;
-            this.lblNumbers.Location = new System.Drawing.Point(35, 148);
+            this.lblNumbers.Location = new System.Drawing.Point(47, 182);
+            this.lblNumbers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumbers.Name = "lblNumbers";
-            this.lblNumbers.Size = new System.Drawing.Size(238, 36);
+            this.lblNumbers.Size = new System.Drawing.Size(317, 44);
             this.lblNumbers.TabIndex = 70;
             this.lblNumbers.Text = "Unique Materials";
             this.lblNumbers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -64,10 +65,11 @@ namespace workflowLoginForm
             this.stockDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.stockDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.stockDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.stockDataGridView.Location = new System.Drawing.Point(292, 72);
+            this.stockDataGridView.Location = new System.Drawing.Point(389, 89);
+            this.stockDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stockDataGridView.Name = "stockDataGridView";
             this.stockDataGridView.RowHeadersWidth = 51;
-            this.stockDataGridView.Size = new System.Drawing.Size(596, 461);
+            this.stockDataGridView.Size = new System.Drawing.Size(795, 567);
             this.stockDataGridView.TabIndex = 68;
             this.stockDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.stockDataGridView_CellContentClick);
             // 
@@ -75,9 +77,10 @@ namespace workflowLoginForm
             // 
             this.Stockiest.Font = new System.Drawing.Font("Lucida Bright", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Stockiest.ForeColor = System.Drawing.Color.White;
-            this.Stockiest.Location = new System.Drawing.Point(255, 2);
+            this.Stockiest.Location = new System.Drawing.Point(340, 2);
+            this.Stockiest.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Stockiest.Name = "Stockiest";
-            this.Stockiest.Size = new System.Drawing.Size(428, 50);
+            this.Stockiest.Size = new System.Drawing.Size(571, 62);
             this.Stockiest.TabIndex = 65;
             this.Stockiest.Text = "Raw Materials Report";
             this.Stockiest.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -86,9 +89,10 @@ namespace workflowLoginForm
             // 
             this.countlbl.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countlbl.ForeColor = System.Drawing.Color.White;
-            this.countlbl.Location = new System.Drawing.Point(62, 184);
+            this.countlbl.Location = new System.Drawing.Point(83, 226);
+            this.countlbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.countlbl.Name = "countlbl";
-            this.countlbl.Size = new System.Drawing.Size(181, 36);
+            this.countlbl.Size = new System.Drawing.Size(241, 44);
             this.countlbl.TabIndex = 71;
             this.countlbl.Text = "Unknown";
             this.countlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -97,9 +101,10 @@ namespace workflowLoginForm
             // 
             this.label1.Font = new System.Drawing.Font("Lucida Bright", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(29, 252);
+            this.label1.Location = new System.Drawing.Point(39, 310);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 36);
+            this.label1.Size = new System.Drawing.Size(325, 44);
             this.label1.TabIndex = 73;
             this.label1.Text = "Average Quantity";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -108,9 +113,10 @@ namespace workflowLoginForm
             // 
             this.averagelbl.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.averagelbl.ForeColor = System.Drawing.Color.White;
-            this.averagelbl.Location = new System.Drawing.Point(57, 288);
+            this.averagelbl.Location = new System.Drawing.Point(76, 354);
+            this.averagelbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.averagelbl.Name = "averagelbl";
-            this.averagelbl.Size = new System.Drawing.Size(181, 36);
+            this.averagelbl.Size = new System.Drawing.Size(241, 44);
             this.averagelbl.TabIndex = 74;
             this.averagelbl.Text = "Unknown";
             this.averagelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -121,52 +127,54 @@ namespace workflowLoginForm
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(815, 9);
+            this.toolStrip1.Location = new System.Drawing.Point(1087, 11);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(63, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(76, 27);
             this.toolStrip1.TabIndex = 75;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.refreshToolStripMenuItem,
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(51, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // RawMaterialsReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(898, 543);
+            this.ClientSize = new System.Drawing.Size(1197, 668);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.averagelbl);
             this.Controls.Add(this.label1);
@@ -175,7 +183,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.stockDataGridView);
             this.Controls.Add(this.Stockiest);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RawMaterialsReport";
             this.Text = "Raw Materials Report";
             this.Load += new System.EventHandler(this.RawMaterialsReport_Load);

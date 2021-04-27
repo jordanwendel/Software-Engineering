@@ -25,28 +25,28 @@ namespace workflowLoginForm
         {
             int Count = dbReport.CountProducts();
             string Counter = Count.ToString();
-            countlbl.Text = Counter;
+            countlbl1.Text = Counter;
 
             int Avg = dbReport.AvgQuantProducts();
             string Average = Avg.ToString();
-            averagelbl.Text = Average;
+            averagelbl1.Text = Average;
 
             int Quality = dbReport.GoodProducts();
             string Qualitylabel = Quality.ToString();
-            satisfactorylbl.Text = Qualitylabel;
+            satisfactorylbl1.Text = Qualitylabel;
 
             int BadQuality = dbReport.BadProducts();
             string Badlabel = BadQuality.ToString();
-            defectivelbl.Text = Badlabel;
+            defectivelbl1.Text = Badlabel;
 
             int ProgressQuality = dbReport.ProgressProducts();
             string Progresslabel = ProgressQuality.ToString();
-            progresslbl.Text = Progresslabel;
+            progresslbl1.Text = Progresslabel;
 
             decimal QualPercent = (Quality * 100 / Count);
            // Decimal QualPercent2 = Decimal.Truncate(QualPercent);
             string QualityPercent = QualPercent.ToString();
-            qualitylbl.Text = QualityPercent + "%";
+            qualitylbl1.Text = QualityPercent + "%";
 
             int salescount = dbReport.SalesProducts();
             string SalesCount = salescount.ToString();
@@ -54,12 +54,12 @@ namespace workflowLoginForm
 
             int manucount = dbReport.ManuProducts();
             string ManuCount = manucount.ToString();
-            manufacturinglbl.Text = ManuCount;
+            manufacturinglbl1.Text = ManuCount;
 
             decimal salesPercent = (salescount * 100 / Count);
             // Decimal QualPercent2 = Decimal.Truncate(QualPercent);
             string SalesPercent = salesPercent.ToString();
-            percentsaleslbl.Text = SalesPercent + "%";
+            percentsaleslbl1.Text = SalesPercent + "%";
         }
 
         private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
@@ -81,28 +81,28 @@ namespace workflowLoginForm
 
             int Count = dbReport.CountProducts();
             string Counter = Count.ToString();
-            countlbl.Text = Counter;
+            countlbl1.Text = Counter;
 
             int Avg = dbReport.AvgQuantProducts();
             string Average = Avg.ToString();
-            averagelbl.Text = Average;
+            averagelbl1.Text = Average;
 
             int Quality = dbReport.GoodProducts();
             string Qualitylabel = Quality.ToString();
-            satisfactorylbl.Text = Qualitylabel;
+            satisfactorylbl1.Text = Qualitylabel;
 
             int BadQuality = dbReport.BadProducts();
             string Badlabel = BadQuality.ToString();
-            defectivelbl.Text = Badlabel;
+            defectivelbl1.Text = Badlabel;
 
             int ProgressQuality = dbReport.ProgressProducts();
             string Progresslabel = ProgressQuality.ToString();
-            progresslbl.Text = Progresslabel;
+            progresslbl1.Text = Progresslabel;
 
             decimal QualPercent = (Quality * 100 / Count);
             // Decimal QualPercent2 = Decimal.Truncate(QualPercent);
             string QualityPercent = QualPercent.ToString();
-            qualitylbl.Text = QualityPercent + "%";
+            qualitylbl1.Text = QualityPercent + "%";
 
             int salescount = dbReport.SalesProducts();
             string SalesCount = salescount.ToString();
@@ -110,12 +110,12 @@ namespace workflowLoginForm
 
             int manucount = dbReport.ManuProducts();
             string ManuCount = manucount.ToString();
-            manufacturinglbl.Text = ManuCount;
+            manufacturinglbl1.Text = ManuCount;
 
             decimal salesPercent = (salescount * 100 / Count);
             // Decimal QualPercent2 = Decimal.Truncate(QualPercent);
             string SalesPercent = salesPercent.ToString();
-            percentsaleslbl.Text = SalesPercent + "%";
+            percentsaleslbl1.Text = SalesPercent + "%";
         }
     }
 }

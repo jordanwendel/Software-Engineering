@@ -641,7 +641,7 @@ namespace workflowLoginForm
 
         private void reOrderStockToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReOrderStockForm = new RawMaterialsForm("Order Stock", "Re-Order Raw Materials"); // Change the name of the titles on the form
+            ReOrderStockForm = new RawMaterialsForm("Order Stock", "Reorder Raw Materials"); // Change the name of the titles on the form
             ReOrderStockForm.ShowDialog();
             this.Show();
         }

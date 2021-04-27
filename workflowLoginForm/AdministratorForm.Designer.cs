@@ -66,9 +66,10 @@
             // 
             this.Admin.Font = new System.Drawing.Font("Lucida Bright", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.Color.White;
-            this.Admin.Location = new System.Drawing.Point(199, 9);
+            this.Admin.Location = new System.Drawing.Point(265, 11);
+            this.Admin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(464, 50);
+            this.Admin.Size = new System.Drawing.Size(619, 62);
             this.Admin.TabIndex = 1;
             this.Admin.Text = "ADMINISTRATOR MENU";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,10 +79,10 @@
             this.stockiestBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.stockiestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stockiestBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.stockiestBtn.Location = new System.Drawing.Point(34, 170);
-            this.stockiestBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.stockiestBtn.Location = new System.Drawing.Point(45, 209);
+            this.stockiestBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.stockiestBtn.Name = "stockiestBtn";
-            this.stockiestBtn.Size = new System.Drawing.Size(153, 44);
+            this.stockiestBtn.Size = new System.Drawing.Size(204, 54);
             this.stockiestBtn.TabIndex = 0;
             this.stockiestBtn.Text = "STOCKIEST";
             this.stockiestBtn.UseVisualStyleBackColor = false;
@@ -92,10 +93,10 @@
             this.prodManagerBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.prodManagerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prodManagerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prodManagerBtn.Location = new System.Drawing.Point(306, 170);
-            this.prodManagerBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.prodManagerBtn.Location = new System.Drawing.Point(408, 209);
+            this.prodManagerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.prodManagerBtn.Name = "prodManagerBtn";
-            this.prodManagerBtn.Size = new System.Drawing.Size(153, 44);
+            this.prodManagerBtn.Size = new System.Drawing.Size(204, 54);
             this.prodManagerBtn.TabIndex = 1;
             this.prodManagerBtn.Text = "PRODUCT MANAGER";
             this.prodManagerBtn.UseVisualStyleBackColor = false;
@@ -106,10 +107,10 @@
             this.delManagerBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.delManagerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delManagerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delManagerBtn.Location = new System.Drawing.Point(306, 336);
-            this.delManagerBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.delManagerBtn.Location = new System.Drawing.Point(408, 414);
+            this.delManagerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.delManagerBtn.Name = "delManagerBtn";
-            this.delManagerBtn.Size = new System.Drawing.Size(153, 44);
+            this.delManagerBtn.Size = new System.Drawing.Size(204, 54);
             this.delManagerBtn.TabIndex = 3;
             this.delManagerBtn.Text = "DELIVERY MANAGER";
             this.delManagerBtn.UseVisualStyleBackColor = false;
@@ -120,10 +121,10 @@
             this.repManagerBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.repManagerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.repManagerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.repManagerBtn.Location = new System.Drawing.Point(168, 490);
-            this.repManagerBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.repManagerBtn.Location = new System.Drawing.Point(224, 603);
+            this.repManagerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.repManagerBtn.Name = "repManagerBtn";
-            this.repManagerBtn.Size = new System.Drawing.Size(153, 46);
+            this.repManagerBtn.Size = new System.Drawing.Size(204, 57);
             this.repManagerBtn.TabIndex = 4;
             this.repManagerBtn.Text = "REPORT MANAGER";
             this.repManagerBtn.UseVisualStyleBackColor = false;
@@ -134,10 +135,10 @@
             this.qualAnalyzerBtn.BackColor = System.Drawing.Color.WhiteSmoke;
             this.qualAnalyzerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.qualAnalyzerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.qualAnalyzerBtn.Location = new System.Drawing.Point(34, 336);
-            this.qualAnalyzerBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.qualAnalyzerBtn.Location = new System.Drawing.Point(45, 414);
+            this.qualAnalyzerBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.qualAnalyzerBtn.Name = "qualAnalyzerBtn";
-            this.qualAnalyzerBtn.Size = new System.Drawing.Size(153, 46);
+            this.qualAnalyzerBtn.Size = new System.Drawing.Size(204, 57);
             this.qualAnalyzerBtn.TabIndex = 2;
             this.qualAnalyzerBtn.Text = "QUALITY ANALYZER";
             this.qualAnalyzerBtn.UseVisualStyleBackColor = false;
@@ -150,9 +151,10 @@
             this.registerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registerBtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerBtn.ForeColor = System.Drawing.Color.Black;
-            this.registerBtn.Location = new System.Drawing.Point(619, 421);
+            this.registerBtn.Location = new System.Drawing.Point(825, 518);
+            this.registerBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(166, 44);
+            this.registerBtn.Size = new System.Drawing.Size(221, 54);
             this.registerBtn.TabIndex = 6;
             this.registerBtn.Text = "REGISTER NEW USER";
             this.registerBtn.UseVisualStyleBackColor = false;
@@ -166,9 +168,9 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(803, 9);
+            this.toolStrip1.Location = new System.Drawing.Point(1071, 11);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(55, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(105, 27);
             this.toolStrip1.TabIndex = 17;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -187,19 +189,19 @@
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
             this.toolStripDropDownButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(52, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.refreshToolStripMenuItem.Text = "Refresh";
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
@@ -208,20 +210,20 @@
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem
             // 
             this.viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
-            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(185, 26);
             this.viewReportsToolStripMenuItem.Text = "View Reports";
             this.viewReportsToolStripMenuItem.Click += new System.EventHandler(this.viewReportsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -232,9 +234,10 @@
             this.edituserbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.edituserbtn.Font = new System.Drawing.Font("Lucida Bright", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edituserbtn.ForeColor = System.Drawing.Color.Black;
-            this.edituserbtn.Location = new System.Drawing.Point(619, 243);
+            this.edituserbtn.Location = new System.Drawing.Point(825, 299);
+            this.edituserbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.edituserbtn.Name = "edituserbtn";
-            this.edituserbtn.Size = new System.Drawing.Size(166, 46);
+            this.edituserbtn.Size = new System.Drawing.Size(221, 57);
             this.edituserbtn.TabIndex = 5;
             this.edituserbtn.Text = "EDIT USER INFORMATION";
             this.edituserbtn.UseVisualStyleBackColor = false;
@@ -244,9 +247,10 @@
             // 
             this.label2.Font = new System.Drawing.Font("Lucida Bright", 20.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(577, 82);
+            this.label2.Location = new System.Drawing.Point(769, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 50);
+            this.label2.Size = new System.Drawing.Size(341, 62);
             this.label2.TabIndex = 20;
             this.label2.Text = "Users";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -254,9 +258,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(664, 336);
+            this.pictureBox1.Location = new System.Drawing.Point(885, 414);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 79);
+            this.pictureBox1.Size = new System.Drawing.Size(115, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
@@ -264,9 +269,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(664, 156);
+            this.pictureBox2.Location = new System.Drawing.Point(885, 192);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(86, 81);
+            this.pictureBox2.Size = new System.Drawing.Size(115, 100);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
@@ -274,9 +280,10 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(338, 252);
+            this.pictureBox3.Location = new System.Drawing.Point(451, 310);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(94, 79);
+            this.pictureBox3.Size = new System.Drawing.Size(125, 97);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 23;
             this.pictureBox3.TabStop = false;
@@ -284,9 +291,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(206, 406);
+            this.pictureBox4.Location = new System.Drawing.Point(275, 500);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(82, 79);
+            this.pictureBox4.Size = new System.Drawing.Size(109, 97);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 24;
             this.pictureBox4.TabStop = false;
@@ -294,9 +302,10 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(82, 261);
+            this.pictureBox5.Location = new System.Drawing.Point(109, 321);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(70, 70);
+            this.pictureBox5.Size = new System.Drawing.Size(93, 86);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 25;
             this.pictureBox5.TabStop = false;
@@ -304,9 +313,10 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(338, 82);
+            this.pictureBox6.Location = new System.Drawing.Point(451, 101);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(94, 83);
+            this.pictureBox6.Size = new System.Drawing.Size(125, 102);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 26;
             this.pictureBox6.TabStop = false;
@@ -314,19 +324,20 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(82, 98);
+            this.pictureBox7.Location = new System.Drawing.Point(109, 121);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(70, 67);
+            this.pictureBox7.Size = new System.Drawing.Size(93, 82);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 27;
             this.pictureBox7.TabStop = false;
             // 
             // AdministratorForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(864, 547);
+            this.ClientSize = new System.Drawing.Size(1152, 673);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
@@ -345,7 +356,7 @@
             this.Controls.Add(this.stockiestBtn);
             this.Controls.Add(this.Admin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdministratorForm";
             this.Text = "5";
             this.toolStrip1.ResumeLayout(false);

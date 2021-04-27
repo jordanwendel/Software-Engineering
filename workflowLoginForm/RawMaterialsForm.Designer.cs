@@ -51,10 +51,9 @@ namespace workflowLoginForm
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRawMat.Font = new System.Drawing.Font("Lucida Bright", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRawMat.ForeColor = System.Drawing.Color.White;
-            this.lblRawMat.Location = new System.Drawing.Point(133, 7);
-            this.lblRawMat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblRawMat.Location = new System.Drawing.Point(177, 9);
             this.lblRawMat.Name = "lblRawMat";
-            this.lblRawMat.Size = new System.Drawing.Size(495, 83);
+            this.lblRawMat.Size = new System.Drawing.Size(660, 102);
             this.lblRawMat.TabIndex = 24;
             this.lblRawMat.Text = "Raw Materials Form";
             this.lblRawMat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -63,10 +62,9 @@ namespace workflowLoginForm
             // 
             this.label3.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(218, 211);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(291, 260);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 18);
+            this.label3.Size = new System.Drawing.Size(156, 22);
             this.label3.TabIndex = 20;
             this.label3.Text = "Item Quantity:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -75,10 +73,9 @@ namespace workflowLoginForm
             // 
             this.lblName.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(230, 164);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblName.Location = new System.Drawing.Point(307, 202);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(105, 20);
+            this.lblName.Size = new System.Drawing.Size(140, 25);
             this.lblName.TabIndex = 19;
             this.lblName.Text = "Item Name:";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -88,10 +85,10 @@ namespace workflowLoginForm
             this.btnInsertInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.btnInsertInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInsertInformation.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertInformation.Location = new System.Drawing.Point(299, 271);
-            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInsertInformation.Location = new System.Drawing.Point(399, 334);
+            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInsertInformation.Name = "btnInsertInformation";
-            this.btnInsertInformation.Size = new System.Drawing.Size(150, 41);
+            this.btnInsertInformation.Size = new System.Drawing.Size(200, 50);
             this.btnInsertInformation.TabIndex = 3;
             this.btnInsertInformation.Text = "Insert";
             this.btnInsertInformation.UseVisualStyleBackColor = false;
@@ -100,28 +97,29 @@ namespace workflowLoginForm
             // txtRawMatName
             // 
             this.txtRawMatName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtRawMatName.Location = new System.Drawing.Point(338, 166);
-            this.txtRawMatName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRawMatName.Location = new System.Drawing.Point(451, 204);
+            this.txtRawMatName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRawMatName.Name = "txtRawMatName";
-            this.txtRawMatName.Size = new System.Drawing.Size(160, 20);
+            this.txtRawMatName.Size = new System.Drawing.Size(212, 22);
             this.txtRawMatName.TabIndex = 0;
             // 
             // txtRawMatQuanity
             // 
             this.txtRawMatQuanity.BackColor = System.Drawing.SystemColors.Control;
-            this.txtRawMatQuanity.Location = new System.Drawing.Point(338, 212);
-            this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(2);
+            this.txtRawMatQuanity.Location = new System.Drawing.Point(451, 261);
+            this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRawMatQuanity.Name = "txtRawMatQuanity";
-            this.txtRawMatQuanity.Size = new System.Drawing.Size(160, 20);
+            this.txtRawMatQuanity.Size = new System.Drawing.Size(212, 22);
             this.txtRawMatQuanity.TabIndex = 1;
             // 
             // lblDesc
             // 
             this.lblDesc.Font = new System.Drawing.Font("Lucida Bright", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.ForeColor = System.Drawing.Color.White;
-            this.lblDesc.Location = new System.Drawing.Point(296, 129);
+            this.lblDesc.Location = new System.Drawing.Point(395, 159);
+            this.lblDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(162, 35);
+            this.lblDesc.Size = new System.Drawing.Size(216, 43);
             this.lblDesc.TabIndex = 25;
             this.lblDesc.Text = "Add a Raw Material";
             this.lblDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,17 +131,17 @@ namespace workflowLoginForm
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(651, 7);
+            this.toolStrip1.Location = new System.Drawing.Point(868, 9);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(55, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(66, 27);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripDropDownButton1
             // 
             this.toolStripDropDownButton1.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.LightGray;
+            this.toolStripDropDownButton1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.goBackToolStripMenuItem,
@@ -152,29 +150,29 @@ namespace workflowLoginForm
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(52, 22);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(63, 24);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // RawMaterialsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(736, 449);
+            this.ClientSize = new System.Drawing.Size(981, 553);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.lblDesc);
             this.Controls.Add(this.lblRawMat);
@@ -184,7 +182,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.txtRawMatName);
             this.Controls.Add(this.txtRawMatQuanity);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RawMaterialsForm";
             this.Text = "Add Raw Material";
             this.toolStrip1.ResumeLayout(false);

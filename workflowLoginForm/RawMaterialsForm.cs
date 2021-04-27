@@ -49,7 +49,7 @@ namespace workflowLoginForm
                 {
                     objRawMaterial = new RawMaterial(txtRawMatName.Text, int.Parse(txtRawMatQuanity.Text)); // Create a new raw material object
                     dbTools.AddRawMaterial(objRawMaterial); // Add the raw material to the database
-                    MessageBox.Show("Item enterted Successfully");
+                    MessageBox.Show("Item Entered Successfully");
                 }
                 else
                 {
