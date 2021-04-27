@@ -82,11 +82,12 @@
             // 
             // Admin
             // 
-            this.Admin.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin.Font = new System.Drawing.Font("Lucida Bright", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.Color.White;
-            this.Admin.Location = new System.Drawing.Point(13, 9);
+            this.Admin.Location = new System.Drawing.Point(10, 7);
+            this.Admin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(431, 62);
+            this.Admin.Size = new System.Drawing.Size(323, 50);
             this.Admin.TabIndex = 2;
             this.Admin.Text = "Product Manager Page";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,21 +102,21 @@
             this.prodDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.prodDataGridView.Location = new System.Drawing.Point(397, 75);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prodDataGridView.Location = new System.Drawing.Point(298, 61);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
-            this.prodDataGridView.Size = new System.Drawing.Size(787, 559);
+            this.prodDataGridView.Size = new System.Drawing.Size(590, 454);
             this.prodDataGridView.TabIndex = 12;
             this.prodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.prodDataGridView_CellContentClick);
             // 
             // addItemLbl
             // 
-            this.addItemLbl.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItemLbl.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemLbl.ForeColor = System.Drawing.Color.White;
-            this.addItemLbl.Location = new System.Drawing.Point(49, 96);
+            this.addItemLbl.Location = new System.Drawing.Point(37, 78);
+            this.addItemLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addItemLbl.Name = "addItemLbl";
-            this.addItemLbl.Size = new System.Drawing.Size(288, 37);
+            this.addItemLbl.Size = new System.Drawing.Size(216, 30);
             this.addItemLbl.TabIndex = 19;
             this.addItemLbl.Text = "Add Product";
             this.addItemLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,30 +124,31 @@
             // txtQuantity
             // 
             this.txtQuantity.BackColor = System.Drawing.SystemColors.Control;
-            this.txtQuantity.Location = new System.Drawing.Point(125, 176);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtQuantity.Location = new System.Drawing.Point(94, 143);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(172, 22);
+            this.txtQuantity.Size = new System.Drawing.Size(130, 20);
             this.txtQuantity.TabIndex = 1;
             // 
             // nameLbl
             // 
-            this.nameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLbl.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLbl.ForeColor = System.Drawing.Color.White;
-            this.nameLbl.Location = new System.Drawing.Point(51, 140);
+            this.nameLbl.Location = new System.Drawing.Point(38, 114);
+            this.nameLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(61, 28);
+            this.nameLbl.Size = new System.Drawing.Size(46, 23);
             this.nameLbl.TabIndex = 24;
             this.nameLbl.Text = "Item:";
             this.nameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // quantityLbl
             // 
-            this.quantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantityLbl.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantityLbl.ForeColor = System.Drawing.Color.White;
-            this.quantityLbl.Location = new System.Drawing.Point(15, 169);
+            this.quantityLbl.Location = new System.Drawing.Point(11, 137);
+            this.quantityLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.quantityLbl.Name = "quantityLbl";
-            this.quantityLbl.Size = new System.Drawing.Size(103, 28);
+            this.quantityLbl.Size = new System.Drawing.Size(77, 23);
             this.quantityLbl.TabIndex = 26;
             this.quantityLbl.Text = "Quantity:";
             this.quantityLbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -154,11 +156,12 @@
             // filterLbl
             // 
             this.filterLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.filterLbl.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.filterLbl.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.filterLbl.ForeColor = System.Drawing.Color.White;
-            this.filterLbl.Location = new System.Drawing.Point(84, 409);
+            this.filterLbl.Location = new System.Drawing.Point(65, 342);
+            this.filterLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.filterLbl.Name = "filterLbl";
-            this.filterLbl.Size = new System.Drawing.Size(203, 44);
+            this.filterLbl.Size = new System.Drawing.Size(152, 36);
             this.filterLbl.TabIndex = 28;
             this.filterLbl.Text = "Filter Items";
             this.filterLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -167,24 +170,25 @@
             // 
             this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(133, 220);
-            this.addItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addItemBtn.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItemBtn.Location = new System.Drawing.Point(100, 168);
+            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(133, 34);
+            this.addItemBtn.Size = new System.Drawing.Size(100, 39);
             this.addItemBtn.TabIndex = 3;
-            this.addItemBtn.Text = "ADD ";
+            this.addItemBtn.Text = "Add";
             this.addItemBtn.UseVisualStyleBackColor = false;
             this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-1, 497);
+            this.label1.Location = new System.Drawing.Point(-1, 404);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 28);
+            this.label1.Size = new System.Drawing.Size(94, 23);
             this.label1.TabIndex = 32;
             this.label1.Text = "Item Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -193,33 +197,37 @@
             // 
             this.txtFilterByItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtFilterByItem.BackColor = System.Drawing.SystemColors.Control;
-            this.txtFilterByItem.Location = new System.Drawing.Point(125, 501);
-            this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFilterByItem.Location = new System.Drawing.Point(94, 407);
+            this.txtFilterByItem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtFilterByItem.Name = "txtFilterByItem";
-            this.txtFilterByItem.Size = new System.Drawing.Size(163, 22);
+            this.txtFilterByItem.Size = new System.Drawing.Size(123, 20);
             this.txtFilterByItem.TabIndex = 6;
             this.txtFilterByItem.TextChanged += new System.EventHandler(this.txtFilterByItem_TextChanged);
             // 
             // btnFilter
             // 
-            this.btnFilter.Location = new System.Drawing.Point(303, 573);
-            this.btnFilter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.Location = new System.Drawing.Point(229, 468);
+            this.btnFilter.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnFilter.Name = "btnFilter";
-            this.btnFilter.Size = new System.Drawing.Size(87, 48);
+            this.btnFilter.Size = new System.Drawing.Size(65, 31);
             this.btnFilter.TabIndex = 11;
             this.btnFilter.Text = "Filter";
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(24, 466);
+            this.label2.Location = new System.Drawing.Point(18, 379);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 24);
+            this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 37;
             this.label2.Text = "Filter By:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -227,11 +235,12 @@
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(16, 529);
+            this.label3.Location = new System.Drawing.Point(12, 430);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(104, 28);
+            this.label3.Size = new System.Drawing.Size(78, 23);
             this.label3.TabIndex = 41;
             this.label3.Text = "Quality:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -240,20 +249,21 @@
             // 
             this.txtNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNum.BackColor = System.Drawing.SystemColors.Control;
-            this.txtNum.Location = new System.Drawing.Point(261, 559);
-            this.txtNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNum.Location = new System.Drawing.Point(196, 454);
+            this.txtNum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(27, 22);
+            this.txtNum.Size = new System.Drawing.Size(21, 20);
             this.txtNum.TabIndex = 9;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(19, 558);
+            this.label4.Location = new System.Drawing.Point(14, 453);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(105, 28);
+            this.label4.Size = new System.Drawing.Size(79, 23);
             this.label4.TabIndex = 45;
             this.label4.Text = "Quantity:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -261,11 +271,12 @@
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(19, 586);
+            this.label5.Location = new System.Drawing.Point(14, 476);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 28);
+            this.label5.Size = new System.Drawing.Size(79, 23);
             this.label5.TabIndex = 46;
             this.label5.Text = "Location:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -278,19 +289,18 @@
             this.cBoxLocation.Items.AddRange(new object[] {
             "Sales",
             "Manufacturing"});
-            this.cBoxLocation.Location = new System.Drawing.Point(125, 586);
-            this.cBoxLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cBoxLocation.Location = new System.Drawing.Point(94, 476);
+            this.cBoxLocation.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.cBoxLocation.Name = "cBoxLocation";
-            this.cBoxLocation.Size = new System.Drawing.Size(163, 24);
+            this.cBoxLocation.Size = new System.Drawing.Size(123, 21);
             this.cBoxLocation.TabIndex = 10;
             // 
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtName.Location = new System.Drawing.Point(125, 145);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(94, 118);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(172, 22);
+            this.txtName.Size = new System.Drawing.Size(130, 20);
             this.txtName.TabIndex = 0;
             // 
             // filterMenu
@@ -303,10 +313,9 @@
             "Quality",
             "Quantity",
             "Location"});
-            this.filterMenu.Location = new System.Drawing.Point(124, 466);
-            this.filterMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.filterMenu.Location = new System.Drawing.Point(93, 379);
             this.filterMenu.Name = "filterMenu";
-            this.filterMenu.Size = new System.Drawing.Size(163, 24);
+            this.filterMenu.Size = new System.Drawing.Size(123, 21);
             this.filterMenu.TabIndex = 5;
             this.filterMenu.SelectedIndexChanged += new System.EventHandler(this.filterMenu_SelectedIndexChanged);
             // 
@@ -319,10 +328,9 @@
             "Satisfactory",
             "Defective",
             "In Progress"});
-            this.cBoxQuality.Location = new System.Drawing.Point(125, 529);
-            this.cBoxQuality.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cBoxQuality.Location = new System.Drawing.Point(94, 430);
             this.cBoxQuality.Name = "cBoxQuality";
-            this.cBoxQuality.Size = new System.Drawing.Size(163, 24);
+            this.cBoxQuality.Size = new System.Drawing.Size(123, 21);
             this.cBoxQuality.TabIndex = 7;
             // 
             // quantityEquations
@@ -334,10 +342,9 @@
             "GREATER THAN",
             "LESS THAN",
             "EQUAL TO"});
-            this.quantityEquations.Location = new System.Drawing.Point(125, 558);
-            this.quantityEquations.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quantityEquations.Location = new System.Drawing.Point(94, 453);
             this.quantityEquations.Name = "quantityEquations";
-            this.quantityEquations.Size = new System.Drawing.Size(128, 24);
+            this.quantityEquations.Size = new System.Drawing.Size(97, 21);
             this.quantityEquations.TabIndex = 8;
             // 
             // stsStripDisplayInfo
@@ -346,35 +353,35 @@
             this.stsStripDisplayInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stsStripLabel,
             this.toolStripStatusLabel1});
-            this.stsStripDisplayInfo.Location = new System.Drawing.Point(0, 644);
+            this.stsStripDisplayInfo.Location = new System.Drawing.Point(0, 519);
             this.stsStripDisplayInfo.Name = "stsStripDisplayInfo";
-            this.stsStripDisplayInfo.Padding = new System.Windows.Forms.Padding(1, 0, 13, 0);
-            this.stsStripDisplayInfo.Size = new System.Drawing.Size(1193, 22);
+            this.stsStripDisplayInfo.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.stsStripDisplayInfo.Size = new System.Drawing.Size(895, 22);
             this.stsStripDisplayInfo.TabIndex = 53;
             // 
             // stsStripLabel
             // 
             this.stsStripLabel.BackColor = System.Drawing.Color.White;
             this.stsStripLabel.Name = "stsStripLabel";
-            this.stsStripLabel.Size = new System.Drawing.Size(0, 16);
+            this.stsStripLabel.Size = new System.Drawing.Size(0, 17);
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // removeItemBtn
             // 
             this.removeItemBtn.BackColor = System.Drawing.Color.Firebrick;
             this.removeItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.removeItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.removeItemBtn.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeItemBtn.ForeColor = System.Drawing.SystemColors.Control;
-            this.removeItemBtn.Location = new System.Drawing.Point(133, 220);
-            this.removeItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.removeItemBtn.Location = new System.Drawing.Point(100, 168);
+            this.removeItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.removeItemBtn.Name = "removeItemBtn";
-            this.removeItemBtn.Size = new System.Drawing.Size(133, 34);
+            this.removeItemBtn.Size = new System.Drawing.Size(100, 39);
             this.removeItemBtn.TabIndex = 2;
-            this.removeItemBtn.Text = "REMOVE";
+            this.removeItemBtn.Text = "Remove";
             this.removeItemBtn.UseVisualStyleBackColor = false;
             this.removeItemBtn.Click += new System.EventHandler(this.removeItemBtn_Click);
             // 
@@ -383,10 +390,10 @@
             this.itemsView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.itemsView.HideSelection = false;
-            this.itemsView.Location = new System.Drawing.Point(3, 258);
-            this.itemsView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.itemsView.Location = new System.Drawing.Point(2, 210);
+            this.itemsView.Margin = new System.Windows.Forms.Padding(2);
             this.itemsView.Name = "itemsView";
-            this.itemsView.Size = new System.Drawing.Size(192, 116);
+            this.itemsView.Size = new System.Drawing.Size(145, 95);
             this.itemsView.TabIndex = 55;
             this.itemsView.UseCompatibleStateImageBehavior = false;
             this.itemsView.View = System.Windows.Forms.View.SmallIcon;
@@ -396,23 +403,26 @@
             this.rawMatsView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rawMatsView.HideSelection = false;
-            this.rawMatsView.Location = new System.Drawing.Point(201, 258);
-            this.rawMatsView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rawMatsView.Location = new System.Drawing.Point(151, 210);
+            this.rawMatsView.Margin = new System.Windows.Forms.Padding(2);
             this.rawMatsView.Name = "rawMatsView";
-            this.rawMatsView.Size = new System.Drawing.Size(189, 116);
+            this.rawMatsView.Size = new System.Drawing.Size(143, 95);
             this.rawMatsView.TabIndex = 56;
             this.rawMatsView.UseCompatibleStateImageBehavior = false;
             this.rawMatsView.View = System.Windows.Forms.View.SmallIcon;
             // 
             // confirmChangesBtn
             // 
-            this.confirmChangesBtn.Location = new System.Drawing.Point(302, 378);
-            this.confirmChangesBtn.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.confirmChangesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
+            this.confirmChangesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmChangesBtn.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmChangesBtn.Location = new System.Drawing.Point(199, 309);
+            this.confirmChangesBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirmChangesBtn.Name = "confirmChangesBtn";
-            this.confirmChangesBtn.Size = new System.Drawing.Size(87, 38);
+            this.confirmChangesBtn.Size = new System.Drawing.Size(95, 31);
             this.confirmChangesBtn.TabIndex = 4;
             this.confirmChangesBtn.Text = "Confirm";
-            this.confirmChangesBtn.UseVisualStyleBackColor = true;
+            this.confirmChangesBtn.UseVisualStyleBackColor = false;
             this.confirmChangesBtn.Click += new System.EventHandler(this.confirmChangesBtn_Click);
             // 
             // menuStrip1
@@ -435,31 +445,31 @@
             this.goBackToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 24);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // viewProductReportToolStripMenuItem
             // 
             this.viewProductReportToolStripMenuItem.Name = "viewProductReportToolStripMenuItem";
-            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.viewProductReportToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.viewProductReportToolStripMenuItem.Text = "View Product Report";
             // 
             // viewMaterialsReportToolStripMenuItem
             // 
             this.viewMaterialsReportToolStripMenuItem.Name = "viewMaterialsReportToolStripMenuItem";
-            this.viewMaterialsReportToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.viewMaterialsReportToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.viewMaterialsReportToolStripMenuItem.Text = "View Materials Report";
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.goBackToolStripMenuItem.Text = "Go Back";
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // toolStrip1
@@ -470,9 +480,9 @@
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(1121, 9);
+            this.toolStrip1.Location = new System.Drawing.Point(818, 7);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(63, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(54, 25);
             this.toolStrip1.TabIndex = 66;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -490,20 +500,20 @@
             this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
             this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(60, 24);
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(51, 22);
             this.toolStripDropDownButton1.Text = "Menu";
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // goBackMenuItem
             // 
             this.goBackMenuItem.Name = "goBackMenuItem";
-            this.goBackMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.goBackMenuItem.Size = new System.Drawing.Size(117, 22);
             this.goBackMenuItem.Text = "Go Back";
             this.goBackMenuItem.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
@@ -514,27 +524,27 @@
             this.materialsTableToolStripMenuItem,
             this.reportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // productTableToolStripMenuItem
             // 
             this.productTableToolStripMenuItem.Name = "productTableToolStripMenuItem";
-            this.productTableToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.productTableToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.productTableToolStripMenuItem.Text = "Product Table";
             this.productTableToolStripMenuItem.Click += new System.EventHandler(this.productTableToolStripMenuItem_Click);
             // 
             // materialsTableToolStripMenuItem
             // 
             this.materialsTableToolStripMenuItem.Name = "materialsTableToolStripMenuItem";
-            this.materialsTableToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.materialsTableToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.materialsTableToolStripMenuItem.Text = "Materials Table";
             this.materialsTableToolStripMenuItem.Click += new System.EventHandler(this.materialsTableToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
-            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.reportsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.reportsToolStripMenuItem.Text = "View Reports";
             this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
@@ -543,30 +553,30 @@
             this.orderToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reOrderStockToolStripMenuItem});
             this.orderToolStripMenuItem.Name = "orderToolStripMenuItem";
-            this.orderToolStripMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.orderToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.orderToolStripMenuItem.Text = "Order";
             // 
             // reOrderStockToolStripMenuItem
             // 
             this.reOrderStockToolStripMenuItem.Name = "reOrderStockToolStripMenuItem";
-            this.reOrderStockToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
+            this.reOrderStockToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
             this.reOrderStockToolStripMenuItem.Text = "Re-Order Stock";
             this.reOrderStockToolStripMenuItem.Click += new System.EventHandler(this.reOrderStockToolStripMenuItem_Click);
             // 
             // exitMenuItem
             // 
             this.exitMenuItem.Name = "exitMenuItem";
-            this.exitMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.exitMenuItem.Size = new System.Drawing.Size(117, 22);
             this.exitMenuItem.Text = "Exit";
             this.exitMenuItem.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // ProductManagerForm
             // 
             this.AcceptButton = this.btnFilter;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1193, 666);
+            this.ClientSize = new System.Drawing.Size(895, 541);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.confirmChangesBtn);
             this.Controls.Add(this.rawMatsView);
@@ -595,7 +605,7 @@
             this.Controls.Add(this.prodDataGridView);
             this.Controls.Add(this.Admin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ProductManagerForm";
             this.Text = "Product Manager";
             this.Load += new System.EventHandler(this.ProductManagerForm_Load);

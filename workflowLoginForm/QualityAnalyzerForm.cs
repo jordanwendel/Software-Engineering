@@ -249,80 +249,7 @@ namespace workflowLoginForm
 
         private void btnFilter_Click(object sender, EventArgs e)
         {
-            string info = txtFilterByItem.Text;
-            string qual = cBoxQuality.Text;
-            string location = cBoxLocation.Text;
-
-            // Filtering Products database
-            if (dgTools.dbName.Equals("Products"))
-            {
-                try
-                {
-                    // Filtering by Name
-                    if (filterMenu.Text.Equals("Name"))
-                    {
-                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
-
-                        dgTools.PopulateDataGrid(prodDataGridView);
-
-                    }
-
-                    // Filtering by Quality
-                    else if (filterMenu.Text.Equals("Quality"))
-                    {
-                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
-
-                        dgTools.PopulateDataGrid(prodDataGridView);
-
-                    }
-
-                    // Filtering by Quantity
-                    else if (filterMenu.Text.Equals("Quantity"))
-                    {
-                        int N = int.Parse(txtNum.Text);
-
-                        // Valid quanitity input greater than zero
-                        if (N > 0)
-                        {
-                            // Inequality comparisons for quantity
-                            if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
-                            {
-                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity > " + "'" + N + "'";
-                            }
-                            else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
-                            {
-                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity < " + "'" + N + "'";
-                            }
-                            else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
-                            {
-                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + N + "'";
-                            }
-                        }
-
-                        // Entered quanitity is negative
-                        else
-                        {
-                            MessageBox.Show("Quantity must be greater than zero");
-                        }
-
-                        dgTools.PopulateDataGrid(prodDataGridView);
-
-                    }
-
-                    // Filtering by Location
-                    else if (filterMenu.Text.Equals("Location"))
-                    {
-                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
-
-                        dgTools.PopulateDataGrid(prodDataGridView);
-                    }
-                }
-                catch (FormatException)
-                {
-                    MessageBox.Show("Please input the correct information");
-                    throw;
-                }
-            }    
+                
             
         }
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -418,9 +345,87 @@ namespace workflowLoginForm
             txtFilterByItem.Clear();
             cBoxLocation.SelectedIndex = -1;
             cBoxQuality.SelectedIndex = -1;
-            quantityEquations.Clear();
+            quantityEquations.Text = null;
             txtNum.Clear();
             filterMenu.SelectedIndex = -1;
+        }
+
+        private void btnFilter_Click_1(object sender, EventArgs e)
+        {
+            string info = txtFilterByItem.Text;
+            string qual = cBoxQuality.Text;
+            string location = cBoxLocation.Text;
+
+            // Filtering Products database
+            if (dgTools.dbName.Equals("Products"))
+            {
+                try
+                {
+                    // Filtering by Name
+                    if (filterMenu.Text.Equals("Name"))
+                    {
+                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE ProductName LIKE " + "'%" + info + "%'"; // Any matches of the inputted search term
+
+                        dgTools.PopulateDataGrid(prodDataGridView);
+
+                    }
+
+                    // Filtering by Quality
+                    else if (filterMenu.Text.Equals("Quality"))
+                    {
+                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quality = " + "'" + qual + "'";
+
+                        dgTools.PopulateDataGrid(prodDataGridView);
+
+                    }
+
+                    // Filtering by Quantity
+                    else if (filterMenu.Text.Equals("Quantity"))
+                    {
+                        int N = int.Parse(txtNum.Text);
+
+                        // Valid quanitity input greater than zero
+                        if (N > 0)
+                        {
+                            // Inequality comparisons for quantity
+                            if (quantityEquations.Text.Equals("GREATER THAN")) // Greater than N
+                            {
+                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity > " + "'" + N + "'";
+                            }
+                            else if (quantityEquations.Text.Equals("LESS THAN")) // Less than N
+                            {
+                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity < " + "'" + N + "'";
+                            }
+                            else if (quantityEquations.Text.Equals("EQUAL TO")) // Equal to N
+                            {
+                                dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Quantity = " + "'" + N + "'";
+                            }
+                        }
+
+                        // Entered quanitity is negative
+                        else
+                        {
+                            MessageBox.Show("Quantity must be greater than zero");
+                        }
+
+                        dgTools.PopulateDataGrid(prodDataGridView);
+
+                    }
+
+                    // Filtering by Location
+                    else if (filterMenu.Text.Equals("Location"))
+                    {
+                        dgTools.SqlCommand = "SELECT ProductName, Quality, Quantity, Location FROM Products WHERE Location = " + "'" + location + "'";
+
+                        dgTools.PopulateDataGrid(prodDataGridView);
+                    }
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Please input the correct information");
+                    throw;
+                }
+            }
         }
     }
 }

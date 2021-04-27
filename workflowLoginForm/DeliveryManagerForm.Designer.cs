@@ -72,11 +72,11 @@
             // 
             // Admin
             // 
-            this.Admin.Font = new System.Drawing.Font("Lucida Bright", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin.Font = new System.Drawing.Font("Lucida Bright", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.Color.White;
-            this.Admin.Location = new System.Drawing.Point(12, 9);
+            this.Admin.Location = new System.Drawing.Point(3, 9);
             this.Admin.Name = "Admin";
-            this.Admin.Size = new System.Drawing.Size(334, 50);
+            this.Admin.Size = new System.Drawing.Size(345, 50);
             this.Admin.TabIndex = 2;
             this.Admin.Text = "Delivery Manager Page";
             this.Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -98,7 +98,7 @@
             // 
             this.locationLbl.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.locationLbl.Location = new System.Drawing.Point(14, 178);
+            this.locationLbl.Location = new System.Drawing.Point(16, 135);
             this.locationLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationLbl.Name = "locationLbl";
             this.locationLbl.Size = new System.Drawing.Size(82, 28);
@@ -110,7 +110,7 @@
             // 
             this.nameLbl.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.nameLbl.Location = new System.Drawing.Point(43, 154);
+            this.nameLbl.Location = new System.Drawing.Point(46, 107);
             this.nameLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(52, 28);
@@ -125,8 +125,8 @@
             this.locationMenu.Items.AddRange(new object[] {
             "Manufacturing",
             "Sales"});
-            this.locationMenu.Location = new System.Drawing.Point(104, 184);
-            this.locationMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.locationMenu.Location = new System.Drawing.Point(103, 140);
+            this.locationMenu.Margin = new System.Windows.Forms.Padding(4);
             this.locationMenu.Name = "locationMenu";
             this.locationMenu.Size = new System.Drawing.Size(130, 21);
             this.locationMenu.TabIndex = 1;
@@ -136,7 +136,7 @@
             this.addItemLbl.AutoSize = true;
             this.addItemLbl.Font = new System.Drawing.Font("Lucida Bright", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemLbl.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.addItemLbl.Location = new System.Drawing.Point(81, 132);
+            this.addItemLbl.Location = new System.Drawing.Point(81, 79);
             this.addItemLbl.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.addItemLbl.Name = "addItemLbl";
             this.addItemLbl.Size = new System.Drawing.Size(137, 22);
@@ -152,7 +152,7 @@
             this.prodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.prodDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.prodDataGridView.Location = new System.Drawing.Point(270, 62);
-            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prodDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.prodDataGridView.Name = "prodDataGridView";
             this.prodDataGridView.RowHeadersWidth = 51;
             this.prodDataGridView.Size = new System.Drawing.Size(622, 470);
@@ -163,11 +163,11 @@
             // 
             this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addItemBtn.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(38, 219);
-            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addItemBtn.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItemBtn.Location = new System.Drawing.Point(32, 180);
+            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(90, 32);
+            this.addItemBtn.Size = new System.Drawing.Size(103, 39);
             this.addItemBtn.TabIndex = 2;
             this.addItemBtn.Text = "Edit";
             this.addItemBtn.UseVisualStyleBackColor = false;
@@ -176,8 +176,8 @@
             // txtItemName
             // 
             this.txtItemName.BackColor = System.Drawing.SystemColors.Control;
-            this.txtItemName.Location = new System.Drawing.Point(104, 161);
-            this.txtItemName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtItemName.Location = new System.Drawing.Point(104, 113);
+            this.txtItemName.Margin = new System.Windows.Forms.Padding(2);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(130, 20);
             this.txtItemName.TabIndex = 0;
@@ -296,14 +296,16 @@
             // 
             // btnFilter
             // 
-            this.btnFilter.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
+            this.btnFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFilter.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.Location = new System.Drawing.Point(32, 463);
             this.btnFilter.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(103, 39);
             this.btnFilter.TabIndex = 10;
-            this.btnFilter.Text = "FILTER";
-            this.btnFilter.UseVisualStyleBackColor = true;
+            this.btnFilter.Text = "Filter";
+            this.btnFilter.UseVisualStyleBackColor = false;
             this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
             // 
             // txtFilterByItem
@@ -382,7 +384,7 @@
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.menuStrip2.Location = new System.Drawing.Point(728, 7);
+            this.menuStrip2.Location = new System.Drawing.Point(712, 9);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
             this.menuStrip2.Size = new System.Drawing.Size(57, 24);
@@ -440,25 +442,27 @@
             // 
             // btnClear
             // 
-            this.btnClear.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Location = new System.Drawing.Point(140, 463);
             this.btnClear.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(103, 39);
             this.btnClear.TabIndex = 11;
-            this.btnClear.Text = "CLEAR";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnClear2
             // 
-            this.btnClear2.BackColor = System.Drawing.Color.LightGray;
+            this.btnClear2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnClear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear2.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear2.Location = new System.Drawing.Point(152, 219);
-            this.btnClear2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear2.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear2.Location = new System.Drawing.Point(140, 180);
+            this.btnClear2.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear2.Name = "btnClear2";
-            this.btnClear2.Size = new System.Drawing.Size(90, 32);
+            this.btnClear2.Size = new System.Drawing.Size(103, 39);
             this.btnClear2.TabIndex = 3;
             this.btnClear2.Text = "Clear";
             this.btnClear2.UseVisualStyleBackColor = false;
@@ -495,7 +499,7 @@
             this.Controls.Add(this.prodDataGridView);
             this.Controls.Add(this.Admin);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DeliveryManagerForm";
             this.Text = "Delivery Manager";
             this.Load += new System.EventHandler(this.DeliveryManagerForm_Load);

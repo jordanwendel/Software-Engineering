@@ -49,7 +49,7 @@ namespace workflowLoginForm
             this.lblRawMat.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRawMat.Font = new System.Drawing.Font("Impact", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRawMat.Font = new System.Drawing.Font("Lucida Bright", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRawMat.ForeColor = System.Drawing.Color.White;
             this.lblRawMat.Location = new System.Drawing.Point(133, 7);
             this.lblRawMat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -61,7 +61,7 @@ namespace workflowLoginForm
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(218, 211);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -73,7 +73,7 @@ namespace workflowLoginForm
             // 
             // lblName
             // 
-            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
             this.lblName.Location = new System.Drawing.Point(230, 164);
             this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -87,13 +87,13 @@ namespace workflowLoginForm
             // 
             this.btnInsertInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.btnInsertInformation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsertInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertInformation.Location = new System.Drawing.Point(298, 301);
-            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInsertInformation.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertInformation.Location = new System.Drawing.Point(299, 271);
+            this.btnInsertInformation.Margin = new System.Windows.Forms.Padding(2);
             this.btnInsertInformation.Name = "btnInsertInformation";
             this.btnInsertInformation.Size = new System.Drawing.Size(150, 41);
             this.btnInsertInformation.TabIndex = 3;
-            this.btnInsertInformation.Text = "INSERT";
+            this.btnInsertInformation.Text = "Insert";
             this.btnInsertInformation.UseVisualStyleBackColor = false;
             this.btnInsertInformation.Click += new System.EventHandler(this.btnInsertInformation_Click);
             // 
@@ -101,7 +101,7 @@ namespace workflowLoginForm
             // 
             this.txtRawMatName.BackColor = System.Drawing.SystemColors.Control;
             this.txtRawMatName.Location = new System.Drawing.Point(338, 166);
-            this.txtRawMatName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRawMatName.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawMatName.Name = "txtRawMatName";
             this.txtRawMatName.Size = new System.Drawing.Size(160, 20);
             this.txtRawMatName.TabIndex = 0;
@@ -110,18 +110,18 @@ namespace workflowLoginForm
             // 
             this.txtRawMatQuanity.BackColor = System.Drawing.SystemColors.Control;
             this.txtRawMatQuanity.Location = new System.Drawing.Point(338, 212);
-            this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRawMatQuanity.Margin = new System.Windows.Forms.Padding(2);
             this.txtRawMatQuanity.Name = "txtRawMatQuanity";
             this.txtRawMatQuanity.Size = new System.Drawing.Size(160, 20);
             this.txtRawMatQuanity.TabIndex = 1;
             // 
             // lblDesc
             // 
-            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.Font = new System.Drawing.Font("Lucida Bright", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.ForeColor = System.Drawing.Color.White;
             this.lblDesc.Location = new System.Drawing.Point(296, 129);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(162, 13);
+            this.lblDesc.Size = new System.Drawing.Size(162, 35);
             this.lblDesc.TabIndex = 25;
             this.lblDesc.Text = "Add a Raw Material";
             this.lblDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -184,7 +184,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.txtRawMatName);
             this.Controls.Add(this.txtRawMatQuanity);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "RawMaterialsForm";
             this.Text = "Add Raw Material";
             this.toolStrip1.ResumeLayout(false);

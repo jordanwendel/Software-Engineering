@@ -46,6 +46,7 @@ namespace workflowLoginForm
             newProducts = new List<Product>();
             matsQuantityToRemove = new List<RawMaterial>();
             filterTools = new FilterTools();
+            //toolStripStatusLabel1.BackColor = 
         }
 
         private void ConfirmChanges(Object sender, EventArgs e)

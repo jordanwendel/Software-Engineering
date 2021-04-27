@@ -78,10 +78,10 @@ namespace workflowLoginForm
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(925, 9);
+            this.menuStrip1.Location = new System.Drawing.Point(688, 7);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(67, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(56, 24);
             this.menuStrip1.TabIndex = 79;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,20 +94,20 @@ namespace workflowLoginForm
             this.viewToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            this.menuToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
+            this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
             // refreshToolStripMenuItem
             // 
             this.refreshToolStripMenuItem.Name = "refreshToolStripMenuItem";
-            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.refreshToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.refreshToolStripMenuItem.Text = "Refresh";
             this.refreshToolStripMenuItem.Click += new System.EventHandler(this.refreshToolStripMenuItem_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.goBackToolStripMenuItem.Text = "Go Back";
             this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
@@ -116,102 +116,97 @@ namespace workflowLoginForm
             this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.viewReportsToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // viewReportsToolStripMenuItem
             // 
             this.viewReportsToolStripMenuItem.Name = "viewReportsToolStripMenuItem";
-            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(179, 26);
+            this.viewReportsToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.viewReportsToolStripMenuItem.Text = "View Reports";
             this.viewReportsToolStripMenuItem.Click += new System.EventHandler(this.viewReportsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(353, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(252, 43);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 33);
+            this.label1.Size = new System.Drawing.Size(152, 27);
             this.label1.TabIndex = 80;
             this.label1.Text = "Stock Manager";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(353, 305);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(252, 252);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(171, 33);
+            this.label5.Size = new System.Drawing.Size(152, 27);
             this.label5.TabIndex = 84;
             this.label5.Text = "Delivery Manager";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(576, 305);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(419, 252);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 33);
+            this.label6.Size = new System.Drawing.Size(152, 27);
             this.label6.TabIndex = 85;
             this.label6.Text = "Product Manager";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(788, 306);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(578, 253);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 33);
+            this.label7.Size = new System.Drawing.Size(152, 27);
             this.label7.TabIndex = 86;
             this.label7.Text = "Administrator";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(779, 48);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(587, 43);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(171, 33);
+            this.label8.Size = new System.Drawing.Size(152, 27);
             this.label8.TabIndex = 87;
             this.label8.Text = "Quality Analyzer";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(577, 48);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(413, 43);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(171, 33);
+            this.label9.Size = new System.Drawing.Size(152, 27);
             this.label9.TabIndex = 88;
             this.label9.Text = "Report Manager";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // addItemLbl
             // 
-            this.addItemLbl.Font = new System.Drawing.Font("Impact", 16F);
+            this.addItemLbl.Font = new System.Drawing.Font("Lucida Bright", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addItemLbl.ForeColor = System.Drawing.Color.White;
-            this.addItemLbl.Location = new System.Drawing.Point(71, 48);
+            this.addItemLbl.Location = new System.Drawing.Point(54, 36);
+            this.addItemLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addItemLbl.Name = "addItemLbl";
-            this.addItemLbl.Size = new System.Drawing.Size(175, 37);
+            this.addItemLbl.Size = new System.Drawing.Size(149, 31);
             this.addItemLbl.TabIndex = 89;
             this.addItemLbl.Text = "Edit User";
             this.addItemLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,21 +222,20 @@ namespace workflowLoginForm
             "Quality Analyzer",
             "Report Manager",
             "Stockiest"});
-            this.boxOccupation.Location = new System.Drawing.Point(147, 150);
-            this.boxOccupation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.boxOccupation.Location = new System.Drawing.Point(103, 119);
+            this.boxOccupation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.boxOccupation.Name = "boxOccupation";
-            this.boxOccupation.Size = new System.Drawing.Size(132, 24);
+            this.boxOccupation.Size = new System.Drawing.Size(100, 21);
             this.boxOccupation.TabIndex = 102;
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(13, 145);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 119);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 28);
+            this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 103;
             this.label3.Text = "Job Type:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -249,15 +243,15 @@ namespace workflowLoginForm
             // 
             // addItemBtn
             // 
-            this.addItemBtn.BackColor = System.Drawing.Color.LightGray;
+            this.addItemBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
             this.addItemBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addItemBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addItemBtn.Location = new System.Drawing.Point(101, 193);
-            this.addItemBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addItemBtn.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addItemBtn.Location = new System.Drawing.Point(66, 157);
+            this.addItemBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addItemBtn.Name = "addItemBtn";
-            this.addItemBtn.Size = new System.Drawing.Size(101, 34);
+            this.addItemBtn.Size = new System.Drawing.Size(118, 38);
             this.addItemBtn.TabIndex = 104;
-            this.addItemBtn.Text = "EDIT";
+            this.addItemBtn.Text = "Edit";
             this.addItemBtn.UseVisualStyleBackColor = false;
             this.addItemBtn.Click += new System.EventHandler(this.addItemBtn_Click);
             // 
@@ -268,13 +262,12 @@ namespace workflowLoginForm
             this.StockiestDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.StockiestDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StockiestDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.StockiestDataGridView.Location = new System.Drawing.Point(335, 85);
-            this.StockiestDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StockiestDataGridView.Location = new System.Drawing.Point(251, 69);
             this.StockiestDataGridView.Name = "StockiestDataGridView";
             this.StockiestDataGridView.ReadOnly = true;
             this.StockiestDataGridView.RowHeadersVisible = false;
             this.StockiestDataGridView.RowHeadersWidth = 51;
-            this.StockiestDataGridView.Size = new System.Drawing.Size(239, 225);
+            this.StockiestDataGridView.Size = new System.Drawing.Size(179, 183);
             this.StockiestDataGridView.TabIndex = 105;
             this.StockiestDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StockiestDataGridView_CellContentClick);
             // 
@@ -285,12 +278,11 @@ namespace workflowLoginForm
             this.ReportDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ReportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ReportDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ReportDataGridView.Location = new System.Drawing.Point(547, 85);
-            this.ReportDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ReportDataGridView.Location = new System.Drawing.Point(410, 69);
             this.ReportDataGridView.Name = "ReportDataGridView";
             this.ReportDataGridView.RowHeadersVisible = false;
             this.ReportDataGridView.RowHeadersWidth = 51;
-            this.ReportDataGridView.Size = new System.Drawing.Size(239, 225);
+            this.ReportDataGridView.Size = new System.Drawing.Size(179, 183);
             this.ReportDataGridView.TabIndex = 106;
             this.ReportDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReportDataGridView_CellContentClick);
             // 
@@ -301,12 +293,11 @@ namespace workflowLoginForm
             this.QualityDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.QualityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.QualityDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.QualityDataGridView.Location = new System.Drawing.Point(757, 85);
-            this.QualityDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.QualityDataGridView.Location = new System.Drawing.Point(568, 69);
             this.QualityDataGridView.Name = "QualityDataGridView";
             this.QualityDataGridView.RowHeadersVisible = false;
             this.QualityDataGridView.RowHeadersWidth = 51;
-            this.QualityDataGridView.Size = new System.Drawing.Size(239, 225);
+            this.QualityDataGridView.Size = new System.Drawing.Size(179, 183);
             this.QualityDataGridView.TabIndex = 107;
             this.QualityDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QualityDataGridView_CellContentClick);
             // 
@@ -317,12 +308,11 @@ namespace workflowLoginForm
             this.DeliveryDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DeliveryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DeliveryDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.DeliveryDataGridView.Location = new System.Drawing.Point(335, 342);
-            this.DeliveryDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DeliveryDataGridView.Location = new System.Drawing.Point(251, 278);
             this.DeliveryDataGridView.Name = "DeliveryDataGridView";
             this.DeliveryDataGridView.RowHeadersVisible = false;
             this.DeliveryDataGridView.RowHeadersWidth = 51;
-            this.DeliveryDataGridView.Size = new System.Drawing.Size(239, 198);
+            this.DeliveryDataGridView.Size = new System.Drawing.Size(179, 161);
             this.DeliveryDataGridView.TabIndex = 108;
             this.DeliveryDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DeliveryDataGridView_CellContentClick);
             // 
@@ -333,12 +323,11 @@ namespace workflowLoginForm
             this.ProductDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProductDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ProductDataGridView.Location = new System.Drawing.Point(547, 342);
-            this.ProductDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ProductDataGridView.Location = new System.Drawing.Point(410, 278);
             this.ProductDataGridView.Name = "ProductDataGridView";
             this.ProductDataGridView.RowHeadersVisible = false;
             this.ProductDataGridView.RowHeadersWidth = 51;
-            this.ProductDataGridView.Size = new System.Drawing.Size(239, 198);
+            this.ProductDataGridView.Size = new System.Drawing.Size(179, 161);
             this.ProductDataGridView.TabIndex = 109;
             this.ProductDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductDataGridView_CellContentClick);
             // 
@@ -349,44 +338,42 @@ namespace workflowLoginForm
             this.AdminDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AdminDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AdminDataGridView.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.AdminDataGridView.Location = new System.Drawing.Point(757, 343);
-            this.AdminDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdminDataGridView.Location = new System.Drawing.Point(568, 279);
             this.AdminDataGridView.Name = "AdminDataGridView";
             this.AdminDataGridView.RowHeadersVisible = false;
             this.AdminDataGridView.RowHeadersWidth = 51;
-            this.AdminDataGridView.Size = new System.Drawing.Size(239, 197);
+            this.AdminDataGridView.Size = new System.Drawing.Size(179, 160);
             this.AdminDataGridView.TabIndex = 110;
             this.AdminDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminDataGridView_CellContentClick);
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(101, 89);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFirstName.Location = new System.Drawing.Point(76, 72);
+            this.txtFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.ReadOnly = true;
-            this.txtFirstName.Size = new System.Drawing.Size(107, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(81, 20);
             this.txtFirstName.TabIndex = 112;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Lucida Bright", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(-27, 85);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(-15, 69);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 28);
+            this.label2.Size = new System.Drawing.Size(86, 23);
             this.label2.TabIndex = 113;
             this.label2.Text = "Name:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(209, 89);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLastName.Location = new System.Drawing.Point(157, 72);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.ReadOnly = true;
-            this.txtLastName.Size = new System.Drawing.Size(101, 22);
+            this.txtLastName.Size = new System.Drawing.Size(77, 20);
             this.txtLastName.TabIndex = 114;
             // 
             // statusStrip1
@@ -398,36 +385,35 @@ namespace workflowLoginForm
             this.editUserStatusLbl,
             this.toolStripStatusLabel1,
             this.editUserStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 561);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 452);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1001, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(751, 22);
             this.statusStrip1.TabIndex = 115;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // editUserStatusLbl
             // 
             this.editUserStatusLbl.Name = "editUserStatusLbl";
-            this.editUserStatusLbl.Size = new System.Drawing.Size(0, 16);
+            this.editUserStatusLbl.Size = new System.Drawing.Size(0, 17);
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // editUserStatus
             // 
             this.editUserStatus.ActiveLinkColor = System.Drawing.Color.White;
             this.editUserStatus.ForeColor = System.Drawing.Color.White;
             this.editUserStatus.Name = "editUserStatus";
-            this.editUserStatus.Size = new System.Drawing.Size(0, 16);
+            this.editUserStatus.Size = new System.Drawing.Size(0, 17);
             // 
             // EditUserInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1001, 583);
+            this.ClientSize = new System.Drawing.Size(751, 474);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label2);
@@ -450,7 +436,7 @@ namespace workflowLoginForm
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EditUserInfo";
             this.Text = "Edit User";
             this.Load += new System.EventHandler(this.EditUser_Load);

@@ -38,57 +38,65 @@ namespace workflowLoginForm
             // 
             // lblConfirmPass
             // 
-            this.lblConfirmPass.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPass.Font = new System.Drawing.Font("Lucida Bright", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPass.ForeColor = System.Drawing.Color.White;
-            this.lblConfirmPass.Location = new System.Drawing.Point(68, 85);
-            this.lblConfirmPass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblConfirmPass.Location = new System.Drawing.Point(34, 21);
             this.lblConfirmPass.Name = "lblConfirmPass";
-            this.lblConfirmPass.Size = new System.Drawing.Size(253, 28);
+            this.lblConfirmPass.Size = new System.Drawing.Size(208, 32);
             this.lblConfirmPass.TabIndex = 3;
             this.lblConfirmPass.Text = "Confirm Password:";
             this.lblConfirmPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(73, 141);
+            this.txtPass.Location = new System.Drawing.Point(55, 55);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(248, 22);
+            this.txtPass.Size = new System.Drawing.Size(187, 20);
             this.txtPass.TabIndex = 0;
             this.txtPass.UseSystemPasswordChar = true;
             // 
             // confirmBtn
             // 
-            this.confirmBtn.Location = new System.Drawing.Point(73, 185);
+            this.confirmBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(220)))), ((int)(((byte)(109)))));
+            this.confirmBtn.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmBtn.Location = new System.Drawing.Point(55, 90);
+            this.confirmBtn.Margin = new System.Windows.Forms.Padding(2);
             this.confirmBtn.Name = "confirmBtn";
-            this.confirmBtn.Size = new System.Drawing.Size(107, 30);
+            this.confirmBtn.Size = new System.Drawing.Size(92, 35);
             this.confirmBtn.TabIndex = 1;
-            this.confirmBtn.Text = "CONFIRM";
-            this.confirmBtn.UseVisualStyleBackColor = true;
+            this.confirmBtn.Text = "Confirm";
+            this.confirmBtn.UseVisualStyleBackColor = false;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(214, 185);
+            this.btnCancel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancel.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCancel.Location = new System.Drawing.Point(151, 90);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(107, 30);
+            this.btnCancel.Size = new System.Drawing.Size(91, 35);
             this.btnCancel.TabIndex = 2;
-            this.btnCancel.Text = "CANCEL";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // EditUserAdminConfirm
             // 
             this.AcceptButton = this.confirmBtn;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(378, 244);
+            this.ClientSize = new System.Drawing.Size(284, 136);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.lblConfirmPass);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditUserAdminConfirm";
             this.Text = "Confirm Password";
             this.ResumeLayout(false);
