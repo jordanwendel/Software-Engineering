@@ -69,11 +69,20 @@ namespace workflowLoginForm
             {
                 try
                 {
-                    dbTools.EditLocation(ProductName, Location);
-                    txtItemName.Clear();
-                    locationMenu.Text = String.Empty;
-                    btnRefresh_Click(sender, e);
+                    string message = "Are you sure you want to change the location of " + ProductName + " to " + Location + "?";
+                    string title = "Warning!";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
 
+                    if (result == DialogResult.Yes)
+                    {
+                        dbTools.EditLocation(ProductName, Location);
+                        txtItemName.Clear();
+                        locationMenu.Text = String.Empty;
+                        btnRefresh_Click(sender, e);
+                    }
+                    else
+                        return;
                 }
                 catch (Exception err)
                 {

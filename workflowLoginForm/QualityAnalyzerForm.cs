@@ -125,7 +125,7 @@ namespace workflowLoginForm
                     string message = "Are you sure you want to change the quality of " + ProductName + " to " + Quality + "?";
                     string title = "Warning!";
 
-                    MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
                     DialogResult result = MessageBox.Show(message, title, buttons);
                     if (result == DialogResult.Yes)
                     {

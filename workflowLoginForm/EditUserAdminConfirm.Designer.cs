@@ -54,7 +54,7 @@ namespace workflowLoginForm
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(248, 22);
-            this.txtPass.TabIndex = 4;
+            this.txtPass.TabIndex = 0;
             this.txtPass.UseSystemPasswordChar = true;
             // 
             // confirmBtn
@@ -62,7 +62,7 @@ namespace workflowLoginForm
             this.confirmBtn.Location = new System.Drawing.Point(73, 185);
             this.confirmBtn.Name = "confirmBtn";
             this.confirmBtn.Size = new System.Drawing.Size(107, 30);
-            this.confirmBtn.TabIndex = 5;
+            this.confirmBtn.TabIndex = 1;
             this.confirmBtn.Text = "CONFIRM";
             this.confirmBtn.UseVisualStyleBackColor = true;
             this.confirmBtn.Click += new System.EventHandler(this.confirmBtn_Click);
@@ -72,7 +72,7 @@ namespace workflowLoginForm
             this.btnCancel.Location = new System.Drawing.Point(214, 185);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(107, 30);
-            this.btnCancel.TabIndex = 6;
+            this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
