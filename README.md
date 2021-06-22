@@ -8,6 +8,7 @@ Steven Nirenberg,
 Justin Andrea,
 Ryan Toering,
 
+REQUIREMENTS PDF: https://github.com/jordanwendel/Software-Engineering/blob/master/WORK%20FLOW%20Requirements.pdf
 
 
 IMPORTANT LINKS:
